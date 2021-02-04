@@ -1,0 +1,1 @@
+包[org.apache.spark.launcher](http://spark.apache.org/docs/2.2.0/api/java/index.html?org/apache/spark/launcher/package-summary.html)提供了用于使用Java API以子线程启动Spark jobs的相关的类。
