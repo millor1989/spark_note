@@ -1,0 +1,1630 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据源 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="xing-neng-diao-shi.html" />
+    
+    
+    <link rel="prev" href="getting-started.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Spark总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../kuai-su-ru-men.html">
+            
+                <a href="../kuai-su-ru-men.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../sparkbian-cheng-dao-yin.html">
+            
+                <a href="../sparkbian-cheng-dao-yin.html">
+            
+                    
+                    Spark编程导引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                    
+                    RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                    
+                    从Java/Scala启动Spark jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../spark-sql.html">
+            
+                <a href="../spark-sql.html">
+            
+                    
+                    Spark SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="shu-ju-yuan.html">
+            
+                <a href="shu-ju-yuan.html">
+            
+                    
+                    数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="xing-neng-diao-shi.html">
+            
+                <a href="xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="fen-bu-shi-sql-yin-qing.html">
+            
+                <a href="fen-bu-shi-sql-yin-qing.html">
+            
+                    
+                    分布式SQL引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="yu-apache-hive-de-jian-rong-xing.html">
+            
+                <a href="yu-apache-hive-de-jian-rong-xing.html">
+            
+                    
+                    与Apache Hive的兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="shu-ju-lei-xing.html">
+            
+                <a href="shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="built-in-functions.html">
+            
+                <a href="built-in-functions.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../spark-streaming.html">
+            
+                <a href="../spark-streaming.html">
+            
+                    
+                    Spark Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../spark-streaming/ji-ben-gai-nian.html">
+            
+                <a href="../spark-streaming/ji-ben-gai-nian.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../spark-streaming/xing-neng-diao-shi.html">
+            
+                <a href="../spark-streaming/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../spark-streaming/rong-cuo.html">
+            
+                <a href="../spark-streaming/rong-cuo.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../structured-streaming.html">
+            
+                <a href="../structured-streaming.html">
+            
+                    
+                    Structured Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                <a href="../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                    
+                    使用Datasets和DataFrames的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                <a href="../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                    
+                    Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../bu-shu.html">
+            
+                <a href="../bu-shu.html">
+            
+                    
+                    部署和运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../bu-shu/zu-jian-ff08-components.html">
+            
+                <a href="../bu-shu/zu-jian-ff08-components.html">
+            
+                    
+                    组件（Components）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                <a href="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                    
+                    集群管理器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../bu-shu/ti-jiao-ying-yong.html">
+            
+                <a href="../bu-shu/ti-jiao-ying-yong.html">
+            
+                    
+                    提交应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../bu-shu/jian-kong.html">
+            
+                <a href="../bu-shu/jian-kong.html">
+            
+                    
+                    监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在YARN上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../pei-zhi.html">
+            
+                <a href="../pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../pei-zhi/sparkshu-xing.html">
+            
+                <a href="../pei-zhi/sparkshu-xing.html">
+            
+                    
+                    Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                    
+                    动态加载Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                    
+                    查看Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../diao-shi.html">
+            
+                <a href="../diao-shi.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../extff1a-xing-neng-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                    
+                    基础优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                    
+                    高级优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在Yarn上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../an-quan.html">
+            
+                <a href="../an-quan.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ying-jian-pei-zhi.html">
+            
+                <a href="../ying-jian-pei-zhi.html">
+            
+                    
+                    硬件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../mllib.html">
+            
+                <a href="../mllib.html">
+            
+                    
+                    MLlib
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../mllib/shu-ju-lei-xing.html">
+            
+                <a href="../mllib/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../mllib/ji-chu-tong-ji.html">
+            
+                <a href="../mllib/ji-chu-tong-ji.html">
+            
+                    
+                    基础统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../mllib/pipelines.html">
+            
+                <a href="../mllib/pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                    
+                    特征的提取、转换和筛选
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                    
+                    Feature Extractors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                    
+                    Feature Transformers-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                    
+                    Feature Transformers-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                    
+                    Feature Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                    
+                    Locality Sensitive Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../mllib/fen-lei-he-hui-gui.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui.html">
+            
+                    
+                    分类和回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="../mllib/fen-lei-he-hui-gui/fen-lei.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/fen-lei.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="../mllib/fen-lei-he-hui-gui/hui-gui.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/hui-gui.html">
+            
+                    
+                    回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="../mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                    
+                    线性方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="../mllib/fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="../mllib/fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                    
+                    树团体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../mllib/ju-lei.html">
+            
+                <a href="../mllib/ju-lei.html">
+            
+                    
+                    聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../mllib/xie-tong-guo-lv.html">
+            
+                <a href="../mllib/xie-tong-guo-lv.html">
+            
+                    
+                    协同过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../questions.html">
+            
+                <a href="../questions.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../questions/datasetdataframerdd.html">
+            
+                <a href="../questions/datasetdataframerdd.html">
+            
+                    
+                    DataFrame-Dataset-RDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../questions/spark-checkpoint.html">
+            
+                <a href="../questions/spark-checkpoint.html">
+            
+                    
+                    checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../questions/shu-ju-ben-di-xing.html">
+            
+                <a href="../questions/shu-ju-ben-di-xing.html">
+            
+                    
+                    某个task很慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../questions/sparkhan-shu.html">
+            
+                <a href="../questions/sparkhan-shu.html">
+            
+                    
+                    Spark函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../questions/hadoop-1he-hadoop2.html">
+            
+                <a href="../questions/hadoop-1he-hadoop2.html">
+            
+                    
+                    Hadoop 1和Hadoop2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../questions/broadcast-join.html">
+            
+                <a href="../questions/broadcast-join.html">
+            
+                    
+                    Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据源</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6570;&#x636E;&#x6E90;">&#x6570;&#x636E;&#x6E90;</h3>
+<p>Spark SQL&#x901A;&#x8FC7;DataFrame&#x63A5;&#x53E3;&#x652F;&#x6301;&#x591A;&#x79CD;&#x591A;&#x6837;&#x7684;&#x6570;&#x636E;&#x6E90;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x5173;&#x7CFB;&#x578B;&#x7684;&#x8F6C;&#x6362;&#x6216;&#x8005;&#x901A;&#x8FC7;&#x521B;&#x5EFA;&#x4E34;&#x65F6;&#x89C6;&#x56FE;&#x6765;&#x64CD;&#x4F5C;DataFrame&#x3002;&#x628A;DataFrame&#x6CE8;&#x518C;&#x4E3A;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x89C6;&#x56FE;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;SQL&#x67E5;&#x8BE2;&#x5BF9;&#x4ED6;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="1&#x3001;&#x901A;&#x7528;&#x7684;loadsave&#x51FD;&#x6570;">1&#x3001;&#x901A;&#x7528;&#x7684;Load/Save&#x51FD;&#x6570;</h4>
+<p>&#x6700;&#x7B80;&#x5355;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF08;<code>parquet</code>&#xFF0C;&#x9664;&#x975E;&#x901A;&#x8FC7;<code>spark.sql.sources.default</code>&#x53E6;&#x5916;&#x6307;&#x5B9A;&#xFF09;&#x5C06;&#x88AB;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> usersDF = spark.read.load(<span class="hljs-string">&quot;examples/src/main/resources/users.parquet&quot;</span>)
+usersDF.select(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;favorite_color&quot;</span>).write.save(<span class="hljs-string">&quot;namesAndFavColors.parquet&quot;</span>)
+</code></pre>
+<h5 id="11&#x3001;&#x6307;&#x5B9A;&#x9009;&#x9879;&#xFF08;manually-specifying-options&#xFF09;">1.1&#x3001;&#x6307;&#x5B9A;&#x9009;&#x9879;&#xFF08;Manually Specifying Options&#xFF09;</h5>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4E3A;&#x6570;&#x636E;&#x6E90;&#x6307;&#x5B9A;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x7684;&#x9009;&#x9879;&#x3002;&#x6570;&#x636E;&#x6E90;&#x4E00;&#x822C;&#x901A;&#x8FC7;&#x5168;&#x9650;&#x5B9A;&#x540D;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;<code>org.apache.spark.sql.parquet</code>&#xFF09;&#x6765;&#x6307;&#x5B9A;&#xFF0C;&#x5BF9;&#x4E8E;&#x5185;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x6E90;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7B80;&#x79F0;&#xFF08;<code>json</code>, <code>parquet</code>, <code>jdbc</code>, <code>orc</code>, <code>libsvm</code>, <code>csv</code>, <code>text</code>&#xFF09;&#x6307;&#x5B9A;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;DataFrame&#x8BED;&#x6CD5;&#x53EF;&#x4EE5;&#x5C06;&#x4EFB;&#x610F;&#x6570;&#x636E;&#x6E90;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> peopleDF = spark.read.format(<span class="hljs-string">&quot;json&quot;</span>).load(<span class="hljs-string">&quot;examples/src/main/resources/people.json&quot;</span>)
+peopleDF.select(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>).write.format(<span class="hljs-string">&quot;parquet&quot;</span>).save(<span class="hljs-string">&quot;namesAndAges.parquet&quot;</span>)
+</code></pre>
+<h5 id="12&#x3001;&#x76F4;&#x63A5;&#x5BF9;&#x6587;&#x4EF6;&#x8FD0;&#x884C;sql">1.2&#x3001;&#x76F4;&#x63A5;&#x5BF9;&#x6587;&#x4EF6;&#x8FD0;&#x884C;SQL</h5>
+<p>&#x9664;&#x4E86;&#x901A;&#x8FC7;<code>read</code> API&#x5C06;&#x6587;&#x4EF6;&#x5BFC;&#x5165;DataFrame&#x7136;&#x540E;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;SQL&#x67E5;&#x8BE2;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> sqlDF = spark.sql(<span class="hljs-string">&quot;SELECT * FROM parquet.`examples/src/main/resources/users.parquet`&quot;</span>)
+</code></pre>
+<h5 id="13&#x3001;save-modes">1.3&#x3001;Save Modes</h5>
+<p><code>save</code>&#x64CD;&#x4F5C;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x9009;&#x9879;<code>mode</code>&#x4F7F;&#x7528;<code>SaveMode</code>&#x505A;&#x53C2;&#x6570;&#x2014;&#x2014;&#x6307;&#x5B9A;&#x5982;&#x679C;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x8BE5;&#x5982;&#x4F55;&#x5904;&#x7406;&#x3002;&#x8FD9;&#x4E9B;&#x4FDD;&#x5B58;&#x6A21;&#x5F0F;&#x65E2;&#x4E0D;&#x4F7F;&#x7528;&#x9501;&#x673A;&#x5236;&#x4E5F;&#x4E0D;&#x662F;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x4F7F;&#x7528;<code>Overwrite</code>&#x4FDD;&#x5B58;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x65B0;&#x7684;&#x6570;&#x636E;&#x5728;&#x6267;&#x884C;&#x4FDD;&#x5B58;&#x4E4B;&#x524D;&#x4F1A;&#x5220;&#x9664;&#x5DF2;&#x6709;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>Scala/Java</th>
+<th>Any Language</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SaveMode.ErrorIfExists</code> &#xFF08;<strong>&#x9ED8;&#x8BA4;</strong>&#xFF09;</td>
+<td><code>&quot;error&quot;</code> (default)</td>
+<td>&#x5982;&#x679C;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x671F;&#x671B;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</td>
+</tr>
+<tr>
+<td><code>SaveMode.Append</code></td>
+<td><code>&quot;append&quot;</code></td>
+<td>When saving a DataFrame to a data source, if data/table already exists,     contents of the DataFrame are expected to be appended to existing data.</td>
+</tr>
+<tr>
+<td><code>SaveMode.Overwrite</code></td>
+<td><code>&quot;overwrite&quot;</code></td>
+<td>&#x5982;&#x679C;&#x6570;&#x636E;/&#x8868;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x671F;&#x671B;&#x5B58;&#x5728;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x88AB;DataFrame&#x4E2D;&#x7684;&#x6570;&#x636E;&#x8986;&#x76D6;</td>
+</tr>
+<tr>
+<td><code>SaveMode.Ignore</code></td>
+<td><code>&quot;ignore&quot;</code></td>
+<td>&#x5982;&#x679C;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x671F;&#x671B;&#x4E0D;&#x4FDD;&#x5B58;DataFrame&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x6539;&#x53D8;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x6570;&#x636E;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="14&#x3001;&#x4FDD;&#x5B58;&#x5230;&#x6301;&#x4E45;&#x5316;&#x8868;&#xFF08;saving-to-persistent-tables&#xFF09;">1.4&#x3001;&#x4FDD;&#x5B58;&#x5230;&#x6301;&#x4E45;&#x5316;&#x8868;&#xFF08;Saving to Persistent Tables&#xFF09;</h5>
+<p><code>DataFrame</code>&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>saveAsTable</code>&#x547D;&#x4EE4;&#x4FDD;&#x5B58;&#x4E3A;Hive metastore&#x4E2D;&#x7684;&#x6301;&#x4E45;&#x5316;&#x8868;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x90E8;&#x7F72;Hive&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7279;&#x5F81;&#x3002;Spark&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x672C;&#x5730;Hive metastore&#xFF08;&#x4F7F;&#x7528;Derby&#xFF09;&#x3002;&#x4E0E;<code>createOrReplaceTempView</code>&#x4E0D;&#x540C;&#xFF0C;<code>saveAsTable</code> &#x4F1A;&#x628A;DataFrame&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x7269;&#x5316;&#xFF08;materialize&#xFF09;&#x5E76;&#x4E14;&#x5728;Hive metastore&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x6307;&#x9488;&#x3002;&#x5373;&#x4F7F;Spark&#x7A0B;&#x5E8F;&#x91CD;&#x542F;&#x6301;&#x4E45;&#x5316;&#x8868;&#x4ECD;&#x7136;&#x5B58;&#x5728;&#xFF0C;&#x53EA;&#x8981;&#x80FD;&#x628A;&#x8FDE;&#x63A5;&#x6307;&#x5411;&#x76F8;&#x540C;&#x7684;metastore&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>SparkSession</code>&#x7684;<code>table</code>&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x6301;&#x4E45;&#x5316;&#x8868;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5C31;&#x80FD;&#x521B;&#x5EFA;&#x6301;&#x4E45;&#x5316;&#x8868;&#x7684;DataFrame&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x57FA;&#x4E8E;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x6BD4;&#x5982;text, parquet, json,&#x7B49;&#x7B49;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>path</code>&#x9009;&#x9879;&#x6307;&#x5B9A;&#x8868;&#x8DEF;&#x5F84;&#x3002;&#x6BD4;&#x5982;&#xFF0C;<code>df.write.option(&quot;path&quot;, &quot;/some/path&quot;).saveAsTable(&quot;t&quot;)</code>&#xFF1B;&#x5220;&#x9664;&#x8868;&#x540E;&#xFF0C;&#x8868;&#x8DEF;&#x5F84;&#x548C;&#x8868;&#x6570;&#x636E;&#x4ECD;&#x7136;&#x5B58;&#x5728;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x8868;&#x8DEF;&#x5F84;&#xFF0C;Spark&#x4F1A;&#x628A;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5230;&#x4ED3;&#x5E93;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x8868;&#x8DEF;&#x5F84;&#xFF1B;&#x6B64;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x5220;&#x9664;&#x8868;&#xFF0C;&#x9ED8;&#x8BA4;&#x8868;&#x8DEF;&#x5F84;&#x4E5F;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x4ECE;Spark 2.1&#x5F00;&#x59CB;&#xFF0C;&#x6301;&#x4E45;&#x5316;&#x7684;&#x6570;&#x636E;&#x6E90;&#x8868;&#x628A;&#x6BCF;&#x4E2A;&#x5206;&#x533A;&#x7684;metadata&#x4FDD;&#x5B58;&#x5728;&#x4E86;Hive metastore&#x4E2D;&#x3002;&#x8FD9;&#x5E26;&#x6765;&#x4E86;&#x51E0;&#x70B9;&#x597D;&#x5904;&#xFF1A;</p>
+<ul>
+<li>metastore&#x53EF;&#x4EE5;&#x53EA;&#x4E3A;&#x67D0;&#x4E2A;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x5FC5;&#x8981;&#x7684;&#x5206;&#x533A;&#xFF0C;&#x4E0D;&#x7528;&#x518D;&#x67E5;&#x8BE2;&#x6574;&#x4E2A;&#x8868;&#x7684;&#x5168;&#x90E8;&#x5206;&#x533A;&#x3002;</li>
+<li>Hive&#x7684;DDLs&#x6BD4;&#x5982;<code>ALTER TABLE PARTITION ... SET LOCATION</code>&#x5BF9;DataSource API&#x521B;&#x5EFA;&#x7684;&#x8868;&#x4E5F;&#x53EF;&#x7528;&#x4E86;&#x3002;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5F53;&#x521B;&#x5EFA;&#x5916;&#x90E8;&#x6570;&#x636E;&#x6E90;&#x8868;&#xFF08;&#x4F7F;&#x7528;<code>path</code>&#x9009;&#x9879;&#x521B;&#x5EFA;&#x7684;&#xFF09;&#x9ED8;&#x8BA4;&#x4E0D;&#x4F1A;&#x6536;&#x96C6;&#x5206;&#x533A;&#x4FE1;&#x606F;&#x3002;&#x53EF;&#x4EE5;&#x8C03;&#x7528;<code>MSCK REPAIR TABLE</code>&#x6765;&#x540C;&#x6B65;metastore&#x4E2D;&#x7684;&#x5206;&#x533A;&#x4FE1;&#x606F;&#x3002;</p>
+<h5 id="15&#x3001;bucketing&#xFF0C;sorting&#x548C;partitioning">1.5&#x3001;Bucketing&#xFF0C;Sorting&#x548C;Partitioning</h5>
+<p>&#x5BF9;&#x4E8E;&#x57FA;&#x4E8E;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5BF9;&#x8F93;&#x51FA;&#x8FDB;&#x884C;bucket&#x3001;sort&#x3001;partition&#x3002;bucket&#x548C;sort&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x6301;&#x4E45;&#x5316;&#x8868;&#x3002;</p>
+<pre><code class="lang-scala">peopleDF.write.bucketBy(<span class="hljs-number">42</span>, <span class="hljs-string">&quot;name&quot;</span>).sortBy(<span class="hljs-string">&quot;age&quot;</span>).saveAsTable(<span class="hljs-string">&quot;people_bucketed&quot;</span>)
+</code></pre>
+<p>&#x800C;&#x4F7F;&#x7528;Dataset API&#x65F6;&#xFF0C;partition&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;<code>save</code>&#x548C;<code>saveAsTable</code>&#x3002;</p>
+<pre><code class="lang-scala">usersDF.write.partitionBy(<span class="hljs-string">&quot;favorite_color&quot;</span>).format(<span class="hljs-string">&quot;parquet&quot;</span>).save(<span class="hljs-string">&quot;namesPartByColor.parquet&quot;</span>)
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x5BF9;&#x4E00;&#x4E2A;&#x8868;&#x540C;&#x65F6;&#x8FDB;&#x884C;partition&#x548C;bucket&#xFF1A;</p>
+<pre><code class="lang-scala">peopleDF
+  .write
+  .partitionBy(<span class="hljs-string">&quot;favorite_color&quot;</span>)
+  .bucketBy(<span class="hljs-number">42</span>, <span class="hljs-string">&quot;name&quot;</span>)
+  .saveAsTable(<span class="hljs-string">&quot;people_partitioned_bucketed&quot;</span>)
+</code></pre>
+<p><code>partitionBy</code>&#x4F1A;&#x521B;&#x5EFA;&#x5206;&#x533A;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5BF9;&#x4E8E;&#x9AD8;&#x57FA;&#x6570;&#xFF08;high cardinality&#xFF09;&#x7684;&#x5217;&#x9002;&#x7528;&#x6027;&#x6709;&#x9650;&#x3002;&#x800C;<code>bucketBy</code>&#x628A;&#x6570;&#x636E;&#x5206;&#x6563;&#x5230;&#x56FA;&#x5B9A;&#x6570;&#x91CF;&#x7684;buckets&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5728;&#x552F;&#x4E00;&#x503C;&#x5F97;&#x6570;&#x91CF;&#x4E0D;&#x786E;&#x5B9A;&#xFF08;unbounded&#xFF09;&#x65F6;&#x4F7F;&#x7528;&#x3002;</p>
+<h4 id="2&#x3001;parquet&#x6587;&#x4EF6;">2&#x3001;Parquet&#x6587;&#x4EF6;</h4>
+<p>Parquet&#x662F;&#x4E00;&#x79CD;&#x88AB;&#x8BB8;&#x591A;&#x5176;&#x5B83;&#x6570;&#x636E;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x652F;&#x6301;&#x7684;&#x9762;&#x5411;&#x5217;&#x7684;&#x683C;&#x5F0F;&#x3002;Spark SQL&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;Parquet&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x5199;&#x652F;&#x6301;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x81EA;&#x52A8;&#x4FDD;&#x7559;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;schema&#x3002;&#x5F53;&#x5199;Parquet&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x4E3A;&#x4E86;&#x517C;&#x5BB9;&#x6027;&#xFF08;compatibility&#xFF09;&#x7684;&#x539F;&#x56E0;&#x6240;&#x6709;&#x7684;&#x5217;&#x90FD;&#x88AB;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x4E3A;&#x53EF;&#x4EE5;&#x4E3A;NULL&#x7684;&#xFF08;nullable&#xFF09;&#x3002;</p>
+<h5 id="21&#x3001;&#x7A0B;&#x5F0F;&#x5316;&#x7684;&#x52A0;&#x8F7D;&#x6570;&#x636E;">2.1&#x3001;&#x7A0B;&#x5F0F;&#x5316;&#x7684;&#x52A0;&#x8F7D;&#x6570;&#x636E;</h5>
+<pre><code class="lang-scala"><span class="hljs-comment">// Encoders for most common types are automatically provided by importing spark.implicits._</span>
+<span class="hljs-keyword">import</span> spark.implicits._
+
+<span class="hljs-keyword">val</span> peopleDF = spark.read.json(<span class="hljs-string">&quot;examples/src/main/resources/people.json&quot;</span>)
+
+<span class="hljs-comment">// DataFrames can be saved as Parquet files, maintaining the schema information</span>
+peopleDF.write.parquet(<span class="hljs-string">&quot;people.parquet&quot;</span>)
+
+<span class="hljs-comment">// Read in the parquet file created above</span>
+<span class="hljs-comment">// Parquet files are self-describing so the schema is preserved</span>
+<span class="hljs-comment">// The result of loading a Parquet file is also a DataFrame</span>
+<span class="hljs-keyword">val</span> parquetFileDF = spark.read.parquet(<span class="hljs-string">&quot;people.parquet&quot;</span>)
+
+<span class="hljs-comment">// Parquet files can also be used to create a temporary view and then used in SQL statements</span>
+parquetFileDF.createOrReplaceTempView(<span class="hljs-string">&quot;parquetFile&quot;</span>)
+<span class="hljs-keyword">val</span> namesDF = spark.sql(<span class="hljs-string">&quot;SELECT name FROM parquetFile WHERE age BETWEEN 13 AND 19&quot;</span>)
+namesDF.map(attributes =&gt; <span class="hljs-string">&quot;Name: &quot;</span> + attributes(<span class="hljs-number">0</span>)).show()
+<span class="hljs-comment">// +------------+</span>
+<span class="hljs-comment">// |       value|</span>
+<span class="hljs-comment">// +------------+</span>
+<span class="hljs-comment">// |Name: Justin|</span>
+<span class="hljs-comment">// +------------+</span>
+</code></pre>
+<h5 id="22&#x3001;&#x5206;&#x533A;&#x53D1;&#x73B0;">2.2&#x3001;&#x5206;&#x533A;&#x53D1;&#x73B0;</h5>
+<p>&#x5728;&#x50CF;Hive&#x8FD9;&#x79CD;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x8868;&#x5206;&#x533A;&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x4F18;&#x5316;&#x65B9;&#x6CD5;&#x3002;&#x5728;&#x5206;&#x533A;&#x8868;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x901A;&#x5E38;&#x4FDD;&#x5B58;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x5206;&#x533A;&#x5217;&#x7684;&#x503C;&#x88AB;&#x7F16;&#x7801;&#x5230;&#x6BCF;&#x4E2A;&#x5206;&#x533A;&#x76EE;&#x5F55;&#x7684;&#x8DEF;&#x5F84;&#x3002;Parquet&#x6570;&#x636E;&#x6E90;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5730;&#x53D1;&#x73B0;&#x548C;&#x63A8;&#x5BFC;&#x5206;&#x533A;&#x4FE1;&#x606F;&#x3002;&#x6BD4;&#x5982;&#x7528;<code>gender</code> &#x548C; <code>country</code> &#x4F5C;&#x4E3A;&#x5206;&#x533A;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<pre><code class="lang-reStructuredText">path
+&#x2514;&#x2500;&#x2500; to
+    &#x2514;&#x2500;&#x2500; table
+        &#x251C;&#x2500;&#x2500; gender=male
+        &#x2502;   &#x251C;&#x2500;&#x2500; ...
+        &#x2502;   &#x2502;
+        &#x2502;   &#x251C;&#x2500;&#x2500; country=US
+        &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; data.parquet
+        &#x2502;   &#x251C;&#x2500;&#x2500; country=CN
+        &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; data.parquet
+        &#x2502;   &#x2514;&#x2500;&#x2500; ...
+        &#x2514;&#x2500;&#x2500; gender=female
+            &#x251C;&#x2500;&#x2500; ...
+            &#x2502;
+            &#x251C;&#x2500;&#x2500; country=US
+            &#x2502;   &#x2514;&#x2500;&#x2500; data.parquet
+            &#x251C;&#x2500;&#x2500; country=CN
+            &#x2502;   &#x2514;&#x2500;&#x2500; data.parquet
+            &#x2514;&#x2500;&#x2500; ...
+</code></pre>
+<p>&#x628A;<code>path/to/table</code>&#x4F20;&#x9012;&#x7ED9;<code>SparkSession.read.parquet</code>&#x6216;&#x8005;<code>SparkSession.read.load</code>&#xFF0C;Spark SQL&#x90FD;&#x80FD;&#x591F;&#x4ECE;&#x8DEF;&#x5F84;&#x4E2D;&#x83B7;&#x53D6;&#x5206;&#x533A;&#x4FE1;&#x606F;&#x3002;&#x8FD4;&#x56DE;&#x7684;DataFrame&#x7684;schema&#x5C06;&#x4F1A;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-reStructuredText">root
+|-- name: string (nullable = true)
+|-- age: long (nullable = true)
+|-- gender: string (nullable = true)
+|-- country: string (nullable = true)
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5206;&#x533A;&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x65F6;&#x81EA;&#x52A8;&#x63A8;&#x5BFC;&#x7684;&#x3002;&#x6570;&#x503C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x90FD;&#x662F;&#x652F;&#x6301;&#x7684;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x8BA9;Spark&#x81EA;&#x52A8;&#x63A8;&#x5BFC;&#x5206;&#x533A;&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;<code>spark.sql.sources.partitionColumnTypeInference.enabled</code>&#x914D;&#x7F6E;&#x9879;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<code>true</code>&#xFF09;&#x8BBE;&#x7F6E;&#x4E3A;<code>false</code>&#xFF0C;&#x7C7B;&#x578B;&#x63A8;&#x5BFC;&#x5173;&#x95ED;&#x540E;&#xFF0C;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;&#x5206;&#x533A;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x4ECE;Spark 1.6&#x5F00;&#x59CB;&#xFF0C;&#x5206;&#x533A;&#x53D1;&#x73B0;&#x9ED8;&#x8BA4;&#x53EA;&#x4F1A;&#x67E5;&#x627E;&#x6307;&#x5B9A;&#x7684;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x5206;&#x533A;&#x3002;&#x5BF9;&#x4E8E;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x4F20;&#x9012;&#x7684;&#x8DEF;&#x5F84;&#x662F;<code>path/to/table/gender=male</code>&#xFF0C;<code>gender</code>&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x5F53;&#x4F5C;&#x4E00;&#x4E2A;&#x5206;&#x533A;&#x5B57;&#x6BB5;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5206;&#x533A;&#x53D1;&#x73B0;&#x7684;&#x8D77;&#x59CB;&#x76EE;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x6E90;&#x7684;<code>basePath</code>&#x9009;&#x9879;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x8BBE;&#x7F6E;<code>path/to/table/gender=male</code>&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x7684;&#x8DEF;&#x5F84;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;<code>path/to/table/</code>&#x4E3A;<code>basePath</code> &#x65F6;&#xFF0C;<code>gender</code>&#x5C06;&#x4F1A;&#x88AB;&#x4F5C;&#x4E3A;&#x5206;&#x533A;&#x5B57;&#x6BB5;&#x3002;</p>
+<h5 id="23&#x3001;schema&#x5408;&#x5E76;&#xFF08;schema-merging&#xFF09;">2.3&#x3001;Schema&#x5408;&#x5E76;&#xFF08;Schema Merging&#xFF09;</h5>
+<p>&#x4E0E;ProtocolBuffer&#xFF0C;Avro&#x548C;Thrift&#xFF0C;Parquet&#x4E5F;&#x652F;&#x6301;schema&#x6F14;&#x53D8;&#x3002;Parquet&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x4ECE;&#x7B80;&#x5355;&#x7684;schema&#x5F00;&#x59CB;&#xFF0C;&#x6E10;&#x6E10;&#x5730;&#x6839;&#x636E;&#x9700;&#x8981;&#x589E;&#x52A0;&#x66F4;&#x591A;&#x7684;&#x5217;&#x5230;schema&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x80FD;&#x6700;&#x540E;&#x4F1A;&#x6709;&#x591A;&#x4E2A;Parquet&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x62E5;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x4F46;&#x662F;&#x76F8;&#x4E92;&#x517C;&#x5BB9;&#x7684;&#xFF08;different but mutually compatible&#xFF09;schema&#x3002;Parquet&#x6570;&#x636E;&#x6E90;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x4FA6;&#x6D4B;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5E76;&#x4E14;&#x5408;&#x5E76;&#x5168;&#x90E8;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x7684;schema&#x3002;</p>
+<p>schema&#x5408;&#x5E76;&#x662F;&#x76F8;&#x5BF9;&#x9AD8;&#x5F00;&#x9500;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x5E76;&#x4E0D;&#x5FC5;&#x8981;&#xFF0C;Spark&#x4ECE;1.5.0&#x5F00;&#x59CB;&#x9ED8;&#x8BA4;&#x5C06;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5173;&#x95ED;&#x3002;&#x82E5;&#x8981;&#x5F00;&#x542F;&#x53EF;&#x4EE5;&#xFF1A;1&#x3001;&#x5728;&#x8BFB;&#x53D6;Parquet&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x6E90;&#x9009;&#x9879;<code>mergeSchema</code> &#x4E3A;<code>true</code>&#xFF08;&#x5982;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF09;&#xFF0C;&#x6216;&#x8005;2&#x3001;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x7684;SQL&#x9009;&#x9879;<code>spark.sql.parquet.mergeSchema</code> &#x4E3A;<code>true</code>&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// This is used to implicitly convert an RDD to a DataFrame.</span>
+<span class="hljs-keyword">import</span> spark.implicits._
+
+<span class="hljs-comment">// Create a simple DataFrame, store into a partition directory</span>
+<span class="hljs-keyword">val</span> squaresDF = spark.sparkContext.makeRDD(<span class="hljs-number">1</span> to <span class="hljs-number">5</span>).map(i =&gt; (i, i * i)).toDF(<span class="hljs-string">&quot;value&quot;</span>, <span class="hljs-string">&quot;square&quot;</span>)
+squaresDF.write.parquet(<span class="hljs-string">&quot;data/test_table/key=1&quot;</span>)
+
+<span class="hljs-comment">// Create another DataFrame in a new partition directory,</span>
+<span class="hljs-comment">// adding a new column and dropping an existing column</span>
+<span class="hljs-keyword">val</span> cubesDF = spark.sparkContext.makeRDD(<span class="hljs-number">6</span> to <span class="hljs-number">10</span>).map(i =&gt; (i, i * i * i)).toDF(<span class="hljs-string">&quot;value&quot;</span>, <span class="hljs-string">&quot;cube&quot;</span>)
+cubesDF.write.parquet(<span class="hljs-string">&quot;data/test_table/key=2&quot;</span>)
+
+<span class="hljs-comment">// Read the partitioned table</span>
+<span class="hljs-keyword">val</span> mergedDF = spark.read.option(<span class="hljs-string">&quot;mergeSchema&quot;</span>, <span class="hljs-string">&quot;true&quot;</span>).parquet(<span class="hljs-string">&quot;data/test_table&quot;</span>)
+mergedDF.printSchema()
+
+<span class="hljs-comment">// The final schema consists of all 3 columns in the Parquet files together</span>
+<span class="hljs-comment">// with the partitioning column appeared in the partition directory paths</span>
+<span class="hljs-comment">// root</span>
+<span class="hljs-comment">//  |-- value: int (nullable = true)</span>
+<span class="hljs-comment">//  |-- square: int (nullable = true)</span>
+<span class="hljs-comment">//  |-- cube: int (nullable = true)</span>
+<span class="hljs-comment">//  |-- key: int (nullable = true)</span>
+</code></pre>
+<h5 id="24&#x3001;hive-metastore-parquet&#x8868;&#x8F6C;&#x6362;">2.4&#x3001;Hive metastore Parquet&#x8868;&#x8F6C;&#x6362;</h5>
+<p>&#x8BFB;&#x5199;Hive metastore&#x4E2D;&#x7684;Parquet&#x8868;&#x65F6;&#xFF0C;Spark SQL&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x6027;&#x80FD;&#x4F1A;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;Parquet&#x652F;&#x6301;&#x66FF;&#x4EE3;Hive SerDe&#x3002;&#x8FD9;&#x4E2A;&#x884C;&#x4E3A;&#x662F;&#x7531;<code>spark.sql.hive.convertMetastoreParquet</code> &#x914D;&#x7F6E;&#x63A7;&#x5236;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x5F00;&#x542F;&#x7684;&#x3002;</p>
+<h6 id="241&#x3001;hiveparquet-schema&#x534F;&#x8C03;&#xFF08;hiveparquet-schema-reconciliation&#xFF09;">2.4.1&#x3001;Hive/Parquet Schema&#x534F;&#x8C03;&#xFF08;Hive/Parquet Schema Reconciliation&#xFF09;</h6>
+<p>&#x5728;schema&#x5904;&#x7406;&#x7684;&#x89D2;&#x5EA6;&#xFF0C;Hive&#x548C;Parquet&#x6709;&#x4E24;&#x4E2A;&#x5173;&#x952E;&#x7684;&#x4E0D;&#x540C;&#xFF1A;</p>
+<ol>
+<li>Hive&#x662F;&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;&#x7684;&#xFF0C;Parquet&#x4E0D;&#x662F;&#xFF1B;</li>
+<li>Hive&#x8BA4;&#x4E3A;&#x6240;&#x6709;&#x7684;&#x5217;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x4E3A;null&#x7684;&#xFF08;nullable&#xFF09;&#xFF0C;Parquet&#x4E2D;&#x53EF;&#x7A7A;&#x6027;&#x662F;&#x91CD;&#x8981;&#x7684;&#xFF08;while nullability in Parquet is significant&#xFF09;&#x3002;</li>
+</ol>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x5F53;&#x628A;Hive metastore Parquet &#x8868;&#x8F6C;&#x6362;&#x4E3A;Spark SQL Parquet&#x8868;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x534F;&#x8C03;Hive metastore schema&#x548C;Parquet schema&#x3002;&#x534F;&#x8C03;&#x89C4;&#x5219;&#x662F;&#xFF1A;</p>
+<ol>
+<li><p>&#x4E24;&#x8FB9;schema&#x4E2D;&#x5177;&#x6709;&#x76F8;&#x540C;&#x540D;&#x79F0;&#x7684;&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x6709;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x7BA1;&#x53EF;&#x63A7;&#x6027;&#xFF08;regardless of nullability&#xFF09;&#x3002;&#x534F;&#x8C03;&#x540E;&#x7684;&#x5B57;&#x6BB5;&#x5E94;&#x8BE5;&#x4E0E;Parquet&#x4FA7;schema&#x6709;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x4EE5;&#x4FBF;&#x91CD;&#x89C6;&#x53EF;&#x7A7A;&#x6027;&#xFF08;nullability is respected&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x534F;&#x8C03;&#x540E;&#x7684;schema&#x5FC5;&#x987B;&#x5305;&#x542B;Hive metastore schema&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<p>1&#xFF09;&#x53EA;&#x5728;Parquet schema&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x6BB5;&#x5728;&#x534F;&#x8C03;&#x540E;&#x7684;shcema&#x4E2D;&#x5DF2;&#x88AB;&#x5220;&#x9664;</p>
+<p>2&#xFF09;&#x53EA;&#x5728;Hive metastore schema&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x88AB;&#x52A0;&#x5230;&#x534F;&#x8C03;&#x540E;&#x7684;schema&#x4E2D;&#x5E76;&#x4E14;&#x662F;&#x53EF;&#x7A7A;&#x7684;&#x3002;</p>
+</li>
+</ol>
+<h6 id="242&#x3001;metadata&#x5237;&#x65B0;">2.4.2&#x3001;Metadata&#x5237;&#x65B0;</h6>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x6027;&#x80FD;&#xFF0C;Spark SQL&#x7F13;&#x5B58;&#x4E86;Parquet metadata&#x3002;&#x5F53;&#x5F00;&#x542F;&#x4E86;Hive metastore Parquet&#x8868;&#x8F6C;&#x6362;&#xFF0C;&#x8FD9;&#x4E9B;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x8868;metadata&#x4E5F;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E9B;&#x8868;&#x88AB;Hive&#x6216;&#x8005;&#x5176;&#x5B83;&#x5916;&#x90E8;&#x5DE5;&#x5177;&#x66F4;&#x65B0;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x7684;&#x5237;&#x65B0;&#x4EE5;&#x786E;&#x4FDD;metadata&#x4E00;&#x81F4;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// spark is an existing SparkSession</span>
+spark.catalog.refreshTable(<span class="hljs-string">&quot;my_table&quot;</span>)
+</code></pre>
+<h5 id="25&#x3001;&#x914D;&#x7F6E;">2.5&#x3001;&#x914D;&#x7F6E;</h5>
+<p>&#x901A;&#x8FC7;<code>SparkSession</code>&#x7684;<code>setConf</code>&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x4F7F;&#x7528;SQL&#x8FD0;&#x884C;<code>SET key=value</code>&#x53EF;&#x4EE5;&#x5BF9;Parquet&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>spark.sql.parquet.binaryAsString</code></td>
+<td>false</td>
+<td>&#x67D0;&#x4E9B;&#x5176;&#x5B83;&#x7684;Parquet&#x751F;&#x6210;&#x7CFB;&#x7EDF;&#xFF0C;&#x7279;&#x522B;&#x662F;Impala&#xFF0C;Hive&#xFF0C;&#x548C;&#x4F4E;&#x7248;&#x672C;&#x7684;Spark SQL&#xFF0C;&#x5728;&#x5199;&#x51FA;Parquet schema&#x65F6;&#x5E76;&#x4E0D;&#x533A;&#x5206;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x544A;&#x8BC9;Spark SQL&#x628A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#x4F5C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x4EE5;&#x548C;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x517C;&#x5BB9;&#x3002;</td>
+</tr>
+<tr>
+<td><code>spark.sql.parquet.int96AsTimestamp</code></td>
+<td>true</td>
+<td>&#x67D0;&#x4E9B;&#x5176;&#x5B83;&#x7684;Parquet&#x751F;&#x6210;&#x7CFB;&#x7EDF;&#xFF0C;&#x7279;&#x522B;&#x662F;Impala&#xFF0C;Hive&#xFF0C;&#x628A;&#x65F6;&#x95F4;&#x6233;&#x4FDD;&#x5B58;&#x5728;INT96&#x4E2D;&#x3002;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x544A;&#x8BC9;Spark SQL&#x628A;INT96&#x6570;&#x636E;&#x4F5C;&#x4E3A;&#x65F6;&#x95F4;&#x6233;&#x4EE5;&#x548C;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x517C;&#x5BB9;&#x3002;</td>
+</tr>
+<tr>
+<td><code>spark.sql.parquet.cacheMetadata</code></td>
+<td>true</td>
+<td>Turns on caching of Parquet schema metadata. Can speed up querying of static data.</td>
+</tr>
+<tr>
+<td><code>spark.sql.parquet.compression.codec</code></td>
+<td>snappy</td>
+<td>&#x8BBE;&#x7F6E;&#x5199;Parquet&#x6587;&#x4EF6;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x538B;&#x7F29;codec&#x3002;&#x53EF;&#x7528;&#x53C2;&#x6570;&#x5305;&#x62EC;uncompressed, snappy, gzip, lzo&#x3002;</td>
+</tr>
+<tr>
+<td><code>spark.sql.parquet.filterPushdown</code></td>
+<td>true</td>
+<td>&#x8BBE;&#x7F6E;&#x4E3A;true&#x65F6;&#xFF0C;&#x5F00;&#x542F;Parquet&#x8FC7;&#x6EE4;&#x5668;push-down&#x4F18;&#x5316;&#x3002;</td>
+</tr>
+<tr>
+<td><code>spark.sql.hive.convertMetastoreParquet</code></td>
+<td>true</td>
+<td>&#x8BBE;&#x7F6E;&#x4E3A;false&#x65F6;, Spark SQL &#x4F1A;&#x4E3A;parquet&#x8868;&#x4F7F;&#x7528; Hive SerDer&#x800C;&#x4E0D;&#x662F;&#x5185;&#x7F6E;&#x7684;&#x652F;&#x6301;&#x3002;</td>
+</tr>
+<tr>
+<td><code>spark.sql.parquet.mergeSchema</code></td>
+<td>false</td>
+<td>&#x8BBE;&#x7F6E;&#x4E3A;true&#x65F6;&#xFF0C;Parquet&#x6570;&#x636E;&#x6E90;&#x5408;&#x5E76;&#x4ECE;&#x5168;&#x90E8;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x6536;&#x96C6;&#x7684;schema&#xFF0C;&#x5426;&#x5219;&#x4ECE;&#x6C47;&#x603B;&#x6587;&#x4EF6;&#xFF08;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x53EF;&#x7528;&#x7684;&#x6C47;&#x603B;&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF09;&#x83B7;&#x53D6;schema&#x3002;</td>
+</tr>
+<tr>
+<td><code>spark.sql.optimizer.metadataOnly</code></td>
+<td>true</td>
+<td>&#x8BBE;&#x7F6E;&#x4E3A;true&#x65F6;&#xFF0C;&#x5F00;&#x542F;metadata-only&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#xFF08;&#x4F7F;&#x7528;&#x8868;&#x7684;metadata&#x6765;&#x4EA7;&#x751F;&#x5206;&#x533A;&#x5B57;&#x6BB5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x901A;&#x8FC7;&#x626B;&#x8868;&#x4EA7;&#x751F;&#xFF09;&#x3002;&#x5F53;&#x626B;&#x63CF;&#x7684;&#x5B57;&#x6BB5;&#x90FD;&#x662F;&#x5206;&#x533A;&#x5B57;&#x6BB5;&#x5E76;&#x4E14;&#x67E5;&#x8BE2;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x7B26;&#x5408;distinct&#x8BED;&#x4E49;&#x7684;&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x7B26;&#x65F6;&#x5B83;&#x624D;&#x8D77;&#x4F5C;&#x7528;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3&#x3001;json&#x6570;&#x636E;&#x96C6;">3&#x3001;JSON&#x6570;&#x636E;&#x96C6;</h4>
+<p>Spark SQL&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x63A8;&#x6D4B;JSON&#x6570;&#x636E;&#x96C6;&#x7684;schema&#xFF0C;&#x5E76;&#x4E14;&#x628A;&#x5B83;&#x52A0;&#x8F7D;&#x4E3A;<code>Dataset[Row]</code>&#x3002;&#x5BF9;JSON&#x6587;&#x4EF6;&#x6216;&#x8005;<code>Dataset[String]</code>&#x5E94;&#x7528;<code>SparkSession.read.json()</code>&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x8F6C;&#x6362;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;json&#x6587;&#x4EF6;<strong>&#x5E76;&#x4E0D;&#x662F;</strong>&#x5178;&#x578B;&#x7684;JSON&#x6587;&#x4EF6;&#x3002;&#x6BCF;&#x884C;&#x90FD;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#xFF08;separate&#xFF09;&#x3001;&#x72EC;&#x7ACB;&#x6709;&#x6548;&#x7684;&#xFF08;self-contained valid&#xFF09;JSON&#x5BF9;&#x8C61;&#x3002;&#x5BF9;&#x4E8E;&#x5E38;&#x89C4;&#x7684;&#x591A;&#x884C;JSON&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;<code>option</code>&#x5C06;<code>multiLine</code>&#x9009;&#x9879;&#x8BBE;&#x7F6E;&#x4E3A;<code>true</code>&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// Primitive types (Int, String, etc) and Product types (case classes) encoders are</span>
+<span class="hljs-comment">// supported by importing this when creating a Dataset.</span>
+<span class="hljs-keyword">import</span> spark.implicits._
+
+<span class="hljs-comment">// A JSON dataset is pointed to by path.</span>
+<span class="hljs-comment">// The path can be either a single text file or a directory storing text files</span>
+<span class="hljs-keyword">val</span> path = <span class="hljs-string">&quot;examples/src/main/resources/people.json&quot;</span>
+<span class="hljs-keyword">val</span> peopleDF = spark.read.json(path)
+
+<span class="hljs-comment">// The inferred schema can be visualized using the printSchema() method</span>
+peopleDF.printSchema()
+<span class="hljs-comment">// root</span>
+<span class="hljs-comment">//  |-- age: long (nullable = true)</span>
+<span class="hljs-comment">//  |-- name: string (nullable = true)</span>
+
+<span class="hljs-comment">// Creates a temporary view using the DataFrame</span>
+peopleDF.createOrReplaceTempView(<span class="hljs-string">&quot;people&quot;</span>)
+
+<span class="hljs-comment">// SQL statements can be run by using the sql methods provided by spark</span>
+<span class="hljs-keyword">val</span> teenagerNamesDF = spark.sql(<span class="hljs-string">&quot;SELECT name FROM people WHERE age BETWEEN 13 AND 19&quot;</span>)
+teenagerNamesDF.show()
+<span class="hljs-comment">// +------+</span>
+<span class="hljs-comment">// |  name|</span>
+<span class="hljs-comment">// +------+</span>
+<span class="hljs-comment">// |Justin|</span>
+<span class="hljs-comment">// +------+</span>
+
+<span class="hljs-comment">// Alternatively, a DataFrame can be created for a JSON dataset represented by</span>
+<span class="hljs-comment">// a Dataset[String] storing one JSON object per string</span>
+<span class="hljs-keyword">val</span> otherPeopleDataset = spark.createDataset(
+  <span class="hljs-string">&quot;&quot;</span><span class="hljs-string">&quot;{&quot;</span><span class="hljs-string">name&quot;:&quot;</span><span class="hljs-type">Yin</span><span class="hljs-string">&quot;,&quot;</span><span class="hljs-string">address&quot;:{&quot;</span><span class="hljs-string">city&quot;:&quot;</span><span class="hljs-type">Columbus</span><span class="hljs-string">&quot;,&quot;</span><span class="hljs-string">state&quot;:&quot;</span><span class="hljs-type">Ohio</span><span class="hljs-string">&quot;}}&quot;</span><span class="hljs-string">&quot;&quot;</span> :: <span class="hljs-type">Nil</span>)
+<span class="hljs-keyword">val</span> otherPeople = spark.read.json(otherPeopleDataset)
+otherPeople.show()
+<span class="hljs-comment">// +---------------+----+</span>
+<span class="hljs-comment">// |        address|name|</span>
+<span class="hljs-comment">// +---------------+----+</span>
+<span class="hljs-comment">// |[Columbus,Ohio]| Yin|</span>
+<span class="hljs-comment">// +---------------+----+</span>
+</code></pre>
+<h4 id="4&#x3001;hive&#x8868;">4&#x3001;Hive&#x8868;</h4>
+<p>Spark SQL&#x4E5F;&#x652F;&#x6301;&#x5BF9;Apache Hive&#x4E2D;&#x7684;&#x8868;&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#x3002;&#x4F46;&#x662F;Hive&#x6709;&#x5927;&#x91CF;&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x4F9D;&#x8D56;&#x4E0D;&#x5B58;&#x5728;&#x4E8E;Spark&#x9ED8;&#x8BA4;&#x7684;&#x53D1;&#x884C;&#x7248;&#x672C;&#x4E2D;&#x3002;&#x5982;&#x679C;classpath&#x4E2D;&#x6709;&#x8FD9;&#x4E9B;Hive&#x4F9D;&#x8D56;&#xFF0C;Spark&#x4F1A;&#x81EA;&#x52A8;&#x5730;&#x52A0;&#x8F7D;&#x5B83;&#x4EEC;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x4E9B;Hive&#x4F9D;&#x8D56;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x5DE5;&#x4F5C;&#x8282;&#x70B9;&#x4E0A;&#xFF0C;&#x56E0;&#x4E3A;&#x4E3A;&#x4E86;&#x8BBF;&#x95EE;Hive&#x4E2D;&#x4FDD;&#x5B58;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x9700;&#x8981;&#x8BBF;&#x95EE;Hive&#x7684;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x5E93;&#xFF08;SerDes&#xFF09;&#x3002;</p>
+<p>&#x628A;<code>hive-site.xml</code>, <code>core-site.xml</code> (for security configuration),&#x548C; <code>hdfs-site.xml</code> (for HDFS configuration) &#x6587;&#x4EF6;&#x653E;&#x5728;<code>/conf</code>&#x76EE;&#x5F55;&#x4E2D;&#x5B8C;&#x6210;Hive&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x4F7F;&#x7528;Hive&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x5B9E;&#x4F8B;&#x5316;&#x652F;&#x6301;Hive&#x7684;<code>SparkSession</code>&#xFF0C;&#x5305;&#x62EC;&#x5230;Hive metastore&#x7684;&#x8FDE;&#x63A5;&#x3001;Hive serdes&#x7684;&#x652F;&#x6301;&#x3001;&#x548C;Hive&#x7684;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x3002;&#x6CA1;&#x6709;&#x90E8;&#x7F72;Hive&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4E5F;&#x53EF;&#x4EE5;&#x5F00;&#x542F;Hive&#x652F;&#x6301;&#x3002;&#x6CA1;&#x6709;&#x901A;&#x8FC7;<code>hive-site.xml</code>&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Spark&#x7684;context&#x4F1A;&#x81EA;&#x52A8;&#x5730;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;<code>metastore_db</code>&#xFF0C;&#x5E76;&#x4E14;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>spark.sql.warehouse.dir</code>&#x914D;&#x7F6E;&#x7684;&#x76EE;&#x5F55;&#xFF08;&#x9ED8;&#x8BA4;&#x7684;&#x76EE;&#x5F55;&#x662F;Spark&#x5E94;&#x7528;&#x542F;&#x52A8;&#x65F6;&#x7684;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E2D;&#x7684;<code>spark-warehouse</code>&#x76EE;&#x5F55;&#xFF09;&#x3002;&#x4ECE;Spark 2.0.0&#x5F00;&#x59CB;&#xFF0C;<code>hive-site.xml</code> &#x4E2D;&#x7684;<code>hive.metastore.warehouse.dir</code> &#x5C5E;&#x6027;&#x5C31;&#x88AB;&#x5F03;&#x7528;&#x4E86;&#xFF0C;&#x4F7F;&#x7528;<code>spark.sql.warehouse.dir</code> &#x6765;&#x6307;&#x5B9A;&#x4ED3;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7684;&#x9ED8;&#x8BA4;&#x4F4D;&#x7F6E;&#x3002;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4E3A;&#x542F;&#x52A8;Spark&#x5E94;&#x7528;&#x7684;&#x7528;&#x6237;&#x6388;&#x6743;&#x5199;&#x6743;&#x9650;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> java.io.<span class="hljs-type">File</span>
+
+<span class="hljs-keyword">import</span> org.apache.spark.sql.<span class="hljs-type">Row</span>
+<span class="hljs-keyword">import</span> org.apache.spark.sql.<span class="hljs-type">SparkSession</span>
+
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Record</span>(<span class="hljs-params">key: <span class="hljs-type">Int</span>, value: <span class="hljs-type">String</span></span>)</span>
+
+<span class="hljs-comment">// warehouseLocation points to the default location for managed databases and tables</span>
+<span class="hljs-keyword">val</span> warehouseLocation = <span class="hljs-keyword">new</span> <span class="hljs-type">File</span>(<span class="hljs-string">&quot;spark-warehouse&quot;</span>).getAbsolutePath
+
+<span class="hljs-keyword">val</span> spark = <span class="hljs-type">SparkSession</span>
+  .builder()
+  .appName(<span class="hljs-string">&quot;Spark Hive Example&quot;</span>)
+  .config(<span class="hljs-string">&quot;spark.sql.warehouse.dir&quot;</span>, warehouseLocation)
+  .enableHiveSupport()
+  .getOrCreate()
+
+<span class="hljs-keyword">import</span> spark.implicits._
+<span class="hljs-keyword">import</span> spark.sql
+
+sql(<span class="hljs-string">&quot;CREATE TABLE IF NOT EXISTS src (key INT, value STRING) USING hive&quot;</span>)
+sql(<span class="hljs-string">&quot;LOAD DATA LOCAL INPATH &apos;examples/src/main/resources/kv1.txt&apos; INTO TABLE src&quot;</span>)
+
+<span class="hljs-comment">// Queries are expressed in HiveQL</span>
+sql(<span class="hljs-string">&quot;SELECT * FROM src&quot;</span>).show()
+<span class="hljs-comment">// +---+-------+</span>
+<span class="hljs-comment">// |key|  value|</span>
+<span class="hljs-comment">// +---+-------+</span>
+<span class="hljs-comment">// |238|val_238|</span>
+<span class="hljs-comment">// | 86| val_86|</span>
+<span class="hljs-comment">// |311|val_311|</span>
+<span class="hljs-comment">// ...</span>
+
+<span class="hljs-comment">// Aggregation queries are also supported.</span>
+sql(<span class="hljs-string">&quot;SELECT COUNT(*) FROM src&quot;</span>).show()
+<span class="hljs-comment">// +--------+</span>
+<span class="hljs-comment">// |count(1)|</span>
+<span class="hljs-comment">// +--------+</span>
+<span class="hljs-comment">// |    500 |</span>
+<span class="hljs-comment">// +--------+</span>
+
+<span class="hljs-comment">// The results of SQL queries are themselves DataFrames and support all normal functions.</span>
+<span class="hljs-keyword">val</span> sqlDF = sql(<span class="hljs-string">&quot;SELECT key, value FROM src WHERE key &lt; 10 ORDER BY key&quot;</span>)
+
+<span class="hljs-comment">// The items in DataFrames are of type Row, which allows you to access each column by ordinal.</span>
+<span class="hljs-keyword">val</span> stringsDS = sqlDF.map {
+  <span class="hljs-keyword">case</span> <span class="hljs-type">Row</span>(key: <span class="hljs-type">Int</span>, value: <span class="hljs-type">String</span>) =&gt; <span class="hljs-string">s&quot;Key: <span class="hljs-subst">$key</span>, Value: <span class="hljs-subst">$value</span>&quot;</span>
+}
+stringsDS.show()
+<span class="hljs-comment">// +--------------------+</span>
+<span class="hljs-comment">// |               value|</span>
+<span class="hljs-comment">// +--------------------+</span>
+<span class="hljs-comment">// |Key: 0, Value: val_0|</span>
+<span class="hljs-comment">// |Key: 0, Value: val_0|</span>
+<span class="hljs-comment">// |Key: 0, Value: val_0|</span>
+<span class="hljs-comment">// ...</span>
+
+<span class="hljs-comment">// You can also use DataFrames to create temporary views within a SparkSession.</span>
+<span class="hljs-keyword">val</span> recordsDF = spark.createDataFrame((<span class="hljs-number">1</span> to <span class="hljs-number">100</span>).map(i =&gt; <span class="hljs-type">Record</span>(i, <span class="hljs-string">s&quot;val_<span class="hljs-subst">$i</span>&quot;</span>)))
+recordsDF.createOrReplaceTempView(<span class="hljs-string">&quot;records&quot;</span>)
+
+<span class="hljs-comment">// Queries can then join DataFrame data with data stored in Hive.</span>
+sql(<span class="hljs-string">&quot;SELECT * FROM records r JOIN src s ON r.key = s.key&quot;</span>).show()
+<span class="hljs-comment">// +---+------+---+------+</span>
+<span class="hljs-comment">// |key| value|key| value|</span>
+<span class="hljs-comment">// +---+------+---+------+</span>
+<span class="hljs-comment">// |  2| val_2|  2| val_2|</span>
+<span class="hljs-comment">// |  4| val_4|  4| val_4|</span>
+<span class="hljs-comment">// |  5| val_5|  5| val_5|</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<h5 id="41&#x3001;&#x6307;&#x5B9A;hive&#x8868;&#x7684;&#x5B58;&#x50A8;&#x683C;&#x5F0F;">4.1&#x3001;&#x6307;&#x5B9A;Hive&#x8868;&#x7684;&#x5B58;&#x50A8;&#x683C;&#x5F0F;</h5>
+<p>&#x9ED8;&#x8BA4;&#xFF0C;&#x4EE5;&#x666E;&#x901A;&#x6587;&#x672C;&#x7684;&#x683C;&#x5F0F;&#x8BFB;&#x53D6;Hive&#x8868;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x4E0B;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6307;&#x5B9A;Hive&#x7684;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982; <code>CREATE TABLE src(id int) USING hive OPTIONS(fileFormat &apos;parquet&apos;)</code>&#x3002;&#x6CE8;&#x610F;&#xFF0C;Spark SQL&#x8FD8;&#x4E0D;&#x652F;&#x6301;&#x521B;&#x5EFA;&#x8868;&#x65F6;&#x5BF9;Hive&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;Hive&#x4FA7;&#x4F7F;&#x7528;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x521B;&#x5EFA;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;Spark SQL&#x6765;&#x8BFB;&#x53D6;&#x5B83;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fileFormat</code></td>
+<td>&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E86; &quot;serde&quot;, &quot;input format&quot;&#x548C; &quot;output format&quot;&#x4FE1;&#x606F;&#x3002;&#x76EE;&#x524D;&#x652F;&#x6301;6&#x4E2D;&#x683C;&#x5F0F;: &apos;sequencefile&apos;, &apos;rcfile&apos;, &apos;orc&apos;, &apos;parquet&apos;, &apos;textfile&apos; and &apos;avro&apos;&#x3002;</td>
+</tr>
+<tr>
+<td><code>inputFormat, outputFormat</code></td>
+<td>&#x6307;&#x5B9A;&#x5BF9;&#x5E94; <code>InputFormat</code> and <code>OutputFormat</code>&#x7C7B;&#x7684;&#x540D;&#x79F0;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BD4;&#x5982; <code>org.apache.hadoop.hive.ql.io.orc.OrcInputFormat</code>. &#x8FD9;&#x4E24;&#x4E2A;&#x9009;&#x9879;&#x6210;&#x5BF9;&#x51FA;&#x73B0;&#xFF0C;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86; <code>fileFormat</code> &#x9009;&#x9879;&#xFF0C;&#x5C31;&#x4E0D;&#x80FD;&#x8FD9;&#x4E24;&#x4E2A;&#x9009;&#x9879;&#x3002;</td>
+</tr>
+<tr>
+<td><code>serde</code></td>
+<td>&#x6307;&#x5B9A;serde class&#x7684;&#x540D;&#x5B57;&#x3002;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;<code>fileformat</code>&#x5305;&#x542B;&#x4E86;serde&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5C31;&#x4E0D;&#x60F3;&#x518D;&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x3002;&#x76EE;&#x524D;&#xFF0C;&quot;sequencefile&quot;, &quot;textfile&quot; &#x548C; &quot;rcfile&quot;&#x8FD9;&#x4E09;&#x79CD;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x4E0D;&#x5305;&#x542B;serde&#x4FE1;&#x606F;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4EEC;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x8BE5;&#x9009;&#x9879;&#x3002;</td>
+</tr>
+<tr>
+<td><code>fieldDelim, escapeDelim, collectionDelim, mapkeyDelim, lineDelim</code></td>
+<td>&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x201C;textfile&#x201D;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x3002;&#x5B9A;&#x4E49;&#x5982;&#x4F55;&#x628A;&#x5206;&#x9694;&#x7B26;&#x5206;&#x9694;&#x7684;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x4E3A;&#x884C;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x90FD;&#x901A;&#x8FC7;<code>OPTIONS</code>&#x5B9A;&#x4E49;&#xFF0C;&#x4F1A;&#x88AB;&#x5F53;&#x4F5C;Hive serde&#x5C5E;&#x6027;&#x3002;</p>
+<h5 id="42&#x3001;&#x4E0E;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;hive-metastore&#x4EA4;&#x4E92;">4.2&#x3001;&#x4E0E;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;Hive metastore&#x4EA4;&#x4E92;</h5>
+<p>Spark SQL&#x7684;Hive&#x652F;&#x6301;&#x4E2D;&#x6709;&#x4E9B;&#x5F88;&#x91CD;&#x8981;&#x90E8;&#x5206;&#x662F;&#x4E0E;Hive metastore&#x7684;&#x4EA4;&#x4E92;&#xFF0C;&#x5B83;&#x4EEC;&#x4F7F;Spark SQL&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;Hive&#x8868;&#x7684;metadata&#x3002;&#x4ECE;Spark 1.4.0&#x5F00;&#x59CB;&#xFF0C;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF0C;Spark SQL&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;Hive metastores&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x4E0E;&#x548C;metastore&#x4EA4;&#x4E92;Hive&#x7684;&#x7248;&#x672C;&#x4E0D;&#x540C;&#xFF0C;Spark SQL&#x5185;&#x90E8;&#x5BF9;&#x7167;Hive 1.2.1&#x7F16;&#x8BD1;&#x5E76;&#x4E14;&#x628A;&#x8FD9;&#x4E9B;&#x7C7B;&#x7528;&#x4E8E;&#x5185;&#x90E8;&#x6267;&#x884C;&#xFF08;serdes&#x3001;UDFs&#x3001;UDAFs&#xFF0C;&#x7B49;&#xFF09;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x7528;&#x6765;&#x83B7;&#x53D6;metadata&#x7684;Hive&#x7248;&#x672C;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>spark.sql.hive.metastore.version</code></td>
+<td><code>1.2.1</code></td>
+<td>Hive metastore&#x7248;&#x672C;.&#x53EF;&#x9009;&#x7684;&#x662F; <code>0.12.0</code> t&#x5230; <code>1.2.1</code>&#x7684;&#x7248;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>spark.sql.hive.metastore.jars</code></td>
+<td><code>builtin</code></td>
+<td>&#x7528;&#x6765;&#x5B9E;&#x4F8B;&#x5316;HiveMetastoreClient&#x7684;jars&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x6709;3&#x4E2A;&#x9009;&#x9879;: 1&#xFF09; <code>builtin</code>         &#x4F7F;&#x7528;Hive 1.2.1, &#x5F53;<code>-Phive</code>&#x88AB;&#x5F00;&#x542F;&#x65F6;&#xFF0C;&#x5B83;&#x548C;Spark assembly &#x662F;&#x7ED1;&#x5B9A;&#x7684;. &#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x65F6;&#xFF0C;<code>spark.sql.hive.metastore.version</code> &#x5FC5;&#x987B;&#x662F; <code>1.2.1</code> &#x6216;&#x8005;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x3002;2&#xFF09; <code>maven</code>      &#x4F7F;&#x7528;&#x4ECE;Maven&#x4ED3;&#x5E93;&#x4E0B;&#x8F7D;&#x7684;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x7684;Hive jars&#x3002;&#x901A;&#x5E38;&#x4E0D;&#x5EFA;&#x8BAE;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x3002;3&#xFF09;JVM&#x6807;&#x51C6;&#x683C;&#x5F0F;&#x7684;classpath    &#x8FD9;&#x4E2A;classpath&#x5FC5;&#x987B;&#x5305;&#x542B;&#x6574;&#x4E2A;Hive&#x548C;Hive&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x5305;&#x62EC;&#x6B63;&#x786E;&#x7248;&#x672C;&#x7684;Hadoop&#x3002;&#x8FD9;&#x4E9B;jars&#x53EA;&#x9700;&#x8981;&#x5B58;&#x5728;&#x4E8E;driver&#x4E0A;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5728;yarn&#x96C6;&#x7FA4;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#xFF0C;&#x5FC5;&#x987B;&#x786E;&#x4FDD;&#x5B83;&#x4EEC;&#x6253;&#x5305;&#x5728;&#x5E94;&#x7528;&#x4E2D;&#x3002;</td>
+</tr>
+<tr>
+<td></td>
+<td><code>com.mysql.jdbc</code>&#xFF0C; <code>org.postgresql</code>&#xFF0C; <code>com.microsoft.sqlserver</code>&#xFF0C;  <code>oracle.jdbc</code></td>
+<td>&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;classloader&#x52A0;&#x8F7D;&#x7684;&#xFF0C;Spark SQL&#x548C;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x7684;Hive&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x7684;&#xFF0C;&#x7C7B;&#x7684;&#x524D;&#x7F00;&#x7684;&#x96C6;&#x5408;&#x3002;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x7684;&#x7C7B;&#x7684;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x662F;&#x4E0E;metastore&#x8FDB;&#x884C;&#x4EA4;&#x6D41;&#x7684;JDBC drivers&#x3002;&#x5176;&#x5B83;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x662F;&#x90A3;&#x4E9B;&#x548C;&#x5DF2;&#x7ECF;&#x5171;&#x4EAB;&#x7684;&#x7C7B;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x7684;&#x7C7B;&#x3002;&#x6BD4;&#x5982;&#xFF0C;log4j&#x4F7F;&#x7528;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7684;appenders&#x3002;</td>
+</tr>
+<tr>
+<td><code>spark.sql.hive.metastore.barrierPrefixes</code></td>
+<td><code>(empty)</code></td>
+<td>&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x660E;&#x786E;&#x5730;&#x4E3A;&#x548C;Spark SQL&#x901A;&#x4FE1;&#x7684;&#x6BCF;&#x4E2A;Hive&#x7248;&#x672C;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x7684;&#xFF0C;&#x7C7B;&#x7684;&#x524D;&#x7F00;&#x7684;&#x96C6;&#x5408;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4EE5;&#x540C;&#x4E00;&#x4E2A;&#x524D;&#x7F00;&#x58F0;&#x660E;&#x7684;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x7684;Hive UDFs&#xFF08;&#x6BD4;&#x5982;&#xFF0C;<code>org.apache.spark.*</code>&#xFF09;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="5&#x3001;&#x5176;&#x5B83;&#x6570;&#x636E;&#x5E93;&#x7684;jdbc">5&#x3001;&#x5176;&#x5B83;&#x6570;&#x636E;&#x5E93;&#x7684;JDBC</h4>
+<p>Spark SQL&#x4E5F;&#x5305;&#x62EC;&#x6709;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;JDBC&#x4ECE;&#x5176;&#x5B83;&#x6570;&#x636E;&#x5E93;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;&#x6570;&#x636E;&#x6E90;&#x3002;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x6BD4;&#x4F7F;&#x7528;<code>JdbcRDD</code>&#x66F4;&#x597D;&#x3002;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x662F;DataFrame&#xFF0C;&#x8FDB;&#x800C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5730;&#x88AB;Spark SQL&#x5904;&#x7406;&#x6216;&#x8005;&#x548C;&#x5176;&#x5B83;&#x6570;&#x636E;&#x6E90;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x3002;JDBC&#x6570;&#x636E;&#x6E90;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x6237;&#x63D0;&#x4F9B;ClassTag&#xFF0C;&#x4F7F;&#x7528;Java&#x6216;&#x8005;Python&#x64CD;&#x4F5C;&#x8D77;&#x6765;&#x66F4;&#x7B80;&#x5355;&#x3002;&#xFF08;&#x6CE8;&#x610F;JDBC&#x6570;&#x636E;&#x6E90;&#x548C;&#x5141;&#x8BB8;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x4F7F;&#x7528;Spark SQL&#x8FD0;&#x884C;&#x67E5;&#x8BE2;&#x7684;Spark SQL JDBC server&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;&#xFF09;</p>
+<p>&#x4F7F;&#x7528;jdbc&#x6570;&#x636E;&#x6E90;&#x9700;&#x8981;spark classpath&#x4E2D;&#x6709;&#x4E0E;&#x6570;&#x636E;&#x5BF9;&#x5E94;&#x7684;JDBC driver&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x8981;&#x901A;&#x8FC7;spark-shell&#x8FDE;&#x63A5;&#x5230;postgres&#xFF0C;&#x9700;&#x8981;&#x8FD0;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-bash">bin/spark-shell --driver-class-path postgresql-9.4.1207.jar --jars postgresql-9.4.1207.jar
+</code></pre>
+<p>&#x4F7F;&#x7528;JDBC&#x6570;&#x636E;&#x6E90;API&#x53EF;&#x4EE5;&#x628A;&#x8FDC;&#x7A0B;&#x7684;&#x6570;&#x636E;&#x5E93;&#x52A0;&#x8F7D;&#x4E3A;&#x4E00;&#x4E2A;DataFrame&#x6216;&#x8005;Spark SQL&#x4E34;&#x65F6;&#x89C6;&#x56FE;&#x3002;&#x5728;&#x6570;&#x636E;&#x6E90;&#x7684;&#x9009;&#x9879;&#x4E2D;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;JDBC&#x8FDE;&#x63A5;&#x5C5E;&#x6027;&#x3002;<code>user</code>&#x548C;<code>password</code>&#x4E00;&#x822C;&#x4F5C;&#x4E3A;&#x8FDE;&#x63A5;&#x5C5E;&#x6027;&#x6765;&#x63D0;&#x4F9B;&#xFF0C;&#x4EE5;&#x767B;&#x5F55;&#x5230;&#x6570;&#x636E;&#x6E90;&#x3002;&#x9664;&#x4E86;&#x8FDE;&#x63A5;&#x5C5E;&#x6027;&#xFF0C;Spark&#x8FD8;&#x652F;&#x6301;&#x5982;&#x4E0B;&#x7684;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x7684;&#x9009;&#x9879;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>JDBC URL&#x3002;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x6E90;&#x53EF;&#x80FD;&#x4E0D;&#x540C;&#x3002;&#x6BD4;&#x5982;, <code>jdbc:postgresql://localhost/test?user=fred&amp;password=secret</code></td>
+</tr>
+<tr>
+<td><code>dbtable</code></td>
+<td>&#x8868;&#x540D;&#x3002;&#x53EF;&#x4EE5;&#x662F;SQL&#x67E5;&#x8BE2;&#x7684;<code>FROM</code>&#x5B50;&#x53E5;&#x4E2D;&#x5408;&#x6CD5;&#x7684;&#x6240;&#x6709;&#x8BED;&#x53E5;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x9664;&#x4E86;&#x8868;&#x540D;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5B50;&#x67E5;&#x8BE2;&#x3002;</td>
+</tr>
+<tr>
+<td>`driver</td>
+<td>JDBC driver&#x7C7B;&#x540D;</td>
+</tr>
+<tr>
+<td><code>partitionColumn, lowerBound, upperBound</code></td>
+<td>&#x8FD9;&#x51E0;&#x4E2A;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x6216;&#x8005;&#x90FD;&#x4E0D;&#x6307;&#x5B9A;&#x3002;&#x6307;&#x5B9A;&#x65F6;&#xFF0C;<code>numPartitions</code>&#x4E5F;&#x5FC5;&#x987B;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x3002;&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x63CF;&#x8FF0;&#x4ECE;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x5E76;&#x884C;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x65F6;&#x5982;&#x4F55;&#x5BF9;&#x8868;&#x8FDB;&#x884C;&#x5206;&#x533A;&#x3002;<code>partitionColumn</code>&#x5FC5;&#x987B;&#x662F;&#x8868;&#x7684;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x5217;&#x3002;&#x6CE8;&#x610F;&#xFF0C;<code>lowerBound</code>&#x548C;<code>upperBound</code> &#x53EA;&#x662F;&#x7528;&#x6765;&#x51B3;&#x5B9A;&#x5206;&#x533A;&#x7684;&#x6B65;&#x957F;&#xFF0C;&#x4E0D;&#x662F;&#x8FC7;&#x6EE4;&#x8868;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#x3002;&#x6240;&#x6709;&#x7684;&#x8BB0;&#x5F55;&#x90FD;&#x4F1A;&#x88AB;&#x5206;&#x533A;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x53EA;&#x7528;&#x4E8E;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x3002;</td>
+</tr>
+<tr>
+<td><code>numPartitions</code></td>
+<td>&#x8868;&#x5E76;&#x884C;&#x8BFB;&#x5199;&#x4F7F;&#x7528;&#x7684;&#x6700;&#x5927;&#x7684;&#x5206;&#x533A;&#x6570;&#x91CF;&#x3002;&#x4E5F;&#x51B3;&#x5B9A;&#x4E86;&#x5E76;&#x884C;&#x7684;JDBC&#x8FDE;&#x63A5;&#x7684;&#x6700;&#x5927;&#x6570;&#x91CF;&#x3002;&#x5982;&#x679C;&#x8981;&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5206;&#x533A;&#x6570;&#x8D85;&#x8FC7;&#x8FD9;&#x4E2A;&#x9650;&#x5236;&#xFF0C;Spark&#x4F1A;&#x5728;&#x5199;&#x6570;&#x636E;&#x524D;&#x8C03;&#x7528; <code>coalesce(numPartitions)</code>&#x3002;</td>
+</tr>
+<tr>
+<td><code>fetchsize</code></td>
+<td>JDBC&#x6293;&#x53D6;&#x5927;&#x5C0F;&#xFF0C;&#x51B3;&#x5B9A;&#x4E00;&#x6B21;&#x6027;&#x83B7;&#x53D6;&#x7684;&#x8BB0;&#x5F55;&#x6761;&#x6570;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x6709;&#x52A9;&#x4E8E;&#x63D0;&#x5347;&#x6293;&#x53D6;&#x5927;&#x5C0F;&#x6BD4;&#x8F83;&#x5C0F;&#x7684;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;Oracel&#x662F;10&#xFF09;JDBC driver&#x7684;&#x6027;&#x80FD;&#x3002;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x8BFB;&#x3002;</td>
+</tr>
+<tr>
+<td><code>batchsize</code></td>
+<td>JDBC&#x6279;&#x6B21;&#x5927;&#x5C0F;&#xFF0C;&#x51B3;&#x5B9A;&#x4E00;&#x6B21;&#x63D2;&#x5165;&#x7684;&#x8BB0;&#x5F55;&#x6761;&#x6570;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x6709;&#x52A9;&#x4E8E;&#x63D0;&#x5347;JDBC drivers&#x7684;&#x6027;&#x80FD;&#x3002;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x5199;&#x3002;&#x9ED8;&#x8BA4;&#xFF0C;1000&#x3002;</td>
+</tr>
+<tr>
+<td><code>isolationLevel</code></td>
+<td>&#x4E8B;&#x7269;&#x72EC;&#x7ACB;&#x7EA7;&#x522B;&#xFF0C;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x3002;&#x53EF;&#x4EE5;&#x662F; <code>NONE</code>, <code>READ_COMMITTED</code>, <code>READ_UNCOMMITTED</code>, <code>REPEATABLE_READ</code>, &#x6216;&#x8005; <code>SERIALIZABLE</code>, &#x5BF9;&#x5E94;&#x4E8E; JDBC&#x7684;Connection&#x5BF9;&#x8C61;&#x7684;&#x6807;&#x51C6;&#x4E8B;&#x7269;&#x72EC;&#x7ACB;&#x6027;&#x7EA7;&#x522B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x662F;<code>READ_UNCOMMITTED</code>&#x3002;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x5199;&#x3002;&#x5177;&#x4F53;&#x67E5;&#x9605;<code>java.sql.Connection</code>&#x6587;&#x6863;&#x3002;</td>
+</tr>
+<tr>
+<td><code>truncate</code></td>
+<td>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;JDBC&#x5199;&#x76F8;&#x5173;&#x9009;&#x9879;&#x3002;&#x5F53;&#x5F00;&#x542F; <code>SaveMode.Overwrite</code> &#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x8BA9;Spark truncate&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x8868;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5148;drop&#x8868;&#x7136;&#x540E;&#x518D;create&#x8868;&#x3002;&#x8FD9;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#xFF0C;&#x5E76;&#x4E14;&#x9632;&#x6B62;&#x8868;&#x5143;&#x6570;&#x636E;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x7D22;&#x5F15;&#xFF09;&#x88AB;&#x5220;&#x9664;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x5F53;&#x65B0;&#x7684;&#x6570;&#x636E;schema&#x4E0D;&#x540C;&#x65F6;&#x3002;&#x9ED8;&#x8BA4;<code>false</code>&#xFF0C;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x5199;&#x3002;</td>
+</tr>
+<tr>
+<td><code>createTableOptions</code></td>
+<td>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;JDBC&#x5199;&#x76F8;&#x5173;&#x7684;&#x9009;&#x9879;&#x3002;&#x5982;&#x679C;&#x6307;&#x5B9A;&#xFF0C;&#x5F53;&#x521B;&#x5EFA;&#x8868;&#x65F6;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4E13;&#x7528;&#x7684;&#x8868;&#x6216;&#x5206;&#x533A;&#x9009;&#x9879; (&#x6BD4;&#x5982;, <code>CREATE TABLE t (name string) ENGINE=InnoDB.</code>)&#x3002;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x5199;&#x3002;</td>
+</tr>
+<tr>
+<td><code>createTableColumnTypes</code></td>
+<td>&#x521B;&#x5EFA;&#x8868;&#x65F6;&#xFF0C;&#x7528;&#x4E8E;&#x66FF;&#x6362;&#x9ED8;&#x8BA4;&#x5217;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5E93;&#x5217;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#x7684;&#x6307;&#x5B9A;&#x5E94;&#x8BE5;&#x4E0E;CREATE TABLE&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x76F8;&#x540C;&#xFF08;&#x6BD4;&#x5982;&#xFF1A; <code>&quot;name CHAR(64), comments VARCHAR(1024)&quot;</code>&#xFF09;&#x3002;&#x6307;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x5E94;&#x8BE5;&#x662F;&#x5408;&#x6CD5;&#x7684;Spark SQL&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x5199;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-scala"><span class="hljs-comment">// Note: JDBC loading and saving can be achieved via either the load/save or jdbc methods</span>
+<span class="hljs-comment">// Loading data from a JDBC source</span>
+<span class="hljs-keyword">val</span> jdbcDF = spark.read
+  .format(<span class="hljs-string">&quot;jdbc&quot;</span>)
+  .option(<span class="hljs-string">&quot;url&quot;</span>, <span class="hljs-string">&quot;jdbc:postgresql:dbserver&quot;</span>)
+  .option(<span class="hljs-string">&quot;dbtable&quot;</span>, <span class="hljs-string">&quot;schema.tablename&quot;</span>)
+  .option(<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;username&quot;</span>)
+  .option(<span class="hljs-string">&quot;password&quot;</span>, <span class="hljs-string">&quot;password&quot;</span>)
+  .load()
+
+<span class="hljs-keyword">val</span> connectionProperties = <span class="hljs-keyword">new</span> <span class="hljs-type">Properties</span>()
+connectionProperties.put(<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;username&quot;</span>)
+connectionProperties.put(<span class="hljs-string">&quot;password&quot;</span>, <span class="hljs-string">&quot;password&quot;</span>)
+<span class="hljs-keyword">val</span> jdbcDF2 = spark.read
+  .jdbc(<span class="hljs-string">&quot;jdbc:postgresql:dbserver&quot;</span>, <span class="hljs-string">&quot;schema.tablename&quot;</span>, connectionProperties)
+
+<span class="hljs-comment">// Saving data to a JDBC source</span>
+jdbcDF.write
+  .format(<span class="hljs-string">&quot;jdbc&quot;</span>)
+  .option(<span class="hljs-string">&quot;url&quot;</span>, <span class="hljs-string">&quot;jdbc:postgresql:dbserver&quot;</span>)
+  .option(<span class="hljs-string">&quot;dbtable&quot;</span>, <span class="hljs-string">&quot;schema.tablename&quot;</span>)
+  .option(<span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-string">&quot;username&quot;</span>)
+  .option(<span class="hljs-string">&quot;password&quot;</span>, <span class="hljs-string">&quot;password&quot;</span>)
+  .save()
+
+jdbcDF2.write
+  .jdbc(<span class="hljs-string">&quot;jdbc:postgresql:dbserver&quot;</span>, <span class="hljs-string">&quot;schema.tablename&quot;</span>, connectionProperties)
+
+<span class="hljs-comment">// Specifying create table column data types on write</span>
+jdbcDF.write
+  .option(<span class="hljs-string">&quot;createTableColumnTypes&quot;</span>, <span class="hljs-string">&quot;name CHAR(64), comments VARCHAR(1024)&quot;</span>)
+  .jdbc(<span class="hljs-string">&quot;jdbc:postgresql:dbserver&quot;</span>, <span class="hljs-string">&quot;schema.tablename&quot;</span>, connectionProperties)
+</code></pre>
+<h4 id="6&#x3001;&#x6545;&#x969C;&#x6392;&#x9664;">6&#x3001;&#x6545;&#x969C;&#x6392;&#x9664;</h4>
+<ul>
+<li>JDBC driver&#x5FC5;&#x987B;&#x5BF9;&#x5BA2;&#x6237;&#x7684;session&#x548C;&#x6240;&#x6709;executors&#x4E0A;&#x7684;&#x539F;&#x59CB;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#xFF08;primordial class loader&#xFF09;&#x53EF;&#x89C1;&#x3002;&#x56E0;&#x4E3A;&#x5728;&#x6253;&#x5F00;connection&#x65F6;&#xFF0C;Java&#x7684;DriverManager&#x4F1A;&#x8FDB;&#x884C;&#x5B89;&#x5168;&#x68C0;&#x67E5;&#xFF0C;&#x5B83;&#x4F1A;&#x5FFD;&#x7565;&#x5BF9;&#x539F;&#x59CB;&#x7C7B;&#x52A0;&#x8F7D;&#x5668;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#x6240;&#x6709;drivers&#x3002;&#x4E00;&#x79CD;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#xFF0C;&#x4FEE;&#x6539;&#x6240;&#x6709;&#x5DE5;&#x4F5C;&#x8005;&#x8282;&#x70B9;&#x4E0A;&#x7684;<code>compute_classpath.sh</code>&#x4EE5;&#x5305;&#x542B;driver JARs&#x3002;</li>
+<li>&#x67D0;&#x4E9B;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6BD4;&#x5982;H2&#xFF0C;&#x628A;&#x6240;&#x6709;&#x540D;&#x79F0;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;&#x3002;&#x5728;Spark SQL&#x4E2D;&#x8981;&#x4F7F;&#x7528;&#x5927;&#x5199;&#x6765;&#x6307;&#x5411;&#x8FD9;&#x4E9B;&#x540D;&#x79F0;&#x3002;</li>
+</ul>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x6E90;">&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x6E90;</h4>
+<p>&#x5BF9;&#x4E8E;Spark SQL&#x6CA1;&#x6709;&#x5185;&#x7F6E;&#x7684;&#x652F;&#x6301;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x6E90;&#x6765;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x652F;&#x6301;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page: Getting started">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="xing-neng-diao-shi.html" class="navigation navigation-next " aria-label="Next page: 性能调试">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据源","level":"1.4.2","depth":2,"next":{"title":"性能调试","level":"1.4.3","depth":2,"path":"spark-sql/xing-neng-diao-shi.md","ref":"spark-sql/xing-neng-diao-shi.md","articles":[]},"previous":{"title":"Getting started","level":"1.4.1","depth":2,"path":"spark-sql/getting-started.md","ref":"spark-sql/getting-started.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"spark-sql/shu-ju-yuan.md","mtime":"2020-07-07T09:19:57.252Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

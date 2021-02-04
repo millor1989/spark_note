@@ -1,0 +1,1439 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>回归 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="xian-xing-fang-fa.html" />
+    
+    
+    <link rel="prev" href="fen-lei.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Spark总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../kuai-su-ru-men.html">
+            
+                <a href="../../kuai-su-ru-men.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../sparkbian-cheng-dao-yin.html">
+            
+                <a href="../../sparkbian-cheng-dao-yin.html">
+            
+                    
+                    Spark编程导引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../sparkbian-cheng-dao-yin/rdds.html">
+            
+                <a href="../../sparkbian-cheng-dao-yin/rdds.html">
+            
+                    
+                    RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                <a href="../../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                    
+                    从Java/Scala启动Spark jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../spark-sql.html">
+            
+                <a href="../../spark-sql.html">
+            
+                    
+                    Spark SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../spark-sql/getting-started.html">
+            
+                <a href="../../spark-sql/getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../spark-sql/shu-ju-yuan.html">
+            
+                <a href="../../spark-sql/shu-ju-yuan.html">
+            
+                    
+                    数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../spark-sql/xing-neng-diao-shi.html">
+            
+                <a href="../../spark-sql/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                <a href="../../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                    
+                    分布式SQL引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                <a href="../../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                    
+                    与Apache Hive的兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../spark-sql/shu-ju-lei-xing.html">
+            
+                <a href="../../spark-sql/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../spark-sql/built-in-functions.html">
+            
+                <a href="../../spark-sql/built-in-functions.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../spark-streaming.html">
+            
+                <a href="../../spark-streaming.html">
+            
+                    
+                    Spark Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../spark-streaming/ji-ben-gai-nian.html">
+            
+                <a href="../../spark-streaming/ji-ben-gai-nian.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../spark-streaming/xing-neng-diao-shi.html">
+            
+                <a href="../../spark-streaming/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../spark-streaming/rong-cuo.html">
+            
+                <a href="../../spark-streaming/rong-cuo.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../structured-streaming.html">
+            
+                <a href="../../structured-streaming.html">
+            
+                    
+                    Structured Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                <a href="../../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                    
+                    使用Datasets和DataFrames的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                <a href="../../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                    
+                    Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../bu-shu.html">
+            
+                <a href="../../bu-shu.html">
+            
+                    
+                    部署和运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../bu-shu/zu-jian-ff08-components.html">
+            
+                <a href="../../bu-shu/zu-jian-ff08-components.html">
+            
+                    
+                    组件（Components）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                <a href="../../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                    
+                    集群管理器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../bu-shu/ti-jiao-ying-yong.html">
+            
+                <a href="../../bu-shu/ti-jiao-ying-yong.html">
+            
+                    
+                    提交应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../bu-shu/jian-kong.html">
+            
+                <a href="../../bu-shu/jian-kong.html">
+            
+                    
+                    监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../zuo-ye-diao-du.html">
+            
+                <a href="../../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在YARN上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../pei-zhi.html">
+            
+                <a href="../../pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../pei-zhi/sparkshu-xing.html">
+            
+                <a href="../../pei-zhi/sparkshu-xing.html">
+            
+                    
+                    Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                <a href="../../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                    
+                    动态加载Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                <a href="../../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                    
+                    查看Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../diao-shi.html">
+            
+                <a href="../../diao-shi.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../extff1a-xing-neng-you-hua.html">
+            
+                <a href="../../extff1a-xing-neng-you-hua.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                <a href="../../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                    
+                    基础优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                <a href="../../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                    
+                    高级优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在Yarn上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../zuo-ye-diao-du.html">
+            
+                <a href="../../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../an-quan.html">
+            
+                <a href="../../an-quan.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../ying-jian-pei-zhi.html">
+            
+                <a href="../../ying-jian-pei-zhi.html">
+            
+                    
+                    硬件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../mllib.html">
+            
+                <a href="../../mllib.html">
+            
+                    
+                    MLlib
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../shu-ju-lei-xing.html">
+            
+                <a href="../shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../ji-chu-tong-ji.html">
+            
+                <a href="../ji-chu-tong-ji.html">
+            
+                    
+                    基础统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../pipelines.html">
+            
+                <a href="../pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                    
+                    特征的提取、转换和筛选
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                    
+                    Feature Extractors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                    
+                    Feature Transformers-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                    
+                    Feature Transformers-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                    
+                    Feature Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                    
+                    Locality Sensitive Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../fen-lei-he-hui-gui.html">
+            
+                <a href="../fen-lei-he-hui-gui.html">
+            
+                    
+                    分类和回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="fen-lei.html">
+            
+                <a href="fen-lei.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15.5.2" data-path="hui-gui.html">
+            
+                <a href="hui-gui.html">
+            
+                    
+                    回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="xian-xing-fang-fa.html">
+            
+                <a href="xian-xing-fang-fa.html">
+            
+                    
+                    线性方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="jue-ce-shu.html">
+            
+                <a href="jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="shu-tuan-ti.html">
+            
+                <a href="shu-tuan-ti.html">
+            
+                    
+                    树团体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../ju-lei.html">
+            
+                <a href="../ju-lei.html">
+            
+                    
+                    聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../xie-tong-guo-lv.html">
+            
+                <a href="../xie-tong-guo-lv.html">
+            
+                    
+                    协同过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../questions.html">
+            
+                <a href="../../questions.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../questions/datasetdataframerdd.html">
+            
+                <a href="../../questions/datasetdataframerdd.html">
+            
+                    
+                    DataFrame-Dataset-RDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../questions/spark-checkpoint.html">
+            
+                <a href="../../questions/spark-checkpoint.html">
+            
+                    
+                    checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../../questions/shu-ju-ben-di-xing.html">
+            
+                <a href="../../questions/shu-ju-ben-di-xing.html">
+            
+                    
+                    某个task很慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../../questions/sparkhan-shu.html">
+            
+                <a href="../../questions/sparkhan-shu.html">
+            
+                    
+                    Spark函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../../questions/hadoop-1he-hadoop2.html">
+            
+                <a href="../../questions/hadoop-1he-hadoop2.html">
+            
+                    
+                    Hadoop 1和Hadoop2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../../questions/broadcast-join.html">
+            
+                <a href="../../questions/broadcast-join.html">
+            
+                    
+                    Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >回归</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x56DE;&#x5F52;&#xFF08;regression&#xFF09;">&#x56DE;&#x5F52;&#xFF08;Regression&#xFF09;</h3>
+<h4 id="1&#x3001;&#x7EBF;&#x6027;&#x56DE;&#x5F52;">1&#x3001;&#x7EBF;&#x6027;&#x56DE;&#x5F52;</h4>
+<p>&#x4F7F;&#x7528;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#xFF08;linear regression&#xFF09;&#x6A21;&#x578B;&#x548C;&#x6A21;&#x578B;&#x6458;&#x8981;&#x7684;&#x63A5;&#x53E3;&#x4E0E;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7C7B;&#x4F3C;&#x3002;</p>
+<blockquote>
+<p>&#x5F53;&#x901A;&#x8FC7;&#x201C;l-bfgs&#x201D; solver&#x5BF9;&#x5177;&#x6709;&#x5E38;&#x91CF;&#x975E;&#x96F6;&#x5217;&#x7684;&#x6570;&#x636E;&#x96C6;&#x62DF;&#x5408;&#x6CA1;&#x6709;&#x622A;&#x8DDD;&#x7684;LinearRegressionModel&#x65F6;&#xFF0C;Spark MLlib&#x4F1A;&#x4E3A;&#x5E38;&#x91CF;&#x975E;&#x96F6;&#x5217;&#x8F93;&#x51FA;0&#x7CFB;&#x6570;&#x3002;&#x8FD9;&#x79CD;&#x884C;&#x4E3A;&#x4E0E;Rglmnet&#x76F8;&#x540C;&#xFF0C;&#x5F53;&#x65F6;&#x4E0E;LIBSVM&#x4E0D;&#x540C;&#x3002;</p>
+</blockquote>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p>&#x8BAD;&#x7EC3;&#x4E00;&#x4E2A;elastic net &#x6B63;&#x5219;&#x5316;&#x7684;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;&#x6A21;&#x578B;&#x6458;&#x8981;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.regression.<span class="hljs-type">LinearRegression</span>
+
+<span class="hljs-comment">// Load training data</span>
+<span class="hljs-keyword">val</span> training = spark.read.format(<span class="hljs-string">&quot;libsvm&quot;</span>)
+  .load(<span class="hljs-string">&quot;data/mllib/sample_linear_regression_data.txt&quot;</span>)
+
+<span class="hljs-keyword">val</span> lr = <span class="hljs-keyword">new</span> <span class="hljs-type">LinearRegression</span>()
+  .setMaxIter(<span class="hljs-number">10</span>)
+  .setRegParam(<span class="hljs-number">0.3</span>)
+  .setElasticNetParam(<span class="hljs-number">0.8</span>)
+
+<span class="hljs-comment">// Fit the model</span>
+<span class="hljs-keyword">val</span> lrModel = lr.fit(training)
+
+<span class="hljs-comment">// Print the coefficients and intercept for linear regression</span>
+println(<span class="hljs-string">s&quot;Coefficients: <span class="hljs-subst">${lrModel.coefficients}</span> Intercept: <span class="hljs-subst">${lrModel.intercept}</span>&quot;</span>)
+
+<span class="hljs-comment">// Summarize the model over the training set and print out some metrics</span>
+<span class="hljs-keyword">val</span> trainingSummary = lrModel.summary
+println(<span class="hljs-string">s&quot;numIterations: <span class="hljs-subst">${trainingSummary.totalIterations}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;objectiveHistory: [<span class="hljs-subst">${trainingSummary.objectiveHistory.mkString(&quot;,&quot;)}</span>]&quot;</span>)
+trainingSummary.residuals.show()
+println(<span class="hljs-string">s&quot;RMSE: <span class="hljs-subst">${trainingSummary.rootMeanSquaredError}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;r2: <span class="hljs-subst">${trainingSummary.r2}</span>&quot;</span>)
+</code></pre>
+<h4 id="2&#x3001;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x56DE;&#x5F52;">2&#x3001;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x56DE;&#x5F52;</h4>
+<p>&#x4E0E;&#x8F93;&#x51FA;&#x88AB;&#x5047;&#x8BBE;&#x4E3A;&#x7B26;&#x5408;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#xFF08;Gaussian distribution&#xFF09;&#x7684;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x76F8;&#x53CD;&#xFF0C;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#xFF08;Generalized linear models&#xFF0C;GLMs&#xFF09;&#x662F;&#x54CD;&#x5E94;&#x53D8;&#x91CF;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Y</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">Y_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x7B26;&#x5408;&#x67D0;&#x79CD;&#x6307;&#x6570;&#x5206;&#x5E03;&#x7684;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x3002;Spark&#x7684;<code>GeneralizedLinearRegression</code> &#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x79CD;GLMs&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x9884;&#x6D4B;&#x95EE;&#x9898;&#xFF0C;&#x5305;&#x62EC;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#xFF0C;Possion&#x56DE;&#x5F52;&#xFF0C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#xFF0C;&#x548C;&#x5176;&#x5B83;&#x3002;&#x76EE;&#x524D;&#xFF0C;&#x5728;<code>spark.ml</code>&#x4E2D;&#x53EA;&#x652F;&#x6301;&#x67D0;&#x4E9B;&#x6307;&#x6570;&#x5206;&#x5E03;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;Spark&#x76EE;&#x524D;&#x901A;&#x8FC7;<code>GeneralizedLinearRegression</code>&#x63A5;&#x53E3;&#x652F;&#x6301;&#x6700;&#x591A;4096&#x4E2A;&#x7279;&#x5F81;&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x8FD9;&#x4E2A;&#x9650;&#x5236;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;&#x5BF9;&#x4E8E;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x548C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#xFF0C;&#x4F7F;&#x7528;<code>LinearRegression</code> &#x548C;<code>LogisticRegression</code> estimators &#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x8BAD;&#x7EC3;&#x5177;&#x6709;&#x66F4;&#x591A;&#x7279;&#x5F81;&#x7684;&#x6A21;&#x578B;&#x3002;</p>
+<p>GLMs&#x9700;&#x8981;&#x90A3;&#x4E9B;&#x53EF;&#x4EE5;&#x5199;&#x4E3A;&#x201C;&#x5178;&#x578B;&#x201D;&#xFF08;canonical&#xFF09;&#x6216;&#x8005;&#x201C;&#x81EA;&#x7136;&#x201D;&#xFF08;natural&#xFF09;&#x5F62;&#x5F0F;&#x7684;&#x6307;&#x6570;&#x5206;&#x5E03;&#xFF0C;&#x5373;&#x81EA;&#x7136;&#x6307;&#x6570;&#x5206;&#x5E03;&#x3002;&#x81EA;&#x7136;&#x6307;&#x6570;&#x5206;&#x5E03;&#x7684;&#x5F62;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>f</mi><mi>Y</mi></msub><mo>(</mo><mi>y</mi><mi mathvariant="normal">&#x2223;</mi><mi>&#x3B8;</mi><mo separator="true">,</mo><mi>&#x3C4;</mi><mo>)</mo><mo>=</mo><mi>h</mi><mo>(</mo><mi>y</mi><mo separator="true">,</mo><mi>&#x3C4;</mi><mo>)</mo><mi>exp</mi><mrow><mrow><mo fence="true">(</mo><mfrac><mrow><mi>&#x3B8;</mi><mo>&#x22C5;</mo><mi>y</mi><mo>&#x2212;</mo><mi>A</mi><mo>(</mo><mi>&#x3B8;</mi><mo>)</mo></mrow><mrow><mi>d</mi><mo>(</mo><mi>&#x3C4;</mi><mo>)</mo></mrow></mfrac><mo fence="true">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">f_Y(y|\theta, \tau) = h(y, \tau)\exp{\left( \frac{\theta \cdot y - A(\theta)}{d(\tau)} \right)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.15em;"></span><span class="strut bottom" style="height:1.80002em;vertical-align:-0.65002em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.22222em;">Y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord mathrm">&#x2223;</span><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.1132em;">&#x3C4;</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">h</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.1132em;">&#x3C4;</span><span class="mclose">)</span><span class="mop">exp</span><span class="mord textstyle uncramped"><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.34500000000000003em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">d</span><span class="mopen mtight">(</span><span class="mord mathit mtight" style="margin-right:0.1132em;">&#x3C4;</span><span class="mclose mtight">)</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.485em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">&#x3B8;</span><span class="mbin mtight">&#x22C5;</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span><span class="mbin mtight">&#x2212;</span><span class="mord mathit mtight">A</span><span class="mopen mtight">(</span><span class="mord mathit mtight" style="margin-right:0.02778em;">&#x3B8;</span><span class="mclose mtight">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></span></p>
+<p>&#x5176;&#x4E2D;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B8;</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span></span></span></span>&#x662F;interest&#x53C2;&#x6570;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3C4;</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.1132em;">&#x3C4;</span></span></span></span>&#x662F;dispersion&#x53C2;&#x6570;&#x3002;&#x5728;GLM&#x4E2D;&#x54CD;&#x5E94;&#x53D8;&#x91CF;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Y</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">Y_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x670D;&#x4ECE;&#x81EA;&#x7136;&#x6307;&#x6570;&#x5206;&#x5E03;&#xFF1A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>Y</mi><mi>i</mi></msub><mo>&#x223C;</mo><mi>f</mi><mrow><mo fence="true">(</mo><mo>&#x22C5;</mo><mi mathvariant="normal">&#x2223;</mi><msub><mi>&#x3B8;</mi><mi>i</mi></msub><mo separator="true">,</mo><mi>&#x3C4;</mi><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">Y_i \sim f\left(\cdot|\theta_i, \tau \right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.22222em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x223C;</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord">&#x22C5;</span><span class="mord mathrm">&#x2223;</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.1132em;">&#x3C4;</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span></span></span></span></p>
+<p>Spark&#x7684;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x63A5;&#x53E3;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x7528;&#x4E8E;&#x8BCA;&#x65AD;GLM&#x6A21;&#x578B;&#x62DF;&#x5408;&#x7684;&#x6458;&#x8981;&#x7EDF;&#x8BA1;&#xFF0C;&#x5305;&#x62EC;residuals&#xFF0C;p-values&#xFF0C;deviances&#xFF0C;&#x548C;Akaike information criterion&#xFF0C;&#x7B49;&#x3002;</p>
+<h5 id="21&#x3001;&#x53EF;&#x7528;&#x7684;&#x5206;&#x5E03;">2.1&#x3001;&#x53EF;&#x7528;&#x7684;&#x5206;&#x5E03;</h5>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Response Type</th>
+<th>Supported Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gaussian</td>
+<td>Continuous</td>
+<td>Identity*, Log, Inverse</td>
+</tr>
+<tr>
+<td>Binomial</td>
+<td>Binary</td>
+<td>Logit*, Probit, CLogLog</td>
+</tr>
+<tr>
+<td>Poisson</td>
+<td>Count</td>
+<td>Log*, Identity, Sqrt</td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>Continuous</td>
+<td>Inverse*, Idenity, Log</td>
+</tr>
+<tr>
+<td>Tweedie</td>
+<td>Zero-inflated continuous</td>
+<td>Power link function</td>
+</tr>
+</tbody>
+</table>
+<p>* &#x8868;&#x793A;Canonical Link</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p>&#x4F7F;&#x7528;Gaussian&#x54CD;&#x5E94;&#x548C;identity link&#x51FD;&#x6570;&#x8BAD;&#x7EC3;&#x4E00;&#x4E2A;GLM&#xFF0C;&#x5E76;&#x63D0;&#x53D6;&#x6A21;&#x578B;&#x6458;&#x8981;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.regression.<span class="hljs-type">GeneralizedLinearRegression</span>
+
+<span class="hljs-comment">// Load training data</span>
+<span class="hljs-keyword">val</span> dataset = spark.read.format(<span class="hljs-string">&quot;libsvm&quot;</span>)
+  .load(<span class="hljs-string">&quot;data/mllib/sample_linear_regression_data.txt&quot;</span>)
+
+<span class="hljs-keyword">val</span> glr = <span class="hljs-keyword">new</span> <span class="hljs-type">GeneralizedLinearRegression</span>()
+  .setFamily(<span class="hljs-string">&quot;gaussian&quot;</span>)
+  .setLink(<span class="hljs-string">&quot;identity&quot;</span>)
+  .setMaxIter(<span class="hljs-number">10</span>)
+  .setRegParam(<span class="hljs-number">0.3</span>)
+
+<span class="hljs-comment">// Fit the model</span>
+<span class="hljs-keyword">val</span> model = glr.fit(dataset)
+
+<span class="hljs-comment">// Print the coefficients and intercept for generalized linear regression model</span>
+println(<span class="hljs-string">s&quot;Coefficients: <span class="hljs-subst">${model.coefficients}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;Intercept: <span class="hljs-subst">${model.intercept}</span>&quot;</span>)
+
+<span class="hljs-comment">// Summarize the model over the training set and print out some metrics</span>
+<span class="hljs-keyword">val</span> summary = model.summary
+println(<span class="hljs-string">s&quot;Coefficient Standard Errors: <span class="hljs-subst">${summary.coefficientStandardErrors.mkString(&quot;,&quot;)}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;T Values: <span class="hljs-subst">${summary.tValues.mkString(&quot;,&quot;)}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;P Values: <span class="hljs-subst">${summary.pValues.mkString(&quot;,&quot;)}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;Dispersion: <span class="hljs-subst">${summary.dispersion}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;Null Deviance: <span class="hljs-subst">${summary.nullDeviance}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;Residual Degree Of Freedom Null: <span class="hljs-subst">${summary.residualDegreeOfFreedomNull}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;Deviance: <span class="hljs-subst">${summary.deviance}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;Residual Degree Of Freedom: <span class="hljs-subst">${summary.residualDegreeOfFreedom}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;AIC: <span class="hljs-subst">${summary.aic}</span>&quot;</span>)
+println(<span class="hljs-string">&quot;Deviance Residuals: &quot;</span>)
+summary.residuals().show()
+</code></pre>
+<h4 id="3&#x3001;&#x51B3;&#x7B56;&#x6811;&#x56DE;&#x5F52;">3&#x3001;&#x51B3;&#x7B56;&#x6811;&#x56DE;&#x5F52;</h4>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.<span class="hljs-type">Pipeline</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.evaluation.<span class="hljs-type">RegressionEvaluator</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">VectorIndexer</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.regression.<span class="hljs-type">DecisionTreeRegressionModel</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.regression.<span class="hljs-type">DecisionTreeRegressor</span>
+
+<span class="hljs-comment">// Load the data stored in LIBSVM format as a DataFrame.</span>
+<span class="hljs-keyword">val</span> data = spark.read.format(<span class="hljs-string">&quot;libsvm&quot;</span>).load(<span class="hljs-string">&quot;data/mllib/sample_libsvm_data.txt&quot;</span>)
+
+<span class="hljs-comment">// Automatically identify categorical features, and index them.</span>
+<span class="hljs-comment">// Here, we treat features with &gt; 4 distinct values as continuous.</span>
+<span class="hljs-keyword">val</span> featureIndexer = <span class="hljs-keyword">new</span> <span class="hljs-type">VectorIndexer</span>()
+  .setInputCol(<span class="hljs-string">&quot;features&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;indexedFeatures&quot;</span>)
+  .setMaxCategories(<span class="hljs-number">4</span>)
+  .fit(data)
+
+<span class="hljs-comment">// Split the data into training and test sets (30% held out for testing).</span>
+<span class="hljs-keyword">val</span> <span class="hljs-type">Array</span>(trainingData, testData) = data.randomSplit(<span class="hljs-type">Array</span>(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.3</span>))
+
+<span class="hljs-comment">// Train a DecisionTree model.</span>
+<span class="hljs-keyword">val</span> dt = <span class="hljs-keyword">new</span> <span class="hljs-type">DecisionTreeRegressor</span>()
+  .setLabelCol(<span class="hljs-string">&quot;label&quot;</span>)
+  .setFeaturesCol(<span class="hljs-string">&quot;indexedFeatures&quot;</span>)
+
+<span class="hljs-comment">// Chain indexer and tree in a Pipeline.</span>
+<span class="hljs-keyword">val</span> pipeline = <span class="hljs-keyword">new</span> <span class="hljs-type">Pipeline</span>()
+  .setStages(<span class="hljs-type">Array</span>(featureIndexer, dt))
+
+<span class="hljs-comment">// Train model. This also runs the indexer.</span>
+<span class="hljs-keyword">val</span> model = pipeline.fit(trainingData)
+
+<span class="hljs-comment">// Make predictions.</span>
+<span class="hljs-keyword">val</span> predictions = model.transform(testData)
+
+<span class="hljs-comment">// Select example rows to display.</span>
+predictions.select(<span class="hljs-string">&quot;prediction&quot;</span>, <span class="hljs-string">&quot;label&quot;</span>, <span class="hljs-string">&quot;features&quot;</span>).show(<span class="hljs-number">5</span>)
+
+<span class="hljs-comment">// Select (prediction, true label) and compute test error.</span>
+<span class="hljs-keyword">val</span> evaluator = <span class="hljs-keyword">new</span> <span class="hljs-type">RegressionEvaluator</span>()
+  .setLabelCol(<span class="hljs-string">&quot;label&quot;</span>)
+  .setPredictionCol(<span class="hljs-string">&quot;prediction&quot;</span>)
+  .setMetricName(<span class="hljs-string">&quot;rmse&quot;</span>)
+<span class="hljs-keyword">val</span> rmse = evaluator.evaluate(predictions)
+println(<span class="hljs-string">&quot;Root Mean Squared Error (RMSE) on test data = &quot;</span> + rmse)
+
+<span class="hljs-keyword">val</span> treeModel = model.stages(<span class="hljs-number">1</span>).asInstanceOf[<span class="hljs-type">DecisionTreeRegressionModel</span>]
+println(<span class="hljs-string">&quot;Learned regression tree model:\n&quot;</span> + treeModel.toDebugString)
+</code></pre>
+<h4 id="4&#x3001;&#x968F;&#x673A;&#x68EE;&#x6797;&#x56DE;&#x5F52;">4&#x3001;&#x968F;&#x673A;&#x68EE;&#x6797;&#x56DE;&#x5F52;</h4>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.<span class="hljs-type">Pipeline</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.evaluation.<span class="hljs-type">RegressionEvaluator</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">VectorIndexer</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.regression.{<span class="hljs-type">RandomForestRegressionModel</span>, <span class="hljs-type">RandomForestRegressor</span>}
+
+<span class="hljs-comment">// Load and parse the data file, converting it to a DataFrame.</span>
+<span class="hljs-keyword">val</span> data = spark.read.format(<span class="hljs-string">&quot;libsvm&quot;</span>).load(<span class="hljs-string">&quot;data/mllib/sample_libsvm_data.txt&quot;</span>)
+
+<span class="hljs-comment">// Automatically identify categorical features, and index them.</span>
+<span class="hljs-comment">// Set maxCategories so features with &gt; 4 distinct values are treated as continuous.</span>
+<span class="hljs-keyword">val</span> featureIndexer = <span class="hljs-keyword">new</span> <span class="hljs-type">VectorIndexer</span>()
+  .setInputCol(<span class="hljs-string">&quot;features&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;indexedFeatures&quot;</span>)
+  .setMaxCategories(<span class="hljs-number">4</span>)
+  .fit(data)
+
+<span class="hljs-comment">// Split the data into training and test sets (30% held out for testing).</span>
+<span class="hljs-keyword">val</span> <span class="hljs-type">Array</span>(trainingData, testData) = data.randomSplit(<span class="hljs-type">Array</span>(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.3</span>))
+
+<span class="hljs-comment">// Train a RandomForest model.</span>
+<span class="hljs-keyword">val</span> rf = <span class="hljs-keyword">new</span> <span class="hljs-type">RandomForestRegressor</span>()
+  .setLabelCol(<span class="hljs-string">&quot;label&quot;</span>)
+  .setFeaturesCol(<span class="hljs-string">&quot;indexedFeatures&quot;</span>)
+
+<span class="hljs-comment">// Chain indexer and forest in a Pipeline.</span>
+<span class="hljs-keyword">val</span> pipeline = <span class="hljs-keyword">new</span> <span class="hljs-type">Pipeline</span>()
+  .setStages(<span class="hljs-type">Array</span>(featureIndexer, rf))
+
+<span class="hljs-comment">// Train model. This also runs the indexer.</span>
+<span class="hljs-keyword">val</span> model = pipeline.fit(trainingData)
+
+<span class="hljs-comment">// Make predictions.</span>
+<span class="hljs-keyword">val</span> predictions = model.transform(testData)
+
+<span class="hljs-comment">// Select example rows to display.</span>
+predictions.select(<span class="hljs-string">&quot;prediction&quot;</span>, <span class="hljs-string">&quot;label&quot;</span>, <span class="hljs-string">&quot;features&quot;</span>).show(<span class="hljs-number">5</span>)
+
+<span class="hljs-comment">// Select (prediction, true label) and compute test error.</span>
+<span class="hljs-keyword">val</span> evaluator = <span class="hljs-keyword">new</span> <span class="hljs-type">RegressionEvaluator</span>()
+  .setLabelCol(<span class="hljs-string">&quot;label&quot;</span>)
+  .setPredictionCol(<span class="hljs-string">&quot;prediction&quot;</span>)
+  .setMetricName(<span class="hljs-string">&quot;rmse&quot;</span>)
+<span class="hljs-keyword">val</span> rmse = evaluator.evaluate(predictions)
+println(<span class="hljs-string">&quot;Root Mean Squared Error (RMSE) on test data = &quot;</span> + rmse)
+
+<span class="hljs-keyword">val</span> rfModel = model.stages(<span class="hljs-number">1</span>).asInstanceOf[<span class="hljs-type">RandomForestRegressionModel</span>]
+println(<span class="hljs-string">&quot;Learned regression forest model:\n&quot;</span> + rfModel.toDebugString)
+</code></pre>
+<h4 id="5&#x3001;&#x68AF;&#x5EA6;&#x63D0;&#x5347;&#x6811;&#xFF08;gbt&#xFF0C;gradient-boosted-tree&#xFF09;&#x56DE;&#x5F52;">5&#x3001;&#x68AF;&#x5EA6;&#x63D0;&#x5347;&#x6811;&#xFF08;GBT&#xFF0C;Gradient-boosted tree&#xFF09;&#x56DE;&#x5F52;</h4>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x672C;&#x4F8B;&#x4E2D;<code>GBTRegressor</code>&#x5B9E;&#x9645;&#x4E0A;&#x53EA;&#x8FDB;&#x884C;&#x4E86;&#x4E00;&#x6B21;&#x8FED;&#x4EE3;&#xFF0C;&#x5B9E;&#x8DF5;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x9700;&#x8981;&#x66F4;&#x591A;&#x6B21;&#x6570;&#x8FED;&#x4EE3;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.<span class="hljs-type">Pipeline</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.evaluation.<span class="hljs-type">RegressionEvaluator</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">VectorIndexer</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.regression.{<span class="hljs-type">GBTRegressionModel</span>, <span class="hljs-type">GBTRegressor</span>}
+
+<span class="hljs-comment">// Load and parse the data file, converting it to a DataFrame.</span>
+<span class="hljs-keyword">val</span> data = spark.read.format(<span class="hljs-string">&quot;libsvm&quot;</span>).load(<span class="hljs-string">&quot;data/mllib/sample_libsvm_data.txt&quot;</span>)
+
+<span class="hljs-comment">// Automatically identify categorical features, and index them.</span>
+<span class="hljs-comment">// Set maxCategories so features with &gt; 4 distinct values are treated as continuous.</span>
+<span class="hljs-keyword">val</span> featureIndexer = <span class="hljs-keyword">new</span> <span class="hljs-type">VectorIndexer</span>()
+  .setInputCol(<span class="hljs-string">&quot;features&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;indexedFeatures&quot;</span>)
+  .setMaxCategories(<span class="hljs-number">4</span>)
+  .fit(data)
+
+<span class="hljs-comment">// Split the data into training and test sets (30% held out for testing).</span>
+<span class="hljs-keyword">val</span> <span class="hljs-type">Array</span>(trainingData, testData) = data.randomSplit(<span class="hljs-type">Array</span>(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.3</span>))
+
+<span class="hljs-comment">// Train a GBT model.</span>
+<span class="hljs-keyword">val</span> gbt = <span class="hljs-keyword">new</span> <span class="hljs-type">GBTRegressor</span>()
+  .setLabelCol(<span class="hljs-string">&quot;label&quot;</span>)
+  .setFeaturesCol(<span class="hljs-string">&quot;indexedFeatures&quot;</span>)
+  .setMaxIter(<span class="hljs-number">10</span>)
+
+<span class="hljs-comment">// Chain indexer and GBT in a Pipeline.</span>
+<span class="hljs-keyword">val</span> pipeline = <span class="hljs-keyword">new</span> <span class="hljs-type">Pipeline</span>()
+  .setStages(<span class="hljs-type">Array</span>(featureIndexer, gbt))
+
+<span class="hljs-comment">// Train model. This also runs the indexer.</span>
+<span class="hljs-keyword">val</span> model = pipeline.fit(trainingData)
+
+<span class="hljs-comment">// Make predictions.</span>
+<span class="hljs-keyword">val</span> predictions = model.transform(testData)
+
+<span class="hljs-comment">// Select example rows to display.</span>
+predictions.select(<span class="hljs-string">&quot;prediction&quot;</span>, <span class="hljs-string">&quot;label&quot;</span>, <span class="hljs-string">&quot;features&quot;</span>).show(<span class="hljs-number">5</span>)
+
+<span class="hljs-comment">// Select (prediction, true label) and compute test error.</span>
+<span class="hljs-keyword">val</span> evaluator = <span class="hljs-keyword">new</span> <span class="hljs-type">RegressionEvaluator</span>()
+  .setLabelCol(<span class="hljs-string">&quot;label&quot;</span>)
+  .setPredictionCol(<span class="hljs-string">&quot;prediction&quot;</span>)
+  .setMetricName(<span class="hljs-string">&quot;rmse&quot;</span>)
+<span class="hljs-keyword">val</span> rmse = evaluator.evaluate(predictions)
+println(<span class="hljs-string">&quot;Root Mean Squared Error (RMSE) on test data = &quot;</span> + rmse)
+
+<span class="hljs-keyword">val</span> gbtModel = model.stages(<span class="hljs-number">1</span>).asInstanceOf[<span class="hljs-type">GBTRegressionModel</span>]
+println(<span class="hljs-string">&quot;Learned regression GBT model:\n&quot;</span> + gbtModel.toDebugString)
+</code></pre>
+<h4 id="6&#x3001;&#x751F;&#x5B58;&#x56DE;&#x5F52;&#xFF08;survival-regression&#xFF09;">6&#x3001;&#x751F;&#x5B58;&#x56DE;&#x5F52;&#xFF08;Survival regression&#xFF09;</h4>
+<p>&#x5728;<code>spark.ml</code>&#x4E2D;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x52A0;&#x901F;&#x6545;&#x969C;&#xFF08;Accelerated failure time&#xFF0C; AFT&#xFF09;&#x6A21;&#x578B;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x4FEE;&#x6B63;&#x8FC7;&#x6570;&#x636E;&#xFF08;censored data&#xFF09;&#x7684;&#x53C2;&#x6570;&#x7684;&#x751F;&#x5B58;&#x56DE;&#x5F52;&#xFF08;parametric survival regression&#xFF09;&#x6A21;&#x578B;&#x3002;&#x5B83;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#x7684;&#x65E5;&#x5FD7;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x5E38;&#x5B83;&#x88AB;&#x79F0;&#x4E3A;&#x751F;&#x5B58;&#x5206;&#x6790;&#x7684;&#x65E5;&#x5FD7;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#xFF08;log-linear model for survival analysis&#xFF09;&#x3002;&#x4E0E;&#x7528;&#x4E8E;&#x76F8;&#x540C;&#x76EE;&#x7684;&#x7684;&#x6BD4;&#x4F8B;&#x5371;&#x5BB3;&#xFF08;Proportinal hazards&#xFF09;&#x6A21;&#x578B;&#x4E0D;&#x540C;&#xFF0C;AFT&#x6A21;&#x578B;&#x66F4;&#x6613;&#x4E8E;&#x5E76;&#x884C;&#x5316;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x7684;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x90FD;&#x72EC;&#x7ACB;&#x5730;&#x4E3A;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x505A;&#x8D21;&#x732E;&#x3002;</p>
+<h6 id="&#x516C;&#x5F0F;&#xFF0C;&#x7B97;&#x6CD5;&#xFF0C;&#x7701;&#x7565;&#x3002;">&#x516C;&#x5F0F;&#xFF0C;&#x7B97;&#x6CD5;&#xFF0C;&#x7701;&#x7565;&#x3002;</h6>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.<span class="hljs-type">Vectors</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.regression.<span class="hljs-type">AFTSurvivalRegression</span>
+
+<span class="hljs-keyword">val</span> training = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">1.218</span>, <span class="hljs-number">1.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">1.560</span>, <span class="hljs-number">-0.605</span>)),
+  (<span class="hljs-number">2.949</span>, <span class="hljs-number">0.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">0.346</span>, <span class="hljs-number">2.158</span>)),
+  (<span class="hljs-number">3.627</span>, <span class="hljs-number">0.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">1.380</span>, <span class="hljs-number">0.231</span>)),
+  (<span class="hljs-number">0.273</span>, <span class="hljs-number">1.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">0.520</span>, <span class="hljs-number">1.151</span>)),
+  (<span class="hljs-number">4.199</span>, <span class="hljs-number">0.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">0.795</span>, <span class="hljs-number">-0.226</span>))
+)).toDF(<span class="hljs-string">&quot;label&quot;</span>, <span class="hljs-string">&quot;censor&quot;</span>, <span class="hljs-string">&quot;features&quot;</span>)
+<span class="hljs-keyword">val</span> quantileProbabilities = <span class="hljs-type">Array</span>(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.6</span>)
+<span class="hljs-keyword">val</span> aft = <span class="hljs-keyword">new</span> <span class="hljs-type">AFTSurvivalRegression</span>()
+  .setQuantileProbabilities(quantileProbabilities)
+  .setQuantilesCol(<span class="hljs-string">&quot;quantiles&quot;</span>)
+
+<span class="hljs-keyword">val</span> model = aft.fit(training)
+
+<span class="hljs-comment">// Print the coefficients, intercept and scale parameter for AFT survival regression</span>
+println(<span class="hljs-string">s&quot;Coefficients: <span class="hljs-subst">${model.coefficients}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;Intercept: <span class="hljs-subst">${model.intercept}</span>&quot;</span>)
+println(<span class="hljs-string">s&quot;Scale: <span class="hljs-subst">${model.scale}</span>&quot;</span>)
+model.transform(training).show(<span class="hljs-literal">false</span>)
+</code></pre>
+<h4 id="7&#x3001;&#x4FDD;&#x5E8F;&#x56DE;&#x5F52;&#xFF08;isotonic-regression&#xFF09;">7&#x3001;&#x4FDD;&#x5E8F;&#x56DE;&#x5F52;&#xFF08;Isotonic regression&#xFF09;</h4>
+<p>&#x5728;&#x5F62;&#x5F0F;&#x4E0A;&#xFF0C;&#x4FDD;&#x5E8F;&#x56DE;&#x5F52;&#x7684;&#x5B9A;&#x4E49;&#x662F;&#xFF1A;&#x7ED9;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x89C2;&#x6D4B;&#x54CD;&#x5E94;&#x7684;&#x6709;&#x9650;&#x7684;&#x5B9E;&#x6570;&#x96C6;&#x5408;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi><mo>=</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>y</mi><mi>n</mi></msub></mrow></mrow><annotation encoding="application/x-tex">Y = {y_1, y_2,...,y_n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">Y</span><span class="mrel">=</span><span class="mord textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span>&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mo>=</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></mrow><annotation encoding="application/x-tex">X= {x_1, x_2,...,x_n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mrel">=</span><span class="mord textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></span>&#x8868;&#x793A;&#x672A;&#x77E5;&#x7684;&#x54CD;&#x5E94;&#x503C;&#xFF0C;&#x62DF;&#x5408;&#x51FA;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F7F;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>w</mi><mi>i</mi></msub><mo>(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>&#x2212;</mo><msub><mi>x</mi><mi>i</mi></msub><msup><mo>)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(x) = \sum_{i=1}^n w_i (y_i - x_i)^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.114118em;vertical-align:-0.30001em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">=</span><span class="mop"><span class="mop op-symbol small-op" style="top:-0.0000050000000000050004em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.30001em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.364em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02691em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p>&#x6700;&#x5C0F;&#xFF0C;&#x5176;&#x4E2D;&#xFF0C;&#x6574;&#x4F53;&#x987A;&#x5E8F;&#x670D;&#x4ECE;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>&#x2264;</mo><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2264;</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>&#x2264;</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">x_1\le x_2\le ...\le x_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.63597em;"></span><span class="strut bottom" style="height:0.7859700000000001em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2264;</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2264;</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mrel">&#x2264;</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>w</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">w_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02691em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x662F;&#x6B63;&#x7684;&#x6743;&#x91CD;&#x3002;&#x7ED3;&#x679C;&#x51FD;&#x6570;&#x88AB;&#x79F0;&#x4E3A;&#x4FDD;&#x5E8F;&#x56DE;&#x5F52;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x88AB;&#x770B;&#x4F5C;&#x662F;&#x987A;&#x5E8F;&#x9650;&#x5236;&#x4E0B;&#x7684;&#x6700;&#x5C0F;&#x5E73;&#x65B9;&#x95EE;&#x9898;&#x3002;&#x672C;&#x8D28;&#x4E0A;&#xFF0C;&#x4FDD;&#x5E8F;&#x56DE;&#x5F52;&#x662F;&#x6700;&#x7B26;&#x5408;&#x539F;&#x59CB;&#x6570;&#x636E;&#x70B9;&#x7684;&#x4E00;&#x4E2A;&#x5355;&#x8C03;&#x51FD;&#x6570;&#xFF08;monotonic function&#xFF09;&#x3002;</p>
+<p><code>spark.ml</code>&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;pool adjacent violators algorithm&#xFF08;PAVA&#xFF09;&#x6765;&#x5E76;&#x884C;&#x5316;&#x4FDD;&#x5E8F;&#x56DE;&#x5F52;&#x3002;&#x8BAD;&#x7EC3;&#x8F93;&#x5165;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6807;&#x7B7E;&#xFF08;label&#xFF09;&#x3001;&#x7279;&#x5F81;&#xFF08;features&#xFF09;&#x548C;&#x6743;&#x91CD;&#xFF08;weight&#xFF09;&#x4E09;&#x5217;&#x7684;DataFrame&#x3002;&#x6B64;&#x5916;&#xFF0C;<code>IsotonicRegression</code>&#x7B97;&#x6CD5;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<em><strong>isotonic</strong></em>&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<strong>true</strong>&#x7684;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x51B3;&#x5B9A;&#x4FDD;&#x5E8F;&#x56DE;&#x5F52;&#x662F;&#x4FDD;&#x5E8F;&#x7684;&#xFF08;&#x5355;&#x8C03;&#x9012;&#x589E;&#xFF09;&#x8FD8;&#x662F;antitonic&#xFF08;&#x5355;&#x8C03;&#x9012;&#x51CF;&#xFF09;&#x3002;</p>
+<p>&#x8BAD;&#x7EC3;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>IsotonicRegressionModel</code>&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x9884;&#x6D4B;&#x5DF2;&#x77E5;&#x548C;&#x672A;&#x77E5;&#x7279;&#x5F81;&#x7684;&#x6807;&#x7B7E;&#x3002;&#x4FDD;&#x5E8F;&#x56DE;&#x5F52;&#x7684;&#x7ED3;&#x679C;&#x88AB;&#x4F5C;&#x4E3A;&#x5206;&#x6BB5;&#x7EBF;&#x6027;&#x51FD;&#x6570;&#xFF08;piecewise linear function&#xFF09;&#x5BF9;&#x5F85;&#x3002;&#x9884;&#x6D4B;&#x7684;&#x89C4;&#x5219;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x9884;&#x6D4B;&#x8F93;&#x5165;&#x7CBE;&#x786E;&#x5730;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x8BAD;&#x7EC3;&#x7279;&#x5F81;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x3002;&#x5982;&#x679C;&#x76F8;&#x540C;&#x7279;&#x5F81;&#x5BF9;&#x5E94;&#x591A;&#x4E2A;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#xFF0C;&#x81F3;&#x4E8E;&#x8FD4;&#x56DE;&#x54EA;&#x4E00;&#x4E2A;&#x662F;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#xFF08;&#x4E0E;<code>java.util.Arrays.binarySearch</code>&#x76F8;&#x540C;&#xFF09;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x9884;&#x6D4B;&#x8F93;&#x5165;&#x6BD4;&#x6240;&#x6709;&#x7684;&#x8BAD;&#x7EC3;&#x7279;&#x5F81;&#x4F4E;&#x6216;&#x9AD8;&#xFF0C;&#x5219;&#x5206;&#x522B;&#x8FD4;&#x56DE;&#x6700;&#x4F4E;&#x6216;&#x6700;&#x9AD8;&#x7279;&#x5F81;&#x5BF9;&#x5E94;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x3002;&#x5982;&#x679C;&#x76F8;&#x540C;&#x7279;&#x5F81;&#x5BF9;&#x5E94;&#x591A;&#x4E2A;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x5206;&#x522B;&#x8FD4;&#x56DE;&#x6700;&#x4F4E;&#x6216;&#x6700;&#x9AD8;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x9884;&#x6D4B;&#x8F93;&#x5165;&#x843D;&#x5728;&#x4E24;&#x4E2A;&#x8BAD;&#x7EC3;&#x7279;&#x5F81;&#x4E4B;&#x95F4;&#xFF0C;&#x9884;&#x6D4B;&#x4F1A;&#x88AB;&#x4F5C;&#x4E3A;&#x5206;&#x6BB5;&#x7EBF;&#x6027;&#x51FD;&#x6570;&#x5BF9;&#x5F85;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x4E24;&#x4E2A;&#x6700;&#x8FD1;&#x7684;&#x7279;&#x5F81;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x6765;&#x8BA1;&#x7B97;&#x63D2;&#x5165;&#x7684;&#x503C;&#x7684;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x3002;&#x5982;&#x679C;&#x76F8;&#x540C;&#x7279;&#x5F81;&#x5BF9;&#x5E94;&#x591A;&#x4E2A;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x4E0E;&#x4E0A;&#x4E00;&#x6761;&#x76F8;&#x540C;&#x7684;&#x89C4;&#x5219;&#x3002;</li>
+</ul>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.regression.<span class="hljs-type">IsotonicRegression</span>
+
+<span class="hljs-comment">// Loads data.</span>
+<span class="hljs-keyword">val</span> dataset = spark.read.format(<span class="hljs-string">&quot;libsvm&quot;</span>)
+  .load(<span class="hljs-string">&quot;data/mllib/sample_isotonic_regression_libsvm_data.txt&quot;</span>)
+
+<span class="hljs-comment">// Trains an isotonic regression model.</span>
+<span class="hljs-keyword">val</span> ir = <span class="hljs-keyword">new</span> <span class="hljs-type">IsotonicRegression</span>()
+<span class="hljs-keyword">val</span> model = ir.fit(dataset)
+
+println(<span class="hljs-string">s&quot;Boundaries in increasing order: <span class="hljs-subst">${model.boundaries}</span>\n&quot;</span>)
+println(<span class="hljs-string">s&quot;Predictions associated with the boundaries: <span class="hljs-subst">${model.predictions}</span>\n&quot;</span>)
+
+<span class="hljs-comment">// Makes predictions.</span>
+model.transform(dataset).show()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="fen-lei.html" class="navigation navigation-prev " aria-label="Previous page: 分类">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="xian-xing-fang-fa.html" class="navigation navigation-next " aria-label="Next page: 线性方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"回归","level":"1.15.5.2","depth":3,"next":{"title":"线性方法","level":"1.15.5.3","depth":3,"path":"mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.md","ref":"mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.md","articles":[]},"previous":{"title":"分类","level":"1.15.5.1","depth":3,"path":"mllib/fen-lei-he-hui-gui/fen-lei.md","ref":"mllib/fen-lei-he-hui-gui/fen-lei.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mllib/fen-lei-he-hui-gui/hui-gui.md","mtime":"2021-02-04T09:29:42.322Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

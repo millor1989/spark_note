@@ -1,0 +1,1161 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据类型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ji-chu-tong-ji.html" />
+    
+    
+    <link rel="prev" href="../mllib.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Spark总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../kuai-su-ru-men.html">
+            
+                <a href="../kuai-su-ru-men.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../sparkbian-cheng-dao-yin.html">
+            
+                <a href="../sparkbian-cheng-dao-yin.html">
+            
+                    
+                    Spark编程导引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                    
+                    RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                    
+                    从Java/Scala启动Spark jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../spark-sql.html">
+            
+                <a href="../spark-sql.html">
+            
+                    
+                    Spark SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../spark-sql/getting-started.html">
+            
+                <a href="../spark-sql/getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../spark-sql/shu-ju-yuan.html">
+            
+                <a href="../spark-sql/shu-ju-yuan.html">
+            
+                    
+                    数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../spark-sql/xing-neng-diao-shi.html">
+            
+                <a href="../spark-sql/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                <a href="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                    
+                    分布式SQL引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                <a href="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                    
+                    与Apache Hive的兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../spark-sql/shu-ju-lei-xing.html">
+            
+                <a href="../spark-sql/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../spark-sql/built-in-functions.html">
+            
+                <a href="../spark-sql/built-in-functions.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../spark-streaming.html">
+            
+                <a href="../spark-streaming.html">
+            
+                    
+                    Spark Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../spark-streaming/ji-ben-gai-nian.html">
+            
+                <a href="../spark-streaming/ji-ben-gai-nian.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../spark-streaming/xing-neng-diao-shi.html">
+            
+                <a href="../spark-streaming/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../spark-streaming/rong-cuo.html">
+            
+                <a href="../spark-streaming/rong-cuo.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../structured-streaming.html">
+            
+                <a href="../structured-streaming.html">
+            
+                    
+                    Structured Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                <a href="../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                    
+                    使用Datasets和DataFrames的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                <a href="../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                    
+                    Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../bu-shu.html">
+            
+                <a href="../bu-shu.html">
+            
+                    
+                    部署和运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../bu-shu/zu-jian-ff08-components.html">
+            
+                <a href="../bu-shu/zu-jian-ff08-components.html">
+            
+                    
+                    组件（Components）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                <a href="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                    
+                    集群管理器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../bu-shu/ti-jiao-ying-yong.html">
+            
+                <a href="../bu-shu/ti-jiao-ying-yong.html">
+            
+                    
+                    提交应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../bu-shu/jian-kong.html">
+            
+                <a href="../bu-shu/jian-kong.html">
+            
+                    
+                    监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在YARN上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../pei-zhi.html">
+            
+                <a href="../pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../pei-zhi/sparkshu-xing.html">
+            
+                <a href="../pei-zhi/sparkshu-xing.html">
+            
+                    
+                    Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                    
+                    动态加载Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                    
+                    查看Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../diao-shi.html">
+            
+                <a href="../diao-shi.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../extff1a-xing-neng-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                    
+                    基础优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                    
+                    高级优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在Yarn上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../an-quan.html">
+            
+                <a href="../an-quan.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ying-jian-pei-zhi.html">
+            
+                <a href="../ying-jian-pei-zhi.html">
+            
+                    
+                    硬件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../mllib.html">
+            
+                <a href="../mllib.html">
+            
+                    
+                    MLlib
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.15.1" data-path="shu-ju-lei-xing.html">
+            
+                <a href="shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="ji-chu-tong-ji.html">
+            
+                <a href="ji-chu-tong-ji.html">
+            
+                    
+                    基础统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="pipelines.html">
+            
+                <a href="pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                    
+                    特征的提取、转换和筛选
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                    
+                    Feature Extractors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                    
+                    Feature Transformers-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                    
+                    Feature Transformers-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                    
+                    Feature Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                    
+                    Locality Sensitive Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="fen-lei-he-hui-gui.html">
+            
+                <a href="fen-lei-he-hui-gui.html">
+            
+                    
+                    分类和回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="fen-lei-he-hui-gui/fen-lei.html">
+            
+                <a href="fen-lei-he-hui-gui/fen-lei.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="fen-lei-he-hui-gui/hui-gui.html">
+            
+                <a href="fen-lei-he-hui-gui/hui-gui.html">
+            
+                    
+                    回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                <a href="fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                    
+                    线性方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                <a href="fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                <a href="fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                    
+                    树团体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="ju-lei.html">
+            
+                <a href="ju-lei.html">
+            
+                    
+                    聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="xie-tong-guo-lv.html">
+            
+                <a href="xie-tong-guo-lv.html">
+            
+                    
+                    协同过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../questions.html">
+            
+                <a href="../questions.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../questions/datasetdataframerdd.html">
+            
+                <a href="../questions/datasetdataframerdd.html">
+            
+                    
+                    DataFrame-Dataset-RDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../questions/spark-checkpoint.html">
+            
+                <a href="../questions/spark-checkpoint.html">
+            
+                    
+                    checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../questions/shu-ju-ben-di-xing.html">
+            
+                <a href="../questions/shu-ju-ben-di-xing.html">
+            
+                    
+                    某个task很慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../questions/sparkhan-shu.html">
+            
+                <a href="../questions/sparkhan-shu.html">
+            
+                    
+                    Spark函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../questions/hadoop-1he-hadoop2.html">
+            
+                <a href="../questions/hadoop-1he-hadoop2.html">
+            
+                    
+                    Hadoop 1和Hadoop2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../questions/broadcast-join.html">
+            
+                <a href="../questions/broadcast-join.html">
+            
+                    
+                    Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
+<p>MLlib&#x652F;&#x6301;&#x4F4D;&#x4E8E;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x7684;&#x672C;&#x5730;&#x5411;&#x91CF;&#xFF08;local vectors&#xFF09;&#x548C;&#x77E9;&#x9635;&#xFF08;matrices&#xFF09;&#xFF0C;&#x4E5F;&#x652F;&#x6301;&#x57FA;&#x4E8E;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;RDD&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x77E9;&#x9635;&#x3002;&#x672C;&#x5730;&#x5411;&#x91CF;&#x548C;&#x672C;&#x5730;&#x77E9;&#x9635;&#x90FD;&#x662F;&#x4F5C;&#x4E3A;&#x516C;&#x5F00;&#x63A5;&#x53E3;&#x63D0;&#x4F9B;&#x7684;&#x7B80;&#x5355;&#x6570;&#x636E;&#x6A21;&#x578B;&#x3002;&#x5E95;&#x5C42;&#x7684;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x64CD;&#x4F5C;&#x7531;Breeze&#x63D0;&#x4F9B;&#x3002;</p>
+<h4 id="1&#x3001;&#x672C;&#x5730;&#x5411;&#x91CF;&#xFF08;local-vector&#xFF09;">1&#x3001;&#x672C;&#x5730;&#x5411;&#x91CF;&#xFF08;Local vector&#xFF09;</h4>
+<p>&#x672C;&#x5730;&#x5411;&#x91CF;&#x7684;&#x7D22;&#x5F15;&#x662F;0&#x5F00;&#x59CB;&#x7684;integer&#x7C7B;&#x578B;&#xFF0C;&#x503C;&#x662F;double&#x7C7B;&#x578B;&#xFF0C;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x3002;MLlib&#x652F;&#x6301;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x672C;&#x5730;&#x5411;&#x91CF;&#xFF1A;&#x5BC6;&#x96C6;&#x5411;&#x91CF;&#x548C;&#x7A00;&#x758F;&#x5411;&#x91CF;&#x3002;&#x5BC6;&#x96C6;&#x5411;&#x91CF;&#x57FA;&#x4E8E;&#x4E00;&#x4E2A;double&#x6570;&#x7EC4;&#xFF0C;&#x8868;&#x793A;&#x5B83;&#x7684;&#x5143;&#x7D20;&#x503C;&#xFF0C;&#x800C;&#x7A00;&#x758F;&#x5411;&#x91CF;&#x57FA;&#x4E8E;&#x4E24;&#x4E2A;&#x5E76;&#x884C;&#x7684;&#x6570;&#x7EC4;&#xFF1A;&#x7D22;&#x5F15;&#x6570;&#x7EC4;&#x548C;&#x503C;&#x6570;&#x7EC4;&#x3002;&#x6BD4;&#x5982;&#x5411;&#x91CF;<code>(1.0, 0.0, 3.0)</code> &#x53EF;&#x4EE5;&#x7528;&#x5BC6;&#x96C6;&#x5411;&#x91CF;&#x5F62;&#x5F0F;<code>[1.0, 0.0, 3.0]</code>&#x8868;&#x793A;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x7A00;&#x758F;&#x5411;&#x91CF;&#x5F62;&#x5F0F;<code>(3, [0, 2], [1.0, 3.0])</code>&#x8868;&#x793A;&#xFF0C;&#x5176;&#x4E2D;<code>3</code>&#x662F;&#x5411;&#x91CF;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E3A;&#x975E;&#x96F6;&#x7D22;&#x5F15;&#x6570;&#x7EC4;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x7EC4;&#x4E3A;&#x4E0E;&#x7D22;&#x5F15;&#x5BF9;&#x5E94;&#x7684;&#x975E;&#x96F6;&#x503C;&#x3002;</p>
+<p>&#x672C;&#x5730;&#x5411;&#x91CF;&#x7684;&#x57FA;&#x7840;&#x7C7B;&#x662F;<code>Vector</code>&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x5B9E;&#x73B0;<code>DenseVector</code>&#x548C;<code>SparseVector</code>&#x3002;&#x63A8;&#x8350;&#x4F7F;&#x7528;<code>Vectors</code>&#x7C7B;&#x4E2D;&#x7684;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x672C;&#x5730;&#x5411;&#x91CF;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.{<span class="hljs-type">Vector</span>, <span class="hljs-type">Vectors</span>}
+
+<span class="hljs-comment">// Create a dense vector (1.0, 0.0, 3.0).</span>
+<span class="hljs-keyword">val</span> dv: <span class="hljs-type">Vector</span> = <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">1.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">3.0</span>)
+<span class="hljs-comment">// Create a sparse vector (1.0, 0.0, 3.0) by specifying its indices and values corresponding to nonzero entries.</span>
+<span class="hljs-keyword">val</span> sv1: <span class="hljs-type">Vector</span> = <span class="hljs-type">Vectors</span>.sparse(<span class="hljs-number">3</span>, <span class="hljs-type">Array</span>(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>), <span class="hljs-type">Array</span>(<span class="hljs-number">1.0</span>, <span class="hljs-number">3.0</span>))
+<span class="hljs-comment">// Create a sparse vector (1.0, 0.0, 3.0) by specifying its nonzero entries.</span>
+<span class="hljs-keyword">val</span> sv2: <span class="hljs-type">Vector</span> = <span class="hljs-type">Vectors</span>.sparse(<span class="hljs-number">3</span>, <span class="hljs-type">Seq</span>((<span class="hljs-number">0</span>, <span class="hljs-number">1.0</span>), (<span class="hljs-number">2</span>, <span class="hljs-number">3.0</span>)))
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;Scala&#x9ED8;&#x8BA4;&#x5BFC;&#x5165;<code>scala.collection.immutable.Vector</code> &#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x660E;&#x786E;&#x5730;&#x5BFC;&#x5165;<code>org.apache.spark.ml.linalg.Vector</code> &#x4EE5;&#x4F7F;&#x7528;MLlib&#x7684;<code>Vector</code>&#x3002;</p>
+<h4 id="2&#x3001;&#x6807;&#x8BB0;&#x70B9;&#xFF08;labeled-point&#xFF09;">2&#x3001;&#x6807;&#x8BB0;&#x70B9;&#xFF08;Labeled point&#xFF09;</h4>
+<p>&#x6807;&#x8BB0;&#x70B9;&#x662F;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x5411;&#x91CF;&#xFF08;&#x5BC6;&#x96C6;&#x5411;&#x91CF;&#x6216;&#x7A00;&#x758F;&#x5411;&#x91CF;&#xFF09;&#x548C;&#x4E00;&#x4E2A;&#x76F8;&#x5173;&#x7684;&#x6807;&#x7B7E;/&#x54CD;&#x5E94;&#xFF08;label/response&#xFF09;&#x3002;&#x5728;MLlib&#x4E2D;&#xFF0C;&#x6807;&#x8BB0;&#x70B9;&#x7528;&#x4E8E;&#x76D1;&#x7763;&#x5F0F;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x3002;&#x4F7F;&#x7528;double&#x6765;&#x5B58;&#x50A8;&#x6807;&#x7B7E;&#xFF0C;&#x6240;&#x4EE5;&#x5206;&#x7C7B;&#x548C;&#x56DE;&#x5F52;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6807;&#x8BB0;&#x70B9;&#x3002;&#x5BF9;&#x4E8E;&#x4E8C;&#x5143;&#x5206;&#x7C7B;&#xFF0C;&#x6807;&#x7B7E;&#x5E94;&#x8BE5;&#x662F;0&#xFF08;negative&#xFF09;&#x6216;1&#xFF08;positive&#xFF09;&#x3002;&#x5BF9;&#x4E8E;&#x591A;&#x7C7B;&#x578B;&#x5206;&#x7C7B;&#xFF0C;&#x6807;&#x7B7E;&#x5E94;&#x8BE5;&#x662F;&#x4ECE;0&#x5F00;&#x59CB;&#x7684;&#x7C7B;&#x578B;&#x7D22;&#x5F15;&#xFF1A;0&#xFF0C;1&#xFF0C;2&#xFF0C;...&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.<span class="hljs-type">Vectors</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">LabeledPoint</span>
+
+<span class="hljs-comment">// Create a labeled point with a positive label and a dense feature vector.</span>
+<span class="hljs-keyword">val</span> pos = <span class="hljs-type">LabeledPoint</span>(<span class="hljs-number">1.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">1.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">3.0</span>))
+
+<span class="hljs-comment">// Create a labeled point with a negative label and a sparse feature vector.</span>
+<span class="hljs-keyword">val</span> neg = <span class="hljs-type">LabeledPoint</span>(<span class="hljs-number">0.0</span>, <span class="hljs-type">Vectors</span>.sparse(<span class="hljs-number">3</span>, <span class="hljs-type">Array</span>(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>), <span class="hljs-type">Array</span>(<span class="hljs-number">1.0</span>, <span class="hljs-number">3.0</span>)))
+</code></pre>
+<h5 id="21&#x3001;&#x7A00;&#x758F;&#x6570;&#x636E;">2.1&#x3001;&#x7A00;&#x758F;&#x6570;&#x636E;</h5>
+<p>&#x5B9E;&#x8DF5;&#x4E2D;&#x7ECF;&#x5E38;&#x4F1A;&#x7528;&#x5230;&#x7A00;&#x758F;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x3002;MLlib&#x652F;&#x6301;&#x8BFB;&#x53D6;&#x4EE5;<code>LIBSVM</code>&#x683C;&#x5F0F;&#x4FDD;&#x5B58;&#x7684;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x79CD;&#x683C;&#x5F0F;&#x662F;<code>LIBSVM</code>&#x548C;<code>LIBLINEAR</code>&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x683C;&#x5F0F;&#x3002;&#x8FD9;&#x79CD;&#x683C;&#x5F0F;&#x662F;&#x4E00;&#x79CD;&#x6587;&#x672C;&#x683C;&#x5F0F;&#xFF0C;&#x6BCF;&#x884C;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5E26;&#x6807;&#x7B7E;&#x7684;&#x7A00;&#x758F;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>label index1:value1 index2:value2 ...
+</code></pre><p>&#x5176;&#x4E2D;&#x7D22;&#x5F15;&#x662F;&#x6309;&#x7167;&#x5347;&#x5E8F;&#x4ECE;1&#x5F00;&#x59CB;&#x7684;&#x3002;&#x52A0;&#x8F7D;&#x4E4B;&#x540E;&#xFF0C;&#x7279;&#x5F81;&#x7D22;&#x5F15;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x4ECE;0&#x5F00;&#x59CB;&#x7684;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> data = spark.read.format(<span class="hljs-string">&quot;libsvm&quot;</span>).load(<span class="hljs-string">&quot;data/mllib/sample_libsvm_data.txt&quot;</span>)
+</code></pre>
+<h4 id="3&#x3001;&#x672C;&#x5730;&#x77E9;&#x9635;&#xFF08;local-matrix&#xFF09;">3&#x3001;&#x672C;&#x5730;&#x77E9;&#x9635;&#xFF08;Local matrix&#xFF09;</h4>
+<p>&#x672C;&#x5730;&#x77E9;&#x9635;&#x7684;&#x884C;&#x548C;&#x5217;&#x7D22;&#x5F15;&#x662F;integer&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x503C;&#x662F;double&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x3002;MLlib&#x652F;&#x6301;&#x5BC6;&#x96C6;&#x77E9;&#x9635;&#xFF0C;&#x5143;&#x7D20;&#x503C;&#x6309;&#x7167;<strong>&#x5217;&#x4E3B;&#x5E8F;</strong>&#xFF08;column-major order&#xFF09;&#x4FDD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;double&#x6570;&#x7EC4;&#x4E2D;&#xFF1B;MLlib&#x4E5F;&#x652F;&#x6301;&#x7A00;&#x758F;&#x77E9;&#x9635;&#xFF0C;&#x975E;&#x96F6;&#x503C;&#x6309;&#x7167;&#x5217;&#x4E3B;&#x5E8F;&#x4EE5;&#x538B;&#x7F29;&#x7A00;&#x758F;&#x5217;&#xFF08;CSC&#xFF0C;Compressed Sparse Column&#xFF09;&#x683C;&#x5F0F;&#x4FDD;&#x5B58;&#x3002;</p>
+<p>&#x672C;&#x5730;&#x77E9;&#x9635;&#x7684;&#x57FA;&#x7840;&#x7C7B;&#x662F;<code>Matrix</code>&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x5B9E;&#x73B0;&#xFF1A;<code>DenseMatrix</code>&#x548C;<code>SparseMatrix</code>&#x3002;&#x63A8;&#x8350;&#x4F7F;&#x7528;<code>Matricies</code>&#x7684;&#x5DE5;&#x5382;&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x672C;&#x5730;&#x77E9;&#x9635;&#x3002;MLlib&#x4E2D;&#x7684;&#x672C;&#x5730;&#x77E9;&#x9635;&#x662F;&#x6309;&#x7167;&#x5217;&#x4E3B;&#x5E8F;&#x4FDD;&#x5B58;&#x7684;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.{<span class="hljs-type">Matrices</span>, <span class="hljs-type">Matrix</span>}
+
+<span class="hljs-comment">// Create a dense matrix ((1.0, 2.0), (3.0, 4.0), (5.0, 6.0))</span>
+<span class="hljs-keyword">val</span> dm: <span class="hljs-type">Matrix</span> = <span class="hljs-type">Matrices</span>.dense(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-type">Array</span>(<span class="hljs-number">1.0</span>, <span class="hljs-number">3.0</span>, <span class="hljs-number">5.0</span>, <span class="hljs-number">2.0</span>, <span class="hljs-number">4.0</span>, <span class="hljs-number">6.0</span>))
+
+<span class="hljs-comment">// Create a sparse matrix ((9.0, 0.0), (0.0, 8.0), (0.0, 6.0))</span>
+<span class="hljs-keyword">val</span> sm: <span class="hljs-type">Matrix</span> = <span class="hljs-type">Matrices</span>.sparse(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-type">Array</span>(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>), <span class="hljs-type">Array</span>(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>), <span class="hljs-type">Array</span>(<span class="hljs-number">9</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>))
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../mllib.html" class="navigation navigation-prev " aria-label="Previous page: MLlib">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ji-chu-tong-ji.html" class="navigation navigation-next " aria-label="Next page: 基础统计">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据类型","level":"1.15.1","depth":2,"next":{"title":"基础统计","level":"1.15.2","depth":2,"path":"mllib/ji-chu-tong-ji.md","ref":"mllib/ji-chu-tong-ji.md","articles":[]},"previous":{"title":"MLlib","level":"1.15","depth":1,"path":"mllib.md","ref":"mllib.md","articles":[{"title":"数据类型","level":"1.15.1","depth":2,"path":"mllib/shu-ju-lei-xing.md","ref":"mllib/shu-ju-lei-xing.md","articles":[]},{"title":"基础统计","level":"1.15.2","depth":2,"path":"mllib/ji-chu-tong-ji.md","ref":"mllib/ji-chu-tong-ji.md","articles":[]},{"title":"Pipelines","level":"1.15.3","depth":2,"path":"mllib/pipelines.md","ref":"mllib/pipelines.md","articles":[]},{"title":"特征的提取、转换和筛选","level":"1.15.4","depth":2,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.md","articles":[{"title":"Feature Extractors","level":"1.15.4.1","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.md","articles":[]},{"title":"Feature Transformers-1","level":"1.15.4.2","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.md","articles":[]},{"title":"Feature Transformers-2","level":"1.15.4.3","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.md","articles":[]},{"title":"Feature Selectors","level":"1.15.4.4","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.md","articles":[]},{"title":"Locality Sensitive Hashing","level":"1.15.4.5","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.md","articles":[]}]},{"title":"分类和回归","level":"1.15.5","depth":2,"path":"mllib/fen-lei-he-hui-gui.md","ref":"mllib/fen-lei-he-hui-gui.md","articles":[{"title":"分类","level":"1.15.5.1","depth":3,"path":"mllib/fen-lei-he-hui-gui/fen-lei.md","ref":"mllib/fen-lei-he-hui-gui/fen-lei.md","articles":[]},{"title":"回归","level":"1.15.5.2","depth":3,"path":"mllib/fen-lei-he-hui-gui/hui-gui.md","ref":"mllib/fen-lei-he-hui-gui/hui-gui.md","articles":[]},{"title":"线性方法","level":"1.15.5.3","depth":3,"path":"mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.md","ref":"mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.md","articles":[]},{"title":"决策树","level":"1.15.5.4","depth":3,"path":"mllib/fen-lei-he-hui-gui/jue-ce-shu.md","ref":"mllib/fen-lei-he-hui-gui/jue-ce-shu.md","articles":[]},{"title":"树团体","level":"1.15.5.5","depth":3,"path":"mllib/fen-lei-he-hui-gui/shu-tuan-ti.md","ref":"mllib/fen-lei-he-hui-gui/shu-tuan-ti.md","articles":[]}]},{"title":"聚类","level":"1.15.6","depth":2,"path":"mllib/ju-lei.md","ref":"mllib/ju-lei.md","articles":[]},{"title":"协同过滤","level":"1.15.7","depth":2,"path":"mllib/xie-tong-guo-lv.md","ref":"mllib/xie-tong-guo-lv.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mllib/shu-ju-lei-xing.md","mtime":"2020-08-10T12:48:36.527Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

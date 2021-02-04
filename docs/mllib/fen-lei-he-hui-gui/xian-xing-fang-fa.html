@@ -1,0 +1,1339 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>线性方法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="jue-ce-shu.html" />
+    
+    
+    <link rel="prev" href="hui-gui.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Spark总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../kuai-su-ru-men.html">
+            
+                <a href="../../kuai-su-ru-men.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../sparkbian-cheng-dao-yin.html">
+            
+                <a href="../../sparkbian-cheng-dao-yin.html">
+            
+                    
+                    Spark编程导引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../sparkbian-cheng-dao-yin/rdds.html">
+            
+                <a href="../../sparkbian-cheng-dao-yin/rdds.html">
+            
+                    
+                    RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                <a href="../../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                    
+                    从Java/Scala启动Spark jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../spark-sql.html">
+            
+                <a href="../../spark-sql.html">
+            
+                    
+                    Spark SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../spark-sql/getting-started.html">
+            
+                <a href="../../spark-sql/getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../spark-sql/shu-ju-yuan.html">
+            
+                <a href="../../spark-sql/shu-ju-yuan.html">
+            
+                    
+                    数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../spark-sql/xing-neng-diao-shi.html">
+            
+                <a href="../../spark-sql/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                <a href="../../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                    
+                    分布式SQL引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                <a href="../../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                    
+                    与Apache Hive的兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../spark-sql/shu-ju-lei-xing.html">
+            
+                <a href="../../spark-sql/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../spark-sql/built-in-functions.html">
+            
+                <a href="../../spark-sql/built-in-functions.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../spark-streaming.html">
+            
+                <a href="../../spark-streaming.html">
+            
+                    
+                    Spark Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../spark-streaming/ji-ben-gai-nian.html">
+            
+                <a href="../../spark-streaming/ji-ben-gai-nian.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../spark-streaming/xing-neng-diao-shi.html">
+            
+                <a href="../../spark-streaming/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../spark-streaming/rong-cuo.html">
+            
+                <a href="../../spark-streaming/rong-cuo.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../structured-streaming.html">
+            
+                <a href="../../structured-streaming.html">
+            
+                    
+                    Structured Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                <a href="../../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                    
+                    使用Datasets和DataFrames的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                <a href="../../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                    
+                    Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../bu-shu.html">
+            
+                <a href="../../bu-shu.html">
+            
+                    
+                    部署和运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../bu-shu/zu-jian-ff08-components.html">
+            
+                <a href="../../bu-shu/zu-jian-ff08-components.html">
+            
+                    
+                    组件（Components）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                <a href="../../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                    
+                    集群管理器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../bu-shu/ti-jiao-ying-yong.html">
+            
+                <a href="../../bu-shu/ti-jiao-ying-yong.html">
+            
+                    
+                    提交应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../bu-shu/jian-kong.html">
+            
+                <a href="../../bu-shu/jian-kong.html">
+            
+                    
+                    监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../zuo-ye-diao-du.html">
+            
+                <a href="../../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在YARN上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../pei-zhi.html">
+            
+                <a href="../../pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../pei-zhi/sparkshu-xing.html">
+            
+                <a href="../../pei-zhi/sparkshu-xing.html">
+            
+                    
+                    Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                <a href="../../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                    
+                    动态加载Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                <a href="../../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                    
+                    查看Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../diao-shi.html">
+            
+                <a href="../../diao-shi.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../extff1a-xing-neng-you-hua.html">
+            
+                <a href="../../extff1a-xing-neng-you-hua.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                <a href="../../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                    
+                    基础优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                <a href="../../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                    
+                    高级优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在Yarn上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../zuo-ye-diao-du.html">
+            
+                <a href="../../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../an-quan.html">
+            
+                <a href="../../an-quan.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../ying-jian-pei-zhi.html">
+            
+                <a href="../../ying-jian-pei-zhi.html">
+            
+                    
+                    硬件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../mllib.html">
+            
+                <a href="../../mllib.html">
+            
+                    
+                    MLlib
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../shu-ju-lei-xing.html">
+            
+                <a href="../shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../ji-chu-tong-ji.html">
+            
+                <a href="../ji-chu-tong-ji.html">
+            
+                    
+                    基础统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../pipelines.html">
+            
+                <a href="../pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                    
+                    特征的提取、转换和筛选
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                    
+                    Feature Extractors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                    
+                    Feature Transformers-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                    
+                    Feature Transformers-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                    
+                    Feature Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                    
+                    Locality Sensitive Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../fen-lei-he-hui-gui.html">
+            
+                <a href="../fen-lei-he-hui-gui.html">
+            
+                    
+                    分类和回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="fen-lei.html">
+            
+                <a href="fen-lei.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="hui-gui.html">
+            
+                <a href="hui-gui.html">
+            
+                    
+                    回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15.5.3" data-path="xian-xing-fang-fa.html">
+            
+                <a href="xian-xing-fang-fa.html">
+            
+                    
+                    线性方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="jue-ce-shu.html">
+            
+                <a href="jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="shu-tuan-ti.html">
+            
+                <a href="shu-tuan-ti.html">
+            
+                    
+                    树团体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../ju-lei.html">
+            
+                <a href="../ju-lei.html">
+            
+                    
+                    聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../xie-tong-guo-lv.html">
+            
+                <a href="../xie-tong-guo-lv.html">
+            
+                    
+                    协同过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../questions.html">
+            
+                <a href="../../questions.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../questions/datasetdataframerdd.html">
+            
+                <a href="../../questions/datasetdataframerdd.html">
+            
+                    
+                    DataFrame-Dataset-RDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../questions/spark-checkpoint.html">
+            
+                <a href="../../questions/spark-checkpoint.html">
+            
+                    
+                    checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../../questions/shu-ju-ben-di-xing.html">
+            
+                <a href="../../questions/shu-ju-ben-di-xing.html">
+            
+                    
+                    某个task很慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../../questions/sparkhan-shu.html">
+            
+                <a href="../../questions/sparkhan-shu.html">
+            
+                    
+                    Spark函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../../questions/hadoop-1he-hadoop2.html">
+            
+                <a href="../../questions/hadoop-1he-hadoop2.html">
+            
+                    
+                    Hadoop 1和Hadoop2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../../questions/broadcast-join.html">
+            
+                <a href="../../questions/broadcast-join.html">
+            
+                    
+                    Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >线性方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x7EBF;&#x6027;&#x65B9;&#x6CD5;&#xFF08;linear-methods&#xFF09;">&#x7EBF;&#x6027;&#x65B9;&#x6CD5;&#xFF08;Linear Methods&#xFF09;</h3>
+<h4 id="1&#x3001;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#xFF08;mathematical-formulation&#xFF09;">1&#x3001;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#xFF08;Mathematical formulation&#xFF09;</h4>
+<p>&#x8BB8;&#x591A;&#x6807;&#x51C6;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x8868;&#x793A;&#x4E3A;<strong>&#x51F8;&#x4F18;&#x5316;</strong>&#xFF08;Convex optimization&#xFF09;&#x95EE;&#x9898;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span></span></span></span>&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x53D8;&#x91CF;&#x5411;&#x91CF;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span>&#xFF08;&#x4EE3;&#x7801;&#x4E2D;&#x53EB;&#x4F5C;<code>weights</code>&#xFF09;&#xFF0C;&#x67E5;&#x627E;&#x57FA;&#x4E8E;&#x8BE5;&#x5411;&#x91CF;&#x7684;&#x51F8;&#x51FD;&#x6570;&#xFF08;convex function&#xFF09;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span>&#x7684;&#x6700;&#x5C0F;&#x503C;&#x7684;&#x4EFB;&#x52A1;&#x3002;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5199;&#x4F5C;&#x4E00;&#x4E2A;&#x4F18;&#x5316;&#x95EE;&#x9898;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>min</mi><mrow><mi>w</mi><mo>&#x2208;</mo><msup><mi>R</mi><mi>d</mi></msup></mrow></msub><mspace width="0.277778em"></mspace><mi>f</mi><mo>(</mo><mi>w</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\min_{w \in R^d} \; f(w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mop"><span class="mop">min</span><span class="msupsub"><span class="vlist"><span style="top:0.2026199999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.02691em;">w</span><span class="mrel mtight">&#x2208;</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:-0.286em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">d</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit"><span class="mspace thickspace"></span><span class="mord mathit" style="margin-right:0.10764em;">f</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span>&#xFF0C;&#x5176;&#x4E2D;<strong>&#x76EE;&#x6807;&#x51FD;&#x6570;</strong>&#xFF08;objective function&#xFF09;&#x662F;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>w</mi><mo>)</mo><mo>:</mo><mo>=</mo><mi>&#x3BB;</mi><mspace width="0.16667em"></mspace><mi>R</mi><mo>(</mo><mi>w</mi><mo>)</mo><mo>+</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mi>L</mi><mo>(</mo><mi>w</mi><mo separator="true">;</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>i</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">f(w)  := \lambda\, R(w) + \frac1n \sum_{i=1}^n L(w;x_i,y_i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mclose">)</span><span class="mrel">:</span><span class="mrel">=</span><span class="mord mathit">&#x3BB;</span><span class="mord mathit"><span class="mspace thinspace"></span><span class="mord mathit" style="margin-right:0.00773em;">R</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mclose">)</span><span class="mbin">+</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mop"><span class="mop op-symbol small-op" style="top:-0.0000050000000000050004em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.30001em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.364em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mpunct">;</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>&#x7684;&#x5F62;&#x5F0F;&#x3002;&#x5176;&#x4E2D;&#x5411;&#x91CF;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>&#x2208;</mo><msup><mi>R</mi><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">x_i\in R^d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:0.999108em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2208;</span><span class="mord"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">d</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x662F;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x4F8B;&#x5B50;&#xFF08;training data examples&#xFF09;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#x2264;</mo><mi>i</mi><mo>&#x2264;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1\le i\le n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.79549em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mrel">&#x2264;</span><span class="mord mathit">i</span><span class="mrel">&#x2264;</span><span class="mord mathit">n</span></span></span></span>&#xFF0C;&#x5E76;&#x4E14;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>&#x2208;</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">y_i \in R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.00773em;">R</span></span></span></span>&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x6807;&#x7B7E;&#xFF0C;&#x5373;&#x8981;&#x9884;&#x6D4B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5982;&#x679C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>(</mo><mi>w</mi><mo separator="true">;</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L(w; x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mpunct">;</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>w</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">w^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x548C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span>&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x628A;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x79F0;&#x4E3A;&#x662F;<strong>&#x7EBF;&#x6027;&#x7684;</strong>&#x3002;</p>
+<p><strong>&#x76EE;&#x6807;&#x51FD;&#x6570;</strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span>&#x6709;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;&#x6B63;&#x5219;&#x5316;&#x90E8;&#x5206;&#xFF08;regularizer&#xFF09;&#x63A7;&#x5236;&#x6A21;&#x578B;&#x7684;&#x590D;&#x6742;&#x5EA6;&#xFF08;&#x907F;&#x514D;&#x8FC7;&#x62DF;&#x5408;&#xFF09;&#xFF1B;&#x635F;&#x5931;&#x90E8;&#x5206;&#xFF08;loss&#xFF09;&#x8861;&#x91CF;&#x6A21;&#x578B;&#x5728;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x4E0A;&#x7684;&#x8BEF;&#x5DEE;&#xFF08;error&#xFF09;&#x3002;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF08;loss function&#xFF0C;&#x4E5F;&#x79F0;&#x4EE3;&#x4EF7;&#x51FD;&#x6570;&#xFF1A;cost function&#xFF09;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>(</mo><mi>w</mi><mo separator="true">;</mo><mi mathvariant="normal">.</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L(w;.)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mpunct">;</span><span class="mord mathrm">.</span><span class="mclose">)</span></span></span></span>&#x4E00;&#x822C;&#x662F;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span>&#x7684;&#x4E00;&#x4E2A;&#x51F8;&#x51FD;&#x6570;&#x3002;&#x56FA;&#x5B9A;&#x7684;&#x6B63;&#x5219;&#x5316;&#x53C2;&#x6570;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3BB;</mi><mo>&#x2265;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda \ge 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord mathit">&#x3BB;</span><span class="mrel">&#x2265;</span><span class="mord mathrm">0</span></span></span></span>&#xFF08;&#x4EE3;&#x7801;&#x4E2D;&#x7684;<code>regParam</code>&#xFF09;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x4E2A;&#x76EE;&#x6807;&#xFF1A;&#x6700;&#x5C0F;&#x5316;&#x635F;&#x5931;&#xFF08;&#x5373;&#xFF0C;&#x8BAD;&#x7EC3;&#x8BEF;&#x5DEE;&#xFF0C;training error&#xFF09;&#x548C;&#x6700;&#x5C0F;&#x5316;&#x6A21;&#x578B;&#x590D;&#x6742;&#x5EA6;&#xFF08;&#x5373;&#xFF0C;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x8FC7;&#x62DF;&#x5408;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x6743;&#x8861;&#xFF08;trade-off&#xFF09;&#x3002;</p>
+<h5 id="11&#x3001;&#x635F;&#x5931;&#x51FD;&#x6570;">1.1&#x3001;&#x635F;&#x5931;&#x51FD;&#x6570;</h5>
+<p><code>spark.mllib</code>&#x652F;&#x6301;&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570;&#x548C;&#x5B83;&#x4EEC;&#x7684;&#x68AF;&#x5EA6;&#xFF08;gradients&#xFF0C;&#x5347;&#x964D;&#x7387;&#xFF09;&#x6216;&#x8005;&#x6B21;&#x68AF;&#x5EA6;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>&#x635F;&#x5931;&#x51FD;&#x6570;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>(</mo><mi>w</mi><mo separator="true">;</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L(w;x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mpunct">;</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></th>
+<th>&#x68AF;&#x5EA6;&#x6216;&#x6B21;&#x68AF;&#x5EA6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hinge loss</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>max</mi><mo>{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo>&#x2212;</mo><mi>y</mi><msup><mi>w</mi><mi>T</mi></msup><mi>x</mi><mo>}</mo><mo separator="true">,</mo><mspace width="1em"></mspace><mi>y</mi><mo>&#x2208;</mo><mo>{</mo><mo>&#x2212;</mo><mn>1</mn><mo separator="true">,</mo><mo>+</mo><mn>1</mn><mo>}</mo></mrow><annotation encoding="application/x-tex">\max \{0, 1-y w^T x \}, \quad y \in \{-1, +1\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mop">max</span><span class="mopen">{</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">x</span><span class="mclose">}</span><span class="mpunct">,</span><span class="mord mathit"><span class="mspace quad"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span><span class="mrel">&#x2208;</span><span class="mopen">{</span><span class="mord">&#x2212;</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord">+</span><span class="mord mathrm">1</span><span class="mclose">}</span></span></span></span></td>
+<td>&#x592A;&#x590D;&#x6742;&#x7684;&#x516C;&#x5F0F;&#xFF0C;&#x5199;&#x4E0D;&#x7C97;&#x6765;</td>
+</tr>
+<tr>
+<td>logsitc loss</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>log</mi><mo>(</mo><mn>1</mn><mo>+</mo><mi>exp</mi><mo>(</mo><mo>&#x2212;</mo><mi>y</mi><msup><mi>w</mi><mi>T</mi></msup><mi>x</mi><mo>)</mo><mo>)</mo><mo separator="true">,</mo><mspace width="1em"></mspace><mi>y</mi><mo>&#x2208;</mo><mo>{</mo><mo>&#x2212;</mo><mn>1</mn><mo separator="true">,</mo><mo>+</mo><mn>1</mn><mo>}</mo></mrow><annotation encoding="application/x-tex">\log(1+\exp( -y w^T x)),\quad y \in \{-1, +1\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mop">exp</span><span class="mopen">(</span><span class="mord">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mord mathit"><span class="mspace quad"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span><span class="mrel">&#x2208;</span><span class="mopen">{</span><span class="mord">&#x2212;</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord">+</span><span class="mord mathrm">1</span><span class="mclose">}</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2212;</mo><mi>y</mi><mrow><mo fence="true">(</mo><mn>1</mn><mo>&#x2212;</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mi>exp</mi><mo>(</mo><mo>&#x2212;</mo><mi>y</mi><msup><mi>w</mi><mi>T</mi></msup><mi>x</mi><mo>)</mo></mrow></mfrac><mo fence="true">)</mo></mrow><mo>&#x22C5;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">-y \left(1-\frac1{1+\exp(-y w^T x)} \right) \cdot x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.15em;"></span><span class="strut bottom" style="height:1.80002em;vertical-align:-0.65002em;"></span><span class="base textstyle uncramped"><span class="mord">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.35186499999999993em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span><span class="mbin mtight">+</span><span class="mop mtight">exp</span><span class="mopen mtight">(</span><span class="mord mtight">&#x2212;</span><span class="mord mathit mtight" style="margin-right:0.03588em;">y</span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.286em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit mtight">x</span><span class="mclose mtight">)</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="mbin">&#x22C5;</span><span class="mord mathit">x</span></span></span></span></td>
+</tr>
+<tr>
+<td>squared loss</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>(</mo><msup><mi>w</mi><mi>T</mi></msup><mi>x</mi><mo>&#x2212;</mo><mi>y</mi><msup><mo>)</mo><mn>2</mn></msup><mo separator="true">,</mo><mspace width="1em"></mspace><mi>y</mi><mo>&#x2208;</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">\frac{1}{2} (w^T x - y)^2, \quad y \in R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">x</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit"><span class="mspace quad"></span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span><span class="mrel">&#x2208;</span><span class="mord mathit" style="margin-right:0.00773em;">R</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msup><mi>w</mi><mi>T</mi></msup><mi>x</mi><mo>&#x2212;</mo><mi>y</mi><mo>)</mo><mo>&#x22C5;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">(w^T x - y) \cdot x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">x</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mbin">&#x22C5;</span><span class="mord mathit">x</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x4E2D;&#xFF0C;&#x4E8C;&#x5143;&#x6807;&#x7B7E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span>&#x7684;&#x503C;&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">+</span><span class="mord mathrm">1</span></span></span></span>&#xFF08;positive&#xFF09;&#x6216;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">&#x2212;</span><span class="mord mathrm">1</span></span></span></span>&#xFF08;negative&#xFF09;&#xFF0C;&#x5BF9;&#x516C;&#x5F0F;&#x6765;&#x8BF4;&#x5F88;&#x65B9;&#x4FBF;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;<code>spark.mllib</code>&#x4E2D;&#xFF0C;&#x7528;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span></span></span></span>&#x4EE3;&#x66FF;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">&#x2212;</span><span class="mord mathrm">1</span></span></span></span>&#x4EE5;&#x4E0E;&#x591A;&#x5143;&#x5206;&#x7C7B;&#x6807;&#x7B7E;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</p>
+<h5 id="12&#x3001;&#x6B63;&#x5219;&#x5316;">1.2&#x3001;&#x6B63;&#x5219;&#x5316;</h5>
+<p>&#x6B63;&#x5219;&#x5316;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4F7F;&#x6A21;&#x578B;&#x7B80;&#x5355;&#x3001;&#x548C;&#x907F;&#x514D;&#x8FC7;&#x62DF;&#x5408;&#x3002;<code>spark.mllib</code>&#x652F;&#x6301;&#x7684;&#x6B63;&#x5219;&#x5316;&#x65B9;&#x6CD5;&#x6709;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>&#x6B63;&#x5219;&#x5316;&#x65B9;&#x6CD5;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mo>(</mo><mi>w</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">R(w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.00773em;">R</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span></th>
+<th>&#x68AF;&#x5EA6;&#x6216;&#x6B21;&#x68AF;&#x5EA6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>zero&#xFF08;&#x4E0D;&#x6B63;&#x5219;&#x5316;&#xFF09;</td>
+<td>0</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span></span></span></span></td>
+</tr>
+<tr>
+<td>L2</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi mathvariant="normal">&#x2225;</mi><mi>w</mi><msubsup><mi mathvariant="normal">&#x2225;</mi><mn>2</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\frac{1}{2}\|w\|_2^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathrm">&#x2225;</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord"><span class="mord mathrm">&#x2225;</span><span class="msupsub"><span class="vlist"><span style="top:0.24810799999999997em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span></td>
+</tr>
+<tr>
+<td>L1</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2225;</mi><mi>w</mi><msub><mi mathvariant="normal">&#x2225;</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\|w\|_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2225;</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord"><span class="mord mathrm">&#x2225;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">n</mi></mrow><mo>(</mo><mi>w</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathrm{sign}(w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="mord mathrm">n</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span></td>
+</tr>
+<tr>
+<td>elastic net</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi><mi mathvariant="normal">&#x2225;</mi><mi>w</mi><msub><mi mathvariant="normal">&#x2225;</mi><mn>1</mn></msub><mo>+</mo><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>&#x3B1;</mi><mo>)</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mi mathvariant="normal">&#x2225;</mi><mi>w</mi><msubsup><mi mathvariant="normal">&#x2225;</mi><mn>2</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\alpha \|w\|_1 + (1-\alpha)\frac{1}{2}\|w\|_2^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mord mathrm">&#x2225;</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord"><span class="mord mathrm">&#x2225;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mclose">)</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathrm">&#x2225;</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord"><span class="mord mathrm">&#x2225;</span><span class="msupsub"><span class="vlist"><span style="top:0.24810799999999997em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">n</mi></mrow><mo>(</mo><mi>w</mi><mo>)</mo><mo>+</mo><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>&#x3B1;</mi><mo>)</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">\alpha \mathrm{sign}(w) + (1-\alpha) w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mord textstyle uncramped"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="mord mathrm">n</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mclose">)</span><span class="mbin">+</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mclose">)</span><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p>&#x5176;&#x4E2D;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">n</mi></mrow><mo>(</mo><mi>w</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathrm{sign}(w)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="mord mathrm">n</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mclose">)</span></span></span></span>&#x662F;&#x6240;&#x6709;&#x5143;&#x7D20;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span>&#x7684;signs <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#xB1;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\pm1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">&#xB1;</span><span class="mord mathrm">1</span></span></span></span>&#x6784;&#x6210;&#x7684;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x5E73;&#x6ED1;&#x5EA6;&#xFF08;smoothness&#xFF09;&#x7684;&#x539F;&#x56E0;&#xFF0C;L2&#x6B63;&#x5219;&#x5316;&#x95EE;&#x9898;&#x6BD4;L1&#x6B63;&#x5219;&#x5316;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x8D77;&#x6765;&#x7B80;&#x5355;&#x3002;&#x4F46;&#x662F;L1&#x6B63;&#x5219;&#x5316;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x63D0;&#x5347;&#x6743;&#x91CD;&#x7A00;&#x758F;&#x6027;&#xFF08;sparsity in weights&#xFF09;&#xFF0C;&#x8FDB;&#x800C;&#x53EF;&#x4EE5;&#x662F;&#x6A21;&#x578B;&#x66F4;&#x5C0F;&#xFF0C;&#x66F4;&#x53EF;&#x89E3;&#x91CA;&#xFF0C;&#x540E;&#x8005;&#x9002;&#x5408;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x3002;</p>
+<p>Elastic net&#x662F;L1&#x548C;L2&#x6B63;&#x5219;&#x5316;&#x7684;&#x7EC4;&#x5408;&#x3002;&#x5728;&#x6570;&#x5B66;&#x4E0A;&#xFF0C;Elastic Net&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>L</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">L_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">L</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x548C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>L</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">L_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">L</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x6B63;&#x5219;&#x5316;&#x9879;&#x7684;&#x4E00;&#x4E2A;&#x51F8;&#x7EC4;&#x5408;&#xFF08;convex combination&#xFF09;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi><mrow><mo fence="true">(</mo><mi>&#x3BB;</mi><mi mathvariant="normal">&#x2225;</mi><mi>w</mi><msub><mi mathvariant="normal">&#x2225;</mi><mn>1</mn></msub><mo fence="true">)</mo></mrow><mo>+</mo><mo>(</mo><mn>1</mn><mo>&#x2212;</mo><mi>&#x3B1;</mi><mo>)</mo><mrow><mo fence="true">(</mo><mfrac><mrow><mi>&#x3BB;</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mi mathvariant="normal">&#x2225;</mi><mi>w</mi><msubsup><mi mathvariant="normal">&#x2225;</mi><mn>2</mn><mn>2</mn></msubsup><mo fence="true">)</mo></mrow><mo separator="true">,</mo><mi>&#x3B1;</mi><mo>&#x2208;</mo><mo>[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo>]</mo><mo separator="true">,</mo><mi>&#x3BB;</mi><mo>&#x2265;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha \left( \lambda \|w\|_1 \right) + (1-\alpha) \left( \frac{\lambda}{2}\|w\|_2^2 \right) , \alpha \in [0, 1], \lambda \geq 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2301179999999998em;vertical-align:-0.35001em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord mathit">&#x3BB;</span><span class="mord mathrm">&#x2225;</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord"><span class="mord mathrm">&#x2225;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span><span class="mbin">+</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mbin">&#x2212;</span><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mclose">)</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">&#x3BB;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathrm">&#x2225;</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord"><span class="mord mathrm">&#x2225;</span><span class="msupsub"><span class="vlist"><span style="top:0.24810799999999997em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mrel">&#x2208;</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mord mathit">&#x3BB;</span><span class="mrel">&#x2265;</span><span class="mord mathrm">0</span></span></span></span></p>
+<p>&#x901A;&#x8FC7;&#x9002;&#x5F53;&#x5730;&#x8BBE;&#x7F6E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span>&#xFF0C;elastic net&#x5305;&#x542B;&#x4E86;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>L</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">L_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">L</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x548C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>L</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">L_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">L</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x6B63;&#x5219;&#x5316;&#x4F5C;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x4F7F;&#x7528;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span>&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>&#x7684;elastic net&#x6765;&#x8BAD;&#x7EC3;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#x65F6;&#xFF0C;&#x5B83;&#x7B49;&#x4EF7;&#x4E8E;Lasso&#x6A21;&#x578B;&#x3002;&#x5F53;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span>&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span></span></span></span>&#x65F6;&#xFF0C;&#x8BAD;&#x7EC3;&#x7684;&#x6A21;&#x578B;&#x7B80;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;&#x5CAD;&#x56DE;&#x5F52;&#xFF08;ridge regression&#xFF09;&#x6A21;&#x578B;&#x3002;</p>
+<p>&#x4E0D;&#x63A8;&#x8350;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x6B63;&#x5219;&#x5316;&#x5C31;&#x8BAD;&#x7EC3;&#x6A21;&#x578B;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x8BAD;&#x7EC3;&#x6837;&#x672C;&#x6570;&#x91CF;&#x5C0F;&#x7684;&#x65F6;&#x5019;&#x3002;</p>
+<h5 id="13&#x3001;&#x4F18;&#x5316;">1.3&#x3001;&#x4F18;&#x5316;</h5>
+<p>&#x7EBF;&#x6027;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x51F8;&#x4F18;&#x5316;&#xFF08;convex optimization&#xFF09;&#x65B9;&#x6CD5;&#x6765;&#x4F18;&#x5316;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x3002;&#x76EE;&#x524D;&#x5927;&#x591A;&#x6570;&#x7B97;&#x6CD5;APIs&#x652F;&#x6301;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;Stochastic Gradient Descent &#xFF0C;SGD&#xFF09;&#xFF0C;&#x6709;&#x4E9B;&#x652F;&#x6301;L-BFGS&#x3002;</p>
+<h4 id="2&#x3001;&#x5206;&#x7C7B;">2&#x3001;&#x5206;&#x7C7B;</h4>
+<p>&#x5206;&#x7C7B;&#xFF08;Classification&#xFF09;&#x7684;&#x76EE;&#x7684;&#x662F;&#x628A;&#x6761;&#x76EE;&#x5212;&#x5206;&#x4E3A;&#x7C7B;&#x522B;&#xFF08;categories&#xFF09;&#x3002;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5206;&#x7C7B;&#x662F;&#x4E8C;&#x5143;&#x5206;&#x7C7B;&#xFF08;binary classification&#xFF09;&#xFF0C;&#x6709;&#x4E24;&#x79CD;&#x7C7B;&#x522B;&#x3002;&#x5982;&#x679C;&#x6709;&#x8D85;&#x8FC7;&#x4E24;&#x79CD;&#x7C7B;&#x522B;&#xFF0C;&#x5C31;&#x53EB;&#x4F5C;&#x591A;&#x7C7B;&#x578B;&#x5206;&#x7C7B;&#xFF08;multiclass classification&#xFF09;&#x3002;<code>spark.mllib</code>&#x652F;&#x6301;&#x4E24;&#x79CD;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5206;&#x7C7B;&#x7684;&#x7EBF;&#x6027;&#x65B9;&#x6CD5;&#xFF1A;&#x7EBF;&#x6027;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#xFF08;linear Support Vector Machines&#xFF0C;SVMs&#xFF09;&#x548C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x3002;&#x7EBF;&#x6027;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#x53EA;&#x652F;&#x6301;&#x4E8C;&#x5143;&#x5206;&#x7C7B;&#xFF0C;&#x800C;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x652F;&#x6301;&#x4E8C;&#x5143;&#x5206;&#x7C7B;&#x548C;&#x591A;&#x5143;&#x5206;&#x7C7B;&#x3002;&#x5BF9;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;<code>spark.mllib</code>&#x90FD;&#x652F;&#x6301;L1&#x548C;L2&#x6B63;&#x5219;&#x5316;&#x53D8;&#x79CD;&#x3002;&#x5728;MLlib&#x4E2D;&#xFF0C;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x5408;&#x7531;LabeledPoint&#x7684;RDD&#x4EE3;&#x8868;&#xFF0C;&#x5176;&#x4E2D;&#x6807;&#x7B7E;&#x662F;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x7684;&#x7C7B;&#x578B;&#x7D22;&#x5F15;&#xFF1A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">0,1,2,...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mpunct">,</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span></span></span></span>&#x3002;</p>
+<h5 id="21&#x3001;&#x7EBF;&#x6027;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;">2.1&#x3001;&#x7EBF;&#x6027;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;</h5>
+<p>&#x7EBF;&#x6027;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5927;&#x89C4;&#x6A21;&#x5206;&#x7C7B;&#x4EFB;&#x52A1;&#x7684;&#x6807;&#x51C6;&#x65B9;&#x6CD5;&#x3002;&#x4ED6;&#x662F;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x65B9;&#x6CD5;&#xFF0C;&#x635F;&#x5931;&#x51FD;&#x6570;&#x662F;higne loss&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x662F;&#x4F7F;&#x7528;L2&#x6B63;&#x5219;&#x5316;&#xFF0C;&#x4E5F;&#x652F;&#x6301;L1&#x6B63;&#x5219;&#x5316;&#x3002;</p>
+<p>&#x7EBF;&#x6027;SVMs&#x7B97;&#x6CD5;&#x7684;&#x8F93;&#x51FA;&#x662F;SVM&#x6A21;&#x578B;&#x3002;&#x7528;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span>&#x8868;&#x793A;&#x65B0;&#x7684;&#x6570;&#x636E;&#x70B9;&#xFF08;new data point&#xFF09;&#xFF0C;&#x6A21;&#x578B;&#x57FA;&#x4E8E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>w</mi><mi>T</mi></msup><mi>x</mi></mrow><annotation encoding="application/x-tex">w^Tx</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">x</span></span></span></span>&#x7684;&#x503C;&#x8FDB;&#x884C;&#x9884;&#x6D4B;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>w</mi><mi>T</mi></msup><mi>x</mi><mo>&#x2265;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">w^Tx \ge 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.977301em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">x</span><span class="mrel">&#x2265;</span><span class="mord mathrm">0</span></span></span></span>&#x7ED3;&#x679C;&#x4E3A;positive&#xFF0C;&#x5426;&#x5219;&#x4E3A;negative&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.mllib.classification.{<span class="hljs-type">SVMModel</span>, <span class="hljs-type">SVMWithSGD</span>}
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.evaluation.<span class="hljs-type">BinaryClassificationMetrics</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.util.<span class="hljs-type">MLUtils</span>
+
+<span class="hljs-comment">// Load training data in LIBSVM format.</span>
+<span class="hljs-keyword">val</span> data = <span class="hljs-type">MLUtils</span>.loadLibSVMFile(sc, <span class="hljs-string">&quot;data/mllib/sample_libsvm_data.txt&quot;</span>)
+
+<span class="hljs-comment">// Split data into training (60%) and test (40%).</span>
+<span class="hljs-keyword">val</span> splits = data.randomSplit(<span class="hljs-type">Array</span>(<span class="hljs-number">0.6</span>, <span class="hljs-number">0.4</span>), seed = <span class="hljs-number">11</span>L)
+<span class="hljs-keyword">val</span> training = splits(<span class="hljs-number">0</span>).cache()
+<span class="hljs-keyword">val</span> test = splits(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">// Run training algorithm to build the model</span>
+<span class="hljs-keyword">val</span> numIterations = <span class="hljs-number">100</span>
+<span class="hljs-keyword">val</span> model = <span class="hljs-type">SVMWithSGD</span>.train(training, numIterations)
+
+<span class="hljs-comment">// Clear the default threshold.</span>
+model.clearThreshold()
+
+<span class="hljs-comment">// Compute raw scores on the test set.</span>
+<span class="hljs-keyword">val</span> scoreAndLabels = test.map { point =&gt;
+  <span class="hljs-keyword">val</span> score = model.predict(point.features)
+  (score, point.label)
+}
+
+<span class="hljs-comment">// Get evaluation metrics.</span>
+<span class="hljs-keyword">val</span> metrics = <span class="hljs-keyword">new</span> <span class="hljs-type">BinaryClassificationMetrics</span>(scoreAndLabels)
+<span class="hljs-keyword">val</span> auROC = metrics.areaUnderROC()
+
+println(<span class="hljs-string">&quot;Area under ROC = &quot;</span> + auROC)
+
+<span class="hljs-comment">// Save and load model</span>
+model.save(sc, <span class="hljs-string">&quot;target/tmp/scalaSVMWithSGDModel&quot;</span>)
+<span class="hljs-keyword">val</span> sameModel = <span class="hljs-type">SVMModel</span>.load(sc, <span class="hljs-string">&quot;target/tmp/scalaSVMWithSGDModel&quot;</span>)
+</code></pre>
+<p><code>SVMWithSGD.train()</code>&#x65B9;&#x6CD5;&#x9ED8;&#x8BA4;&#x628A;&#x6B63;&#x5219;&#x5316;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;1.0&#x6267;&#x884C;L2&#x6B63;&#x5219;&#x5316;&#x3002;&#x5982;&#x679C;&#x8981;&#x914D;&#x7F6E;&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x5E76;&#x55F2;&#x7528;setter&#x65B9;&#x6CD5;&#x6765;&#x81EA;&#x5B9A;&#x4E49;<code>SVMWithSGD</code>&#x3002;&#x6240;&#x6709;&#x5176;&#x5B83;&#x7684;<code>spark.mllib</code>&#x7B97;&#x6CD5;&#x4E5F;&#x90FD;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x5316;&#x53C2;&#x6570;&#x4E3A;0.1&#x7684;L1&#x6B63;&#x5219;&#x5316;&#x7684;SVMs&#x53D8;&#x79CD;&#xFF0C;&#x5E76;&#x4E14;&#x7528;200&#x6B21;&#x8FED;&#x4EE3;&#x8BAD;&#x7EC3;&#x7B97;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.mllib.optimization.<span class="hljs-type">L1Updater</span>
+
+<span class="hljs-keyword">val</span> svmAlg = <span class="hljs-keyword">new</span> <span class="hljs-type">SVMWithSGD</span>()
+svmAlg.optimizer
+  .setNumIterations(<span class="hljs-number">200</span>)
+  .setRegParam(<span class="hljs-number">0.1</span>)
+  .setUpdater(<span class="hljs-keyword">new</span> <span class="hljs-type">L1Updater</span>)
+<span class="hljs-keyword">val</span> modelL1 = svmAlg.run(training)
+</code></pre>
+<h5 id="22&#x3001;&#x903B;&#x8F91;&#x56DE;&#x5F52;">2.2&#x3001;&#x903B;&#x8F91;&#x56DE;&#x5F52;</h5>
+<p>&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x5E7F;&#x53D1;&#x7528;&#x4E8E;&#x9884;&#x6D4B;&#x4E8C;&#x5143;&#x54CD;&#x5E94;&#xFF0C;&#x635F;&#x5931;&#x51FD;&#x6570;&#x662F;logistic loss&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E8C;&#x5143;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x4E2A;&#x7B97;&#x6CD5;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x4E8C;&#x5143;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#x3002;&#x7528;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span>&#x8868;&#x793A;&#x65B0;&#x7684;&#x6570;&#x636E;&#x70B9;&#xFF08;new data point&#xFF09;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>z</mi><mo>=</mo><msup><mi>w</mi><mi>T</mi></msup><mi>x</mi></mrow><annotation encoding="application/x-tex">z = w^T x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit">x</span></span></span></span>&#xFF0C;&#x6A21;&#x578B;&#x901A;&#x8FC7;&#x5E94;&#x7528;&#x903B;&#x8F91;&#x51FD;&#x6570;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="normal">f</mi></mrow><mo>(</mo><mi>z</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>&#x2212;</mo><mi>z</mi></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{f}(z) = \frac{1}{1 + e^{-z}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.2484389999999999em;vertical-align:-0.403331em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mord mathit mtight">e</span><span class="msupsub"><span class="vlist"><span style="top:-0.286em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathit mtight" style="margin-right:0.04398em;">z</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>&#x8FDB;&#x884C;&#x9884;&#x6D4B;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="normal">f</mi></mrow><mo>(</mo><mi>z</mi><mo>)</mo><mo>&gt;</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">\mathrm{f}(z) \gt 0.5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm" style="margin-right:0.07778em;">f</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mclose">)</span><span class="mrel">&gt;</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">5</span></span></span></span>&#x7ED3;&#x679C;&#x4E3A;positive&#xFF0C;&#x5426;&#x5219;&#x4E3A;negative&#x3002;</p>
+<p>&#x4E8C;&#x5143;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x53EF;&#x4EE5;&#x88AB;&#x4E00;&#x822C;&#x5316;&#x4E3A;&#x591A;&#x9879;&#x5F0F;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#xFF0C;&#x4EE5;&#x8FDB;&#x884C;&#x591A;&#x5143;&#x5206;&#x7C7B;&#x8BAD;&#x7EC3;&#x548C;&#x9884;&#x6D4B;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span></span></span></span>&#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF0C;&#x5176;&#x4E2D;&#x67D0;&#x4E2A;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x88AB;&#x8BBE;&#x5B9A;&#x4E3A;&#x4E00;&#x4E2A;&#x201C;pivot&#x201D;&#xFF0C;&#x5176;&#x5B83;&#x7684;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">K - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span></span></span></span>&#x4E2A;&#x7ED3;&#x679C;&#x4F1A;&#x5206;&#x522B;&#x5730;&#x76F8;&#x5BF9;&#x4E8E;&#xFF08;against&#xFF09;pivot&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x56DE;&#x5F52;&#x3002;&#x5728;<code>spark.mllib</code>&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x7C7B;&#x522B;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span></span></span></span>&#x88AB;&#x8BBE;&#x5B9A;&#x4E3A;&#x201C;pivot&#x201D;&#x7C7B;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x591A;&#x5143;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x7B97;&#x6CD5;&#x4F1A;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x591A;&#x9879;&#x5F0F;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#xFF0C;&#x5B83;&#x5305;&#x542B;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">K - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span></span></span></span>&#x4E2A;&#x76F8;&#x5BF9;&#x4E8E;&#xFF08;against&#xFF09;&#x7B2C;&#x4E00;&#x4E2A;&#x7C7B;&#x522B;&#x7684;&#x4E8C;&#x5143;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#x3002;&#x8F93;&#x5165;&#x65B0;&#x7684;&#x6570;&#x636E;&#x70B9;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">K-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mbin">&#x2212;</span><span class="mord mathrm">1</span></span></span></span>&#x4E2A;&#x6A21;&#x578B;&#x4F1A;&#x8FD0;&#x884C;&#xFF0C;&#x6982;&#x7387;&#x6700;&#x5927;&#x7684;&#x7C7B;&#x522B;&#x4F1A;&#x88AB;&#x4F5C;&#x4E3A;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x7C7B;&#x522B;&#x3002;</p>
+<p><code>spark.mllib</code>&#x5B9E;&#x73B0;&#x4E86;&#x4E24;&#x79CD;&#x89E3;&#x51B3;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;&#x7B97;&#x6CD5;&#xFF1A;mini-batch gradient descent&#x548C;L-BFGS&#x3002;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x540E;&#x8005;&#xFF0C;&#x56E0;&#x4E3A;&#x540E;&#x8005;&#x6536;&#x655B;&#x7684;&#x66F4;&#x5FEB;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.mllib.classification.{<span class="hljs-type">LogisticRegressionModel</span>, <span class="hljs-type">LogisticRegressionWithLBFGS</span>}
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.evaluation.<span class="hljs-type">MulticlassMetrics</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.regression.<span class="hljs-type">LabeledPoint</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.util.<span class="hljs-type">MLUtils</span>
+
+<span class="hljs-comment">// Load training data in LIBSVM format.</span>
+<span class="hljs-keyword">val</span> data = <span class="hljs-type">MLUtils</span>.loadLibSVMFile(sc, <span class="hljs-string">&quot;data/mllib/sample_libsvm_data.txt&quot;</span>)
+
+<span class="hljs-comment">// Split data into training (60%) and test (40%).</span>
+<span class="hljs-keyword">val</span> splits = data.randomSplit(<span class="hljs-type">Array</span>(<span class="hljs-number">0.6</span>, <span class="hljs-number">0.4</span>), seed = <span class="hljs-number">11</span>L)
+<span class="hljs-keyword">val</span> training = splits(<span class="hljs-number">0</span>).cache()
+<span class="hljs-keyword">val</span> test = splits(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">// Run training algorithm to build the model</span>
+<span class="hljs-keyword">val</span> model = <span class="hljs-keyword">new</span> <span class="hljs-type">LogisticRegressionWithLBFGS</span>()
+  .setNumClasses(<span class="hljs-number">10</span>)
+  .run(training)
+
+<span class="hljs-comment">// Compute raw scores on the test set.</span>
+<span class="hljs-keyword">val</span> predictionAndLabels = test.map { <span class="hljs-keyword">case</span> <span class="hljs-type">LabeledPoint</span>(label, features) =&gt;
+  <span class="hljs-keyword">val</span> prediction = model.predict(features)
+  (prediction, label)
+}
+
+<span class="hljs-comment">// Get evaluation metrics.</span>
+<span class="hljs-keyword">val</span> metrics = <span class="hljs-keyword">new</span> <span class="hljs-type">MulticlassMetrics</span>(predictionAndLabels)
+<span class="hljs-keyword">val</span> accuracy = metrics.accuracy
+println(<span class="hljs-string">s&quot;Accuracy = <span class="hljs-subst">$accuracy</span>&quot;</span>)
+
+<span class="hljs-comment">// Save and load model</span>
+model.save(sc, <span class="hljs-string">&quot;target/tmp/scalaLogisticRegressionWithLBFGSModel&quot;</span>)
+<span class="hljs-keyword">val</span> sameModel = <span class="hljs-type">LogisticRegressionModel</span>.load(sc,
+  <span class="hljs-string">&quot;target/tmp/scalaLogisticRegressionWithLBFGSModel&quot;</span>)
+</code></pre>
+<h4 id="3&#x3001;&#x56DE;&#x5F52;">3&#x3001;&#x56DE;&#x5F52;</h4>
+<h5 id="31&#x3001;linear-least-squares&#xFF0C;lasso&#xFF0C;&#x548C;ridge-regression">3.1&#x3001;Linear least squares&#xFF0C;Lasso&#xFF0C;&#x548C;ridge regression</h5>
+<p>&#x7EBF;&#x6027;&#x6700;&#x5C0F;&#x5E73;&#x65B9;&#xFF08;Linear least squares&#xFF09;&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;&#x56DE;&#x5F52;&#x95EE;&#x9898;&#x516C;&#x5F0F;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;squared loss&#x4F5C;&#x4E3A;&#x635F;&#x5931;&#x51FD;&#x6570;&#x7684;&#x7684;&#x7EBF;&#x6027;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4E0D;&#x540C;&#x56DE;&#x5F52;&#x65B9;&#x6CD5;&#x6309;&#x7167;&#x4F7F;&#x7528;&#x7684;&#x6B63;&#x5219;&#x5316;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x8FDB;&#x884C;&#x533A;&#x5206;&#xFF1A;ordinary least squares&#x6216;&#x8005;linear least squares&#x4E0D;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x5316;&#xFF1B;ridge regression&#x4F7F;&#x7528;L2&#x6B63;&#x5219;&#x5316;&#xFF1B;Lasso&#x4F7F;&#x7528;L1&#x6B63;&#x5219;&#x5316;&#x3002;&#x5BF9;&#x4E8E;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x6A21;&#x578B;&#xFF0C;&#x5E73;&#x5747;&#x635F;&#x5931;&#x6216;&#x8005;&#x8BAD;&#x7EC3;&#x8BEF;&#x5DEE;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo>(</mo><msup><mi>w</mi><mi>T</mi></msup><msub><mi>x</mi><mi>i</mi></msub><mo>&#x2212;</mo><msub><mi>y</mi><mi>i</mi></msub><msup><mo>)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{n} \sum_{i=1}^n (w^T x_i - y_i)^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mop"><span class="mop op-symbol small-op" style="top:-0.0000050000000000050004em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.30001em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.364em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x88AB;&#x79F0;&#x4E3A;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#xFF08;mean squared error&#xFF09;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.mllib.linalg.<span class="hljs-type">Vectors</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.regression.<span class="hljs-type">LabeledPoint</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.regression.<span class="hljs-type">LinearRegressionModel</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.regression.<span class="hljs-type">LinearRegressionWithSGD</span>
+
+<span class="hljs-comment">// Load and parse the data</span>
+<span class="hljs-keyword">val</span> data = sc.textFile(<span class="hljs-string">&quot;data/mllib/ridge-data/lpsa.data&quot;</span>)
+<span class="hljs-keyword">val</span> parsedData = data.map { line =&gt;
+  <span class="hljs-keyword">val</span> parts = line.split(&apos;,&apos;)
+  <span class="hljs-type">LabeledPoint</span>(parts(<span class="hljs-number">0</span>).toDouble, <span class="hljs-type">Vectors</span>.dense(parts(<span class="hljs-number">1</span>).split(&apos; &apos;).map(_.toDouble)))
+}.cache()
+
+<span class="hljs-comment">// Building the model</span>
+<span class="hljs-keyword">val</span> numIterations = <span class="hljs-number">100</span>
+<span class="hljs-keyword">val</span> stepSize = <span class="hljs-number">0.00000001</span>
+<span class="hljs-keyword">val</span> model = <span class="hljs-type">LinearRegressionWithSGD</span>.train(parsedData, numIterations, stepSize)
+
+<span class="hljs-comment">// Evaluate model on training examples and compute training error</span>
+<span class="hljs-keyword">val</span> valuesAndPreds = parsedData.map { point =&gt;
+  <span class="hljs-keyword">val</span> prediction = model.predict(point.features)
+  (point.label, prediction)
+}
+<span class="hljs-keyword">val</span> <span class="hljs-type">MSE</span> = valuesAndPreds.map{ <span class="hljs-keyword">case</span>(v, p) =&gt; math.pow((v - p), <span class="hljs-number">2</span>) }.mean()
+println(<span class="hljs-string">&quot;training Mean Squared Error = &quot;</span> + <span class="hljs-type">MSE</span>)
+
+<span class="hljs-comment">// Save and load model</span>
+model.save(sc, <span class="hljs-string">&quot;target/tmp/scalaLinearRegressionWithSGDModel&quot;</span>)
+<span class="hljs-keyword">val</span> sameModel = <span class="hljs-type">LinearRegressionModel</span>.load(sc, <span class="hljs-string">&quot;target/tmp/scalaLinearRegressionWithSGDModel&quot;</span>)
+</code></pre>
+<h5 id="32&#x3001;&#x6D41;&#x5F0F;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#xFF08;streaming-linear-regression&#xFF09;">3.2&#x3001;&#x6D41;&#x5F0F;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#xFF08;Streaming linear regression&#xFF09;</h5>
+<p>&#x5F53;&#x6570;&#x636E;&#x4EE5;&#x6D41;&#x7684;&#x5F62;&#x5F0F;&#x5230;&#x8FBE;&#xFF0C;&#x5728;&#x7EBF;&#x62DF;&#x5408;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#x662F;&#x5F88;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x5F53;&#x65B0;&#x7684;&#x6570;&#x636E;&#x5230;&#x8FBE;&#x65F6;&#x66F4;&#x65B0;&#x6A21;&#x578B;&#x7684;&#x53C2;&#x6570;&#x3002;<code>spark.mllib</code>&#x76EE;&#x524D;&#x652F;&#x6301;&#x4F7F;&#x7528;ordinary least squares&#x7684;&#x6D41;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x3002;&#x5728;&#x7EBF;&#x62DF;&#x5408;&#x4E0E;&#x79BB;&#x7EBF;&#x62DF;&#x5408;&#x7C7B;&#x4F3C;&#xFF0C;&#x9664;&#x4E86;&#x62DF;&#x5408;&#x53D1;&#x751F;&#x5728;&#x6BCF;&#x4E2A;&#x6279;&#x6B21;&#x7684;&#x6570;&#x636E;&#x4E0A;&#xFF0C;&#x4EE5;&#x4FBF;&#x6A21;&#x578B;&#x6301;&#x7EED;&#x5730;&#x66F4;&#x65B0;&#x4EE5;&#x4ECE;&#x6D41;&#x53CD;&#x6620;&#x6570;&#x636E;&#xFF08;reflect the data from the stream&#xFF09;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p><code>args(0)</code>&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x96C6;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;<code>args(1)</code>&#x7528;&#x4E8E;&#x9884;&#x6D4B;&#x7684;&#x6570;&#x636E;&#x96C6;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.mllib.linalg.<span class="hljs-type">Vectors</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.regression.<span class="hljs-type">LabeledPoint</span>
+<span class="hljs-keyword">import</span> org.apache.spark.mllib.regression.<span class="hljs-type">StreamingLinearRegressionWithSGD</span>
+
+<span class="hljs-keyword">val</span> trainingData = ssc.textFileStream(args(<span class="hljs-number">0</span>)).map(<span class="hljs-type">LabeledPoint</span>.parse).cache()
+<span class="hljs-keyword">val</span> testData = ssc.textFileStream(args(<span class="hljs-number">1</span>)).map(<span class="hljs-type">LabeledPoint</span>.parse)
+
+<span class="hljs-keyword">val</span> numFeatures = <span class="hljs-number">3</span>
+<span class="hljs-keyword">val</span> model = <span class="hljs-keyword">new</span> <span class="hljs-type">StreamingLinearRegressionWithSGD</span>()
+  .setInitialWeights(<span class="hljs-type">Vectors</span>.zeros(numFeatures))
+
+model.trainOn(trainingData)
+model.predictOnValues(testData.map(lp =&gt; (lp.label, lp.features))).print()
+
+ssc.start()
+ssc.awaitTermination()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="hui-gui.html" class="navigation navigation-prev " aria-label="Previous page: 回归">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="jue-ce-shu.html" class="navigation navigation-next " aria-label="Next page: 决策树">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"线性方法","level":"1.15.5.3","depth":3,"next":{"title":"决策树","level":"1.15.5.4","depth":3,"path":"mllib/fen-lei-he-hui-gui/jue-ce-shu.md","ref":"mllib/fen-lei-he-hui-gui/jue-ce-shu.md","articles":[]},"previous":{"title":"回归","level":"1.15.5.2","depth":3,"path":"mllib/fen-lei-he-hui-gui/hui-gui.md","ref":"mllib/fen-lei-he-hui-gui/hui-gui.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.md","mtime":"2021-02-04T09:34:07.903Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

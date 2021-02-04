@@ -286,31 +286,8 @@ This method drops the view with the given view name in the catalog. If the view 
 ```
 20/04/26 17:47:42 ERROR yarn.ApplicationMaster: User class threw exception: org.apache.spark.sql.AnalysisException: Cannot overwrite a path that is also being read from.;
 org.apache.spark.sql.AnalysisException: Cannot overwrite a path that is also being read from.;
-    at org.apache.spark.sql.execution.datasources.DataSourceAnalysis$$anonfun$apply$1.applyOrElse(DataSourceStrategy.scala:187)
-    at org.apache.spark.sql.execution.datasources.DataSourceAnalysis$$anonfun$apply$1.applyOrElse(DataSourceStrategy.scala:133)
-    at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$2.apply(TreeNode.scala:267)
-    at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$2.apply(TreeNode.scala:267)
-    at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:70)
-    at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:266)
-    at org.apache.spark.sql.catalyst.trees.TreeNode.transform(TreeNode.scala:256)
-    at org.apache.spark.sql.execution.datasources.DataSourceAnalysis.apply(DataSourceStrategy.scala:133)
-    at org.apache.spark.sql.execution.datasources.DataSourceAnalysis.apply(DataSourceStrategy.scala:51)
-    at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:85)
-    at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:82)
-    at scala.collection.IndexedSeqOptimized$class.foldl(IndexedSeqOptimized.scala:57)
-    at scala.collection.IndexedSeqOptimized$class.foldLeft(IndexedSeqOptimized.scala:66)
-    at scala.collection.mutable.ArrayBuffer.foldLeft(ArrayBuffer.scala:48)
-    at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:82)
-    at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:74)
-    at scala.collection.immutable.List.foreach(List.scala:381)
-    at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:74)
-    at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:69)
-    at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:67)
-    at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:50)
-    at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:66)
-    at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:623)
+    at org.apache.spark.sql.execution.datasources.DataSourceAnalysis 
     at ...
-    ...
 ```
 
 在网上搜索原因，有些说是通过Hive SQL可以，但是Spark SQL不行；这个没有尝试。

@@ -1,0 +1,1495 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>使用Datasets和DataFrames的API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="structured-streaminghe-spark-streaming.html" />
+    
+    
+    <link rel="prev" href="../structured-streaming.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Spark总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../kuai-su-ru-men.html">
+            
+                <a href="../kuai-su-ru-men.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../sparkbian-cheng-dao-yin.html">
+            
+                <a href="../sparkbian-cheng-dao-yin.html">
+            
+                    
+                    Spark编程导引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                    
+                    RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                    
+                    从Java/Scala启动Spark jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../spark-sql.html">
+            
+                <a href="../spark-sql.html">
+            
+                    
+                    Spark SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../spark-sql/getting-started.html">
+            
+                <a href="../spark-sql/getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../spark-sql/shu-ju-yuan.html">
+            
+                <a href="../spark-sql/shu-ju-yuan.html">
+            
+                    
+                    数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../spark-sql/xing-neng-diao-shi.html">
+            
+                <a href="../spark-sql/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                <a href="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                    
+                    分布式SQL引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                <a href="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                    
+                    与Apache Hive的兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../spark-sql/shu-ju-lei-xing.html">
+            
+                <a href="../spark-sql/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../spark-sql/built-in-functions.html">
+            
+                <a href="../spark-sql/built-in-functions.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../spark-streaming.html">
+            
+                <a href="../spark-streaming.html">
+            
+                    
+                    Spark Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../spark-streaming/ji-ben-gai-nian.html">
+            
+                <a href="../spark-streaming/ji-ben-gai-nian.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../spark-streaming/xing-neng-diao-shi.html">
+            
+                <a href="../spark-streaming/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../spark-streaming/rong-cuo.html">
+            
+                <a href="../spark-streaming/rong-cuo.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../structured-streaming.html">
+            
+                <a href="../structured-streaming.html">
+            
+                    
+                    Structured Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="shi-yong-datasets-hedataframes-de-api.html">
+            
+                <a href="shi-yong-datasets-hedataframes-de-api.html">
+            
+                    
+                    使用Datasets和DataFrames的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="structured-streaminghe-spark-streaming.html">
+            
+                <a href="structured-streaminghe-spark-streaming.html">
+            
+                    
+                    Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../bu-shu.html">
+            
+                <a href="../bu-shu.html">
+            
+                    
+                    部署和运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../bu-shu/zu-jian-ff08-components.html">
+            
+                <a href="../bu-shu/zu-jian-ff08-components.html">
+            
+                    
+                    组件（Components）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                <a href="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                    
+                    集群管理器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../bu-shu/ti-jiao-ying-yong.html">
+            
+                <a href="../bu-shu/ti-jiao-ying-yong.html">
+            
+                    
+                    提交应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../bu-shu/jian-kong.html">
+            
+                <a href="../bu-shu/jian-kong.html">
+            
+                    
+                    监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在YARN上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../pei-zhi.html">
+            
+                <a href="../pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../pei-zhi/sparkshu-xing.html">
+            
+                <a href="../pei-zhi/sparkshu-xing.html">
+            
+                    
+                    Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                    
+                    动态加载Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                    
+                    查看Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../diao-shi.html">
+            
+                <a href="../diao-shi.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../extff1a-xing-neng-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                    
+                    基础优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                    
+                    高级优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在Yarn上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../an-quan.html">
+            
+                <a href="../an-quan.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ying-jian-pei-zhi.html">
+            
+                <a href="../ying-jian-pei-zhi.html">
+            
+                    
+                    硬件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../mllib.html">
+            
+                <a href="../mllib.html">
+            
+                    
+                    MLlib
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../mllib/shu-ju-lei-xing.html">
+            
+                <a href="../mllib/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../mllib/ji-chu-tong-ji.html">
+            
+                <a href="../mllib/ji-chu-tong-ji.html">
+            
+                    
+                    基础统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../mllib/pipelines.html">
+            
+                <a href="../mllib/pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                    
+                    特征的提取、转换和筛选
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                    
+                    Feature Extractors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                    
+                    Feature Transformers-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                    
+                    Feature Transformers-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                    
+                    Feature Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                    
+                    Locality Sensitive Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../mllib/fen-lei-he-hui-gui.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui.html">
+            
+                    
+                    分类和回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="../mllib/fen-lei-he-hui-gui/fen-lei.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/fen-lei.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="../mllib/fen-lei-he-hui-gui/hui-gui.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/hui-gui.html">
+            
+                    
+                    回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="../mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                    
+                    线性方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="../mllib/fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="../mllib/fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                    
+                    树团体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../mllib/ju-lei.html">
+            
+                <a href="../mllib/ju-lei.html">
+            
+                    
+                    聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../mllib/xie-tong-guo-lv.html">
+            
+                <a href="../mllib/xie-tong-guo-lv.html">
+            
+                    
+                    协同过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../questions.html">
+            
+                <a href="../questions.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../questions/datasetdataframerdd.html">
+            
+                <a href="../questions/datasetdataframerdd.html">
+            
+                    
+                    DataFrame-Dataset-RDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../questions/spark-checkpoint.html">
+            
+                <a href="../questions/spark-checkpoint.html">
+            
+                    
+                    checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../questions/shu-ju-ben-di-xing.html">
+            
+                <a href="../questions/shu-ju-ben-di-xing.html">
+            
+                    
+                    某个task很慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../questions/sparkhan-shu.html">
+            
+                <a href="../questions/sparkhan-shu.html">
+            
+                    
+                    Spark函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../questions/hadoop-1he-hadoop2.html">
+            
+                <a href="../questions/hadoop-1he-hadoop2.html">
+            
+                    
+                    Hadoop 1和Hadoop2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../questions/broadcast-join.html">
+            
+                <a href="../questions/broadcast-join.html">
+            
+                    
+                    Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >使用Datasets和DataFrames的API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="api&#x4F7F;&#x7528;datasets&#x548C;dataframes">API&#x4F7F;&#x7528;Datasets&#x548C;DataFrames</h3>
+<p>&#x4ECE;Spark 2.0&#x5F00;&#x59CB;&#xFF0C;DataFrames&#x548C;Datasets&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x9759;&#x6001;&#x7684;&#x6709;&#x8FB9;&#x754C;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x6D41;&#x3001;&#x65E0;&#x8FB9;&#x754C;&#x7684;&#x6570;&#x636E;&#x3002;&#x4E0E;&#x9759;&#x6001;Datasets/DataFrames&#x7C7B;&#x4F3C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5E38;&#x7528;&#x7684;&#x5165;&#x53E3;<code>SparkSession</code>&#x6765;&#x4ECE;&#x6D41;&#x6570;&#x636E;&#x6E90;&#x521B;&#x5EFA;&#x6D41;DataFrames/Datasets&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5BF9;&#x5B83;&#x4EEC;&#x5E94;&#x7528;&#x4E0E;&#x9759;&#x6001;DataFrames/Datasets&#x76F8;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="1&#x3001;&#x521B;&#x5EFA;&#x6D41;dataframes&#x548C;&#x6D41;datasets">1&#x3001;&#x521B;&#x5EFA;&#x6D41;DataFrames&#x548C;&#x6D41;Datasets</h4>
+<p>&#x53EF;&#x4EE5;&#x7528;<code>SparkSession.readStream()</code>&#x8FD4;&#x56DE;&#x7684;<code>DataStreamReader</code>&#x63A5;&#x53E3;&#x6765;&#x521B;&#x5EFA;&#x6D41;DataFrames&#x3002;&#x5728;R&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;<code>read.stream()</code>&#x65B9;&#x6CD5;&#x3002;&#x4E0E;&#x521B;&#x5EFA;&#x9759;&#x6001;DataFrame&#x7684;read&#x63A5;&#x53E3;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8BE6;&#x60C5;&#x2014;&#x2014;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;schema&#xFF0C;options&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<h5 id="11&#x3001;&#x8F93;&#x5165;&#x6570;&#x636E;&#x6E90;">1.1&#x3001;&#x8F93;&#x5165;&#x6570;&#x636E;&#x6E90;</h5>
+<p>Spark 2.0&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E9B;&#x5185;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x6E90;&#xFF1A;</p>
+<ul>
+<li>File source&#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x4E3A;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6D41;&#x3002;&#x652F;&#x6301;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x6709;&#xFF1A;text&#x3001;csv&#x3001;json&#x3001;parquet&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>DataStreamReader</code>&#x63A5;&#x53E3;&#x7684;&#x6587;&#x6863;&#x6765;&#x67E5;&#x770B;&#x6700;&#x65B0;&#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x548C;&#x6BCF;&#x4E2A;&#x683C;&#x5F0F;&#x652F;&#x6301;&#x7684;options&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x539F;&#x5B50;&#x6027;&#x5730;&#x653E;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x5728;&#x5927;&#x591A;&#x6570;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x64CD;&#x4F5C;&#x5B9E;&#x73B0;&#x539F;&#x5B50;&#x6027;&#x3002;&#x5BB9;&#x9519;&#xFF1B;&#x652F;&#x6301;&#x901A;&#x914D;&#x7B26;&#x8DEF;&#x5F84;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x652F;&#x6301;&#x9017;&#x53F7;&#x5206;&#x9694;&#x5F97;&#x591A;&#x8DEF;&#x5F84;&#x3002;</li>
+<li>Kafka source&#xFF1A;&#x4ECE;Kafka&#x83B7;&#x53D6;&#x6570;&#x636E;&#x3002;&#x517C;&#x5BB9;0.10.0&#x548C;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x7684;Kafka broker&#x3002;&#x5BB9;&#x9519;&#x3002;</li>
+<li>Socket source&#xFF08;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#xFF09;&#xFF1A;&#x4ECE;socket&#x8FDE;&#x63A5;&#x8BFB;&#x53D6;UTF8&#x6587;&#x672C;&#x6570;&#x636E;&#x3002;&#x76D1;&#x542C;server socket&#x5728;driver&#x4E2D;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x6E90;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4E0D;&#x63D0;&#x4F9B;&#x7AEF;&#x5230;&#x7AEF;&#x7684;&#x5BB9;&#x9519;&#x4FDD;&#x8BC1;&#x3002;</li>
+</ul>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> spark: <span class="hljs-type">SparkSession</span> = ...
+
+<span class="hljs-comment">// Read text from socket</span>
+<span class="hljs-keyword">val</span> socketDF = spark
+  .readStream
+  .format(<span class="hljs-string">&quot;socket&quot;</span>)
+  .option(<span class="hljs-string">&quot;host&quot;</span>, <span class="hljs-string">&quot;localhost&quot;</span>)
+  .option(<span class="hljs-string">&quot;port&quot;</span>, <span class="hljs-number">9999</span>)
+  .load()
+
+<span class="hljs-comment">// Returns True for DataFrames that have streaming sources</span>
+socketDF.isStreaming
+
+socketDF.printSchema
+
+<span class="hljs-comment">// Read all the csv files written atomically in a directory</span>
+<span class="hljs-keyword">val</span> userSchema = <span class="hljs-keyword">new</span> <span class="hljs-type">StructType</span>().add(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;string&quot;</span>).add(<span class="hljs-string">&quot;age&quot;</span>, <span class="hljs-string">&quot;integer&quot;</span>)
+<span class="hljs-keyword">val</span> csvDF = spark
+  .readStream
+  .option(<span class="hljs-string">&quot;sep&quot;</span>, <span class="hljs-string">&quot;;&quot;</span>)
+  .schema(userSchema)      <span class="hljs-comment">// Specify schema of the csv files</span>
+  <span class="hljs-comment">// Equivalent to format(&quot;csv&quot;).load(&quot;/path/to/directory&quot;)</span>
+  .csv(<span class="hljs-string">&quot;/path/to/directory&quot;</span>)
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x4F8B;&#x5B50;&#x4E2D;&#x751F;&#x6210;&#x7684;&#x6D41;DataFrames&#x662F;&#x65E0;&#x7C7B;&#x578B;&#x7684;&#xFF08;untyped&#xFF09;&#xFF0C;&#x5373;&#x8FD9;&#x4E9B;DataFrames&#x7684;schema&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x4E0D;&#x4F1A;&#x88AB;&#x68C0;&#x67E5;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x67E5;&#x8BE2;&#x63D0;&#x4EA4;&#x540E;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x624D;&#x4F1A;&#x68C0;&#x67E5;&#x3002;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;<code>map</code>&#xFF0C;<code>flatMap</code>&#x7B49;&#x9700;&#x8981;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x77E5;&#x9053;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0E;&#x9759;&#x6001;DataFrame&#x76F8;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x5C06;&#x65E0;&#x7C7B;&#x578B;&#x7684;&#x6D41;DataFrame&#x8F6C;&#x6362;&#x4E3A;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x6D41;Dataset&#x3002;</p>
+<h5 id="12&#x3001;schema&#x63A8;&#x5BFC;&#x548C;&#x6D41;dataframesdatasets&#x7684;&#x5206;&#x533A;">1.2&#x3001;Schema&#x63A8;&#x5BFC;&#x548C;&#x6D41;DataFrames/Datasets&#x7684;&#x5206;&#x533A;</h5>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x6E90;&#x7684;Structured Streaming&#x9700;&#x8981;&#x6307;&#x5B9A;schema&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F9D;&#x8D56;Spark&#x53BB;&#x81EA;&#x52A8;&#x5730;&#x63A8;&#x5BFC;&#x3002;&#x8FD9;&#x4E2A;&#x9650;&#x5236;&#x786E;&#x4FDD;&#x6D41;&#x67E5;&#x8BE2;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4E00;&#x76F4;&#x7684;schema&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x53D1;&#x751F;&#x4E86;&#x6545;&#x969C;&#x3002;&#x5BF9;&#x67D0;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#xFF08;ad-hoc&#xFF09;&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;<code>spark.sql.streaming.schemaInference</code>&#x4E3A;<code>true</code>&#x6765;&#x5F00;&#x542F;schema&#x63A8;&#x5BFC;&#x3002;</p>
+<p>&#x5F53;&#x547D;&#x540D;&#x4E3A;<code>/key=value/</code>&#x7684;&#x5B50;&#x76EE;&#x5F55;&#x51FA;&#x73B0;&#x65F6;&#x4F1A;&#x53D1;&#x751F;&#x5206;&#x533A;&#x53D1;&#x73B0;&#xFF08;partition discovery&#xFF09;&#xFF0C;&#x5206;&#x533A;&#x53D1;&#x73B0;&#x4F1A;&#x5728;&#x8FD9;&#x4E9B;&#x5B50;&#x76EE;&#x5F55;&#x4E2D;&#x9012;&#x5F52;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x51FA;&#x73B0;&#x5728;&#x4E86;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x7684;schema&#x4E2D;&#xFF0C;Spark&#x4F1A;&#x57FA;&#x4E8E;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x586B;&#x5145;&#x3002;&#x6784;&#x6210;&#x5206;&#x533A;schema&#x7684;&#x76EE;&#x5F55;&#x5FC5;&#x987B;&#x5728;&#x67E5;&#x8BE2;&#x542F;&#x52A8;&#x65F6;&#x5C31;&#x5B58;&#x5728;&#xFF0C;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x662F;&#x9759;&#x6001;&#x7684;&#x3002;&#x6BD4;&#x5982;&#xFF0C;<code>/data/year=2015</code>&#x5B58;&#x5728;&#x65F6;&#x6DFB;&#x52A0;<code>/data/year=2016</code>&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x6539;&#x53D8;&#x5206;&#x533A;&#x5B57;&#x6BB5;&#x662F;&#x975E;&#x6CD5;&#x7684;&#xFF08;&#x5373;&#xFF0C;&#x521B;&#x5EFA;&#x76EE;&#x5F55;<code>/data/date=2016-04-17</code>&#xFF09;&#x3002;</p>
+<h4 id="2&#x3001;&#x57FA;&#x4E8E;&#x6D41;dataframesdatasets&#x7684;&#x64CD;&#x4F5C;">2&#x3001;&#x57FA;&#x4E8E;&#x6D41;DataFrames/Datasets&#x7684;&#x64CD;&#x4F5C;</h4>
+<p>&#x53EF;&#x4EE5;&#x5BF9;&#x6D41;DataFrames/Datasets&#x5E94;&#x7528;&#x5404;&#x79CD;&#x64CD;&#x4F5C;&#x2014;&#x2014;&#x5305;&#x62EC;&#x65E0;&#x7C7B;&#x578B;&#x7684;&#x3001;&#x7C7B;SQL&#x64CD;&#x4F5C;&#xFF08;&#x6BD4;&#x5982;<code>select</code>&#xFF0C;<code>where</code>&#xFF0C;<code>groupby</code>&#xFF09;&#x3001;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x7C7B;RDD&#x64CD;&#x4F5C;&#xFF08;&#x6BD4;&#x5982;<code>map</code>&#xFF0C;<code>filter</code>&#xFF0C;<code>flatMap</code>&#xFF09;&#x3002;</p>
+<h5 id="21&#x3001;&#x57FA;&#x672C;&#x64CD;&#x4F5C;-selection&#xFF0C;projection&#xFF0C;aggregation">2.1&#x3001;&#x57FA;&#x672C;&#x64CD;&#x4F5C;-Selection&#xFF0C;Projection&#xFF0C;Aggregation</h5>
+<p>&#x5927;&#x591A;&#x6570;DataFrame/Dataset&#x64CD;&#x4F5C;&#x90FD;&#x9002;&#x7528;&#x4E8E;&#x6D41;DataFrame/Dataset&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DeviceData</span>(<span class="hljs-params">device: <span class="hljs-type">String</span>, deviceType: <span class="hljs-type">String</span>, signal: <span class="hljs-type">Double</span>, time: <span class="hljs-type">DateTime</span></span>)</span>
+<span class="hljs-comment">// streaming DataFrame with IOT device data with schema { device: string, deviceType: string, signal: double, time: string }</span>
+<span class="hljs-keyword">val</span> df: <span class="hljs-type">DataFrame</span> = ... 
+<span class="hljs-comment">// streaming Dataset with IOT device data</span>
+<span class="hljs-keyword">val</span> ds: <span class="hljs-type">Dataset</span>[<span class="hljs-type">DeviceData</span>] = df.as[<span class="hljs-type">DeviceData</span>]    
+
+<span class="hljs-comment">// Select the devices which have signal more than 10</span>
+df.select(<span class="hljs-string">&quot;device&quot;</span>).where(<span class="hljs-string">&quot;signal &gt; 10&quot;</span>)      <span class="hljs-comment">// using untyped APIs   </span>
+ds.filter(_.signal &gt; <span class="hljs-number">10</span>).map(_.device)         <span class="hljs-comment">// using typed APIs</span>
+
+<span class="hljs-comment">// Running count of the number of updates for each device type</span>
+df.groupBy(<span class="hljs-string">&quot;deviceType&quot;</span>).count()                          <span class="hljs-comment">// using untyped API</span>
+
+<span class="hljs-comment">// Running average signal for each device type</span>
+<span class="hljs-keyword">import</span> org.apache.spark.sql.expressions.scalalang.typed
+ds.groupByKey(_.deviceType).agg(typed.avg(_.signal))    <span class="hljs-comment">// using typed API</span>
+</code></pre>
+<h5 id="22&#x3001;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x7684;&#x7A97;&#x53E3;&#x64CD;&#x4F5C;">2.2&#x3001;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x7684;&#x7A97;&#x53E3;&#x64CD;&#x4F5C;</h5>
+<p>Structured Streaming&#x7684;&#x5BF9;&#x6ED1;&#x52A8;&#x7684;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x7A97;&#x53E3;&#x7684;&#x805A;&#x5408;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4E0E;&#x5206;&#x7EC4;&#x805A;&#x5408;&#xFF08;grouped aggregations&#xFF09;&#x5F88;&#x76F8;&#x4F3C;&#x3002;&#x5728;&#x5206;&#x7EC4;&#x805A;&#x5408;&#x4E2D;&#xFF0C;&#x805A;&#x5408;&#x503C;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;counts&#xFF09;&#x662F;&#x9488;&#x5BF9;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;&#x7684;&#x6BCF;&#x4E2A;&#x552F;&#x4E00;&#x503C;&#x7684;&#x3002;&#x800C;&#x5728;&#x57FA;&#x4E8E;&#x7A97;&#x53E3;&#x7684;&#x805A;&#x5408;&#x4E2D;&#xFF0C;&#x805A;&#x5408;&#x503C;&#x662F;&#x9488;&#x5BF9;&#x6BCF;&#x4E2A;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x7A97;&#x53E3;&#x4E2D;&#x7684;&#x884C;&#x7684;&#x3002;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x9610;&#x91CA;&#x5B83;&#x2026;&#x2026;</p>
+<p>&#x6570;&#x636E;&#x6D41;&#x5305;&#x542B;&#x6587;&#x672C;&#x884C;&#x548C;&#x6587;&#x672C;&#x884C;&#x4EA7;&#x751F;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x8BA1;&#x7B97;&#x7A97;&#x53E3;&#x65F6;&#x957F;10&#x5206;&#x949F;&#xFF0C;&#x6BCF;5&#x5206;&#x949F;&#x66F4;&#x65B0;&#x7684;&#x7A97;&#x53E3;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x6570;&#x91CF;&#x3002;&#x5373;&#xFF0C;&#x7EDF;&#x8BA1;&#x7A97;&#x53E3;12:00 - 12:10, 12:05 - 12:15, 12:10 - 12:20&#x7B49;&#x7B49;&#x671F;&#x95F4;&#x63A5;&#x6536;&#x5230;&#x7684;&#x5355;&#x8BCD;&#x7684;&#x5355;&#x8BCD;&#x6570;&#x91CF;&#x3002;12:00 - 12:10&#x610F;&#x5473;&#x7740;12:00&#x4E4B;&#x540E;12:10&#x4E4B;&#x524D;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;&#x3002;&#x6BD4;&#x5982;&#xFF0C;12:07&#x63A5;&#x6536;&#x5230;&#x7684;&#x5355;&#x8BCD;&#x5373;&#x5728;12:00 - 12:10&#x7A97;&#x53E3;&#x4E5F;&#x5728;12:05 - 12:15&#x7A97;&#x53E3;&#x4E2D;&#x3002;</p>
+<p>&#x7ED3;&#x679C;&#x8868;&#x7684;&#x7528;&#x56FE;&#x50CF;&#x8868;&#x793A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../assets/structured-streaming-window.png" alt="Window Operations"></p>
+<p>&#x4EE5;&#x5185;&#x7A97;&#x53E3;&#x64CD;&#x4F5C;&#x548C;&#x5206;&#x7EC4;&#x64CD;&#x4F5C;&#x7C7B;&#x4F3C;&#xFF0C;&#x4EE3;&#x7801;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;<code>groupBy()</code>&#x548C;<code>window()</code>&#x64CD;&#x4F5C;&#x6765;&#x8868;&#x793A;&#x7A97;&#x53E3;&#x805A;&#x5408;&#xFF08;windowed aggregations&#xFF09;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> spark.implicits._
+<span class="hljs-comment">// streaming DataFrame of schema { timestamp: Timestamp, word: String }</span>
+<span class="hljs-keyword">val</span> words = ... 
+
+<span class="hljs-comment">// Group the data by window and word and compute the count of each group</span>
+<span class="hljs-keyword">val</span> windowedCounts = words.groupBy(
+  window($<span class="hljs-string">&quot;timestamp&quot;</span>, <span class="hljs-string">&quot;10 minutes&quot;</span>, <span class="hljs-string">&quot;5 minutes&quot;</span>),
+  $<span class="hljs-string">&quot;word&quot;</span>
+).count()
+</code></pre>
+<h5 id="23&#x3001;&#x5904;&#x7406;&#x8FDF;&#x5230;&#x6570;&#x636E;&#x548C;&#x6C34;&#x5370;">2.3&#x3001;&#x5904;&#x7406;&#x8FDF;&#x5230;&#x6570;&#x636E;&#x548C;&#x6C34;&#x5370;</h5>
+<p>&#x5982;&#x679C;&#x6570;&#x636E;&#x8FDF;&#x5230;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;12:04&#x4EA7;&#x751F;&#x7684;&#x5355;&#x8BCD;&#x88AB;&#x5E94;&#x7528;&#x5728;12:11&#x63A5;&#x6536;&#x5230;&#x3002;&#x5E94;&#x7528;&#x5E94;&#x8BE5;&#x7528;&#x65F6;&#x95F4;12:04&#x800C;&#x4E0D;&#x662F;12:11&#x6765;&#x66F4;&#x65B0;&#x7A97;&#x53E3;12:00-12:10&#x7684;&#x8BA1;&#x6570;&#x3002;&#x5BF9;&#x4E8E;&#x57FA;&#x4E8E;&#x7A97;&#x53E3;&#x7684;&#x5206;&#x7EC4;&#x64CD;&#x4F5C;&#x8FD9;&#x662F;&#x5F88;&#x81EA;&#x7136;&#x5730;&#x2014;&#x2014;Structured Streaming&#x53EF;&#x4EE5;&#x7EF4;&#x6301;&#x90E8;&#x5206;&#x805A;&#x5408;&#x7684;&#x4E2D;&#x95F4;&#x72B6;&#x6001;&#x5F88;&#x957F;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x4FBF;&#x8FDF;&#x5230;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x6B63;&#x786E;&#x5730;&#x66F4;&#x65B0;&#x65E7;&#x7684;&#x7A97;&#x53E3;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x3002;</p>
+<p><img src="../assets/structured-streaming-late-data.png" alt="Handling Late Data"></p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x8981;&#x8FD0;&#x884C;&#x67E5;&#x8BE2;&#x5F88;&#x591A;&#x5929;&#x7684;&#x8BDD;&#xFF0C;&#x5F88;&#x6709;&#x5FC5;&#x8981;&#x9650;&#x5236;&#x7D2F;&#x52A0;&#x7684;&#x4E2D;&#x95F4;&#x7684;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x7684;&#x91CF;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x7CFB;&#x7EDF;&#x9700;&#x8981;&#x77E5;&#x9053;&#x4EC0;&#x4E48;&#x65F6;&#x95F4;&#xFF08;&#x56E0;&#x4E3A;&#x5E94;&#x7528;&#x5C06;&#x4E0D;&#x518D;&#x4E3A;&#x8FD9;&#x4E2A;&#x65E7;&#x7684;&#x805A;&#x5408;&#x63A5;&#x6536;&#x8FDF;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF09;&#x53EF;&#x4EE5;&#x4ECE;&#x5185;&#x5B58;&#x72B6;&#x6001;&#x4E2D;&#x5220;&#x9664;&#x65E7;&#x7684;&#x805A;&#x5408;&#x3002;&#x8981;&#x5F00;&#x542F;&#x5B83;&#xFF0C;&#x5728;Spark 2.1&#x4E2D;&#x91C7;&#x7528;&#x4E86;&#x6C34;&#x5370;&#xFF08;watermarking&#xFF09;&#xFF0C;&#x8BA9;&#x5F15;&#x64CE;&#x81EA;&#x52A8;&#x7684;&#x8DDF;&#x8E2A;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x5F53;&#x524D;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5E76;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x6E05;&#x9664;&#x65E7;&#x7684;&#x72B6;&#x6001;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5B57;&#x6BB5;&#x548C;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x7684;&#x8FDF;&#x5230;&#x9608;&#x503C;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x7684;&#x6C34;&#x5370;&#x3002;&#x5BF9;&#x4E8E;&#x5728;&#x65F6;&#x95F4;<code>T</code>&#x542F;&#x52A8;&#x7684;&#x7279;&#x5B9A;&#x7A97;&#x53E3;&#xFF0C;&#x5F15;&#x64CE;&#x4F1A;&#x7EF4;&#x6301;&#x72B6;&#x6001;&#x5E76;&#x5141;&#x8BB8;&#x8FDF;&#x5230;&#x7684;&#x6570;&#x636E;&#x66F4;&#x65B0;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x76F4;&#x5230;&#x8FBE;&#x5230;&#x6C34;&#x5370;&#x65F6;&#x95F4;&#xFF08;&#x6C34;&#x5370;&#x65F6;&#x95F4;<code>wm</code>=&#x6700;&#x5927;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;-&#x51CF;&#x53BB;-&#x8FDF;&#x5230;&#x9608;&#x503C;&#xFF0C;&#x6700;&#x5927;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5C31;&#x662F;&#x4E0A;&#x6B21;&#x7684;&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#xFF09;&#x3002;&#x5373;&#xFF0C;&#x9608;&#x503C;&#x8303;&#x56F4;&#x5185;&#x7684;&#x8FDF;&#x5230;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x805A;&#x5408;&#xFF0C;&#x4F46;&#x662F;&#x66F4;&#x665A;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>withWatermark()</code>&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x6C34;&#x5370;&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> spark.implicits._
+<span class="hljs-comment">// streaming DataFrame of schema { timestamp: Timestamp, word: String }</span>
+<span class="hljs-keyword">val</span> words = ... 
+
+<span class="hljs-comment">// Group the data by window and word and compute the count of each group</span>
+<span class="hljs-keyword">val</span> windowedCounts = words
+    .withWatermark(<span class="hljs-string">&quot;timestamp&quot;</span>, <span class="hljs-string">&quot;10 minutes&quot;</span>)
+    .groupBy(
+        window($<span class="hljs-string">&quot;timestamp&quot;</span>, <span class="hljs-string">&quot;10 minutes&quot;</span>, <span class="hljs-string">&quot;5 minutes&quot;</span>),
+        $<span class="hljs-string">&quot;word&quot;</span>)
+    .count()
+</code></pre>
+<p>&#x6B64;&#x5904;&#xFF0C;&#x7528;&#x5B57;&#x6BB5;&#x201C;timestamp&#x201D;&#x5B9A;&#x4E49;&#x4E86;&#x6C34;&#x5370;&#xFF0C;&#x5E76;&#x4E14;&#x6307;&#x5B9A;&#x201C;10 minutes&#x201D;&#x4F5C;&#x4E3A;&#x8FDF;&#x5230;&#x9608;&#x503C;&#x3002;&#x5982;&#x679C;&#x67E5;&#x8BE2;&#x7684;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x662F;&#x201C;Update&#x201D;&#xFF0C;&#x5F15;&#x64CE;&#x4F1A;&#x6301;&#x7EED;&#x66F4;&#x65B0;&#x67D0;&#x4E2A;&#x7A97;&#x53E3;&#x5728;&#x7ED3;&#x679C;&#x8868;&#x4E2D;&#x7684;&#x8BA1;&#x6570;&#xFF0C;&#x76F4;&#x5230;&#x7A97;&#x53E3;&#x65F6;&#x95F4;&#x8D85;&#x8FC7;&#x4E86;&#x6C34;&#x5370;&#x7684;&#x9608;&#x503C;&#x3002;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x540E;&#xFF0C;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x8BA1;&#x6570;&#x4F1A;&#x88AB;&#x4F5C;&#x4E3A;&#x672C;&#x6B21;&#x89E6;&#x53D1;&#x7684;&#x8F93;&#x51FA;&#x5199;&#x5230;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x3002;&#x6BD4;&#x5982;&#xFF0C;12:15-12:20&#xFF08;12:20&#x89E6;&#x53D1;&#xFF09;&#x6536;&#x5230;&#x4E86;&#x4E00;&#x4E2A;12:08&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7A97;&#x53E3;12:00-12:10&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x679C;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;&#x5E76;&#x5199;&#x5230;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x3002;</p>
+<p>&#x67D0;&#x4E9B;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x6587;&#x4EF6;&#xFF09;&#x4E0D;&#x652F;&#x6301;&#x201C;Update&#x201D;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x9700;&#x8981;&#x7684;&#x7EC6;&#x7C92;&#x5EA6;&#x66F4;&#x65B0;&#x3002;&#x4E3A;&#x4E86;&#x80FD;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#xFF0C;&#x4E5F;&#x652F;&#x6301;&#x201C;Append&#x201D;&#x6A21;&#x5F0F;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;&#x53EA;&#x6709;&#x6700;&#x7EC8;&#x7684;&#x8BA1;&#x6570;&#x7ED3;&#x679C;&#x624D;&#x4F1A;&#x5199;&#x5230;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x3002;</p>
+<p><img src="../assets/structured-streaming-watermark-append-mode.png" alt="Watermarking in Append Mode"></p>
+<p>&#x4E0E;&#x201C;Update&#x201D;&#x6A21;&#x5F0F;&#x7C7B;&#x4F3C;&#xFF0C;&#x5F15;&#x64CE;&#x4F1A;&#x7EF4;&#x62A4;&#x6BCF;&#x4E2A;&#x7A97;&#x53E3;&#x7684;&#x4E2D;&#x95F4;&#x8BA1;&#x6570;&#x7ED3;&#x679C;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x76F4;&#x5230;&#x6C34;&#x5370;&#x65F6;&#x95F4;&#x5927;&#x4E8E;&#x7A97;&#x53E3;&#x7684;&#x65F6;&#x95F4;&#x624D;&#x4F1A;&#x628A;&#x7ED3;&#x679C;&#x8868;&#x4E2D;&#x7684;&#x5BF9;&#x5E94;&#x884C;&#x5199;&#x51FA;&#x5230;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x3002;&#x6BD4;&#x5982;&#xFF0C;12:20-12:25&#xFF08;12:25&#x89E6;&#x53D1;&#xFF09;&#x6536;&#x5230;&#x4E00;&#x4E2A;12:04&#x7684;&#x6570;&#x636E;&#x548C;12:08&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7A97;&#x53E3;12:00-12:10&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x518D;&#x66F4;&#x65B0;&#x5E76;&#x4E14;&#x4F1A;&#x88AB;&#x5199;&#x5230;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#xFF0C;12:04&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#xFF1B;12:08&#x7684;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#xFF0C;12:05-12:15&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x679C;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;&#x4F46;&#x662F;&#x4E0D;&#x4F1A;&#x5199;&#x5230;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x3002;</p>
+<p><strong>&#x6C34;&#x5370;&#x6E05;&#x9664;&#x805A;&#x5408;&#x72B6;&#x6001;&#x7684;&#x6761;&#x4EF6;</strong>&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x5FC5;&#x987B;&#x662F;&#x201C;Append&#x201D;&#x6216;&#x201C;Update&#x201D;&#xFF1A;&#x201C;Complete&#x201D;&#x6A21;&#x5F0F;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x6C34;&#x5370;&#x5220;&#x9664;&#x4E2D;&#x95F4;&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x805A;&#x5408;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5B57;&#x6BB5;&#x6216;&#x8005;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5B57;&#x6BB5;&#x7684;<code>window</code></li>
+<li><code>withWatermark</code>&#x4F7F;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x805A;&#x5408;&#x4F7F;&#x7528;&#x5B57;&#x6BB5;&#x76F8;&#x540C;&#xFF1B;<code>df.withWatermark(&quot;time&quot;, &quot;1 min&quot;).groupBy(&quot;time2&quot;).count()</code> &#x662F;&#x9519;&#x8BEF;&#x7684;&#x3002;</li>
+<li><code>withWatermark</code>&#x5FC5;&#x987B;&#x5728;&#x4F7F;&#x7528;&#x6C34;&#x5370;&#x7684;&#x805A;&#x5408;&#x4E4B;&#x524D;&#x8C03;&#x7528;&#xFF1B;<code>df.groupBy(&quot;time&quot;).count().withWatermark(&quot;time&quot;, &quot;1 min&quot;)</code>&#x662F;&#x9519;&#x8BEF;&#x7684;&#x3002;</li>
+</ul>
+<h5 id="24&#x3001;&#x8FDE;&#x63A5;&#x64CD;&#x4F5C;">2.4&#x3001;&#x8FDE;&#x63A5;&#x64CD;&#x4F5C;</h5>
+<p>&#x6D41;DataFrames&#x53EF;&#x4EE5;&#x548C;&#x9759;&#x6001;&#x7684;DataFrames&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x4EE5;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x6D41;DataFrames&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> staticDf = spark.read. ...
+<span class="hljs-keyword">val</span> streamingDf = spark.readStream. ...
+<span class="hljs-comment">// inner equi-join with a static DF</span>
+streamingDf.join(staticDf, <span class="hljs-string">&quot;type&quot;</span>)          
+<span class="hljs-comment">// right outer join with a static DF</span>
+streamingDf.join(staticDf, <span class="hljs-string">&quot;type&quot;</span>, <span class="hljs-string">&quot;right_join&quot;</span>)
+</code></pre>
+<h5 id="25&#x3001;&#x6D41;&#x53BB;&#x91CD;">2.5&#x3001;&#x6D41;&#x53BB;&#x91CD;</h5>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E8B;&#x4EF6;&#x4E2D;&#x7684;&#x552F;&#x4E00;identifier&#x6765;&#x53BB;&#x91CD;&#x6570;&#x636E;&#x6D41;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#x3002;&#x8FD9;&#x548C;&#x9759;&#x6001;DataFrame&#x4F7F;&#x7528;&#x552F;&#x4E00;&#x7684;identifier&#x5B57;&#x6BB5;&#x53BB;&#x91CD;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;&#x67E5;&#x8BE2;&#x4F1A;&#x4ECE;&#x4E4B;&#x524D;&#x7684;&#x8BB0;&#x5F55;&#x4FDD;&#x5B58;&#x5FC5;&#x8981;&#x6570;&#x91CF;&#x7684;&#x6570;&#x636E;&#x4EE5;&#x4FBF;&#x8FC7;&#x6EE4;&#x91CD;&#x590D;&#x7684;&#x8BB0;&#x5F55;&#x3002;&#x4E0E;&#x805A;&#x5408;&#x7C7B;&#x4F3C;&#xFF0C;&#x7528;&#x4E0D;&#x7528;&#x6C34;&#x5370;&#x90FD;&#x53EF;&#x4EE5;&#x53BB;&#x91CD;&#x3002;</p>
+<ul>
+<li>&#x7528;&#x6C34;&#x5370;&#xFF1A;&#x5982;&#x679C;&#x6709;&#x91CD;&#x590D;&#x6570;&#x636E;&#x6700;&#x540E;&#x5230;&#x8FBE;&#x7684;&#x4E0A;&#x9650;&#xFF0C;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6C34;&#x5370;&#xFF0C;&#x5E76;&#x4E14;&#x7528;guid&#x548C;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5B57;&#x6BB5;&#x6765;&#x53BB;&#x91CD;&#x3002;&#x67E5;&#x8BE2;&#x4F1A;&#x4F7F;&#x7528;&#x6C34;&#x5370;&#x628A;&#x8FC7;&#x53BB;&#x7684;&#x8BB0;&#x5F55;&#x4E2D;&#x4E0D;&#x91CD;&#x590D;&#x8BB0;&#x5F55;&#x7684;&#x7684;&#x72B6;&#x6001;&#x6570;&#x636E;&#x5220;&#x9664;&#x3002;&#x8FD9;&#x9650;&#x5B9A;&#x4E86;&#x67E5;&#x8BE2;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x7684;&#x72B6;&#x6001;&#x7684;&#x6570;&#x91CF;&#x3002;</li>
+<li>&#x4E0D;&#x7528;&#x6C34;&#x5370;&#xFF1A;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x91CD;&#x590D;&#x6570;&#x636E;&#x6700;&#x540E;&#x5230;&#x8FBE;&#x7684;&#x8FB9;&#x754C;&#xFF0C;&#x67E5;&#x8BE2;&#x4F1A;&#x5B58;&#x50A8;&#x6240;&#x6709;&#x8FC7;&#x53BB;&#x7684;&#x8BB0;&#x5F55;&#x4F5C;&#x4E3A;&#x72B6;&#x6001;&#x3002;</li>
+</ul>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> streamingDf = spark.readStream. ...  <span class="hljs-comment">// columns: guid, eventTime, ...</span>
+
+<span class="hljs-comment">// Without watermark using guid column</span>
+streamingDf.dropDuplicates(<span class="hljs-string">&quot;guid&quot;</span>)
+
+<span class="hljs-comment">// With watermark using guid and eventTime columns</span>
+streamingDf
+  .withWatermark(<span class="hljs-string">&quot;eventTime&quot;</span>, <span class="hljs-string">&quot;10 seconds&quot;</span>)
+  .dropDuplicates(<span class="hljs-string">&quot;guid&quot;</span>, <span class="hljs-string">&quot;eventTime&quot;</span>)
+</code></pre>
+<h5 id="26&#x3001;&#x4EFB;&#x610F;&#x6709;&#x72B6;&#x6001;&#x64CD;&#x4F5C;">2.6&#x3001;&#x4EFB;&#x610F;&#x6709;&#x72B6;&#x6001;&#x64CD;&#x4F5C;</h5>
+<p>&#x8BB8;&#x591A;&#x573A;&#x666F;&#x9700;&#x8981;&#x6BD4;&#x805A;&#x5408;&#x66F4;&#x52A0;&#x9AD8;&#x7EA7;&#x7684;&#x6709;&#x72B6;&#x6001;&#x64CD;&#x4F5C;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x8BB8;&#x591A;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x4ECE;&#x4E8B;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x6D41;&#x8FFD;&#x8E2A;&#x4F1A;&#x8BDD;&#x3002;&#x8981;&#x8FDB;&#x884C;&#x4F1A;&#x8BDD;&#x5316;&#xFF08;sessionization&#xFF09;&#xFF0C;&#x5FC5;&#x987B;&#x4FDD;&#x5B58;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x4F5C;&#x4E3A;&#x72B6;&#x6001;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x65F6;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x6D41;&#x4E8B;&#x4EF6;&#x5BF9;&#x72B6;&#x6001;&#x6267;&#x884C;&#x4EFB;&#x610F;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x4ECE;Spark 2.2&#x5F00;&#x59CB;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x64CD;&#x4F5C;<code>mapGroupWithState</code>&#x548C;&#x66F4;&#x52A0;&#x5F3A;&#x5927;&#x7684;&#x64CD;&#x4F5C;<code>flatMapGroupsWithState</code>&#x8FDB;&#x884C;&#x4F1A;&#x8BDD;&#x5316;&#x3002;&#x4E24;&#x79CD;&#x64CD;&#x4F5C;&#x90FD;&#x53EF;&#x4EE5;&#x5C06;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x4EE3;&#x7801;&#x5E94;&#x7528;&#x5230;&#x5206;&#x7EC4;&#x7684;Datasets&#x4E0A;&#x4EE5;&#x66F4;&#x65B0;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<h5 id="27&#x3001;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;">2.7&#x3001;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;</h5>
+<ul>
+<li>&#x6D41;Datasets&#x7684;&#x591A;&#x91CD;&#x6D41;&#x805A;&#x5408;&#xFF08;&#x5373;&#xFF0C;&#x5BF9;&#x4E00;&#x4E2A;&#x6D41;DF&#x8FDB;&#x884C;&#x4E00;&#x4E32;&#x7684;&#x805A;&#x5408;&#xFF09;&#x6682;&#x4E0D;&#x652F;&#x6301;</li>
+<li>&#x6D41;Datasets&#x7684;<code>limit</code>&#x548C;take&#x524D;N&#x884C;&#x4E0D;&#x652F;&#x6301;</li>
+<li>&#x6D41;Datasets&#x7684;distinct&#x64CD;&#x4F5C;&#x4E0D;&#x652F;&#x6301;</li>
+<li>&#x9664;&#x4E86;&#x805A;&#x5408;&#x540E;&#x548C;&#x5728;Compelte&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#xFF0C;&#x6D41;Datasets&#x7684;&#x6392;&#x5E8F;&#x64CD;&#x4F5C;&#x662F;&#x4E0D;&#x652F;&#x6301;&#x7684;</li>
+<li>&#x6D41;&#x548C;&#x9759;&#x6001;Datasets&#x7684;&#x5916;&#x8FDE;&#x63A5;&#x662F;&#x6709;&#x6761;&#x4EF6;&#x652F;&#x6301;&#x7684;&#xFF1A;<ul>
+<li>&#x548C;&#x6D41;Dataset&#x7684;&#x5168;&#x5916;&#x8FDE;&#x63A5;&#x4E0D;&#x652F;&#x6301;</li>
+<li>&#x6D41;Dataset&#x5728;&#x53F3;&#x8FB9;&#x7684;&#x5DE6;&#x5916;&#x8FDE;&#x63A5;&#x4E0D;&#x652F;&#x6301;</li>
+<li>&#x6D41;Dataset&#x5728;&#x5DE6;&#x8FB9;&#x7684;&#x53F3;&#x5916;&#x8FDE;&#x63A5;&#x4E0D;&#x652F;&#x6301;</li>
+</ul>
+</li>
+<li>&#x4E0D;&#x652F;&#x6301;&#x4E24;&#x4E2A;&#x6D41;Datasets&#x7684;&#x4EFB;&#x610F;&#x8FDE;&#x63A5;</li>
+</ul>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x67D0;&#x4E9B;Dataset&#x65B9;&#x6CD5;&#x5728;&#x6D41;Datasets&#x4E0A;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x662F;&#x4F1A;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x67E5;&#x8BE2;&#x5E76;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x884C;&#x52A8;&#x64CD;&#x4F5C;&#xFF0C;&#x5BF9;&#x6D41;Dataset&#x662F;&#x6CA1;&#x6709;&#x7528;&#x7684;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x901A;&#x8FC7;&#x660E;&#x786E;&#x5730;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x6D41;&#x67E5;&#x8BE2;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#x662F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<ul>
+<li><code>count()</code>&#xFF1A;&#x4E0D;&#x80FD;&#x8FD4;&#x56DE;&#x6D41;Dataset&#x7684;&#x8BB0;&#x5F55;&#x6570;&#x91CF;&#x3002;&#x4F7F;&#x7528;<code>ds.groupBy().count()</code>&#x6765;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x8FD0;&#x884C;&#x8BA1;&#x6570;&#x7684;&#x6D41;Dataset&#x3002;</li>
+<li><code>foreach()</code>&#xFF1A;&#x4F7F;&#x7528;<code>ds.writeStream.foreach(...)</code>&#x4F5C;&#x4E3A;&#x66FF;&#x4EE3;</li>
+<li><code>show()</code>&#xFF1A;&#x4F7F;&#x7528;&#x63A7;&#x5236;&#x53F0;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x4F5C;&#x4E3A;&#x66FF;&#x4EE3;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x5BF9;&#x6D41;Dataset&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x5C06;&#x4F1A;&#x53D1;&#x751F;&#x50CF;&quot;operation XYZ is not supported with streaming DataFrames/Datasets&quot;&#x8FD9;&#x79CD;<code>AnalysisException</code>&#x9519;&#x8BEF;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4EE5;&#x540E;&#x7248;&#x672C;&#x7684;Spark&#x53EF;&#x80FD;&#x4F1A;&#x652F;&#x6301;&#x5B83;&#x4EEC;&#x4E2D;&#x7684;&#x67D0;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x5176;&#x5B83;&#x7684;&#x64CD;&#x4F5C;&#xFF08;&#x6BD4;&#x5982;&#x6392;&#x5E8F;&#xFF09;&#x5728;&#x6D41;&#x6570;&#x636E;&#x4E0A;&#x9AD8;&#x6548;&#x5730;&#x5B9E;&#x73B0;&#x662F;&#x56F0;&#x96BE;&#x7684;&#x3002;</p>
+<h4 id="3&#x3001;&#x542F;&#x52A8;&#x6D41;&#x67E5;&#x8BE2;">3&#x3001;&#x542F;&#x52A8;&#x6D41;&#x67E5;&#x8BE2;</h4>
+<p>&#x4F7F;&#x7528;<code>Dataset.writeStream()</code>&#x8FD4;&#x56DE;&#x7684;<code>DataStreamWriter</code>&#x6765;&#x542F;&#x52A8;&#x6D41;&#x8FD0;&#x7B97;&#x3002;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5982;&#x4E0B;&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x51FA;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x7684;&#x8BE6;&#x60C5;&#xFF1A;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x3001;&#x4F4D;&#x7F6E;&#x7B49;</li>
+<li>&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#xFF1A;&#x8F93;&#x51FA;&#x5230;&#x8F93;&#x51FA;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x7684;&#x5185;&#x5BB9;</li>
+<li>&#x67E5;&#x8BE2;&#x540D;&#x79F0;&#xFF1A;&#x53EF;&#x9009;&#xFF0C;&#x4E3A;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x65B9;&#x4FBF;&#x8BC6;&#x522B;&#x7684;&#x552F;&#x4E00;&#x540D;&#x79F0;</li>
+<li>&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;trigger interval&#xFF09;&#xFF1A;&#x53EF;&#x9009;&#xFF0C;&#x6307;&#x5B9A;&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5728;&#x4E4B;&#x524D;&#x7684;&#x6570;&#x636E;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x540E;&#x7ACB;&#x5373;&#x68C0;&#x67E5;&#x65B0;&#x7684;&#x6570;&#x636E;&#x662F;&#x5426;&#x53EF;&#x7528;&#x3002;&#x5982;&#x679C;&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x7684;&#x5904;&#x7406;&#x672A;&#x5B8C;&#x6210;&#x800C;&#x9519;&#x8FC7;&#x4E86;&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5728;&#x4E0B;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#x5C1D;&#x8BD5;&#x89E6;&#x53D1;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x540E;&#x9A6C;&#x4E0A;&#x89E6;&#x53D1;&#x3002;</li>
+<li>&#x68C0;&#x67E5;&#x70B9;&#x4F4D;&#x7F6E;&#xFF1A;&#x5BF9;&#x4E8E;&#x9700;&#x8981;&#x7AEF;&#x5230;&#x7AEF;&#x5BB9;&#x9519;&#x4FDD;&#x8BC1;&#x7684;&#x8F93;&#x51FA;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#xFF0C;&#x6307;&#x5B9A;&#x68C0;&#x67E5;&#x70B9;&#x4F4D;&#x7F6E;&#x4EE5;&#x4FDD;&#x5B58;&#x68C0;&#x67E5;&#x70B9;&#x4FE1;&#x606F;&#x3002;&#x5E94;&#x8BE5;&#x662F;&#x4E00;&#x4E2A;&#x517C;&#x5BB9;HDFS&#x7684;&#x5BB9;&#x9519;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x3002;</li>
+</ul>
+<h5 id="31&#x3001;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;">3.1&#x3001;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;</h5>
+<p>&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x7684;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li>Append mode&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;&#xFF1A;&#x9ED8;&#x8BA4;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x53EA;&#x6709;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x5F15;&#x8D77;&#x7684;&#x8FFD;&#x52A0;&#x5230;&#x7ED3;&#x679C;&#x8868;&#x7684;&#x65B0;&#x884C;&#x4F1A;&#x88AB;&#x8F93;&#x51FA;&#x5230;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x3002;&#x53EA;&#x6709;&#x5DF2;&#x7ECF;&#x8FFD;&#x52A0;&#x5230;&#x7ED3;&#x679C;&#x8868;&#x7684;&#x884C;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x7684;&#x67E5;&#x8BE2;&#x624D;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x80FD;&#x591F;&#x4FDD;&#x8BC1;&#x6BCF;&#x884C;&#x53EA;&#x8F93;&#x51FA;&#x4E00;&#x6B21;&#xFF08;&#x5047;&#x8BBE;&#x662F;&#x5BB9;&#x9519;&#x7684;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#xFF09;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x53EA;&#x6709;<code>select</code>&#xFF0C;<code>where</code>&#xFF0C;<code>map</code>&#xFF0C;<code>flatMap</code>&#xFF0C;<code>filter</code>&#xFF0C;<code>join</code>&#x7B49;&#x7684;&#x67E5;&#x8BE2;&#x652F;&#x6301;&#x4F7F;&#x7528;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x3002;</li>
+<li>Compelte mode&#xFF1A;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x540E;&#xFF0C;&#x6574;&#x4E2A;&#x7ED3;&#x679C;&#x8868;&#x4F1A;&#x8F93;&#x51FA;&#x5230;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x3002;&#x805A;&#x5408;&#x67E5;&#x8BE2;&#x652F;&#x6301;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x3002;</li>
+<li>Update mode&#xFF1A;&#xFF08;&#x4ECE;Spark 2.1.1&#x53EF;&#x7528;&#xFF09;&#x53EA;&#x6709;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x540E;&#x7ED3;&#x679C;&#x8868;&#x4E2D;&#x88AB;&#x66F4;&#x65B0;&#x7684;&#x884C;&#x624D;&#x4F1A;&#x88AB;&#x8F93;&#x51FA;&#x5230;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x3002;</li>
+</ul>
+<p>&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6D41;&#x67E5;&#x8BE2;&#x652F;&#x6301;&#x4E0D;&#x540C;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x5E76;&#x4E14;&#x6709;&#x6C34;&#x5370;&#x7684;&#x805A;&#x5408;&#x652F;&#x6301;&#x4F7F;&#x7528;&#x4E09;&#x79CD;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x3002;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x6C34;&#x5370;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x65E7;&#x7684;&#x805A;&#x5408;&#x72B6;&#x6001;&#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x6C34;&#x5370;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x7A97;&#x53E3;&#x805A;&#x5408;&#x7ED3;&#x679C;&#x7684;&#x8F93;&#x51FA;&#x4F1A;&#x6709;&#x5EF6;&#x65F6;&#x3002;&#x66F4;&#x65B0;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x6C34;&#x5370;&#x5220;&#x9664;&#x65E7;&#x7684;&#x805A;&#x5408;&#x72B6;&#x6001;&#x3002;&#x5B8C;&#x6574;&#x6A21;&#x5F0F;&#x4E0D;&#x4F1A;&#x5220;&#x9664;&#x65E7;&#x7684;&#x805A;&#x5408;&#x72B6;&#x6001;&#xFF0C;&#x56E0;&#x4E3A;&#x6309;&#x7167;&#x5B9A;&#x4E49;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x4FDD;&#x7559;&#x7ED3;&#x679C;&#x8868;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4E0D;&#x4F7F;&#x7528;&#x6C34;&#x5370;&#x7684;&#x805A;&#x5408;&#x4E0D;&#x652F;&#x6301;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#x805A;&#x5408;&#x7ED3;&#x679C;&#x7684;&#x66F4;&#x65B0;&#x4E0E;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x7684;&#x8BED;&#x4E49;&#x76F8;&#x51B2;&#x7A81;&#x3002;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x6C34;&#x5370;&#xFF0C;&#x65E7;&#x7684;&#x805A;&#x5408;&#x72B6;&#x6001;&#x4E0D;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>mapGroupsWithState</code>&#x7684;&#x67E5;&#x8BE2;&#x652F;&#x6301;&#x66F4;&#x65B0;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>flatMapGroupsWithState</code>&#x7684;&#x67E5;&#x8BE2;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;<code>flatMapGroupsWithState</code>&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x805A;&#x5408;&#xFF1B;&#x800C;&#x5728;&#x4F7F;&#x7528;&#x66F4;&#x65B0;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;<code>flatMapGroupsWithState</code>&#x540E;&#x9762;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x805A;&#x5408;&#x3002;</p>
+<p>&#x5176;&#x5B83;&#x67E5;&#x8BE2;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x5B8C;&#x6574;&#x6A21;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x7ED3;&#x679C;&#x8868;&#x4E2D;&#x4FDD;&#x5B58;&#x6240;&#x6709;&#x7684;&#x975E;&#x805A;&#x5408;&#x6570;&#x636E;&#x662F;&#x4E0D;&#x53EF;&#x884C;&#x7684;&#x3002;</p>
+<h5 id="32&#x3001;&#x8F93;&#x51FA;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;">3.2&#x3001;&#x8F93;&#x51FA;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;</h5>
+<p>&#x5185;&#x7F6E;&#x7684;&#x8F93;&#x51FA;&#x5916;&#x90E8;&#x63A5;&#x6536;&#x5668;&#x7C7B;&#x578B;&#x6709;&#xFF1A;</p>
+<ul>
+<li><p><strong>File sink</strong>&#xFF1A;&#x4FDD;&#x5B58;&#x8F93;&#x51FA;&#x5230;&#x76EE;&#x5F55;&#x3002;&#x662F;&#x5BB9;&#x9519;&#x7684;&#x3002;&#x652F;&#x6301;&#x8F93;&#x51FA;&#x5230;&#x5206;&#x533A;&#x8868;&#x3002;&#x5FC5;&#x987B;&#x7528;<code>path</code>&#x9009;&#x9879;&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x76EE;&#x5F55;&#x3002;&#x652F;&#x6301;&#x7684;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#x53C2;&#x8003;<code>DataFrameWriter</code>&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x53EA;&#x652F;&#x6301;&#x8FFD;&#x52A0;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-scala">writeStream
+    .format(<span class="hljs-string">&quot;parquet&quot;</span>)        <span class="hljs-comment">// can be &quot;orc&quot;, &quot;json&quot;, &quot;csv&quot;, etc.</span>
+    .option(<span class="hljs-string">&quot;path&quot;</span>, <span class="hljs-string">&quot;path/to/destination/dir&quot;</span>)
+    .start()
+</code></pre>
+</li>
+<li><p><strong>Foreach sink</strong>&#xFF1A;&#x5BF9;&#x8F93;&#x51FA;&#x7684;&#x8BB0;&#x5F55;&#x8FD0;&#x884C;&#x4EFB;&#x610F;&#x7684;&#x8FD0;&#x7B97;&#x3002;&#x662F;&#x5426;&#x5BB9;&#x9519;&#x8981;&#x6839;&#x636E;<code>ForeachWriter</code>&#x7684;&#x5B9E;&#x73B0;&#x800C;&#x5B9A;&#x3002;&#x652F;&#x6301;&#x4E09;&#x79CD;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-scala">writeStream
+    .foreach(...)
+    .start()
+</code></pre>
+</li>
+<li><p><strong>Console sink&#xFF08;&#x7528;&#x4E8E;debugging&#xFF09;</strong>&#xFF1A;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x65F6;&#x628A;&#x8F93;&#x51FA;&#x6253;&#x5370;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x6216;&#x8005;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002;&#x652F;&#x6301;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x548C;&#x5B8C;&#x6574;&#x6A21;&#x5F0F;&#x3002;&#x56E0;&#x4E3A;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x540E;&#x7684;&#x6240;&#x6709;&#x8F93;&#x51FA;&#x90FD;&#x88AB;&#x6536;&#x96C6;&#x5E76;&#x5B58;&#x50A8;&#x5728;driver&#x7684;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x8FD9;&#x79CD;sink&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x91CF;&#x4E0D;&#x5927;&#x7684;debugging&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>numRows</code>&#xFF08;&#x9ED8;&#x8BA4;20&#xFF09;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x8F93;&#x51FA;&#x7684;&#x884C;&#x6570;&#xFF1B;&#x4F7F;&#x7528;<code>truncate</code>&#xFF08;&#x9ED8;&#x8BA4;true&#xFF09;&#x5728;&#x8F93;&#x51FA;&#x592A;&#x957F;&#x65F6;&#x622A;&#x6389;&#x8F93;&#x51FA;&#x3002;&#x652F;&#x6301;&#x4E09;&#x79CD;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-scala">writeStream
+    .format(<span class="hljs-string">&quot;console&quot;</span>)
+    .start()
+</code></pre>
+</li>
+<li><p><strong>Memory sink&#xFF08;for debugging&#xFF09;</strong>&#xFF1A;&#x8F93;&#x51FA;&#x4EE5;&#x5185;&#x5B58;&#x8868;&#x7684;&#x5F62;&#x5F0F;&#x4FDD;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x3002;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x8F93;&#x51FA;&#x90FD;&#x88AB;&#x6536;&#x96C6;&#x5E76;&#x5B58;&#x50A8;&#x5728;driver&#x7684;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x8FD9;&#x79CD;sink&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x91CF;&#x4E0D;&#x5927;&#x7684;debugging&#x3002;&#x5185;&#x5B58;&#x8868;&#x7684;&#x8868;&#x540D;&#x5C31;&#x662F;&#x67E5;&#x8BE2;&#x540D;&#x3002;&#x652F;&#x6301;&#x8FFD;&#x52A0;&#x548C;&#x5B8C;&#x6574;&#x4E24;&#x79CD;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x3002;&#x4E0D;&#x5BB9;&#x9519;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x5B8C;&#x6574;&#x8F93;&#x51FA;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x91CD;&#x542F;&#x67E5;&#x8BE2;&#x53EF;&#x4EE5;&#x91CD;&#x5EFA;&#x6574;&#x4E2A;&#x8868;&#x3002;</p>
+<pre><code class="lang-scala">writeStream
+    .format(<span class="hljs-string">&quot;memory&quot;</span>)
+    .queryName(<span class="hljs-string">&quot;tableName&quot;</span>)
+    .start()
+</code></pre>
+</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;<code>start()</code>&#x65B9;&#x6CD5;&#x6765;&#x4E8B;&#x5B9E;&#x4E0A;&#x542F;&#x52A8;&#x67E5;&#x8BE2;&#x7684;&#x6267;&#x884C;&#x3002;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>StreamingQuery</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x662F;&#x6301;&#x7EED;&#x8FD0;&#x884C;&#x7684;&#x67E5;&#x8BE2;&#x7684;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x53E5;&#x67C4;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x5B83;&#x6765;&#x7BA1;&#x7406;&#x67E5;&#x8BE2;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// ========== DF with no aggregations ==========</span>
+<span class="hljs-keyword">val</span> noAggDF = deviceDataDf.select(<span class="hljs-string">&quot;device&quot;</span>).where(<span class="hljs-string">&quot;signal &gt; 10&quot;</span>)   
+
+<span class="hljs-comment">// Print new data to console</span>
+noAggDF
+  .writeStream
+  .format(<span class="hljs-string">&quot;console&quot;</span>)
+  .start()
+
+<span class="hljs-comment">// Write new data to Parquet files</span>
+noAggDF
+  .writeStream
+  .format(<span class="hljs-string">&quot;parquet&quot;</span>)
+  .option(<span class="hljs-string">&quot;checkpointLocation&quot;</span>, <span class="hljs-string">&quot;path/to/checkpoint/dir&quot;</span>)
+  .option(<span class="hljs-string">&quot;path&quot;</span>, <span class="hljs-string">&quot;path/to/destination/dir&quot;</span>)
+  .start()
+
+<span class="hljs-comment">// ========== DF with aggregation ==========</span>
+<span class="hljs-keyword">val</span> aggDF = df.groupBy(<span class="hljs-string">&quot;device&quot;</span>).count()
+
+<span class="hljs-comment">// Print updated aggregations to console</span>
+aggDF
+  .writeStream
+  .outputMode(<span class="hljs-string">&quot;complete&quot;</span>)
+  .format(<span class="hljs-string">&quot;console&quot;</span>)
+  .start()
+
+<span class="hljs-comment">// Have all the aggregates in an in-memory table</span>
+aggDF
+  .writeStream
+  .queryName(<span class="hljs-string">&quot;aggregates&quot;</span>)    <span class="hljs-comment">// this query name will be the table name</span>
+  .outputMode(<span class="hljs-string">&quot;complete&quot;</span>)
+  .format(<span class="hljs-string">&quot;memory&quot;</span>)
+  .start()
+
+spark.sql(<span class="hljs-string">&quot;select * from aggregates&quot;</span>).show()   <span class="hljs-comment">// interactively query in-memory table</span>
+</code></pre>
+<h5 id="33&#x3001;&#x4F7F;&#x7528;foreach">3.3&#x3001;&#x4F7F;&#x7528;Foreach</h5>
+<p><code>foreach</code>&#x64CD;&#x4F5C;&#x4ECE;Spark 2.1&#x5F00;&#x59CB;&#x53EF;&#x7528;&#x3002;&#x4F7F;&#x7528;&#x5B83;&#x53EF;&#x4EE5;&#x5BF9;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x6267;&#x884C;&#x4EFB;&#x610F;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x8981;&#x4F7F;&#x7528;&#x5B83;&#xFF0C;&#x9700;&#x8981;&#x5B9E;&#x73B0;<code>ForeachWriter</code>&#x63A5;&#x53E3;&#xFF0C;&#x6D41;&#x89E6;&#x53D1;&#x540E;&#x5F53;&#x6709;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4EA7;&#x751F;&#x65F6;&#xFF0C;&#x4F1A;&#x8C03;&#x7528;<code>ForeachWriter</code>&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x8FD9;&#x4E2A;writer&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x5E8F;&#x5217;&#x5316;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4F1A;&#x88AB;&#x5E8F;&#x5217;&#x5316;&#x5E76;&#x53D1;&#x9001;&#x5230;executors&#x53BB;&#x6267;&#x884C;</li>
+<li>executors&#x4F1A;&#x6267;&#x884C;writer&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#xFF08;<code>open</code>&#xFF0C;<code>process</code>&#xFF0C;<code>close</code>&#xFF09;</li>
+<li>&#x53EA;&#x6709;&#x5F53;&#x8C03;&#x7528;writer&#x7684;<code>open</code>&#x65B9;&#x6CD5;&#x65F6;&#x624D;&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x6253;&#x5F00;&#x8FDE;&#x63A5;&#x3001;&#x5F00;&#x542F;&#x4E8B;&#x52A1;&#x7B49;&#xFF09;&#x3002;&#x8981;&#x77E5;&#x9053;&#xFF0C;&#x5982;&#x679C;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x65F6;&#x5C31;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x4F1A;&#x5728;driver&#x4E0A;&#x53D1;&#x751F;&#x521D;&#x59CB;&#x5316;&#xFF08;&#x56E0;&#x4E3A;driver&#x4F1A;&#x521B;&#x5EFA;&#x5B83;&#x7684;&#x5B9E;&#x4F8B;&#xFF09;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x662F;&#x4E0D;&#x613F;&#x89C1;&#x5230;&#x7684;&#x3002;</li>
+<li><code>version</code>&#x548C;<code>partitionId</code>&#x662F;<code>open</code>&#x65B9;&#x6CD5;&#x7684;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x552F;&#x4E00;&#x6027;&#x7684;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x9700;&#x8981;&#x8F93;&#x51FA;&#x7684;&#x8BB0;&#x5F55;&#x3002;<code>version</code>&#x662F;&#x4E00;&#x4E2A;&#x968F;&#x7740;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x5355;&#x8C03;&#x9012;&#x589E;&#x7684;id&#x3002;<code>partitionId</code>&#x662F;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x8F93;&#x51FA;&#x5206;&#x533A;&#x7684;id&#xFF0C;&#x56E0;&#x4E3A;&#x8F93;&#x51FA;&#x662F;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x5E76;&#x4E14;&#x4F1A;&#x5728;&#x591A;&#x4E2A;executors&#x4E0A;&#x8FDB;&#x884C;&#x3002;</li>
+<li><code>open</code>&#x4F1A;&#x4F7F;&#x7528;<code>version</code>&#x548C;<code>partitionId</code>&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x8981;&#x8F93;&#x51FA;&#x8FD9;&#x4E9B;&#x8BB0;&#x5F55;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;true&#x6216;false&#x3002;&#x5982;&#x679C;&#x8FD4;&#x56DE;false&#xFF0C;<code>process</code>&#x65B9;&#x6CD5;&#x5C31;&#x4E0D;&#x4F1A;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x8BB0;&#x5F55;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;&#x6545;&#x969C;&#x53D1;&#x751F;&#x540E;&#xFF0C;&#x5931;&#x8D25;&#x7684;&#x89E6;&#x53D1;&#x5BF9;&#x5E94;&#x7684;&#x8F93;&#x51FA;&#x5206;&#x533A;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x3002;&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;writer&#x53EF;&#x4EE5;&#x5206;&#x8FA8;&#x90A3;&#x4E9B;&#x5206;&#x533A;&#x5DF2;&#x7ECF;&#x8F93;&#x51FA;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x8FD4;&#x56DE;false&#x4EE5;&#x8DF3;&#x8FC7;&#x518D;&#x6B21;&#x5C06;&#x5B83;&#x4EEC;&#x8F93;&#x51FA;&#x3002;</li>
+<li>&#x8C03;&#x7528;&#x5B8C;<code>open</code>&#x540E;&#xFF0C;&#x4E5F;&#x4F1A;&#x8C03;&#x7528;<code>close</code>&#xFF08;&#x9664;&#x975E;JVM&#x56E0;&#x4E3A;&#x9519;&#x8BEF;&#x800C;&#x9000;&#x51FA;&#xFF09;&#x3002;&#x5373;&#x4F7F;<code>open</code>&#x8FD4;&#x56DE;false&#xFF0C;&#x4E5F;&#x4F1A;&#x8C03;&#x7528;<code>close</code>&#x3002;&#x5982;&#x679C;&#x5728;&#x5904;&#x7406;&#x548C;&#x5199;&#x6570;&#x636E;&#x65F6;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;<code>close</code>&#x4F1A;&#x968F;&#x7740;&#x9519;&#x8BEF;&#x800C;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x5728;<code>close</code>&#x4E2D;&#x6E05;&#x9664;<code>open</code>&#x4E2D;&#x521B;&#x5EFA;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x8FDE;&#x63A5;&#x3001;&#x4E8B;&#x52A1;&#x7B49;&#xFF09;&#x4EE5;&#x514D;&#x8D44;&#x6E90;&#x6CC4;&#x9732;&#x3002;</li>
+</ul>
+<h4 id="4&#x3001;&#x7BA1;&#x7406;&#x6D41;&#x67E5;&#x8BE2;">4&#x3001;&#x7BA1;&#x7406;&#x6D41;&#x67E5;&#x8BE2;</h4>
+<p><code>StreamQuery</code>&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x7528;&#x4E86;&#x76D1;&#x63A7;&#x548C;&#x7BA1;&#x7406;&#x67E5;&#x8BE2;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> query = df.writeStream.format(<span class="hljs-string">&quot;console&quot;</span>).start()   <span class="hljs-comment">// get the query object</span>
+<span class="hljs-comment">// get the unique identifier of the running query that persists across restarts from checkpoint data</span>
+query.id          
+<span class="hljs-comment">// get the unique id of this run of the query, which will be generated at every start/restart</span>
+query.runId       
+<span class="hljs-comment">// get the name of the auto-generated or user-specified name</span>
+query.name        
+<span class="hljs-comment">// print detailed explanations of the query</span>
+query.explain()   
+<span class="hljs-comment">// stop the query</span>
+query.stop()      
+<span class="hljs-comment">// block until query is terminated, with stop() or with error</span>
+query.awaitTermination()   
+<span class="hljs-comment">// the exception if the query has been terminated with error</span>
+query.exception       
+<span class="hljs-comment">// an array of the most recent progress updates for this query</span>
+query.recentProgress  
+<span class="hljs-comment">// the most recent progress update of this streaming query</span>
+query.lastProgress
+</code></pre>
+<p>&#x4E00;&#x4E2A;SparkSession&#x4E2D;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x67E5;&#x8BE2;&#x3002;&#x5B83;&#x4EEC;&#x4F1A;&#x5171;&#x4EAB;&#x96C6;&#x7FA4;&#x8D44;&#x6E90;&#xFF0C;&#x540C;&#x6B65;&#x8FD0;&#x884C;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>sparkSession.streams()</code>&#x6765;&#x83B7;&#x53D6;<code>StreamingQueryManager</code>&#xFF0C;&#x4F7F;&#x7528;<code>StreamingQueryManager</code>&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x5F53;&#x524D;&#x6D3B;&#x8DC3;&#x7684;&#x67E5;&#x8BE2;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> spark: <span class="hljs-type">SparkSession</span> = ...
+
+spark.streams.active    <span class="hljs-comment">// get the list of currently active streaming queries</span>
+
+spark.streams.get(id)   <span class="hljs-comment">// get a query object by its unique id</span>
+
+spark.streams.awaitAnyTermination()   <span class="hljs-comment">// block until any one of them terminates</span>
+</code></pre>
+<h4 id="5&#x3001;&#x76D1;&#x63A7;&#x6D41;&#x67E5;&#x8BE2;">5&#x3001;&#x76D1;&#x63A7;&#x6D41;&#x67E5;&#x8BE2;</h4>
+<p>&#x6709;&#x4E24;&#x79CD;&#x76D1;&#x63A7;&#x548C;debugging&#x6D3B;&#x8DC3;&#x67E5;&#x8BE2;&#x7684;APIs&#x2014;&#x2014;&#x4EA4;&#x4E92;&#x5730;&#x548C;&#x5F02;&#x6B65;&#x7684;&#x3002;</p>
+<h5 id="51&#x3001;&#x4EA4;&#x4E92;apis">5.1&#x3001;&#x4EA4;&#x4E92;APIs</h5>
+<p>&#x4F7F;&#x7528;<code>streamingQuery.lastProgress()</code> &#x548C;<code>streamingQuery.status()</code>&#x83B7;&#x53D6;&#x6D3B;&#x8DC3;&#x67E5;&#x8BE2;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x548C;metrics&#x3002;<code>lastProgress()</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>StreamingQueryProgress</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x6D41;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x7684;&#x8FDB;&#x5EA6;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;&#xFF1A;&#x5904;&#x7406;&#x7684;&#x4EC0;&#x4E48;&#x6570;&#x636E;&#x3001;&#x5904;&#x7406;&#x7387;&#xFF08;processing rates&#xFF09;&#x3001;&#x5EF6;&#x8FDF;&#x7B49;&#x7B49;&#x3002;<code>streamingQuery.recentProgress</code> &#x8FD4;&#x56DE;&#x6700;&#x8FD1;&#x7684;&#x51E0;&#x6761;&#x8FDB;&#x5EA6;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;<code>streamingQuery.status()</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>StreamingQueryStatus</code> &#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x7684;&#x662F;&#x5173;&#x4E8E;&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x6267;&#x884C;&#xFF08;immediately doing&#xFF09;&#x7684;&#x4FE1;&#x606F;&#x2014;&#x2014;&#x89E6;&#x53D1;&#x662F;&#x5426;&#x6D3B;&#x8DC3;&#xFF0C;&#x662F;&#x5426;&#x6B63;&#x5728;&#x5904;&#x7406;&#x6570;&#x636E;&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> query: <span class="hljs-type">StreamingQuery</span> = ...
+
+println(query.lastProgress)
+
+<span class="hljs-comment">/* Will print something like the following.
+
+{
+  &quot;id&quot; : &quot;ce011fdc-8762-4dcb-84eb-a77333e28109&quot;,
+  &quot;runId&quot; : &quot;88e2ff94-ede0-45a8-b687-6316fbef529a&quot;,
+  &quot;name&quot; : &quot;MyQuery&quot;,
+  &quot;timestamp&quot; : &quot;2016-12-14T18:45:24.873Z&quot;,
+  &quot;numInputRows&quot; : 10,
+  &quot;inputRowsPerSecond&quot; : 120.0,
+  &quot;processedRowsPerSecond&quot; : 200.0,
+  &quot;durationMs&quot; : {
+    &quot;triggerExecution&quot; : 3,
+    &quot;getOffset&quot; : 2
+  },
+  &quot;eventTime&quot; : {
+    &quot;watermark&quot; : &quot;2016-12-14T18:45:24.873Z&quot;
+  },
+  &quot;stateOperators&quot; : [ ],
+  &quot;sources&quot; : [ {
+    &quot;description&quot; : &quot;KafkaSource[Subscribe[topic-0]]&quot;,
+    &quot;startOffset&quot; : {
+      &quot;topic-0&quot; : {
+        &quot;2&quot; : 0,
+        &quot;4&quot; : 1,
+        &quot;1&quot; : 1,
+        &quot;3&quot; : 1,
+        &quot;0&quot; : 1
+      }
+    },
+    &quot;endOffset&quot; : {
+      &quot;topic-0&quot; : {
+        &quot;2&quot; : 0,
+        &quot;4&quot; : 115,
+        &quot;1&quot; : 134,
+        &quot;3&quot; : 21,
+        &quot;0&quot; : 534
+      }
+    },
+    &quot;numInputRows&quot; : 10,
+    &quot;inputRowsPerSecond&quot; : 120.0,
+    &quot;processedRowsPerSecond&quot; : 200.0
+  } ],
+  &quot;sink&quot; : {
+    &quot;description&quot; : &quot;MemorySink&quot;
+  }
+}
+*/</span>
+
+
+println(query.status)
+
+<span class="hljs-comment">/*  Will print something like the following.
+{
+  &quot;message&quot; : &quot;Waiting for data to arrive&quot;,
+  &quot;isDataAvailable&quot; : false,
+  &quot;isTriggerActive&quot; : false
+}
+*/</span>
+</code></pre>
+<h5 id="52&#x3001;&#x5F02;&#x6B65;api">5.2&#x3001;&#x5F02;&#x6B65;API</h5>
+<p>&#x901A;&#x8FC7;&#x6DFB;&#x52A0;<code>StreamingQueryListener</code>&#x53EF;&#x4EE5;&#x5F02;&#x6B65;&#x5730;&#x76D1;&#x63A7;&#x4E0E;<code>SparkSession</code>&#x5173;&#x8054;&#x7684;&#x6240;&#x6709;&#x67E5;&#x8BE2;&#x3002;&#x4F7F;&#x7528;<code>sparkSession.streams.attachListener()</code>&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;<code>StreamingQueryListener</code> &#x540E;&#xFF0C;&#x5F53;&#x67E5;&#x8BE2;&#x542F;&#x52A8;&#x3001;&#x505C;&#x6B62;&#x6216;&#x4EA7;&#x751F;&#x65B0;&#x7684;&#x8FDB;&#x5EA6;&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x5F97;&#x5230;&#x53CD;&#x9988;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> spark: <span class="hljs-type">SparkSession</span> = ...
+
+spark.streams.addListener(<span class="hljs-keyword">new</span> <span class="hljs-type">StreamingQueryListener</span>() {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onQueryStarted</span></span>(queryStarted: <span class="hljs-type">QueryStartedEvent</span>): <span class="hljs-type">Unit</span> = {
+        println(<span class="hljs-string">&quot;Query started: &quot;</span> + queryStarted.id)
+    }
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onQueryTerminated</span></span>(queryTerminated: <span class="hljs-type">QueryTerminatedEvent</span>): <span class="hljs-type">Unit</span> = {
+        println(<span class="hljs-string">&quot;Query terminated: &quot;</span> + queryTerminated.id)
+    }
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onQueryProgress</span></span>(queryProgress: <span class="hljs-type">QueryProgressEvent</span>): <span class="hljs-type">Unit</span> = {
+        println(<span class="hljs-string">&quot;Query made progress: &quot;</span> + queryProgress.progress)
+    }
+})
+</code></pre>
+<h3 id="&#x4F7F;&#x7528;checkpointing&#x4ECE;&#x6545;&#x969C;&#x4E2D;&#x6062;&#x590D;">&#x4F7F;&#x7528;Checkpointing&#x4ECE;&#x6545;&#x969C;&#x4E2D;&#x6062;&#x590D;</h3>
+<p>&#x4F7F;&#x7528;checkpointing&#x548C;write ahead logs&#xFF0C;&#x5728;&#x6545;&#x969C;&#x6216;&#x6545;&#x610F;&#x7684;&#x5173;&#x95ED;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x6062;&#x590D;&#x4E4B;&#x524D;&#x67E5;&#x8BE2;&#x7684;&#x8FDB;&#x5EA6;&#x548C;&#x72B6;&#x6001;&#xFF0C;&#x5E76;&#x4E14;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x3002;&#x53EF;&#x4EE5;&#x4E3A;&#x67E5;&#x8BE2;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;checkpoint&#x4F4D;&#x7F6E;&#xFF0C;&#x67E5;&#x8BE2;&#x4F1A;&#x628A;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x5EA6;&#x4FE1;&#x606F;&#xFF08;&#x5373;&#xFF0C;&#x6BCF;&#x6B21;&#x89E6;&#x53D1;&#x5904;&#x7406;&#x7684;&#x504F;&#x79FB;&#x91CF;&#x8303;&#x56F4;&#xFF09;&#x548C;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x805A;&#x5408;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x4E4B;&#x524D;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x5355;&#x8BCD;&#x8BA1;&#x6570;&#xFF09;&#x4FDD;&#x5B58;&#x5230;checkpoint&#x4F4D;&#x7F6E;&#x3002;checkpoint&#x4F4D;&#x7F6E;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x517C;&#x5BB9;HDFS&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5F53;&#x67E5;&#x8BE2;&#x542F;&#x52A8;&#x65F6;&#x8981;&#x5728;<code>DataStreamWriter</code>&#x4E2D;&#x7684;&#x9009;&#x9879;&#x4E2D;&#x8BBE;&#x7F6E;checkpoint&#x4F4D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-scala">aggDF
+  .writeStream
+  .outputMode(<span class="hljs-string">&quot;complete&quot;</span>)
+  .option(<span class="hljs-string">&quot;checkpointLocation&quot;</span>, <span class="hljs-string">&quot;path/to/HDFS/dir&quot;</span>)
+  .format(<span class="hljs-string">&quot;memory&quot;</span>)
+  .start()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../structured-streaming.html" class="navigation navigation-prev " aria-label="Previous page: Structured Streaming">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="structured-streaminghe-spark-streaming.html" class="navigation navigation-next " aria-label="Next page: Structured Streaming和Spark Streaming">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"使用Datasets和DataFrames的API","level":"1.6.1","depth":2,"next":{"title":"Structured Streaming和Spark Streaming","level":"1.6.2","depth":2,"path":"structured-streaming/structured-streaminghe-spark-streaming.md","ref":"structured-streaming/structured-streaminghe-spark-streaming.md","articles":[]},"previous":{"title":"Structured Streaming","level":"1.6","depth":1,"path":"structured-streaming.md","ref":"structured-streaming.md","articles":[{"title":"使用Datasets和DataFrames的API","level":"1.6.1","depth":2,"path":"structured-streaming/shi-yong-datasets-hedataframes-de-api.md","ref":"structured-streaming/shi-yong-datasets-hedataframes-de-api.md","articles":[]},{"title":"Structured Streaming和Spark Streaming","level":"1.6.2","depth":2,"path":"structured-streaming/structured-streaminghe-spark-streaming.md","ref":"structured-streaming/structured-streaminghe-spark-streaming.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"structured-streaming/shi-yong-datasets-hedataframes-de-api.md","mtime":"2020-07-03T09:56:11.462Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

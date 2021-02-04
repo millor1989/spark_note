@@ -1,0 +1,1302 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Pipelines · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html" />
+    
+    
+    <link rel="prev" href="ji-chu-tong-ji.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Spark总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../kuai-su-ru-men.html">
+            
+                <a href="../kuai-su-ru-men.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../sparkbian-cheng-dao-yin.html">
+            
+                <a href="../sparkbian-cheng-dao-yin.html">
+            
+                    
+                    Spark编程导引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                    
+                    RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                    
+                    从Java/Scala启动Spark jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../spark-sql.html">
+            
+                <a href="../spark-sql.html">
+            
+                    
+                    Spark SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../spark-sql/getting-started.html">
+            
+                <a href="../spark-sql/getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../spark-sql/shu-ju-yuan.html">
+            
+                <a href="../spark-sql/shu-ju-yuan.html">
+            
+                    
+                    数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../spark-sql/xing-neng-diao-shi.html">
+            
+                <a href="../spark-sql/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                <a href="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                    
+                    分布式SQL引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                <a href="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                    
+                    与Apache Hive的兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../spark-sql/shu-ju-lei-xing.html">
+            
+                <a href="../spark-sql/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../spark-sql/built-in-functions.html">
+            
+                <a href="../spark-sql/built-in-functions.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../spark-streaming.html">
+            
+                <a href="../spark-streaming.html">
+            
+                    
+                    Spark Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../spark-streaming/ji-ben-gai-nian.html">
+            
+                <a href="../spark-streaming/ji-ben-gai-nian.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../spark-streaming/xing-neng-diao-shi.html">
+            
+                <a href="../spark-streaming/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../spark-streaming/rong-cuo.html">
+            
+                <a href="../spark-streaming/rong-cuo.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../structured-streaming.html">
+            
+                <a href="../structured-streaming.html">
+            
+                    
+                    Structured Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                <a href="../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                    
+                    使用Datasets和DataFrames的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                <a href="../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                    
+                    Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../bu-shu.html">
+            
+                <a href="../bu-shu.html">
+            
+                    
+                    部署和运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../bu-shu/zu-jian-ff08-components.html">
+            
+                <a href="../bu-shu/zu-jian-ff08-components.html">
+            
+                    
+                    组件（Components）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                <a href="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                    
+                    集群管理器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../bu-shu/ti-jiao-ying-yong.html">
+            
+                <a href="../bu-shu/ti-jiao-ying-yong.html">
+            
+                    
+                    提交应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../bu-shu/jian-kong.html">
+            
+                <a href="../bu-shu/jian-kong.html">
+            
+                    
+                    监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在YARN上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../pei-zhi.html">
+            
+                <a href="../pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../pei-zhi/sparkshu-xing.html">
+            
+                <a href="../pei-zhi/sparkshu-xing.html">
+            
+                    
+                    Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                    
+                    动态加载Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                    
+                    查看Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../diao-shi.html">
+            
+                <a href="../diao-shi.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../extff1a-xing-neng-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                    
+                    基础优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                    
+                    高级优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在Yarn上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../an-quan.html">
+            
+                <a href="../an-quan.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ying-jian-pei-zhi.html">
+            
+                <a href="../ying-jian-pei-zhi.html">
+            
+                    
+                    硬件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../mllib.html">
+            
+                <a href="../mllib.html">
+            
+                    
+                    MLlib
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="shu-ju-lei-xing.html">
+            
+                <a href="shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="ji-chu-tong-ji.html">
+            
+                <a href="ji-chu-tong-ji.html">
+            
+                    
+                    基础统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15.3" data-path="pipelines.html">
+            
+                <a href="pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                    
+                    特征的提取、转换和筛选
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                    
+                    Feature Extractors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                    
+                    Feature Transformers-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                    
+                    Feature Transformers-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                    
+                    Feature Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                    
+                    Locality Sensitive Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="fen-lei-he-hui-gui.html">
+            
+                <a href="fen-lei-he-hui-gui.html">
+            
+                    
+                    分类和回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="fen-lei-he-hui-gui/fen-lei.html">
+            
+                <a href="fen-lei-he-hui-gui/fen-lei.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="fen-lei-he-hui-gui/hui-gui.html">
+            
+                <a href="fen-lei-he-hui-gui/hui-gui.html">
+            
+                    
+                    回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                <a href="fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                    
+                    线性方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                <a href="fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                <a href="fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                    
+                    树团体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="ju-lei.html">
+            
+                <a href="ju-lei.html">
+            
+                    
+                    聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="xie-tong-guo-lv.html">
+            
+                <a href="xie-tong-guo-lv.html">
+            
+                    
+                    协同过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../questions.html">
+            
+                <a href="../questions.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../questions/datasetdataframerdd.html">
+            
+                <a href="../questions/datasetdataframerdd.html">
+            
+                    
+                    DataFrame-Dataset-RDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../questions/spark-checkpoint.html">
+            
+                <a href="../questions/spark-checkpoint.html">
+            
+                    
+                    checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../questions/shu-ju-ben-di-xing.html">
+            
+                <a href="../questions/shu-ju-ben-di-xing.html">
+            
+                    
+                    某个task很慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../questions/sparkhan-shu.html">
+            
+                <a href="../questions/sparkhan-shu.html">
+            
+                    
+                    Spark函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../questions/hadoop-1he-hadoop2.html">
+            
+                <a href="../questions/hadoop-1he-hadoop2.html">
+            
+                    
+                    Hadoop 1和Hadoop2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../questions/broadcast-join.html">
+            
+                <a href="../questions/broadcast-join.html">
+            
+                    
+                    Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Pipelines</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="ml-pipelines">ML Pipelines</h3>
+<p>ML Pipelines&#xFF08;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7BA1;&#x9053;&#xFF09;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7EC4;&#x9AD8;&#x7EA7;&#x522B;&#x7684;&#x57FA;&#x4E8E;DataFrames&#x7684;APIs&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x548C;&#x8C03;&#x8BD5;&#x5B9E;&#x9645;&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7BA1;&#x9053;&#x3002;</p>
+<h4 id="1&#x3001;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x6982;&#x5FF5;">1&#x3001;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x6982;&#x5FF5;</h4>
+<p>MLlib&#x5C06;&#x7528;&#x4E8E;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x6807;&#x51C6;&#x5316;&#xFF0C;&#x4EE5;&#x66F4;&#x7B80;&#x5355;&#x5730;&#x5C06;&#x591A;&#x4E2A;&#x7B97;&#x6CD5;&#x5728;&#x4E00;&#x4E2A;&#x7BA1;&#x9053;&#xFF08;&#x6216;&#x8005;&#x5DE5;&#x4F5C;&#x6D41;&#xFF09;&#x4E2D;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x3002;MLlib&#x7684;&#x7BA1;&#x9053;&#x6DF1;&#x53D7;scikit-learn&#x9879;&#x76EE;&#x7684;&#x542F;&#x53D1;&#x3002;</p>
+<ul>
+<li><strong>DataFrame</strong>&#xFF1A;ML API&#x4F7F;&#x7528;Spark SQL&#x7684;<code>DataFrame</code>&#x4F5C;&#x4E3A;ML&#x6570;&#x636E;&#x96C6;&#xFF0C;<code>DataFrame</code>&#x53EF;&#x4EE5;&#x6301;&#x6709;&#x591A;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x6BD4;&#x5982;&#xFF0C;<code>DataFrame</code>&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4E0D;&#x540C;&#x7684;&#x5217;&#x2014;&#x2014;&#x4FDD;&#x5B58;&#x6587;&#x672C;&#xFF0C;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;true&#x6807;&#x7B7E;&#xFF0C;&#x548C;&#x9884;&#x6D4B;&#x503C;&#x3002;</li>
+<li><strong>Transformer</strong>&#xFF1A;<code>Transformer</code>&#x662F;&#x5C06;&#x4E00;&#x4E2A;<code>DataFrame</code>&#x8F6C;&#x6362;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;<code>DataFrame</code>&#x7684;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;ML&#x6A21;&#x578B;&#x662F;&#x4E00;&#x4E2A;&#x5C06;&#x5E26;&#x6709;&#x7279;&#x5F81;&#x7684;<code>DataFrame</code>&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x9884;&#x6D4B;&#x7ED3;&#x679C;&#x7684;<code>DataFrame</code>&#x3002;</li>
+<li><strong>Estimator</strong>&#xFF1A;<code>Estimator</code>&#x662F;&#x57FA;&#x4E8E;<code>DataFrame</code>&#x62DF;&#x5408;&#x51FA;&#x4E00;&#x4E2A;<code>Transformer</code>&#x7684;&#x4E00;&#x4E2A;&#x7B97;&#x6CD5;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;<code>Estimator</code>&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;<code>DataFrame</code>&#x8BAD;&#x7EC3;&#x51FA;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x7684;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;&#x3002;</li>
+<li><strong>Pipeline</strong>&#xFF1A;<code>Pipeline</code>&#x94FE;&#x5C06;<code>Transformer</code>s&#x548C;<code>Estimator</code>s&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x6784;&#x6210;&#x4E00;&#x4E2A;ML&#x5DE5;&#x4F5C;&#x6D41;&#x3002;</li>
+<li><strong>Parameter</strong>&#xFF1A;&#x6240;&#x6709;&#x7684;<code>Transformer</code>s&#x548C;<code>Estimator</code>s&#x5206;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;API&#x6765;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x3002;</li>
+</ul>
+<h4 id="2&#x3001;dataframe">2&#x3001;DataFrame</h4>
+<p>&#x673A;&#x5668;&#x5B66;&#x4E60;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x5230;&#x591A;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;&#x5411;&#x91CF;&#xFF0C;&#x6587;&#x672C;&#xFF0C;&#x56FE;&#x50CF;&#xFF0C;&#x548C;&#x6709;&#x7ED3;&#x6784;&#x7684;&#x6570;&#x636E;&#x3002;<code>spark.ml</code>&#x4F7F;&#x7528;&#x6765;&#x81EA;Spark SQL&#x7684;<code>DataFrame</code>&#x6765;&#x652F;&#x6301;&#x591A;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<p><code>DataFrame</code>&#x652F;&#x6301;&#x591A;&#x79CD;&#x57FA;&#x672C;&#x548C;&#x7ED3;&#x6784;&#x5316;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1B;&#x9664;&#x4E86;Spark SQL guide&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;<code>DataFrame</code>&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ML&#x7684;<code>Vector</code>&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x9690;&#x5F0F;&#x5730;&#x6216;&#x8005;&#x660E;&#x786E;&#x5730;&#x4F7F;&#x7528;&#x666E;&#x901A;<code>RDD</code>&#x521B;&#x5EFA;<code>DataFrame</code>&#x3002;</p>
+<p><code>DataFrame</code>&#x4E2D;&#x7684;&#x5217;&#x662F;&#x6709;&#x540D;&#x79F0;&#x7684;&#x3002;</p>
+<h4 id="3&#x3001;&#x7BA1;&#x9053;&#x7EC4;&#x4EF6;">3&#x3001;&#x7BA1;&#x9053;&#x7EC4;&#x4EF6;</h4>
+<h5 id="31&#x3001;transformers">3.1&#x3001;Transformers</h5>
+<p><code>Transformer</code>&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x7279;&#x5F81;&#x8F6C;&#x6362;&#x5668;&#x548C;&#x5B66;&#x4E60;&#x5F97;&#x51FA;&#x7684;&#x6A21;&#x578B;&#x7684;&#x62BD;&#x8C61;&#x6982;&#x5FF5;&#x3002;&#x5728;&#x6280;&#x672F;&#x4E0A;&#xFF0C;<code>Transformer</code>&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;<code>transfrom</code>&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;<code>DataFrame</code>&#x8F6C;&#x6362;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;<code>DataFrame</code>&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x901A;&#x8FC7;&#x8FFD;&#x52A0;&#x4E00;&#x5217;&#x6216;&#x8005;&#x591A;&#x5217;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x7279;&#x5F81;&#x8F6C;&#x6362;&#x5668;&#x53EF;&#x80FD;&#x7528;&#x4E00;&#x4E2A;<code>DataFrame</code>&#xFF0C;&#x8BFB;&#x53D6;&#x4E00;&#x5217;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x6587;&#x672C;&#xFF09;&#x5C06;&#x5B83;&#x6620;&#x5C04;&#x4E3A;&#x65B0;&#x7684;&#x4E00;&#x5217;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x8F93;&#x51FA;&#x8FFD;&#x52A0;&#x4E86;&#x6620;&#x5C04;&#x7684;&#x65B0;&#x5217;&#x7684;<code>DataFrame</code>&#x3002;</li>
+<li>&#x4E00;&#x4E2A;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x53EF;&#x80FD;&#x7528;&#x4E00;&#x4E2A;<code>DataFrame</code>&#xFF0C;&#x8BFB;&#x53D6;&#x5305;&#x542B;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x7684;&#x5217;&#xFF0C;&#x9884;&#x6D4B;&#x6BCF;&#x4E2A;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x5BF9;&#x5E94;&#x7684;&#x6807;&#x7B7E;&#xFF0C;&#x5E76;&#x4E14;&#x8F93;&#x51FA;&#x5E26;&#x6709;&#x9884;&#x6D4B;&#x6807;&#x7B7E;&#x5217;&#x7684;&#x65B0;&#x7684;<code>DataFrame</code>&#x3002;</li>
+</ul>
+<h5 id="32&#x3001;estimators">3.2&#x3001;Estimators</h5>
+<p><code>Estimator</code>&#x62BD;&#x8C61;&#x4E86;&#x62DF;&#x5408;&#x6216;&#x8005;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x7684;&#x7B97;&#x6CD5;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x6280;&#x672F;&#x4E0A;&#xFF0C;<code>Estimator</code>&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;<code>fit()</code>&#xFF0C;&#x63A5;&#x6536;&#x4E00;&#x4E2A;<code>DataFrame</code>&#x4EA7;&#x751F;&#x4E00;&#x4E2A;<code>Model</code>&#xFF08;&#x662F;&#x4E00;&#x4E2A;<code>Transformer</code>&#xFF09;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5B66;&#x4E60;&#x7B97;&#x6CD5;<code>LogisticRegression</code>&#x662F;&#x4E00;&#x4E2A;<code>Estimator</code>&#xFF0C;&#x8C03;&#x7528;<code>fit()</code>&#x65B9;&#x6CD5;&#x8BAD;&#x7EC3;&#x4E00;&#x4E2A;<code>LogisticRegressionModel</code>&#xFF08;&#x662F;&#x4E00;&#x4E2A;<code>Model</code>&#xFF0C;&#x6240;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>Transformer</code>&#xFF09;&#x3002;</p>
+<h4 id="33&#x3001;&#x7BA1;&#x9053;&#x7EC4;&#x5EFA;&#x7684;&#x5C5E;&#x6027;">3.3&#x3001;&#x7BA1;&#x9053;&#x7EC4;&#x5EFA;&#x7684;&#x5C5E;&#x6027;</h4>
+<p><code>Transformer.transform()</code>s&#x548C;<code>Estimator.fit()</code>s&#x90FD;&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x3002;&#x672A;&#x6765;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x901A;&#x8FC7;&#x5176;&#x5B83;&#x7684;&#x6982;&#x5FF5;&#x652F;&#x6301;&#x6709;&#x72B6;&#x6001;&#x7684;&#x7B97;&#x6CD5;&#x3002;</p>
+<p><code>Transformer</code>&#x6216;&#x8005;<code>Estimator</code>&#x7684;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;ID&#xFF0C;&#x5728;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x65F6;&#x6709;&#x7528;&#x3002;</p>
+<h4 id="4&#x3001;&#x7BA1;&#x9053;">4&#x3001;&#x7BA1;&#x9053;</h4>
+<p>&#x5728;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x4E2D;&#xFF0C;&#x8FD0;&#x884C;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x7B97;&#x6CD5;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x548C;&#x5B66;&#x4E60;&#x662F;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x5904;&#x7406;&#x5DE5;&#x4F5C;&#x6D41;&#x53EF;&#x80FD;&#x5305;&#x62EC;&#x5982;&#x4E0B;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;</p>
+<ul>
+<li>&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x672C;&#x5207;&#x5206;&#x4E3A;&#x5355;&#x8BCD;</li>
+<li>&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x5355;&#x8BCD;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x503C;&#x7279;&#x5F81;&#x5411;&#x91CF;</li>
+<li>&#x4F7F;&#x7528;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x548C;&#x6807;&#x7B7E;&#x5B66;&#x4E60;&#x4E00;&#x4E2A;&#x9884;&#x6D4B;&#x6A21;&#x578B;</li>
+</ul>
+<p>MLlib&#x5C06;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x6D41;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;<code>Pipeline</code>&#xFF0C;<code>Pipeline</code>&#x7531;&#x4EE5;&#x6307;&#x5B9A;&#x7684;&#x987A;&#x5E8F;&#x8FD0;&#x884C;&#x7684;&#x4E00;&#x7CFB;&#x5217;<code>PipelineStage</code>s&#xFF08;<code>Transformer</code>s&#x548C;<code>Estimator</code>s&#xFF09;&#x6784;&#x6210;&#x3002;</p>
+<h5 id="41&#x3001;&#x5DE5;&#x4F5C;&#x539F;&#x7406;">4.1&#x3001;&#x5DE5;&#x4F5C;&#x539F;&#x7406;</h5>
+<p><code>Pipeline</code>&#x5305;&#x542B;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x9636;&#x6BB5;&#xFF0C;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x662F;<code>Transformer</code>&#x6216;&#x8005;<code>Estimator</code>&#x3002;&#x8FD9;&#x4E9B;&#x9636;&#x6BB5;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x8FD0;&#x884C;&#xFF0C;&#x8F93;&#x5165;<code>DataFrame</code>&#x968F;&#x7740;&#x5728;&#x7BA1;&#x9053;&#x4E2D;&#x7684;&#x6D41;&#x52A8;&#x5728;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x88AB;&#x8F6C;&#x6362;&#x3002;&#x5BF9;&#x4E8E;<code>TransFormer</code>&#x9636;&#x6BB5;&#xFF0C;&#x5BF9;&#x8F93;&#x5165;<code>DataFrame</code>&#x8C03;&#x7528;<code>transfrom()</code>&#x65B9;&#x6CD5;&#x3002;&#x5BF9;&#x4E8E;<code>Estimator</code>&#x9636;&#x6BB5;&#xFF0C;&#x8C03;&#x7528;<code>fit()</code>&#x65B9;&#x6CD5;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;<code>Transformer</code>&#xFF08;&#x5B83;&#x662F;<code>PipelineModel</code>&#x6216;&#x8005;&#x62DF;&#x5408;&#x51FA;&#x7684;<code>Pipeline</code>&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF09;&#xFF0C;&#x5E76;&#x5BF9;<code>DataFrame</code>&#x8C03;&#x7528;&#x8FD9;&#x4E2A;<code>Transformer</code>&#x7684;<code>transform()</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x7528;&#x7B80;&#x5355;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x5DE5;&#x4F5C;&#x6D41;&#x8FDB;&#x4E00;&#x6B65;&#x9610;&#x91CA;&#x3002;&#x4E0B;&#x56FE;&#x662F;<code>Pipeline</code>&#x7684;&#x8BAD;&#x7EC3;&#x65F6;&#xFF08;<strong>traning time</strong>&#xFF09;&#x7528;&#x6CD5;&#x3002;</p>
+<p><img src="../assets/ml-Pipeline.png" alt="ML Pipeline Example"></p>
+<p>&#x4E0A;&#x56FE;&#x4E2D;&#xFF0C;&#x9876;&#x884C;&#x8868;&#x793A;<code>Pipeline</code>&#x7684;&#x4E09;&#x4E2A;&#x9636;&#x6BB5;&#x3002;&#x524D;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;&#xFF08;<code>Tokenizer</code>&#x548C;<code>HashingTF</code>&#xFF09;&#x662F;<code>Transformer</code>s&#xFF08;&#x84DD;&#x8272;&#xFF09;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#xFF08;<code>LogisticRegression</code>&#xFF09;&#x662F;&#x4E00;&#x4E2A;<code>Estimator</code>&#xFF08;&#x7EA2;&#x8272;&#xFF09;&#x3002;&#x5E95;&#x884C;&#x8868;&#x793A;&#x7BA1;&#x9053;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x6D41;&#x52A8;&#xFF0C;&#x5706;&#x67F1;&#x8868;&#x793A;<code>DataFrame</code>s&#x3002;&#x5BF9;&#x6E90;<code>DataFrame</code>&#xFF08;&#x5305;&#x542B;&#x539F;&#x59CB;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x548C;&#x6807;&#x7B7E;&#xFF09;&#x8C03;&#x7528;<code>Pipeline.fit()</code>&#x65B9;&#x6CD5;&#x3002;<code>Tokenizer.transform()</code>&#x65B9;&#x6CD5;&#x628A;&#x539F;&#x59CB;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x5207;&#x5206;&#x4E3A;&#x5355;&#x8BCD;&#xFF0C;&#x5C06;&#x5E26;&#x6709;&#x5207;&#x5206;&#x540E;&#x5355;&#x8BCD;&#x7684;&#x65B0;&#x5217;&#x6DFB;&#x52A0;&#x5230;<code>DataFrame</code>&#x3002;<code>HashingTF.transform()</code>&#x65B9;&#x6CD5;&#x5C06;&#x5355;&#x8BCD;&#x5217;&#x8F6C;&#x6362;&#x4E3A;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;&#x5E76;&#x5F80;<code>DataFrame</code>&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x5217;&#x3002;&#x56E0;&#x4E3A;<code>LogisticRegression</code>&#x662F;&#x4E00;&#x4E2A;<code>Estimaotr</code>&#xFF0C;<code>Pipeline</code>&#x9996;&#x5148;&#x8C03;&#x7528;<code>LogisticRegression.fit()</code>&#x6765;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;<code>LogisticRegressionModel</code>&#x3002;&#x5982;&#x679C;<code>Pipeline</code>&#x6709;&#x66F4;&#x591A;&#x7684;<code>Estimator</code>s&#xFF0C;&#x5B83;&#x4F1A;&#x5728;&#x628A;<code>DataFrame</code>&#x4F20;&#x9012;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#x4E4B;&#x524D;&#xFF0C;&#x5BF9;<code>DataFrame</code>&#x8C03;&#x7528;<code>LogisticRegressionModel</code>&#x7684;<code>transform()</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<p><code>Pipeline</code>&#x662F;&#x4E00;&#x4E2A;<code>Estimator</code>&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8C03;&#x7528;<code>Pipeline</code>&#x7684;<code>fit()</code>&#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x5B83;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;<code>PipelineModel</code>&#xFF08;&#x662F;&#x4E00;&#x4E2A;<code>Transformer</code>&#xFF09;&#x3002;&#x8FD9;&#x4E2A;<code>PipelineModel</code>&#x662F;&#x6D4B;&#x8BD5;&#x65F6;&#xFF08;<strong>test time</strong>&#xFF09;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x4E0B;&#x56FE;&#x662F;&#x5B83;&#x7684;&#x7528;&#x6CD5;&#x3002;</p>
+<p><img src="../assets/ml-PipelineModel.png" alt="ML PipelineModel Example"></p>
+<p>&#x5728;&#x4E0A;&#x56FE;&#x4E2D;&#xFF0C;<code>PipelineModel</code>&#x4E0E;&#x539F;&#x59CB;&#x7684;<code>Pipeline</code>&#x5177;&#x6709;&#x76F8;&#x540C;&#x6570;&#x91CF;&#x7684;&#x9636;&#x6BB5;&#xFF0C;&#x4F46;&#x662F;&#x539F;&#x59CB;<code>Pipeline</code>&#x4E2D;&#x6240;&#x6709;&#x7684;<code>Estimator</code>s&#x90FD;&#x53D8;&#x6210;&#x4E86;<code>Transformer</code>s&#x3002;&#x5F53;&#x5BF9;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x96C6;&#x8C03;&#x7528;<code>PipelineModel</code>&#x7684;<code>transform()</code>&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x6570;&#x636E;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x5728;&#x62DF;&#x5408;&#x51FA;&#x7684;&#x7BA1;&#x9053;&#x4E2D;&#x4F20;&#x9012;&#x3002;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x7684;<code>transform()</code>&#x65B9;&#x6CD5;&#x5BF9;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x5E76;&#x5C06;&#x5176;&#x4F20;&#x9012;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#x3002;</p>
+<p><code>Pipeline</code>s&#x548C;<code>PipelineModel</code>s&#x5E2E;&#x52A9;&#x4FDD;&#x8BC1;&#x4E86;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x548C;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x7ECF;&#x8FC7;&#x7684;&#x662F;&#x76F8;&#x540C;&#x7684;&#x7279;&#x5F81;&#x5904;&#x7406;&#x6B65;&#x9AA4;&#x3002;</p>
+<h5 id="42&#x3001;&#x8BE6;&#x7EC6;">4.2&#x3001;&#x8BE6;&#x7EC6;</h5>
+<p><strong>DAG <code>Pipeline</code>s</strong>&#xFF1A;<code>Pipeline</code>&#x7684;&#x9636;&#x6BB5;&#x88AB;&#x6307;&#x5B9A;&#x4E3A;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x4F8B;&#x5B50;&#x90FD;&#x662F;&#x7EBF;&#x6027;&#x7684;<code>Pipeline</code>s&#xFF0C;&#x5373;&#xFF0C;<code>Pipeline</code>&#x4E2D;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x90FD;&#x662F;&#x7528;&#x524D;&#x4E00;&#x9636;&#x6BB5;&#x4EA7;&#x751F;&#x7684;&#x6570;&#x636E;&#x3002;&#x53EA;&#x8981;&#x6570;&#x636E;&#x6D41;&#x56FE;&#x80FD;&#x591F;&#x6491;&#x4E00;&#x4E2A;&#x6709;&#x5411;&#x65E0;&#x73AF;&#x56FE;&#xFF08;DAG&#xFF09;&#x4E5F;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x975E;&#x7EBF;&#x6027;&#x7684;<code>Pipeline</code>s&#x3002;&#x76EE;&#x524D;&#xFF0C;&#x6570;&#x636E;&#x6D41;&#x56FE;&#x662F;&#x57FA;&#x4E8E;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x5217;&#x7684;&#x540D;&#x5B57;&#xFF08;&#x4E00;&#x822C;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#xFF09;&#x9690;&#x5F0F;&#x5730;&#x6307;&#x5B9A;&#x7684;&#x3002;&#x5982;&#x679C;<code>Pipeline</code>&#x6784;&#x6210;&#x4E86;&#x4E00;&#x4E2A;DAG&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x6309;&#x7167;&#x62D3;&#x6251;&#x7ED3;&#x6784;&#x987A;&#x5E8F;&#x6307;&#x5B9A;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x3002;</p>
+<p><strong>&#x8FD0;&#x884C;&#x65F6;&#x68C0;&#x67E5;</strong>&#xFF08;Runtime checking&#xFF09;&#xFF1A;&#x56E0;&#x4E3A;<code>Pipeline</code>s&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;<code>DataFrame</code>s&#xFF0C;&#x6240;&#x4EE5;<code>Pipeline</code>s&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7F16;&#x8BD1;&#x65F6;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x3002;<code>Pipeline</code>s&#x548C;<code>PipelineModel</code>s&#x5728;&#x8FD0;&#x884C;<code>Pipeline</code>&#x4E4B;&#x524D;&#x6267;&#x884C;&#x7684;&#x662F;&#x8FD0;&#x884C;&#x65F6;&#x68C0;&#x67E5;&#x3002;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x662F;&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>DataFrame</code>&#x7684;<em>schema</em>&#xFF08;<code>DataFrame</code>&#x4E2D;&#x5217;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x63CF;&#x8FF0;&#xFF09;&#x8FDB;&#x884C;&#x7684;&#x3002;</p>
+<p><strong>Unique Pipeline stages</strong>&#xFF1A;<code>Pipeline</code>&#x7684;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x90FD;&#x5E94;&#x8BE5;&#x662F;&#x552F;&#x4E00;&#x5B9E;&#x4F8B;&#x7684;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x76F8;&#x540C;&#x7684;&#x5B9E;&#x4F8B;<code>myHashingTF</code>&#x4E0D;&#x80FD;&#x63D2;&#x5165;<code>Pipeline</code>&#x4E24;&#x6B21;&#xFF0C;&#x56E0;&#x4E3A;<code>Pipeline</code>&#x7684;&#x9636;&#x6BB5;&#x5FC5;&#x987B;&#x5177;&#x6709;&#x552F;&#x4E00;&#x7684;IDs&#x3002;&#x4F46;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x4F8B;<code>myHashingTF1</code>&#x548C;<code>myHashingTF2</code>&#xFF08;&#x90FD;&#x662F;<code>HashingTF</code>&#x7C7B;&#x578B;&#xFF09;&#x53EF;&#x4EE5;&#x653E;&#x8FDB;&#x76F8;&#x540C;&#x7684;<code>Pipeline</code>&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x4F8B;&#x4F1A;&#x4EA7;&#x751F;&#x4E0D;&#x540C;&#x7684;IDs&#x3002;</p>
+<h4 id="5&#x3001;&#x53C2;&#x6570;">5&#x3001;&#x53C2;&#x6570;</h4>
+<p>MLlib<code>Estimator</code>s&#x548C;<code>Transformer</code>s&#x4F7F;&#x7528;&#x7EDF;&#x4E00;&#x7684;API&#x6765;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x3002;</p>
+<p><code>Param</code>&#x662F;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x72EC;&#x7ACB;&#x6587;&#x6863;&#x7684;&#x547D;&#x540D;&#x53C2;&#x6570;&#x3002;<code>ParamMap</code>&#x662F;&#x4E00;&#x4E2A;(&#x53C2;&#x6570;&#xFF0C;&#x503C;)&#x5BF9;&#x7684;&#x96C6;&#x5408;&#x3002;</p>
+<p>&#x6709;&#x4E24;&#x79CD;&#x7ED9;&#x7B97;&#x6CD5;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x7684;&#x4E3B;&#x8981;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ol>
+<li>&#x4E3A;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x679C;<code>lr</code>&#x662F;&#x4E00;&#x4E2A;<code>LogisticRegression</code>&#x5B9E;&#x4F8B;&#xFF0C;&#x53EF;&#x4EE5;&#x8C03;&#x7528;<code>lr.setMaxIter(10)</code>&#x4F7F;<code>lr.fit()</code>&#x4F7F;&#x7528;&#x6700;&#x591A;10&#x6B21;&#x904D;&#x5386;&#x3002;</li>
+<li>&#x4F20;&#x9012;<code>ParamMap</code>&#x5230;<code>fit()</code>&#x6216;<code>transform()</code>&#x3002;<code>ParamMap</code>&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#x90FD;&#x4F1A;&#x8986;&#x76D6;&#x4E4B;&#x524D;&#x901A;&#x8FC7;setter&#x65B9;&#x6CD5;&#x8BBE;&#x7F6E;&#x7684;&#x53C2;&#x6570;&#x3002;</li>
+</ol>
+<p>&#x53C2;&#x6570;&#x662F;&#x5C5E;&#x4E8E;&#x7279;&#x5B9A;&#x7684;<code>Estimator</code>s&#x548C;<code>Transformer</code>s&#x7684;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x4E24;&#x4E2A;<code>LogisticalRegression</code>&#x5B9E;&#x4F8B;<code>lr1</code>&#x548C;<code>lr2</code>&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;<code>ParamMap(lr1.maxIter -&gt; 10, lr2.maxIter -&gt; 20)</code>&#x6765;&#x4E3A;&#x4E8C;&#x8005;&#x8BBE;&#x7F6E;<code>maxIter</code>&#x53C2;&#x6570;&#x3002;&#x5982;&#x679C;<code>Pipeline</code>&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x5177;&#x6709;<code>maxIter</code>&#x53C2;&#x6570;&#x7684;&#x7B97;&#x6CD5;&#x65F6;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x6709;&#x7528;&#x7684;&#x3002;</p>
+<h4 id="6&#x3001;&#x4FDD;&#x5B58;&#x548C;&#x52A0;&#x8F7D;&#x7BA1;&#x9053;">6&#x3001;&#x4FDD;&#x5B58;&#x548C;&#x52A0;&#x8F7D;&#x7BA1;&#x9053;</h4>
+<p>&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x7684;<a href="">&#x4F8B;&#x5B50;&#xFF1A;Pipeline</a></p>
+<h4 id="7&#x3001;&#x4EE3;&#x7801;&#x793A;&#x4F8B;">7&#x3001;&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
+<h5 id="&#x4F8B;&#x5B50;&#xFF1A;estimator&#xFF0C;transformer&#xFF0C;&#x548C;param">&#x4F8B;&#x5B50;&#xFF1A;Estimator&#xFF0C;Transformer&#xFF0C;&#x548C;Param</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.classification.<span class="hljs-type">LogisticRegression</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.{<span class="hljs-type">Vector</span>, <span class="hljs-type">Vectors</span>}
+<span class="hljs-keyword">import</span> org.apache.spark.ml.param.<span class="hljs-type">ParamMap</span>
+<span class="hljs-keyword">import</span> org.apache.spark.sql.<span class="hljs-type">Row</span>
+
+<span class="hljs-comment">// Prepare training data from a list of (label, features) tuples.</span>
+<span class="hljs-keyword">val</span> training = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">1.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">0.0</span>, <span class="hljs-number">1.1</span>, <span class="hljs-number">0.1</span>)),
+  (<span class="hljs-number">0.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">2.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">-1.0</span>)),
+  (<span class="hljs-number">0.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">2.0</span>, <span class="hljs-number">1.3</span>, <span class="hljs-number">1.0</span>)),
+  (<span class="hljs-number">1.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">0.0</span>, <span class="hljs-number">1.2</span>, <span class="hljs-number">-0.5</span>))
+)).toDF(<span class="hljs-string">&quot;label&quot;</span>, <span class="hljs-string">&quot;features&quot;</span>)
+
+<span class="hljs-comment">// Create a LogisticRegression instance. This instance is an Estimator.</span>
+<span class="hljs-keyword">val</span> lr = <span class="hljs-keyword">new</span> <span class="hljs-type">LogisticRegression</span>()
+<span class="hljs-comment">// Print out the parameters, documentation, and any default values.</span>
+println(<span class="hljs-string">&quot;LogisticRegression parameters:\n&quot;</span> + lr.explainParams() + <span class="hljs-string">&quot;\n&quot;</span>)
+
+<span class="hljs-comment">// We may set parameters using setter methods.</span>
+lr.setMaxIter(<span class="hljs-number">10</span>)
+  .setRegParam(<span class="hljs-number">0.01</span>)
+
+<span class="hljs-comment">// Learn a LogisticRegression model. This uses the parameters stored in lr.</span>
+<span class="hljs-keyword">val</span> model1 = lr.fit(training)
+<span class="hljs-comment">// Since model1 is a Model (i.e., a Transformer produced by an Estimator),</span>
+<span class="hljs-comment">// we can view the parameters it used during fit().</span>
+<span class="hljs-comment">// This prints the parameter (name: value) pairs, where names are unique IDs for this</span>
+<span class="hljs-comment">// LogisticRegression instance.</span>
+println(<span class="hljs-string">&quot;Model 1 was fit using parameters: &quot;</span> + model1.parent.extractParamMap)
+
+<span class="hljs-comment">// We may alternatively specify parameters using a ParamMap,</span>
+<span class="hljs-comment">// which supports several methods for specifying parameters.</span>
+<span class="hljs-keyword">val</span> paramMap = <span class="hljs-type">ParamMap</span>(lr.maxIter -&gt; <span class="hljs-number">20</span>)
+  .put(lr.maxIter, <span class="hljs-number">30</span>)  <span class="hljs-comment">// Specify 1 Param. This overwrites the original maxIter.</span>
+  .put(lr.regParam -&gt; <span class="hljs-number">0.1</span>, lr.threshold -&gt; <span class="hljs-number">0.55</span>)  <span class="hljs-comment">// Specify multiple Params.</span>
+
+<span class="hljs-comment">// One can also combine ParamMaps.</span>
+<span class="hljs-keyword">val</span> paramMap2 = <span class="hljs-type">ParamMap</span>(lr.probabilityCol -&gt; <span class="hljs-string">&quot;myProbability&quot;</span>)  <span class="hljs-comment">// Change output column name.</span>
+<span class="hljs-keyword">val</span> paramMapCombined = paramMap ++ paramMap2
+
+<span class="hljs-comment">// Now learn a new model using the paramMapCombined parameters.</span>
+<span class="hljs-comment">// paramMapCombined overrides all parameters set earlier via lr.set* methods.</span>
+<span class="hljs-keyword">val</span> model2 = lr.fit(training, paramMapCombined)
+println(<span class="hljs-string">&quot;Model 2 was fit using parameters: &quot;</span> + model2.parent.extractParamMap)
+
+<span class="hljs-comment">// Prepare test data.</span>
+<span class="hljs-keyword">val</span> test = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">1.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">-1.0</span>, <span class="hljs-number">1.5</span>, <span class="hljs-number">1.3</span>)),
+  (<span class="hljs-number">0.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">3.0</span>, <span class="hljs-number">2.0</span>, <span class="hljs-number">-0.1</span>)),
+  (<span class="hljs-number">1.0</span>, <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">0.0</span>, <span class="hljs-number">2.2</span>, <span class="hljs-number">-1.5</span>))
+)).toDF(<span class="hljs-string">&quot;label&quot;</span>, <span class="hljs-string">&quot;features&quot;</span>)
+
+<span class="hljs-comment">// Make predictions on test data using the Transformer.transform() method.</span>
+<span class="hljs-comment">// LogisticRegression.transform will only use the &apos;features&apos; column.</span>
+<span class="hljs-comment">// Note that model2.transform() outputs a &apos;myProbability&apos; column instead of the usual</span>
+<span class="hljs-comment">// &apos;probability&apos; column since we renamed the lr.probabilityCol parameter previously.</span>
+model2.transform(test)
+  .select(<span class="hljs-string">&quot;features&quot;</span>, <span class="hljs-string">&quot;label&quot;</span>, <span class="hljs-string">&quot;myProbability&quot;</span>, <span class="hljs-string">&quot;prediction&quot;</span>)
+  .collect()
+  .foreach { <span class="hljs-keyword">case</span> <span class="hljs-type">Row</span>(features: <span class="hljs-type">Vector</span>, label: <span class="hljs-type">Double</span>, prob: <span class="hljs-type">Vector</span>, prediction: <span class="hljs-type">Double</span>) =&gt;
+    println(<span class="hljs-string">s&quot;(<span class="hljs-subst">$features</span>, <span class="hljs-subst">$label</span>) -&gt; prob=<span class="hljs-subst">$prob</span>, prediction=<span class="hljs-subst">$prediction</span>&quot;</span>)
+  }
+</code></pre>
+<h5 id="&#x4F8B;&#x5B50;&#xFF1A;pipeline">&#x4F8B;&#x5B50;&#xFF1A;Pipeline</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.{<span class="hljs-type">Pipeline</span>, <span class="hljs-type">PipelineModel</span>}
+<span class="hljs-keyword">import</span> org.apache.spark.ml.classification.<span class="hljs-type">LogisticRegression</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.feature.{<span class="hljs-type">HashingTF</span>, <span class="hljs-type">Tokenizer</span>}
+<span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.<span class="hljs-type">Vector</span>
+<span class="hljs-keyword">import</span> org.apache.spark.sql.<span class="hljs-type">Row</span>
+
+<span class="hljs-comment">// Prepare training documents from a list of (id, text, label) tuples.</span>
+<span class="hljs-keyword">val</span> training = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">0</span>L, <span class="hljs-string">&quot;a b c d e spark&quot;</span>, <span class="hljs-number">1.0</span>),
+  (<span class="hljs-number">1</span>L, <span class="hljs-string">&quot;b d&quot;</span>, <span class="hljs-number">0.0</span>),
+  (<span class="hljs-number">2</span>L, <span class="hljs-string">&quot;spark f g h&quot;</span>, <span class="hljs-number">1.0</span>),
+  (<span class="hljs-number">3</span>L, <span class="hljs-string">&quot;hadoop mapreduce&quot;</span>, <span class="hljs-number">0.0</span>)
+)).toDF(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;text&quot;</span>, <span class="hljs-string">&quot;label&quot;</span>)
+
+<span class="hljs-comment">// Configure an ML pipeline, which consists of three stages: tokenizer, hashingTF, and lr.</span>
+<span class="hljs-keyword">val</span> tokenizer = <span class="hljs-keyword">new</span> <span class="hljs-type">Tokenizer</span>()
+  .setInputCol(<span class="hljs-string">&quot;text&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;words&quot;</span>)
+<span class="hljs-keyword">val</span> hashingTF = <span class="hljs-keyword">new</span> <span class="hljs-type">HashingTF</span>()
+  .setNumFeatures(<span class="hljs-number">1000</span>)
+  .setInputCol(tokenizer.getOutputCol)
+  .setOutputCol(<span class="hljs-string">&quot;features&quot;</span>)
+<span class="hljs-keyword">val</span> lr = <span class="hljs-keyword">new</span> <span class="hljs-type">LogisticRegression</span>()
+  .setMaxIter(<span class="hljs-number">10</span>)
+  .setRegParam(<span class="hljs-number">0.001</span>)
+<span class="hljs-keyword">val</span> pipeline = <span class="hljs-keyword">new</span> <span class="hljs-type">Pipeline</span>()
+  .setStages(<span class="hljs-type">Array</span>(tokenizer, hashingTF, lr))
+
+<span class="hljs-comment">// Fit the pipeline to training documents.</span>
+<span class="hljs-keyword">val</span> model = pipeline.fit(training)
+
+<span class="hljs-comment">// Now we can optionally save the fitted pipeline to disk</span>
+model.write.overwrite().save(<span class="hljs-string">&quot;/tmp/spark-logistic-regression-model&quot;</span>)
+
+<span class="hljs-comment">// We can also save this unfit pipeline to disk</span>
+pipeline.write.overwrite().save(<span class="hljs-string">&quot;/tmp/unfit-lr-model&quot;</span>)
+
+<span class="hljs-comment">// And load it back in during production</span>
+<span class="hljs-keyword">val</span> sameModel = <span class="hljs-type">PipelineModel</span>.load(<span class="hljs-string">&quot;/tmp/spark-logistic-regression-model&quot;</span>)
+
+<span class="hljs-comment">// Prepare test documents, which are unlabeled (id, text) tuples.</span>
+<span class="hljs-keyword">val</span> test = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">4</span>L, <span class="hljs-string">&quot;spark i j k&quot;</span>),
+  (<span class="hljs-number">5</span>L, <span class="hljs-string">&quot;l m n&quot;</span>),
+  (<span class="hljs-number">6</span>L, <span class="hljs-string">&quot;spark hadoop spark&quot;</span>),
+  (<span class="hljs-number">7</span>L, <span class="hljs-string">&quot;apache hadoop&quot;</span>)
+)).toDF(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;text&quot;</span>)
+
+<span class="hljs-comment">// Make predictions on test documents.</span>
+model.transform(test)
+  .select(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;text&quot;</span>, <span class="hljs-string">&quot;probability&quot;</span>, <span class="hljs-string">&quot;prediction&quot;</span>)
+  .collect()
+  .foreach { <span class="hljs-keyword">case</span> <span class="hljs-type">Row</span>(id: <span class="hljs-type">Long</span>, text: <span class="hljs-type">String</span>, prob: <span class="hljs-type">Vector</span>, prediction: <span class="hljs-type">Double</span>) =&gt;
+    println(<span class="hljs-string">s&quot;(<span class="hljs-subst">$id</span>, <span class="hljs-subst">$text</span>) --&gt; prob=<span class="hljs-subst">$prob</span>, prediction=<span class="hljs-subst">$prediction</span>&quot;</span>)
+  }
+</code></pre>
+<h5 id="&#x6A21;&#x578B;&#x9009;&#x62E9;&#xFF08;&#x8D85;&#x53C2;&#x8C03;&#x8BD5;&#xFF09;">&#x6A21;&#x578B;&#x9009;&#x62E9;&#xFF08;&#x8D85;&#x53C2;&#x8C03;&#x8BD5;&#xFF09;</h5>
+<p>&#x4F7F;&#x7528;ML&#x7BA1;&#x9053;&#x7684;&#x4E00;&#x4E2A;&#x76CA;&#x5904;&#x662F;&#x8D85;&#x53C2;&#xFF08;hyperparameter&#xFF09;&#x4F18;&#x5316;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ji-chu-tong-ji.html" class="navigation navigation-prev " aria-label="Previous page: 基础统计">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html" class="navigation navigation-next " aria-label="Next page: 特征的提取、转换和筛选">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Pipelines","level":"1.15.3","depth":2,"next":{"title":"特征的提取、转换和筛选","level":"1.15.4","depth":2,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.md","articles":[{"title":"Feature Extractors","level":"1.15.4.1","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.md","articles":[]},{"title":"Feature Transformers-1","level":"1.15.4.2","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.md","articles":[]},{"title":"Feature Transformers-2","level":"1.15.4.3","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.md","articles":[]},{"title":"Feature Selectors","level":"1.15.4.4","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.md","articles":[]},{"title":"Locality Sensitive Hashing","level":"1.15.4.5","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.md","articles":[]}]},"previous":{"title":"基础统计","level":"1.15.2","depth":2,"path":"mllib/ji-chu-tong-ji.md","ref":"mllib/ji-chu-tong-ji.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mllib/pipelines.md","mtime":"2020-07-31T08:28:42.849Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

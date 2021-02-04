@@ -1,0 +1,1477 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Feature Transformers-1 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="feature-transformers-2.html" />
+    
+    
+    <link rel="prev" href="feature-extractors.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Spark总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../kuai-su-ru-men.html">
+            
+                <a href="../../kuai-su-ru-men.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../sparkbian-cheng-dao-yin.html">
+            
+                <a href="../../sparkbian-cheng-dao-yin.html">
+            
+                    
+                    Spark编程导引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../sparkbian-cheng-dao-yin/rdds.html">
+            
+                <a href="../../sparkbian-cheng-dao-yin/rdds.html">
+            
+                    
+                    RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                <a href="../../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                    
+                    从Java/Scala启动Spark jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../spark-sql.html">
+            
+                <a href="../../spark-sql.html">
+            
+                    
+                    Spark SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../spark-sql/getting-started.html">
+            
+                <a href="../../spark-sql/getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../spark-sql/shu-ju-yuan.html">
+            
+                <a href="../../spark-sql/shu-ju-yuan.html">
+            
+                    
+                    数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../spark-sql/xing-neng-diao-shi.html">
+            
+                <a href="../../spark-sql/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                <a href="../../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                    
+                    分布式SQL引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                <a href="../../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                    
+                    与Apache Hive的兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../spark-sql/shu-ju-lei-xing.html">
+            
+                <a href="../../spark-sql/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../spark-sql/built-in-functions.html">
+            
+                <a href="../../spark-sql/built-in-functions.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../spark-streaming.html">
+            
+                <a href="../../spark-streaming.html">
+            
+                    
+                    Spark Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../spark-streaming/ji-ben-gai-nian.html">
+            
+                <a href="../../spark-streaming/ji-ben-gai-nian.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../spark-streaming/xing-neng-diao-shi.html">
+            
+                <a href="../../spark-streaming/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../spark-streaming/rong-cuo.html">
+            
+                <a href="../../spark-streaming/rong-cuo.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../structured-streaming.html">
+            
+                <a href="../../structured-streaming.html">
+            
+                    
+                    Structured Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                <a href="../../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                    
+                    使用Datasets和DataFrames的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                <a href="../../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                    
+                    Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../bu-shu.html">
+            
+                <a href="../../bu-shu.html">
+            
+                    
+                    部署和运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../bu-shu/zu-jian-ff08-components.html">
+            
+                <a href="../../bu-shu/zu-jian-ff08-components.html">
+            
+                    
+                    组件（Components）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                <a href="../../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                    
+                    集群管理器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../bu-shu/ti-jiao-ying-yong.html">
+            
+                <a href="../../bu-shu/ti-jiao-ying-yong.html">
+            
+                    
+                    提交应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../bu-shu/jian-kong.html">
+            
+                <a href="../../bu-shu/jian-kong.html">
+            
+                    
+                    监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../zuo-ye-diao-du.html">
+            
+                <a href="../../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在YARN上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../pei-zhi.html">
+            
+                <a href="../../pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../pei-zhi/sparkshu-xing.html">
+            
+                <a href="../../pei-zhi/sparkshu-xing.html">
+            
+                    
+                    Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                <a href="../../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                    
+                    动态加载Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                <a href="../../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                    
+                    查看Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../diao-shi.html">
+            
+                <a href="../../diao-shi.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../extff1a-xing-neng-you-hua.html">
+            
+                <a href="../../extff1a-xing-neng-you-hua.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                <a href="../../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                    
+                    基础优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                <a href="../../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                    
+                    高级优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在Yarn上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../zuo-ye-diao-du.html">
+            
+                <a href="../../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../an-quan.html">
+            
+                <a href="../../an-quan.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../ying-jian-pei-zhi.html">
+            
+                <a href="../../ying-jian-pei-zhi.html">
+            
+                    
+                    硬件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../mllib.html">
+            
+                <a href="../../mllib.html">
+            
+                    
+                    MLlib
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../shu-ju-lei-xing.html">
+            
+                <a href="../shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../ji-chu-tong-ji.html">
+            
+                <a href="../ji-chu-tong-ji.html">
+            
+                    
+                    基础统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../pipelines.html">
+            
+                <a href="../pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                <a href="../te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                    
+                    特征的提取、转换和筛选
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="feature-extractors.html">
+            
+                <a href="feature-extractors.html">
+            
+                    
+                    Feature Extractors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15.4.2" data-path="feature-tranformers.html">
+            
+                <a href="feature-tranformers.html">
+            
+                    
+                    Feature Transformers-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="feature-transformers-2.html">
+            
+                <a href="feature-transformers-2.html">
+            
+                    
+                    Feature Transformers-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="feature-selectors.html">
+            
+                <a href="feature-selectors.html">
+            
+                    
+                    Feature Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="locality-sensitive-hashing.html">
+            
+                <a href="locality-sensitive-hashing.html">
+            
+                    
+                    Locality Sensitive Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../fen-lei-he-hui-gui.html">
+            
+                <a href="../fen-lei-he-hui-gui.html">
+            
+                    
+                    分类和回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="../fen-lei-he-hui-gui/fen-lei.html">
+            
+                <a href="../fen-lei-he-hui-gui/fen-lei.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="../fen-lei-he-hui-gui/hui-gui.html">
+            
+                <a href="../fen-lei-he-hui-gui/hui-gui.html">
+            
+                    
+                    回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="../fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                <a href="../fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                    
+                    线性方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="../fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                <a href="../fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="../fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                <a href="../fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                    
+                    树团体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../ju-lei.html">
+            
+                <a href="../ju-lei.html">
+            
+                    
+                    聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../xie-tong-guo-lv.html">
+            
+                <a href="../xie-tong-guo-lv.html">
+            
+                    
+                    协同过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../questions.html">
+            
+                <a href="../../questions.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../questions/datasetdataframerdd.html">
+            
+                <a href="../../questions/datasetdataframerdd.html">
+            
+                    
+                    DataFrame-Dataset-RDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../questions/spark-checkpoint.html">
+            
+                <a href="../../questions/spark-checkpoint.html">
+            
+                    
+                    checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../../questions/shu-ju-ben-di-xing.html">
+            
+                <a href="../../questions/shu-ju-ben-di-xing.html">
+            
+                    
+                    某个task很慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../../questions/sparkhan-shu.html">
+            
+                <a href="../../questions/sparkhan-shu.html">
+            
+                    
+                    Spark函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../../questions/hadoop-1he-hadoop2.html">
+            
+                <a href="../../questions/hadoop-1he-hadoop2.html">
+            
+                    
+                    Hadoop 1和Hadoop2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../../questions/broadcast-join.html">
+            
+                <a href="../../questions/broadcast-join.html">
+            
+                    
+                    Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Feature Transformers-1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x7279;&#x5F81;&#x8F6C;&#x6362;&#x7B97;&#x6CD5;&#xFF08;feature-transformers&#xFF09;">&#x7279;&#x5F81;&#x8F6C;&#x6362;&#x7B97;&#x6CD5;&#xFF08;Feature Transformers&#xFF09;</h3>
+<h4 id="1&#x3001;tokenizer">1&#x3001;Tokenizer</h4>
+<p><strong>Tokenization&#xFF08;&#x6807;&#x8BB0;&#x5316;&#xFF09;</strong>&#x662F;&#x6307;&#x5C06;&#x6587;&#x672C;&#xFF08;&#x6BD4;&#x5982;&#x53E5;&#x5B50;&#xFF09;&#x5207;&#x5206;&#x4E3A;&#x5355;&#x72EC;&#x7684;&#x8BCD;&#x8BED;&#xFF08;term&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x5355;&#x8BCD;&#xFF09;&#xFF0C;<code>Tokenizer</code>&#x63D0;&#x4F9B;&#x4E86;&#x8FD9;&#x79CD;&#x529F;&#x80FD;&#x3002;</p>
+<p><code>RegexTokenizer</code>&#x57FA;&#x4E8E;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x5B9E;&#x73B0;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x6807;&#x8BB0;&#x5316;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53C2;&#x6570;&#x201C;pattern&#x201D;&#xFF08;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#xFF1A;&#x201C;\\s+&#x201D;&#xFF09;&#x88AB;&#x7528;&#x4F5C;&#x5206;&#x9694;&#x8F93;&#x5165;&#x6587;&#x672C;&#x7684;&#x5B9A;&#x754C;&#x7B26;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x201C;gaps&#x201D;&#x53C2;&#x6570;&#x4E3A;false&#xFF0C;&#x6B64;&#x65F6;&#x201C;pattern&#x201D;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8868;&#x793A;&#x7684;&#x5C31;&#x662F;&#x201C;&#x6807;&#x8BB0;&#x201D;&#x800C;&#x4E0D;&#x662F;&#x5206;&#x9694;&#x70B9;&#xFF0C;&#x4E0E;&#x201C;pattern&#x201D;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x5C31;&#x662F;&#x6807;&#x8BB0;&#x5316;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.{<span class="hljs-type">RegexTokenizer</span>, <span class="hljs-type">Tokenizer</span>}
+<span class="hljs-keyword">import</span> org.apache.spark.sql.functions._
+
+<span class="hljs-keyword">val</span> sentenceDataFrame = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">0</span>, <span class="hljs-string">&quot;Hi I heard about Spark&quot;</span>),
+  (<span class="hljs-number">1</span>, <span class="hljs-string">&quot;I wish Java could use case classes&quot;</span>),
+  (<span class="hljs-number">2</span>, <span class="hljs-string">&quot;Logistic,regression,models,are,neat&quot;</span>)
+)).toDF(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;sentence&quot;</span>)
+
+<span class="hljs-keyword">val</span> tokenizer = <span class="hljs-keyword">new</span> <span class="hljs-type">Tokenizer</span>().setInputCol(<span class="hljs-string">&quot;sentence&quot;</span>).setOutputCol(<span class="hljs-string">&quot;words&quot;</span>)
+<span class="hljs-keyword">val</span> regexTokenizer = <span class="hljs-keyword">new</span> <span class="hljs-type">RegexTokenizer</span>()
+  .setInputCol(<span class="hljs-string">&quot;sentence&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;words&quot;</span>)
+  .setPattern(<span class="hljs-string">&quot;\\W&quot;</span>) <span class="hljs-comment">// alternatively .setPattern(&quot;\\w+&quot;).setGaps(false)</span>
+
+<span class="hljs-keyword">val</span> countTokens = udf { (words: <span class="hljs-type">Seq</span>[<span class="hljs-type">String</span>]) =&gt; words.length }
+
+<span class="hljs-keyword">val</span> tokenized = tokenizer.transform(sentenceDataFrame)
+tokenized.select(<span class="hljs-string">&quot;sentence&quot;</span>, <span class="hljs-string">&quot;words&quot;</span>)
+    .withColumn(<span class="hljs-string">&quot;tokens&quot;</span>, countTokens(col(<span class="hljs-string">&quot;words&quot;</span>))).show(<span class="hljs-literal">false</span>)
+
+<span class="hljs-keyword">val</span> regexTokenized = regexTokenizer.transform(sentenceDataFrame)
+regexTokenized.select(<span class="hljs-string">&quot;sentence&quot;</span>, <span class="hljs-string">&quot;words&quot;</span>)
+    .withColumn(<span class="hljs-string">&quot;tokens&quot;</span>, countTokens(col(<span class="hljs-string">&quot;words&quot;</span>))).show(<span class="hljs-literal">false</span>)
+</code></pre>
+<h4 id="2&#x3001;stopwordsremover">2&#x3001;StopWordsRemover</h4>
+<p><strong>Stop words</strong>&#xFF08;&#x505C;&#x7528;&#x8BCD;&#xFF09;&#x662F;&#x6307;&#x5E94;&#x8BE5;&#x4ECE;&#x8F93;&#x5165;&#x4E2D;&#x6392;&#x9664;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x6307;&#x9891;&#x7E41;&#x51FA;&#x73B0;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x5B9E;&#x9645;&#x610F;&#x4E49;&#x7684;&#x8BCD;&#x3002;</p>
+<p><code>StopWordsRemover</code>&#x8F93;&#x5165;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5E8F;&#x5217;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;<code>Tokenizer</code>&#x7684;&#x8F93;&#x51FA;&#xFF09;&#xFF0C;&#x8F93;&#x51FA;&#x662F;&#x4ECE;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x5E8F;&#x5217;&#x53BB;&#x9664;&#x6240;&#x6709;&#x505C;&#x7528;&#x8BCD;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5E8F;&#x5217;&#x3002;&#x901A;&#x8FC7;<code>stropWords</code>&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x505C;&#x7528;&#x8BCD;&#x96C6;&#x5408;&#x3002;&#x901A;&#x8FC7;&#x8C03;&#x7528;<code>StopWordsRemover.loadDefaultStopWords(language)</code>&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x67D0;&#x4E9B;&#x8BED;&#x8A00;&#x7684;&#x505C;&#x7528;&#x8BCD;&#xFF0C;&#x652F;&#x6301;&#x7684;&#x8BED;&#x8A00;&#x53C2;&#x6570;<code>language</code>&#x662F;&#xFF1A; &#x201C;danish&#x201D;&#xFF0C;&#x201C;dutch&#x201D;&#xFF0C;&#x201C;english&#x201D;&#xFF0C;&#x201C;finnish&#x201D;&#xFF0C;&#x201C;french&#x201D;&#xFF0C;&#x201C;german&#x201D;&#xFF0C;&#x201C;hungarian&#x201D;&#xFF0C;
+&#x201C;italian&#x201D;&#xFF0C; &#x201C;norwegian&#x201D;&#xFF0C; &#x201C;portuguese&#x201D;&#xFF0C; &#x201C;russian&#x201D;&#xFF0C; &#x201C;spanish&#x201D;&#xFF0C; &#x201C;swedish&#x201D; &#x548C; &#x201C;turkish&#x201D;&#x3002;&#x5E03;&#x5C14;&#x53C2;&#x6570;<code>caseSensitive</code>&#x8868;&#x793A;&#x505C;&#x7528;&#x8BCD;&#x5339;&#x914D;&#x662F;&#x5426;&#x662F;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;&#x7684;&#xFF08;&#x9ED8;&#x8BA4;false&#xFF09;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p>&#x5047;&#x5982;&#x6709;&#x4E00;&#x4E2A;&#x5217;&#x4E3A;<code>id</code>&#x548C;<code>raw</code>&#x7684;DataFrame&#xFF1A;</p>
+<pre><code> id | raw
+----|----------
+ 0  | [I, saw, the, red, baloon]
+ 1  | [Mary, had, a, little, lamb]
+</code></pre><p>&#x628A;<code>raw</code>&#x5217;&#x4F5C;&#x4E3A;<code>StopWordsRemover</code>&#x7684;&#x8F93;&#x5165;&#xFF0C;<code>filtered</code>&#x4F5C;&#x4E3A;&#x8F93;&#x51FA;&#x5217;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;&#xFF1A;</p>
+<pre><code> id | raw                         | filtered
+----|-----------------------------|--------------------
+ 0  | [I, saw, the, red, baloon]  |  [saw, red, baloon]
+ 1  | [Mary, had, a, little, lamb]|[Mary, little, lamb]
+</code></pre><p>&#x53EF;&#x89C1;&#xFF0C;&#x201C;I&#x201D;, &#x201C;the&#x201D;, &#x201C;had&#x201D;, &#x548C; &#x201C;a&#x201D;&#x88AB;&#x4F5C;&#x4E3A;&#x505C;&#x6B62;&#x8BCD;&#x8FC7;&#x6EE4;&#x6389;&#x4E86;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">StopWordsRemover</span>
+
+<span class="hljs-keyword">val</span> remover = <span class="hljs-keyword">new</span> <span class="hljs-type">StopWordsRemover</span>()
+  .setInputCol(<span class="hljs-string">&quot;raw&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;filtered&quot;</span>)
+
+<span class="hljs-keyword">val</span> dataSet = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">0</span>, <span class="hljs-type">Seq</span>(<span class="hljs-string">&quot;I&quot;</span>, <span class="hljs-string">&quot;saw&quot;</span>, <span class="hljs-string">&quot;the&quot;</span>, <span class="hljs-string">&quot;red&quot;</span>, <span class="hljs-string">&quot;balloon&quot;</span>)),
+  (<span class="hljs-number">1</span>, <span class="hljs-type">Seq</span>(<span class="hljs-string">&quot;Mary&quot;</span>, <span class="hljs-string">&quot;had&quot;</span>, <span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;little&quot;</span>, <span class="hljs-string">&quot;lamb&quot;</span>))
+)).toDF(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;raw&quot;</span>)
+
+remover.transform(dataSet).show(<span class="hljs-literal">false</span>)
+</code></pre>
+<h4 id="3&#x3001;nnn-gram">3&#x3001;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>-gram</h4>
+<p>&#x4E00;&#x4E2A;<code>n-gram</code>&#x662F;&#x4E00;&#x4E2A;<code>n</code>&#x4E2A;&#x6807;&#x8BB0;&#xFF08;&#x4E00;&#x822C;&#x662F;&#x5355;&#x8BCD;&#xFF09;&#x7684;&#x5E8F;&#x5217;&#xFF0C;<code>n</code>&#x4E3A;&#x6574;&#x6570;&#x3002;<code>NGram</code>&#x7C7B;&#x53EF;&#x628A;&#x8F93;&#x5165;&#x7279;&#x5F81;&#x8F6C;&#x6362;&#x4E3A;<code>n-gram</code>&#x7279;&#x5F81;&#x3002;</p>
+<p><code>NGram</code>&#x8F93;&#x5165;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5E8F;&#x5217;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;<code>Tokenizer</code>&#x7684;&#x8F93;&#x51FA;&#xFF09;&#x3002;&#x53C2;&#x6570;<code>n</code>&#x7528;&#x6765;&#x51B3;&#x5B9A;&#x6BCF;&#x4E2A;<code>n-gram</code>&#x4E2D;&#x8BCD;&#x7684;&#x4E2A;&#x6570;&#xFF1B;&#x8F93;&#x51FA;&#x6709;<code>n-gram</code>&#x5E8F;&#x5217;&#x6784;&#x6210;&#xFF1B;&#x5176;&#x4E2D;<code>n-gram</code>&#x7531;<code>n</code>&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x5355;&#x8BCD;&#x8868;&#x793A;&#x3002;&#x5982;&#x679C;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x5305;&#x542B;&#x5C11;&#x4E8E;<code>n</code>&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x6709;&#x8F93;&#x51FA;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">NGram</span>
+
+<span class="hljs-keyword">val</span> wordDataFrame = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">0</span>, <span class="hljs-type">Array</span>(<span class="hljs-string">&quot;Hi&quot;</span>, <span class="hljs-string">&quot;I&quot;</span>, <span class="hljs-string">&quot;heard&quot;</span>, <span class="hljs-string">&quot;about&quot;</span>, <span class="hljs-string">&quot;Spark&quot;</span>)),
+  (<span class="hljs-number">1</span>, <span class="hljs-type">Array</span>(<span class="hljs-string">&quot;I&quot;</span>, <span class="hljs-string">&quot;wish&quot;</span>, <span class="hljs-string">&quot;Java&quot;</span>, <span class="hljs-string">&quot;could&quot;</span>, <span class="hljs-string">&quot;use&quot;</span>, <span class="hljs-string">&quot;case&quot;</span>, <span class="hljs-string">&quot;classes&quot;</span>)),
+  (<span class="hljs-number">2</span>, <span class="hljs-type">Array</span>(<span class="hljs-string">&quot;Logistic&quot;</span>, <span class="hljs-string">&quot;regression&quot;</span>, <span class="hljs-string">&quot;models&quot;</span>, <span class="hljs-string">&quot;are&quot;</span>, <span class="hljs-string">&quot;neat&quot;</span>))
+)).toDF(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;words&quot;</span>)
+
+<span class="hljs-keyword">val</span> ngram = <span class="hljs-keyword">new</span> <span class="hljs-type">NGram</span>().setN(<span class="hljs-number">2</span>).setInputCol(<span class="hljs-string">&quot;words&quot;</span>).setOutputCol(<span class="hljs-string">&quot;ngrams&quot;</span>)
+
+<span class="hljs-keyword">val</span> ngramDataFrame = ngram.transform(wordDataFrame)
+ngramDataFrame.select(<span class="hljs-string">&quot;ngrams&quot;</span>).show(<span class="hljs-literal">false</span>)
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x4E3A;&#xFF1A;</p>
+<pre><code>|ngrams                                                                          |
++--------------------------------------------------------------------------------+
+|[Hi I heard, I heard about, heard about Spark]                                  |
+|[I wish Java, wish Java could, Java could use, could use case, use case classes]|
+|[Logistic regression models, regression models are, models are neat]            |
+</code></pre><h4 id="4&#x3001;binarizer">4&#x3001;Binarizer</h4>
+<p>Binarization&#xFF08;&#x4E8C;&#x503C;&#x5316;&#xFF09;&#x6307;&#x5C06;&#x6570;&#x503C;&#x7279;&#x5F81;&#x9608;&#x503C;&#x5904;&#x7406;&#x4E3A;&#x4E8C;&#x5143;&#xFF08;0/1&#xFF09;&#x7279;&#x5F81;&#x3002;</p>
+<p><code>Binarizer</code>&#x7684;&#x53C2;&#x6570;<code>threshold</code>&#xFF0C;&#x6BD4;&#x5B83;&#x5927;&#x7684;&#x7279;&#x5F81;&#x503C;&#x88AB;&#x4E8C;&#x503C;&#x5316;&#x4E3A;1.0&#xFF1B;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5B83;&#x7684;&#x7279;&#x5F81;&#x503C;&#x88AB;&#x4E8C;&#x503C;&#x5316;&#x4E3A;0.0&#x3002;Vector&#x7C7B;&#x578B;&#x548C;Double&#x7C7B;&#x578B;&#x7684;&#x7279;&#x5F81;&#x90FD;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">Binarizer</span>
+
+<span class="hljs-keyword">val</span> data = <span class="hljs-type">Array</span>((<span class="hljs-number">0</span>, <span class="hljs-number">0.1</span>), (<span class="hljs-number">1</span>, <span class="hljs-number">0.8</span>), (<span class="hljs-number">2</span>, <span class="hljs-number">0.2</span>))
+<span class="hljs-keyword">val</span> dataFrame = spark.createDataFrame(data).toDF(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;feature&quot;</span>)
+
+<span class="hljs-keyword">val</span> binarizer: <span class="hljs-type">Binarizer</span> = <span class="hljs-keyword">new</span> <span class="hljs-type">Binarizer</span>()
+  .setInputCol(<span class="hljs-string">&quot;feature&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;binarized_feature&quot;</span>)
+  .setThreshold(<span class="hljs-number">0.5</span>)
+
+<span class="hljs-keyword">val</span> binarizedDataFrame = binarizer.transform(dataFrame)
+
+println(<span class="hljs-string">s&quot;Binarizer output with Threshold = <span class="hljs-subst">${binarizer.getThreshold}</span>&quot;</span>)
+binarizedDataFrame.show()
+</code></pre>
+<h4 id="5&#x3001;pca">5&#x3001;PCA</h4>
+<p>PCA&#xFF08;Principal Component Analysis&#xFF0C;&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;&#xFF09;&#xFF0C;&#x4F7F;&#x7528;&#x6B63;&#x4EA4;&#x53D8;&#x6362;&#xFF08;orthogonal transformation&#xFF09;&#x5C06;&#x4E00;&#x7EC4;&#x53EF;&#x80FD;&#x76F8;&#x5173;&#x7684;&#x89C2;&#x6D4B;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x7EC4;&#x7EBF;&#x6027;&#x4E0D;&#x76F8;&#x5173;&#x7684;&#x503C;&#xFF08;&#x79F0;&#x4E3A;&#xFF0C;&#x4E3B;&#x6210;&#x5206;&#xFF09;&#x3002;<code>PCA</code>&#x4F7F;&#x7528;PCA&#x8BAD;&#x7EC3;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x628A;&#x5411;&#x91CF;&#x6295;&#x5C04;&#x5230;&#x4F4E;&#x7EF4;&#x5EA6;&#x7684;&#x7A7A;&#x95F4;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p>&#x628A;5&#x7EF4;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x6295;&#x5C04;&#x4E3A;3&#x7EF4;&#x7684;&#x4E3B;&#x6210;&#x5206;&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">PCA</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.<span class="hljs-type">Vectors</span>
+
+<span class="hljs-keyword">val</span> data = <span class="hljs-type">Array</span>(
+  <span class="hljs-type">Vectors</span>.sparse(<span class="hljs-number">5</span>, <span class="hljs-type">Seq</span>((<span class="hljs-number">1</span>, <span class="hljs-number">1.0</span>), (<span class="hljs-number">3</span>, <span class="hljs-number">7.0</span>))),
+  <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">2.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">3.0</span>, <span class="hljs-number">4.0</span>, <span class="hljs-number">5.0</span>),
+  <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">4.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">6.0</span>, <span class="hljs-number">7.0</span>)
+)
+<span class="hljs-keyword">val</span> df = spark.createDataFrame(data.map(<span class="hljs-type">Tuple1</span>.apply)).toDF(<span class="hljs-string">&quot;features&quot;</span>)
+
+<span class="hljs-keyword">val</span> pca = <span class="hljs-keyword">new</span> <span class="hljs-type">PCA</span>()
+  .setInputCol(<span class="hljs-string">&quot;features&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;pcaFeatures&quot;</span>)
+  .setK(<span class="hljs-number">3</span>)
+  .fit(df)
+
+<span class="hljs-keyword">val</span> result = pca.transform(df).select(<span class="hljs-string">&quot;pcaFeatures&quot;</span>)
+result.show(<span class="hljs-literal">false</span>)
+</code></pre>
+<h4 id="6&#x3001;polynomialexpansion">6&#x3001;PolynomialExpansion</h4>
+<p>Polynomial expansion&#xFF08;&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;&#xFF09;&#xFF0C;&#x662F;&#x6307;&#x628A;&#x7279;&#x5F81;&#x5C55;&#x5F00;&#x5230;&#x591A;&#x9879;&#x5F0F;&#x7A7A;&#x95F4;&#xFF0C;&#x7531;&#x539F;&#x59CB;&#x7EF4;&#x5EA6;&#x7684;n&#x6B21;&#x7EC4;&#x5408;&#x6765;&#x8868;&#x793A;&#x3002;</p>
+<p>&#x4EE5;&#x7279;&#x5F81;&#x5411;&#x91CF;(x, y)&#x4E3A;&#x4F8B;&#xFF0C;&#x5982;&#x679C;&#x8FDB;&#x884C;2&#x6B21;&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;&#xFF0C;&#x5C06;&#x5F97;&#x5230;<code>(x, x * x, y, x * y, y * y)</code>&#xFF1B;&#x5982;&#x679C;&#x8FDB;&#x884C;3&#x6B21;&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x5F97;&#x5230;<code>(x, y, x * x, y * y, x * y, x * x * y , x * y * y&#xFF0C;x * x * x&#xFF0C; y * y * y)</code>&#x3002;&#x5BF9;&#x4E8E;&#x7279;&#x5F81;&#x5411;&#x91CF;(x, y, z)&#xFF0C;&#x5982;&#x679C;&#x8FDB;&#x884C;2&#x6B21;&#x591A;&#x9879;&#x5F0F;&#x5C55;&#x5F00;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x5F97;&#x5230;<code>(x, y, z, x * x, y * y, z * z, x * y, x * z , y * z)</code>&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p>&#x628A;&#x7279;&#x5F81;&#x5C55;&#x5F00;&#x5230;3&#x6B21;&#x591A;&#x9879;&#x5F0F;&#x7A7A;&#x95F4;&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">PolynomialExpansion</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.<span class="hljs-type">Vectors</span>
+
+<span class="hljs-keyword">val</span> data = <span class="hljs-type">Array</span>(
+  <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">2.0</span>, <span class="hljs-number">1.0</span>),
+  <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>),
+  <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">3.0</span>, <span class="hljs-number">-1.0</span>)
+)
+<span class="hljs-keyword">val</span> df = spark.createDataFrame(data.map(<span class="hljs-type">Tuple1</span>.apply)).toDF(<span class="hljs-string">&quot;features&quot;</span>)
+
+<span class="hljs-keyword">val</span> polyExpansion = <span class="hljs-keyword">new</span> <span class="hljs-type">PolynomialExpansion</span>()
+  .setInputCol(<span class="hljs-string">&quot;features&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;polyFeatures&quot;</span>)
+  .setDegree(<span class="hljs-number">3</span>)
+
+<span class="hljs-keyword">val</span> polyDF = polyExpansion.transform(df)
+polyDF.show(<span class="hljs-literal">false</span>)
+</code></pre>
+<h4 id="7&#x3001;discrete-cosine-transform-&#xFF08;dct&#xFF09;">7&#x3001;Discrete Cosine Transform &#xFF08;DCT&#xFF09;</h4>
+<p>Discrete Cosine Transform&#xFF08;&#x79BB;&#x6563;&#x4F59;&#x5F26;&#x53D8;&#x6362;&#xFF09;&#xFF0C;&#x628A;&#x65F6;&#x57DF;&#xFF08;time domain&#xFF09;&#x4E2D;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;<code>n</code>&#x7684;&#x5B9E;&#x6570;&#x503C;&#x5E8F;&#x5217;&#x8F6C;&#x6362;&#x4E3A;&#x9891;&#x57DF;&#xFF08;frequency domain&#xFF09;&#x4E2D;&#x957F;&#x5EA6;&#x4E3A;<code>n</code>&#x7684;&#x5B9E;&#x6570;&#x503C;&#x5E8F;&#x5217;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">DCT</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.linalg.<span class="hljs-type">Vectors</span>
+
+<span class="hljs-keyword">val</span> data = <span class="hljs-type">Seq</span>(
+  <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">-2.0</span>, <span class="hljs-number">3.0</span>),
+  <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">-1.0</span>, <span class="hljs-number">2.0</span>, <span class="hljs-number">4.0</span>, <span class="hljs-number">-7.0</span>),
+  <span class="hljs-type">Vectors</span>.dense(<span class="hljs-number">14.0</span>, <span class="hljs-number">-2.0</span>, <span class="hljs-number">-5.0</span>, <span class="hljs-number">1.0</span>))
+
+<span class="hljs-keyword">val</span> df = spark.createDataFrame(data.map(<span class="hljs-type">Tuple1</span>.apply)).toDF(<span class="hljs-string">&quot;features&quot;</span>)
+
+<span class="hljs-keyword">val</span> dct = <span class="hljs-keyword">new</span> <span class="hljs-type">DCT</span>()
+  .setInputCol(<span class="hljs-string">&quot;features&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;featuresDCT&quot;</span>)
+  .setInverse(<span class="hljs-literal">false</span>)
+
+<span class="hljs-keyword">val</span> dctDf = dct.transform(df)
+dctDf.select(<span class="hljs-string">&quot;featuresDCT&quot;</span>).show(<span class="hljs-literal">false</span>)
+</code></pre>
+<h4 id="8&#x3001;stringindexer">8&#x3001;StringIndexer</h4>
+<p><code>StringIndexer</code>&#x5C06;&#x6807;&#x7B7E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8F6C;&#x6362;&#x4E3A;&#x6807;&#x7B7E;&#x7D22;&#x5F15;&#x5217;&#x3002;&#x7D22;&#x5F15;&#x4ECB;&#x4E8E;&#x533A;&#x95F4;<code>[0, numLabels)</code>&#xFF0C;&#x6309;&#x7167;&#x6807;&#x7B7E;&#x9891;&#x7387;&#x6392;&#x5E8F;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x9891;&#x7E41;&#x7684;&#x6807;&#x7B7E;&#x7684;&#x7D22;&#x5F15;&#x662F;0&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x9009;&#x62E9;&#x4FDD;&#x7559;&#x672A;&#x51FA;&#x73B0;&#x8FC7;&#x7684;&#x6807;&#x7B7E;&#xFF0C;&#x8FD9;&#x4E9B;&#x6807;&#x7B7E;&#x4F1A;&#x88AB;&#x8D4B;&#x4E88;&#x7D22;&#x5F15;<code>numLables</code>&#x3002;&#x5982;&#x679C;&#x8F93;&#x5165;&#x5217;&#x662F;&#x6570;&#x503C;&#xFF0C;&#x5219;&#x5C06;&#x5B83;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5E76;&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x503C;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x3002;&#x5F53;&#x4E0B;&#x6E38;&#x7684;&#x7BA1;&#x9053;&#x7EC4;&#x4EF6;&#xFF08;&#x6BD4;&#x5982;<code>Estimator</code>&#x6216;&#x8005;<code>Transformer</code>&#xFF09;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x5B57;&#x7B26;&#x4E32;&#x5230;&#x7D22;&#x5F15;&#x7684;&#x6807;&#x7B7E;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x7EC4;&#x4EF6;&#x7684;&#x8F93;&#x5165;&#x5217;&#x4E3A;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5230;&#x7D22;&#x5F15;&#x7684;&#x5217;&#x7684;&#x540D;&#x79F0;&#x3002;&#x5728;&#x8BB8;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>setInputCol</code>&#x8BBE;&#x7F6E;&#x8F93;&#x5165;&#x5217;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p>&#x5047;&#x5982;&#x6709;&#x5217;&#x4E3A;<code>id</code>&#x548C;<code>category</code>&#x7684;DataFrame&#xFF1A;</p>
+<pre><code> id | category
+----|----------
+ 0  | a
+ 1  | b
+ 2  | c
+ 3  | a
+ 4  | a
+ 5  | c
+</code></pre><p>&#x4F7F;&#x7528;<code>StringIndexer</code>&#x5BF9;<code>category</code>&#x5217;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x540E;&#xFF1A;</p>
+<pre><code> id | category | categoryIndex
+----|----------|---------------
+ 0  | a        | 0.0
+ 1  | b        | 2.0
+ 2  | c        | 1.0
+ 3  | a        | 0.0
+ 4  | a        | 0.0
+ 5  | c        | 1.0
+</code></pre><p>&#x201C;a&#x201D;&#x51FA;&#x73B0;&#x9891;&#x7387;&#x6700;&#x9AD8;&#xFF0C;&#x5B83;&#x7684;&#x7D22;&#x5F15;&#x4E3A;0&#xFF0C;&#x201C;c&#x201D;&#x6B21;&#x4E4B;&#x7D22;&#x5F15;&#x4E3A;1&#xFF0C;&#x201C;b&#x201D;&#x7D22;&#x5F15;&#x4E3A;2&#x3002;</p>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x62DF;&#x5408;&#x51FA;&#x7684;<code>StringIndexer</code>&#x53BB;&#x8F6C;&#x6362;&#x53E6;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x65F6;&#xFF0C;&#x6709;&#x4E09;&#x79CD;&#x5904;&#x7406;&#x672A;&#x51FA;&#x73B0;&#x8FC7;&#x7684;&#x6807;&#x7B7E;&#x7684;&#x7B56;&#x7565;&#xFF1A;</p>
+<ul>
+<li>error&#xFF1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;</li>
+<li>skip&#xFF1A;&#x8DF3;&#x8FC7;&#x5305;&#x542B;&#x672A;&#x51FA;&#x73B0;&#x8FC7;&#x7684;&#x6807;&#x7B7E;&#x7684;&#x6574;&#x884C;</li>
+<li>keep&#xFF1A;&#x5C06;&#x672A;&#x51FA;&#x73B0;&#x8FC7;&#x7684;&#x6807;&#x7B7E;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x6876;&#x4E2D;&#xFF0C;&#x8D4B;&#x4E88;&#x7D22;&#x5F15;<code>numLabels</code></li>
+</ul>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x4F7F;&#x7528;&#x4E0A;&#x9762;&#x6570;&#x636E;&#x96C6;&#x7684;<code>StringIndexer</code>&#x5904;&#x7406;&#x4E0B;&#x9762;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF1A;</p>
+<pre><code> id | category
+----|----------
+ 0  | a
+ 1  | b
+ 2  | c
+ 3  | d
+ 4  | e
+</code></pre><p>&#x5982;&#x679C;&#x672A;&#x8BBE;&#x7F6E;&#x5904;&#x7406;&#x672A;&#x51FA;&#x73B0;&#x6807;&#x7B7E;&#x7684;&#x7B56;&#x7565;&#x6216;&#x8005;&#x8BBE;&#x7F6E;&#x5904;&#x7406;&#x7B56;&#x7565;&#x4E3A;&#x201C;error&#x201D;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8C03;&#x7528;&#x4E86;<code>setHandleInvalid(&quot;skip&quot;)</code>&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x751F;&#x6210;&#x5982;&#x4E0B;&#x6570;&#x636E;&#x96C6;&#xFF1A;</p>
+<pre><code> id | category | categoryIndex
+----|----------|---------------
+ 0  | a        | 0.0
+ 1  | b        | 2.0
+ 2  | c        | 1.0
+</code></pre><p>&#x7ED3;&#x679C;&#x4E2D;&#x6CA1;&#x6709;&#x5305;&#x542B;&#x201C;d&#x201D;&#x6216;&#x201C;e&#x201D;&#x7684;&#x884C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8C03;&#x7528;<code>setHandleInvalid(&quot;keep&quot;)</code>&#xFF0C;&#x751F;&#x6210;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code> id | category | categoryIndex
+----|----------|---------------
+ 0  | a        | 0.0
+ 1  | b        | 2.0
+ 2  | c        | 1.0
+ 3  | d        | 3.0
+ 4  | e        | 3.0
+</code></pre><p>&#x5176;&#x4E2D;&#x201C;d&#x201D;&#x548C;&#x201C;e&#x201D;&#x88AB;&#x6620;&#x5C04;&#x4E3A;&#x7D22;&#x5F15;&#x201C;3.0&#x201D;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">StringIndexer</span>
+
+<span class="hljs-keyword">val</span> df = spark.createDataFrame(
+  <span class="hljs-type">Seq</span>((<span class="hljs-number">0</span>, <span class="hljs-string">&quot;a&quot;</span>), (<span class="hljs-number">1</span>, <span class="hljs-string">&quot;b&quot;</span>), (<span class="hljs-number">2</span>, <span class="hljs-string">&quot;c&quot;</span>), (<span class="hljs-number">3</span>, <span class="hljs-string">&quot;a&quot;</span>), (<span class="hljs-number">4</span>, <span class="hljs-string">&quot;a&quot;</span>), (<span class="hljs-number">5</span>, <span class="hljs-string">&quot;c&quot;</span>))
+).toDF(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;category&quot;</span>)
+
+<span class="hljs-keyword">val</span> indexer = <span class="hljs-keyword">new</span> <span class="hljs-type">StringIndexer</span>()
+  .setInputCol(<span class="hljs-string">&quot;category&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;categoryIndex&quot;</span>)
+
+<span class="hljs-keyword">val</span> indexed = indexer.fit(df).transform(df)
+indexed.show()
+</code></pre>
+<h4 id="9&#x3001;indextostring">9&#x3001;IndexToString</h4>
+<p>&#x4E0E;<code>StringIndexer</code>&#x5BF9;&#x79F0;&#xFF0C;<code>IndexToString</code>&#x5C06;&#x6807;&#x7B7E;&#x7D22;&#x5F15;&#x5217;&#x6620;&#x5C04;&#x4E3A;&#x539F;&#x59CB;&#x6807;&#x7B7E;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x3002;&#x901A;&#x5E38;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x662F;&#xFF0C;&#x4F7F;&#x7528;<code>StringIndexer</code>&#x628A;&#x6807;&#x7B7E;&#x8F6C;&#x6362;&#x4E3A;&#x7D22;&#x5F15;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x7D22;&#x5F15;&#x8BAD;&#x7EC3;&#x6A21;&#x578B;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;<code>IndexToString</code>&#x5C06;&#x9884;&#x6D4B;&#x7684;&#x7ED3;&#x679C;&#x7D22;&#x5F15;&#x8F6C;&#x6362;&#x4E3A;&#x539F;&#x59CB;&#x7684;&#x6807;&#x7B7E;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p>&#x57FA;&#x4E8E;&#x524D;&#x4F8B;&#x7684;<code>StringIndexer</code>&#xFF0C;&#x5047;&#x5982;&#x6709;&#x6570;&#x636E;&#x96C6;&#xFF1A;</p>
+<pre><code> id | categoryIndex
+----|---------------
+ 0  | 0.0
+ 1  | 2.0
+ 2  | 1.0
+ 3  | 0.0
+ 4  | 0.0
+ 5  | 1.0
+</code></pre><p>&#x5BF9;&#x5B83;&#x5E94;&#x7528;<code>IndexToString</code>&#xFF0C;&#x5219;&#x80FD;&#x83B7;&#x53D6;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x539F;&#x59CB;&#x6807;&#x7B7E;&#xFF08;&#x901A;&#x8FC7;<code>StringIndexer</code>&#x7684;&#x8F93;&#x51FA;&#x53EF;&#x4EE5;&#x63A8;&#x5BFC;&#x51FA;&#x5217;&#x7684;metadata&#xFF09;&#xFF1A;</p>
+<pre><code> id | categoryIndex | originalCategory
+----|---------------|-----------------
+ 0  | 0.0           | a
+ 1  | 2.0           | b
+ 2  | 1.0           | c
+ 3  | 0.0           | a
+ 4  | 0.0           | a
+ 5  | 1.0           | c
+</code></pre><p>&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.attribute.<span class="hljs-type">Attribute</span>
+<span class="hljs-keyword">import</span> org.apache.spark.ml.feature.{<span class="hljs-type">IndexToString</span>, <span class="hljs-type">StringIndexer</span>}
+
+<span class="hljs-keyword">val</span> df = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">0</span>, <span class="hljs-string">&quot;a&quot;</span>),
+  (<span class="hljs-number">1</span>, <span class="hljs-string">&quot;b&quot;</span>),
+  (<span class="hljs-number">2</span>, <span class="hljs-string">&quot;c&quot;</span>),
+  (<span class="hljs-number">3</span>, <span class="hljs-string">&quot;a&quot;</span>),
+  (<span class="hljs-number">4</span>, <span class="hljs-string">&quot;a&quot;</span>),
+  (<span class="hljs-number">5</span>, <span class="hljs-string">&quot;c&quot;</span>)
+)).toDF(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;category&quot;</span>)
+
+<span class="hljs-keyword">val</span> indexer = <span class="hljs-keyword">new</span> <span class="hljs-type">StringIndexer</span>()
+  .setInputCol(<span class="hljs-string">&quot;category&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;categoryIndex&quot;</span>)
+  .fit(df)
+<span class="hljs-keyword">val</span> indexed = indexer.transform(df)
+
+println(<span class="hljs-string">s&quot;Transformed string column &apos;<span class="hljs-subst">${indexer.getInputCol}</span>&apos; &quot;</span> +
+    <span class="hljs-string">s&quot;to indexed column &apos;<span class="hljs-subst">${indexer.getOutputCol}</span>&apos;&quot;</span>)
+indexed.show()
+
+<span class="hljs-keyword">val</span> inputColSchema = indexed.schema(indexer.getOutputCol)
+println(<span class="hljs-string">s&quot;StringIndexer will store labels in output column metadata: &quot;</span> +
+    <span class="hljs-string">s&quot;<span class="hljs-subst">${Attribute.fromStructField(inputColSchema).toString}</span>\n&quot;</span>)
+
+<span class="hljs-keyword">val</span> converter = <span class="hljs-keyword">new</span> <span class="hljs-type">IndexToString</span>()
+  .setInputCol(<span class="hljs-string">&quot;categoryIndex&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;originalCategory&quot;</span>)
+
+<span class="hljs-keyword">val</span> converted = converter.transform(indexed)
+
+println(<span class="hljs-string">s&quot;Transformed indexed column &apos;<span class="hljs-subst">${converter.getInputCol}</span>&apos; back to original string &quot;</span> +
+    <span class="hljs-string">s&quot;column &apos;<span class="hljs-subst">${converter.getOutputCol}</span>&apos; using labels in metadata&quot;</span>)
+converted.select(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;categoryIndex&quot;</span>, <span class="hljs-string">&quot;originalCategory&quot;</span>).show()
+</code></pre>
+<h4 id="10&#x3001;onehotencoder">10&#x3001;OneHotEncoder</h4>
+<p>One-hot&#x7F16;&#x7801;&#x662F;&#x5C06;&#x6807;&#x7B7E;&#x7D22;&#x5F15;&#x5217;&#x6620;&#x5C04;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x5411;&#x91CF;&#xFF08;binary vector&#xFF0C;&#x4EC5;&#x4EC5;&#x7531;<code>0</code>&#x548C;<code>1</code>&#x4E24;&#x79CD;&#x503C;&#x6784;&#x6210;&#x7684;&#x5411;&#x91CF;&#xFF09;&#x5217;&#xFF0C;&#x6BCF;&#x4E2A;&#x5411;&#x91CF;&#x6700;&#x591A;&#x6709;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;<code>1</code>&#x3002;&#x8FD9;&#x79CD;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x9002;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x8FDE;&#x7EED;&#x7279;&#x5F81;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#xFF1B;&#x5F53;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x8981;&#x4F7F;&#x7528;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#xFF08;categorical features&#xFF0C;&#x4F7F;&#x7528;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x65F6;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x5148;&#x7528;<code>StringIndexer</code>&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF09;&#x65F6;&#xFF0C;&#x8981;&#x4F7F;&#x7528;one-hot&#x7F16;&#x7801;&#x5BF9;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.{<span class="hljs-type">OneHotEncoder</span>, <span class="hljs-type">StringIndexer</span>}
+
+<span class="hljs-keyword">val</span> df = spark.createDataFrame(<span class="hljs-type">Seq</span>(
+  (<span class="hljs-number">0</span>, <span class="hljs-string">&quot;a&quot;</span>),
+  (<span class="hljs-number">1</span>, <span class="hljs-string">&quot;b&quot;</span>),
+  (<span class="hljs-number">2</span>, <span class="hljs-string">&quot;c&quot;</span>),
+  (<span class="hljs-number">3</span>, <span class="hljs-string">&quot;a&quot;</span>),
+  (<span class="hljs-number">4</span>, <span class="hljs-string">&quot;a&quot;</span>),
+  (<span class="hljs-number">5</span>, <span class="hljs-string">&quot;c&quot;</span>),
+  (<span class="hljs-number">6</span>, <span class="hljs-string">&quot;d&quot;</span>)
+)).toDF(<span class="hljs-string">&quot;id&quot;</span>, <span class="hljs-string">&quot;category&quot;</span>)
+
+<span class="hljs-keyword">val</span> indexer = <span class="hljs-keyword">new</span> <span class="hljs-type">StringIndexer</span>()
+  .setInputCol(<span class="hljs-string">&quot;category&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;categoryIndex&quot;</span>)
+  .fit(df)
+<span class="hljs-keyword">val</span> indexed = indexer.transform(df)
+
+<span class="hljs-keyword">val</span> encoder = <span class="hljs-keyword">new</span> <span class="hljs-type">OneHotEncoder</span>()
+  .setInputCol(<span class="hljs-string">&quot;categoryIndex&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;categoryVec&quot;</span>)
+
+<span class="hljs-keyword">val</span> encoded = encoder.transform(indexed)
+encoded.show()
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>| id|category|categoryIndex|  categoryVec|
++---+--------+-------------+-------------+
+|  0|       a|          0.0|(3,[0],[1.0])|
+|  1|       b|          3.0|    (3,[],[])|
+|  2|       c|          1.0|(3,[1],[1.0])|
+|  3|       a|          0.0|(3,[0],[1.0])|
+|  4|       a|          0.0|(3,[0],[1.0])|
+|  5|       c|          1.0|(3,[1],[1.0])|
+|  6|       d|          2.0|(3,[2],[1.0])|
+</code></pre><h4 id="11&#x3001;vectorindexer">11&#x3001;VectorIndexer</h4>
+<p><code>VectorIndexer</code>&#x7528;&#x4E8E;&#x5BF9;<code>Vector</code>&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5730;&#x51B3;&#x5B9A;&#x54EA;&#x4E9B;&#x7279;&#x5F81;&#x662F;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x591F;&#x5C06;&#x539F;&#x59CB;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x7C7B;&#x522B;&#x7D22;&#x5F15;&#xFF08;category indices&#xFF09;&#x3002;&#x7279;&#x522B;&#x662F;&#xFF0C;&#x5B83;&#x8FDB;&#x884C;&#x4E86;&#x5982;&#x4E0B;&#x5904;&#x7406;&#xFF1A;</p>
+<ol>
+<li>&#x8F93;&#x5165;&#x4E3A;<code>Vector</code>&#x7C7B;&#x578B;&#x5217;&#xFF0C;&#x6307;&#x5B9A;&#x53C2;&#x6570;<code>maxCategories</code>&#x3002;</li>
+<li>&#x57FA;&#x4E8E;&#x4E0D;&#x540C;&#x503C;&#xFF08;distinct values&#xFF09;&#x7684;&#x6570;&#x91CF;&#x51B3;&#x5B9A;&#x90A3;&#x4E9B;&#x7279;&#x5F81;&#x662F;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#xFF0C;&#x5176;&#x4E2D;&#x58F0;&#x660E;&#x4E86;&#x6700;&#x591A;<code>maxCategorices</code>&#x4E2A;&#x7279;&#x5F81;&#x662F;&#x7C7B;&#x522B;&#x7684;&#x3002;</li>
+<li>&#x4E3A;&#x6BCF;&#x4E2A;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x8BA1;&#x7B97;&#x57FA;&#x4E8E;0&#x7684;&#x7D22;&#x5F15;&#x3002;</li>
+<li>&#x5BF9;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x5E76;&#x5C06;&#x7279;&#x5F81;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x7D22;&#x5F15;&#x3002;</li>
+</ol>
+<p>&#x5BF9;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#x53EF;&#x4EE5;&#x8BA9;&#x7B97;&#x6CD5;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x51B3;&#x7B56;&#x6811;Decision Trees&#xFF0C;&#x6811;&#x56E2;&#x4F53;Tree Ensembles&#xFF09;&#x6070;&#x5F53;&#x5730;&#x5904;&#x7406;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#xFF0C;&#x63D0;&#x5347;&#x6027;&#x80FD;&#x3002;</p>
+<h5 id="&#x4F8B;">&#x4F8B;</h5>
+<p>&#x8BFB;&#x53D6;&#x6807;&#x8BB0;&#x70B9;&#xFF08;labled points&#xFF09;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x4F7F;&#x7528;<code>VectorIndex</code>&#x6765;&#x51B3;&#x5B9A;&#x54EA;&#x4E9B;&#x7279;&#x5F81;&#x662F;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x3002;&#x5C06;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x8F6C;&#x6362;&#x4E3A;&#x7D22;&#x5F15;&#x3002;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x7ED9;&#x5904;&#x7406;&#x7C7B;&#x522B;&#x7279;&#x5F81;&#x7684;&#x7B97;&#x6CD5;&#xFF08;&#x6BD4;&#x5982;<code>DecisionTreeRegressor</code>&#xFF09;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark.ml.feature.<span class="hljs-type">VectorIndexer</span>
+
+<span class="hljs-keyword">val</span> data = spark.read.format(<span class="hljs-string">&quot;libsvm&quot;</span>).load(<span class="hljs-string">&quot;data/mllib/sample_libsvm_data.txt&quot;</span>)
+
+<span class="hljs-keyword">val</span> indexer = <span class="hljs-keyword">new</span> <span class="hljs-type">VectorIndexer</span>()
+  .setInputCol(<span class="hljs-string">&quot;features&quot;</span>)
+  .setOutputCol(<span class="hljs-string">&quot;indexed&quot;</span>)
+  .setMaxCategories(<span class="hljs-number">10</span>)
+
+<span class="hljs-keyword">val</span> indexerModel = indexer.fit(data)
+
+<span class="hljs-keyword">val</span> categoricalFeatures: <span class="hljs-type">Set</span>[<span class="hljs-type">Int</span>] = indexerModel.categoryMaps.keys.toSet
+println(<span class="hljs-string">s&quot;Chose <span class="hljs-subst">${categoricalFeatures.size}</span> categorical features: &quot;</span> +
+  categoricalFeatures.mkString(<span class="hljs-string">&quot;, &quot;</span>))
+
+<span class="hljs-comment">// Create new column &quot;indexed&quot; with categorical values transformed to indices</span>
+<span class="hljs-keyword">val</span> indexedData = indexerModel.transform(data)
+indexedData.show()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="feature-extractors.html" class="navigation navigation-prev " aria-label="Previous page: Feature Extractors">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="feature-transformers-2.html" class="navigation navigation-next " aria-label="Next page: Feature Transformers-2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Feature Transformers-1","level":"1.15.4.2","depth":3,"next":{"title":"Feature Transformers-2","level":"1.15.4.3","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.md","articles":[]},"previous":{"title":"Feature Extractors","level":"1.15.4.1","depth":3,"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.md","ref":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.md","mtime":"2020-09-02T07:21:32.584Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

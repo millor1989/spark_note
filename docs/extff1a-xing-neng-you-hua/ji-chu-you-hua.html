@@ -1,0 +1,1202 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基础优化 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gao-ji-you-hua.html" />
+    
+    
+    <link rel="prev" href="../extff1a-xing-neng-you-hua.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Spark总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../kuai-su-ru-men.html">
+            
+                <a href="../kuai-su-ru-men.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../sparkbian-cheng-dao-yin.html">
+            
+                <a href="../sparkbian-cheng-dao-yin.html">
+            
+                    
+                    Spark编程导引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                    
+                    RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                    
+                    从Java/Scala启动Spark jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../spark-sql.html">
+            
+                <a href="../spark-sql.html">
+            
+                    
+                    Spark SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../spark-sql/getting-started.html">
+            
+                <a href="../spark-sql/getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../spark-sql/shu-ju-yuan.html">
+            
+                <a href="../spark-sql/shu-ju-yuan.html">
+            
+                    
+                    数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../spark-sql/xing-neng-diao-shi.html">
+            
+                <a href="../spark-sql/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                <a href="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                    
+                    分布式SQL引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                <a href="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                    
+                    与Apache Hive的兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../spark-sql/shu-ju-lei-xing.html">
+            
+                <a href="../spark-sql/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../spark-sql/built-in-functions.html">
+            
+                <a href="../spark-sql/built-in-functions.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../spark-streaming.html">
+            
+                <a href="../spark-streaming.html">
+            
+                    
+                    Spark Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../spark-streaming/ji-ben-gai-nian.html">
+            
+                <a href="../spark-streaming/ji-ben-gai-nian.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../spark-streaming/xing-neng-diao-shi.html">
+            
+                <a href="../spark-streaming/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../spark-streaming/rong-cuo.html">
+            
+                <a href="../spark-streaming/rong-cuo.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../structured-streaming.html">
+            
+                <a href="../structured-streaming.html">
+            
+                    
+                    Structured Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                <a href="../structured-streaming/shi-yong-datasets-hedataframes-de-api.html">
+            
+                    
+                    使用Datasets和DataFrames的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                <a href="../structured-streaming/structured-streaminghe-spark-streaming.html">
+            
+                    
+                    Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../bu-shu.html">
+            
+                <a href="../bu-shu.html">
+            
+                    
+                    部署和运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../bu-shu/zu-jian-ff08-components.html">
+            
+                <a href="../bu-shu/zu-jian-ff08-components.html">
+            
+                    
+                    组件（Components）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                <a href="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                    
+                    集群管理器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../bu-shu/ti-jiao-ying-yong.html">
+            
+                <a href="../bu-shu/ti-jiao-ying-yong.html">
+            
+                    
+                    提交应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../bu-shu/jian-kong.html">
+            
+                <a href="../bu-shu/jian-kong.html">
+            
+                    
+                    监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在YARN上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../pei-zhi.html">
+            
+                <a href="../pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../pei-zhi/sparkshu-xing.html">
+            
+                <a href="../pei-zhi/sparkshu-xing.html">
+            
+                    
+                    Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                    
+                    动态加载Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                    
+                    查看Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../diao-shi.html">
+            
+                <a href="../diao-shi.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../extff1a-xing-neng-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.10.1" data-path="ji-chu-you-hua.html">
+            
+                <a href="ji-chu-you-hua.html">
+            
+                    
+                    基础优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="gao-ji-you-hua.html">
+            
+                <a href="gao-ji-you-hua.html">
+            
+                    
+                    高级优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在Yarn上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../an-quan.html">
+            
+                <a href="../an-quan.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ying-jian-pei-zhi.html">
+            
+                <a href="../ying-jian-pei-zhi.html">
+            
+                    
+                    硬件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../mllib.html">
+            
+                <a href="../mllib.html">
+            
+                    
+                    MLlib
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../mllib/shu-ju-lei-xing.html">
+            
+                <a href="../mllib/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../mllib/ji-chu-tong-ji.html">
+            
+                <a href="../mllib/ji-chu-tong-ji.html">
+            
+                    
+                    基础统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../mllib/pipelines.html">
+            
+                <a href="../mllib/pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                    
+                    特征的提取、转换和筛选
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                    
+                    Feature Extractors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                    
+                    Feature Transformers-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                    
+                    Feature Transformers-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                    
+                    Feature Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                    
+                    Locality Sensitive Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../mllib/fen-lei-he-hui-gui.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui.html">
+            
+                    
+                    分类和回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="../mllib/fen-lei-he-hui-gui/fen-lei.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/fen-lei.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="../mllib/fen-lei-he-hui-gui/hui-gui.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/hui-gui.html">
+            
+                    
+                    回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="../mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                    
+                    线性方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="../mllib/fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="../mllib/fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                    
+                    树团体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../mllib/ju-lei.html">
+            
+                <a href="../mllib/ju-lei.html">
+            
+                    
+                    聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../mllib/xie-tong-guo-lv.html">
+            
+                <a href="../mllib/xie-tong-guo-lv.html">
+            
+                    
+                    协同过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../questions.html">
+            
+                <a href="../questions.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../questions/datasetdataframerdd.html">
+            
+                <a href="../questions/datasetdataframerdd.html">
+            
+                    
+                    DataFrame-Dataset-RDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../questions/spark-checkpoint.html">
+            
+                <a href="../questions/spark-checkpoint.html">
+            
+                    
+                    checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../questions/shu-ju-ben-di-xing.html">
+            
+                <a href="../questions/shu-ju-ben-di-xing.html">
+            
+                    
+                    某个task很慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../questions/sparkhan-shu.html">
+            
+                <a href="../questions/sparkhan-shu.html">
+            
+                    
+                    Spark函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../questions/hadoop-1he-hadoop2.html">
+            
+                <a href="../questions/hadoop-1he-hadoop2.html">
+            
+                    
+                    Hadoop 1和Hadoop2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../questions/broadcast-join.html">
+            
+                <a href="../questions/broadcast-join.html">
+            
+                    
+                    Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >基础优化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x5F00;&#x53D1;&#x8C03;&#x4F18;">&#x5F00;&#x53D1;&#x8C03;&#x4F18;</h3>
+<p>&#x5F00;&#x53D1;&#x4F18;&#x5316;&#x5305;&#x62EC;&#xFF1A;RDD lineage&#x8BBE;&#x8BA1;&#x3001;&#x7B97;&#x5B50;&#x7684;&#x5408;&#x7406;&#x4F7F;&#x7528;&#x3001;&#x7279;&#x6B8A;&#x64CD;&#x4F5C;&#x7684;&#x4F18;&#x5316;</p>
+<h5 id="1&#x3001;&#x907F;&#x514D;&#x521B;&#x5EFA;&#x91CD;&#x590D;&#x7684;rdd">1&#x3001;&#x907F;&#x514D;&#x521B;&#x5EFA;&#x91CD;&#x590D;&#x7684;RDD</h5>
+<p>RDD lineage&#xFF1A;RDD&#x7684;&#x8840;&#x7F18;&#x5173;&#x7CFB;&#xFF1B;&#x7531;&#x67D0;&#x4E2A;RDD&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x7B97;&#x5B50;&#x64CD;&#x4F5C;&#x5F97;&#x5230;&#x4E00;&#x7CFB;&#x5217;RDD&#x7684;&#x8FD9;&#x4E00;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x4E9B;RDD&#x76F4;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4EFD;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x5E94;&#x8BE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;RDD&#xFF1B;&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4EFD;&#x6570;&#x636E;&#x521B;&#x5EFA;&#x591A;&#x4E2A;RDD&#x4F1A;&#x589E;&#x52A0;&#x4F5C;&#x4E1A;&#x7684;&#x5F00;&#x9500;&#x3002;</p>
+<h5 id="2&#x3001;&#x5C3D;&#x53EF;&#x80FD;&#x590D;&#x7528;&#x540C;&#x4E00;&#x4E2A;rdd">2&#x3001;&#x5C3D;&#x53EF;&#x80FD;&#x590D;&#x7528;&#x540C;&#x4E00;&#x4E2A;RDD</h5>
+<p>&#x5728;&#x5BF9;&#x6765;&#x81EA;&#x540C;&#x4E00;&#x4E2A;RDD&#x7684;&#x4E0D;&#x540C;&#x90E8;&#x5206;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x8981;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x590D;&#x7528;&#x4E00;&#x4E2A;RDD&#x3002;</p>
+<h5 id="3&#x3001;&#x5BF9;&#x591A;&#x6B21;&#x4F7F;&#x7528;&#x7684;rdd&#x8FDB;&#x884C;&#x6301;&#x4E45;&#x5316;">3&#x3001;&#x5BF9;&#x591A;&#x6B21;&#x4F7F;&#x7528;&#x7684;RDD&#x8FDB;&#x884C;&#x6301;&#x4E45;&#x5316;</h5>
+<p>Spark&#x5904;&#x7406;RDD&#x7684;&#x9ED8;&#x8BA4;&#x6D41;&#x7A0B;&#x662F;&#xFF1A;&#x6BCF;&#x6B21;&#x5BF9;RDD&#x6267;&#x884C;&#x7B97;&#x5B50;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x5148;&#x4ECE;RDD&#x7684;&#x6E90;&#x5934;&#x8BA1;&#x7B97;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6267;&#x884C;&#x7B97;&#x5B50;&#x3002;&#x800C;&#x5C06;RDD&#x6301;&#x4E45;&#x5316;&#x540E;&#xFF0C;&#x5BF9;&#x8FD9;&#x4E2A;RDD&#x6267;&#x884C;&#x7B97;&#x5B50;&#x65F6;&#x4F1A;&#x4ECE;&#x6301;&#x4E45;&#x5316;&#x7684;RDD&#x6765;&#x6267;&#x884C;&#x7B97;&#x5B50;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x4ECE;&#x5934;&#x8BA1;&#x7B97;RDD&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x7684;&#x6301;&#x4E45;&#x5316;&#x7EA7;&#x522B;&#x662F;<code>MEMORY_ONLY</code>&#x3002;&#x53EF;&#x9009;&#x7684;&#x6301;&#x4E45;&#x5316;&#x7EA7;&#x522B;&#x5305;&#x62EC;<code>MEMORY_AND_DISK</code>&#x3001;<code>MEMORY_ONLY_SER</code>&#x3001;<code>MEMORY_AND_DISK_SER</code>&#xFF0C;&#x901A;&#x5E38;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;<code>DISK_ONLY</code>&#x548C;&#x540E;&#x7F00;&#x4E3A;<code>_2</code>&#x7684;&#x6301;&#x4E45;&#x5316;&#x7EA7;&#x522B;&#xFF0C;&#x57FA;&#x4E8E;&#x786C;&#x76D8;&#x7684;&#x6301;&#x4E45;&#x5316;&#x8BFB;&#x5199;&#x5F88;&#x6162;&#xFF0C;&#x6027;&#x80FD;&#x53EF;&#x80FD;&#x8FD8;&#x4E0D;&#x5982;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;RDD&#xFF1B;&#x800C;&#x540E;&#x7F00;&#x4E3A;<code>_2</code>&#x7684;&#x7EA7;&#x522B;&#x5FC5;&#x987B;&#x5C06;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x590D;&#x5236;&#x4E00;&#x4EFD;&#x526F;&#x672C;&#x53D1;&#x9001;&#x5230;&#x5176;&#x5B83;&#x8282;&#x70B9;&#x4E0A;&#xFF0C;&#x6570;&#x636E;&#x590D;&#x5236;&#x548C;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x4F1A;&#x52A0;&#x5927;&#x5F00;&#x9500;&#xFF0C;&#x9664;&#x975E;&#x4F5C;&#x4E1A;&#x8981;&#x6C42;&#x9AD8;&#x53EF;&#x7528;&#x6027;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x3002;</p>
+<h5 id="4&#x3001;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;shuffle&#x7C7B;&#x578B;&#x7684;&#x7B97;&#x5B50;">4&#x3001;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;shuffle&#x7C7B;&#x578B;&#x7684;&#x7B97;&#x5B50;</h5>
+<p>shuffle&#xFF08;&#x6DF7;&#x6D17;&#xFF09;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x8D77;&#x5927;&#x91CF;&#x6570;&#x636E;&#x7684;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x548C;&#x786C;&#x76D8;&#x8BFB;&#x5199;&#xFF0C;&#x662F;Spark&#x4F5C;&#x4E1A;&#x4E2D;&#x6700;&#x6D88;&#x8017;&#x6027;&#x80FD;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x8981;&#x907F;&#x514D;&#x4F7F;&#x7528;reduceByKey&#x3001;join&#x3001;distinct&#x3001;repartition&#x7B49;shuffle&#x7B97;&#x5B50;&#xFF0C;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;map&#x7C7B;&#x7684;&#x975E;shuffle&#x7B97;&#x5B50;&#x3002;&#x6CA1;&#x6709;shuffle&#x7B97;&#x5B50;&#x6216;&#x8005;&#x5C11;&#x91CF;&#x7684;shuffle&#x7B97;&#x5B50;&#xFF0C;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x6027;&#x80FD;&#x5F00;&#x9500;&#x3002;</p>
+<p>&#x4F7F;&#x7528;broadcast&#x5C06;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x91CF;&#x8F83;&#x5C0F;&#x7684;RDD&#x4F5C;&#x4E3A;&#x5E7F;&#x64AD;&#x53D8;&#x91CF;&#xFF0C;&#x6267;&#x884C;map&#x4FA7;&#x64CD;&#x4F5C;&#x3002;</p>
+<h5 id="5&#x3001;&#x4F7F;&#x7528;map-side&#x9884;&#x805A;&#x5408;&#x7684;shuffle&#x64CD;&#x4F5C;">5&#x3001;&#x4F7F;&#x7528;map-side&#x9884;&#x805A;&#x5408;&#x7684;shuffle&#x64CD;&#x4F5C;</h5>
+<p>&#x5982;&#x679C;&#x4E00;&#x5B9A;&#x8981;&#x4F7F;&#x7528;shuffle&#x64CD;&#x4F5C;&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;map&#x7C7B;&#x7B97;&#x5B50;&#x66FF;&#x4EE3;&#xFF0C;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x53EF;&#x4EE5;map-side&#x9884;&#x805A;&#x5408;&#x7684;&#x7B97;&#x5B50;&#x3002;</p>
+<p>map-side&#x9884;&#x805A;&#x5408;&#x5C31;&#x662F;&#x5728;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x672C;&#x5730;&#x5BF9;&#x76F8;&#x540C;&#x7684;key&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x805A;&#x5408;&#x64CD;&#x4F5C;&#xFF0C;map-side&#x9884;&#x805A;&#x5408;&#x4E4B;&#x540E;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x672C;&#x5730;&#x53EA;&#x4F1A;&#x6709;&#x4E00;&#x6761;&#x76F8;&#x540C;&#x7684;key&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x51CF;&#x5C11;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x548C;&#x786C;&#x76D8;&#x8BFB;&#x5199;&#x7684;&#x6570;&#x636E;&#x91CF;&#x3002;</p>
+<p>&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;reduceByKey&#x6216;&#x8005;aggregateByKey&#x66FF;&#x6362;groupByKey&#x7B97;&#x5B50;&#xFF0C;groupByKey&#x4E0D;&#x4F1A;&#x8FDB;&#x884C;&#x9884;&#x805A;&#x5408;&#xFF0C;&#x524D;&#x4E24;&#x8005;&#x4F1A;&#x5BF9;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x672C;&#x5730;&#x7684;&#x76F8;&#x540C;key&#x8FDB;&#x884C;&#x9884;&#x805A;&#x5408;&#x3002;</p>
+<h5 id="6&#x3001;&#x4F7F;&#x7528;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x7B97;&#x5B50;">6&#x3001;&#x4F7F;&#x7528;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x7B97;&#x5B50;</h5>
+<ul>
+<li><p>&#x4F7F;&#x7528;reduceByKey/aggregateByKey&#x66FF;&#x4EE3;groupByKey</p>
+</li>
+<li><p>&#x4F7F;&#x7528;mapPartitions&#x66FF;&#x4EE3;&#x666E;&#x901A;map</p>
+<p>mapPartitions&#x7C7B;&#x7B97;&#x5B50;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x4F1A;&#x5904;&#x7406;&#x4E00;&#x4E2A;partition&#x7684;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x6B21;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x5904;&#x7406;&#x4E00;&#x6761;&#xFF0C;&#x6027;&#x80FD;&#x8F83;&#x9AD8;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x5185;&#x5B58;&#x4E0D;&#x591F;&#x4E00;&#x6B21;&#x5904;&#x7406;&#x4E00;&#x4E2A;partition&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x9020;&#x6210;OMM&#x7684;&#x5F02;&#x5E38;&#x3002;&#x6240;&#x4EE5;&#x6B64;&#x5904;&#x8981;&#x6743;&#x8861;&#x3002;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;foreachPartitions&#x66FF;&#x4EE3;foreach</p>
+<p>&#x539F;&#x7406;&#x7C7B;&#x4F3C;&#x4E8E;&#x201C;&#x4F7F;&#x7528;mapPartitions&#x66FF;&#x4EE3;&#x666E;&#x901A;map&#x201D;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;filter&#x4E4B;&#x540E;&#x8FDB;&#x884C;coalesce&#x64CD;&#x4F5C;</p>
+<p>&#x5982;&#x679C;&#x5BF9;&#x4E00;&#x4E2A;RDD&#x7684;filter&#x7B97;&#x5B50;&#x8FC7;&#x6EE4;&#x6389;RDD&#x4E2D;&#x7684;&#x8F83;&#x591A;&#x6570;&#x636E;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;coalesce&#x7B97;&#x5B50;&#xFF0C;&#x5C06;RDD&#x6570;&#x636E;&#x538B;&#x7F29;&#x5230;&#x66F4;&#x5C11;&#x7684;partitions&#x4E2D;&#xFF0C;&#x51CF;&#x5C11;RDD&#x7684;partitions&#x6570;&#x91CF;&#x3002;&#x8FC7;&#x591A;&#x7684;partition&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x8FC7;&#x591A;&#x7684;task&#xFF0C;&#x8FDB;&#x800C;&#x9020;&#x6210;&#x8D44;&#x6E90;&#x6D6A;&#x8D39;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x4F7F;&#x4F5C;&#x4E1A;&#x53D8;&#x6162;&#x3002;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;repartitionAndSortWithinPartitions&#x66FF;&#x4EE3;repartition&#x4E0E;sort&#x7C7B;&#x64CD;&#x4F5C;</p>
+<p>repartitionAndSortWithinPartitions&#x662F;Spark&#x5B98;&#x65B9;&#x63A8;&#x8350;&#x7684;&#x7B97;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x5728;repartition&#x91CD;&#x5206;&#x533A;&#x540E;&#x8FD8;&#x8981;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;repartitionAndSortWithinPartitions&#x7B97;&#x5B50;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4E00;&#x8FB9;&#x8FDB;&#x884C;repartition&#x8FD9;&#x4E00;shuffle&#x64CD;&#x4F5C;&#xFF0C;&#x4E00;&#x8FB9;&#x6392;&#x5E8F;&#xFF0C;&#x6BD4;&#x5148;repartition&#x518D;sort&#x6027;&#x80FD;&#x8981;&#x9AD8;&#x3002;</p>
+</li>
+</ul>
+<h5 id="7&#x3001;&#x5E7F;&#x64AD;&#x5927;&#x53D8;&#x91CF;">7&#x3001;&#x5E7F;&#x64AD;&#x5927;&#x53D8;&#x91CF;</h5>
+<p>&#x5982;&#x679C;&#x8981;&#x5728;&#x7B97;&#x5B50;&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#xFF08;&#x5C24;&#x5176;&#x662F;&#x5927;&#x53D8;&#x91CF;&#xFF0C;&#x6BD4;&#x5982;100M&#x4EE5;&#x4E0A;&#x7684;&#x5927;&#x96C6;&#x5408;&#xFF09;&#xFF0C;&#x6B64;&#x65F6;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5E7F;&#x64AD;broadcast&#x6765;&#x63D0;&#x5347;&#x6027;&#x80FD;&#x3002;</p>
+<p>&#x5F53;&#x7B97;&#x5B50;&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;Spark&#x4F1A;&#x5C06;&#x8BE5;&#x53D8;&#x91CF;&#x590D;&#x5236;&#x591A;&#x4E2A;&#x526F;&#x672C;&#xFF0C;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x5230;task&#x4E2D;&#xFF0C;&#x6B64;&#x65F6;&#x6BCF;&#x4E2A;task&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x526F;&#x672C;&#x3002;&#x5982;&#x679C;&#x53D8;&#x91CF;&#x8F83;&#x5927;&#x5219;&#x4F1A;&#x9020;&#x6210;&#x5F88;&#x5927;&#x7684;&#x7F51;&#x7EDC;&#x548C;&#x5185;&#x5B58;&#x5F00;&#x9500;&#x3002;&#x800C;&#x5E7F;&#x64AD;&#x540E;&#x7684;&#x53D8;&#x91CF;&#x4F1A;&#x4FDD;&#x8BC1;&#x6BCF;&#x4E2A;Executor&#x5185;&#x5B58;&#x4E2D;&#x53EA;&#x9A7B;&#x7559;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x526F;&#x672C;&#xFF0C;Executor&#x4E2D;&#x7684;task&#x6267;&#x884C;&#x65F6;&#x5171;&#x4EAB;&#x8BE5;&#x526F;&#x672C;&#xFF0C;&#x4ECE;&#x800C;&#x5927;&#x5927;&#x51CF;&#x5C11;&#x7F51;&#x7EDC;&#x548C;&#x5185;&#x5B58;&#x5F00;&#x9500;&#x3002;</p>
+<h5 id="8&#x3001;&#x4F7F;&#x7528;kryo&#x5E8F;&#x5217;&#x5316;&#x4F18;&#x5316;&#x5E8F;&#x5217;&#x5316;&#x6027;&#x80FD;">8&#x3001;&#x4F7F;&#x7528;Kryo&#x5E8F;&#x5217;&#x5316;&#x4F18;&#x5316;&#x5E8F;&#x5217;&#x5316;&#x6027;&#x80FD;</h5>
+<p>Spark&#x6D89;&#x53CA;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x4E09;&#x4E2A;&#x5730;&#x65B9;&#xFF1A;</p>
+<ul>
+<li>&#x7B97;&#x5B50;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x53D8;&#x91CF;&#x4F1A;&#x88AB;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x8FDB;&#x884C;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;</li>
+<li>&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#x4F5C;&#x4E3A;RDD&#x7684;&#x6CDB;&#x578B;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x90FD;&#x4F1A;&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x8981;&#x6C42;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;Serializable&#x63A5;&#x53E3;</li>
+<li>&#x4F7F;&#x7528;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x6301;&#x4E45;&#x5316;&#x7EA7;&#x522B;&#x65F6;</li>
+</ul>
+<p>Spark&#x4F1A;&#x5C06;RDD&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;partition&#x90FD;&#x5E8F;&#x5217;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;&#x5927;&#x7684;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x8FD9;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Kryo&#x5E8F;&#x5217;&#x5316;&#x3002;Spark&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;Java&#x7684;&#x5E8F;&#x5217;&#x5316;&#x673A;&#x5236;&#xFF0C;Kryo&#x8981;&#x6C42;&#x6CE8;&#x518C;&#x6240;&#x6709;&#x9700;&#x8981;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x3002;</p>
+<h5 id="9&#x3001;&#x4F18;&#x5316;&#x6570;&#x636E;&#x7ED3;&#x6784;">9&#x3001;&#x4F18;&#x5316;&#x6570;&#x636E;&#x7ED3;&#x6784;</h5>
+<p>Java&#x4E2D;&#xFF0C;&#x4E09;&#x79CD;&#x6BD4;&#x8F83;&#x8017;&#x5185;&#x5B58;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li>&#x5BF9;&#x8C61;&#xFF0C;Java&#x5BF9;&#x8C61;&#x6709;&#x5BF9;&#x8C61;&#x5934;&#x3001;&#x5F15;&#x7528;&#x7B49;&#x989D;&#x5916;&#x4FE1;&#x606F;</li>
+<li>&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x6570;&#x7EC4;&#x4EE5;&#x53CA;&#x957F;&#x5EA6;&#x7B49;&#x989D;&#x5916;&#x4FE1;&#x606F;</li>
+<li>&#x96C6;&#x5408;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;HashMap&#x3001;LinkedList&#x7B49;&#xFF0C;&#x96C6;&#x5408;&#x7C7B;&#x578B;&#x5185;&#x90E8;&#x901A;&#x5E38;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x5185;&#x90E8;&#x7C7B;&#x6765;&#x5C01;&#x88C5;&#x96C6;&#x5408;&#x5143;&#x7D20;&#xFF0C;&#x6BD4;&#x5982;Map.Entry&#x3002;</li>
+</ul>
+<p>Spark&#x5EFA;&#x8BAE;&#xFF0C;&#x5728;Spark&#x7F16;&#x7801;&#x4E2D;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x7B97;&#x5B50;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x4EE5;&#x4E0A;&#x4E09;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x4EE3;&#x66FF;&#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x4EE3;&#x66FF;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x4EE3;&#x66FF;&#x96C6;&#x5408;&#xFF1B;&#x8FD9;&#x6837;&#x80FD;&#x591F;&#x51CF;&#x5C11;&#x5185;&#x5B58;&#x5360;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x964D;&#x4F4E;GC&#x9891;&#x7387;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;</p>
+<p>&#x8FD9;&#x70B9;&#x5B8C;&#x5168;&#x505A;&#x5230;&#x5F88;&#x4E0D;&#x5BB9;&#x6613;&#xFF0C;&#x8981;&#x7EFC;&#x5408;&#x8003;&#x8651;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x3001;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#xFF0C;&#x5728;&#x5408;&#x9002;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x5360;&#x5185;&#x5B58;&#x8F83;&#x5C11;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
+<h3 id="&#x8D44;&#x6E90;&#x4F18;&#x5316;">&#x8D44;&#x6E90;&#x4F18;&#x5316;</h3>
+<h6 id="spark&#x4F5C;&#x4E1A;&#x7684;&#x57FA;&#x672C;&#x8FD0;&#x884C;&#x539F;&#x7406;">Spark&#x4F5C;&#x4E1A;&#x7684;&#x57FA;&#x672C;&#x8FD0;&#x884C;&#x539F;&#x7406;</h6>
+<p><img src="../assets/1f1ddad5.png" alt=""></p>
+<p>&#x63D0;&#x4EA4;Spark&#x4F5C;&#x4E1A;&#x540E;&#xFF0C;&#x4F1A;&#x542F;&#x52A8;&#x4E00;&#x4E2A;Driver&#xFF0C;&#x6839;&#x636E;&#x90E8;&#x7F72;&#x6A21;&#x5F0F;&#xFF08;deploy-mode&#xFF09;Driver&#x53EF;&#x80FD;&#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x67D0;&#x4E2A;&#x5DE5;&#x4F5C;&#x8282;&#x70B9;&#x542F;&#x52A8;&#x3002;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x7684;&#x53C2;&#x6570;&#xFF0C;Driver&#x4F1A;&#x5360;&#x7528;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x5185;&#x5B58;&#x548C;CPU&#x6838;&#x5FC3;&#xFF0C;Driver&#x4F1A;&#x5411;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x5668;&#x7533;&#x8BF7;Spark&#x4F5C;&#x4E1A;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x8D44;&#x6E90;&#xFF08;executor&#x8FDB;&#x7A0B;&#xFF09;&#xFF0C;&#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x5668;&#x6839;&#x636E;Spark&#x4F5C;&#x4E1A;&#x7684;&#x8D44;&#x6E90;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#xFF0C;&#x5728;&#x5DE5;&#x4F5C;&#x8282;&#x70B9;&#x542F;&#x52A8;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;executor&#x8FDB;&#x7A0B;&#xFF0C;&#x6BCF;&#x4E2A;executor&#x8FDB;&#x7A0B;&#x5360;&#x7528;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x5185;&#x5B58;&#x548C;CPU&#x6838;&#x5FC3;&#x3002;</p>
+<p>&#x8D44;&#x6E90;&#x5206;&#x914D;&#x5B8C;&#x6210;&#x540E;&#xFF0C;Driver&#x8FDB;&#x7A0B;&#x5F00;&#x59CB;&#x8C03;&#x5EA6;&#x548C;&#x6267;&#x884C;&#x4F5C;&#x4E1A;&#x4EE3;&#x7801;&#xFF0C;&#x6839;&#x636E;&#x4EE3;&#x7801;&#x5C06;&#x4F5C;&#x4E1A;&#x5212;&#x5206;&#x4E3A;&#x591A;&#x4E2A;stage&#xFF0C;&#x6BCF;&#x4E2A;stage&#x5305;&#x542B;&#x4E00;&#x6279;task&#xFF0C;&#x6267;&#x884C;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x4EE3;&#x7801;&#xFF1B;&#x8FD9;&#x4E9B;task&#x88AB;&#x5206;&#x914D;&#x5230;&#x5404;&#x4E2A;executor&#x8FDB;&#x7A0B;&#x4E2D;&#x6267;&#x884C;&#x3002;task&#x662F;&#x6700;&#x5C0F;&#x7684;&#x8BA1;&#x7B97;&#x5355;&#x5143;&#xFF0C;&#x8D1F;&#x8D23;&#x6267;&#x884C;&#x76F8;&#x540C;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x53EA;&#x662F;&#x6BCF;&#x4E2A;task&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x540C;&#x3002;&#x4E00;&#x4E2A;stage&#x7684;&#x6240;&#x6709;task&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x4F1A;&#x5728;&#x5404;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x672C;&#x5730;&#x786C;&#x76D8;&#x5199;&#x5165;&#x8BA1;&#x7B97;&#x7684;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#xFF0C;Driver&#x5219;&#x8C03;&#x5EA6;&#x8FD0;&#x884C;&#x4E0B;&#x4E00;&#x4E2A;stage&#x3002;&#x4E0B;&#x4E00;&#x4E2A;stage&#x7684;&#x8F93;&#x5165;&#x5C31;&#x662F;&#x4E0A;&#x4E00;&#x4E2A;stage&#x7684;&#x8F93;&#x51FA;&#x3002;&#x5982;&#x6B64;&#x5FAA;&#x73AF;&#xFF0C;&#x76F4;&#x5230;&#x4F5C;&#x4E1A;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x3002;</p>
+<p>Spark&#x6839;&#x636E;shuffle&#x7B97;&#x5B50;&#x5212;&#x5206;stage&#xFF0C;&#x5728;shuffle&#x7B97;&#x5B50;&#x5904;&#x5212;&#x51FA;&#x4E00;&#x6761;stage&#x8FB9;&#x754C;&#x3002;&#x56E0;&#x6B64;&#x4E00;&#x4E2A;stage&#x521A;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x5B83;&#x7684;&#x6BCF;&#x4E2A;task&#x53EF;&#x80FD;&#x90FD;&#x4F1A;&#x4ECE;&#x4E0A;&#x4E00;&#x4E2A;stage&#x7684;task&#x6240;&#x5728;&#x7684;&#x8282;&#x70B9;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x83B7;&#x53D6;&#x5404;&#x81EA;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;key&#xFF0C;&#x5C06;&#x62C9;&#x53D6;&#x5230;&#x7684;&#x76F8;&#x540C;&#x7684;key&#x4F7F;&#x7528;&#x7B97;&#x5B50;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x8FD9;&#x4E00;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;shuffle&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6709;cache/persist&#x64CD;&#x4F5C;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x6301;&#x4E45;&#x5316;&#x7EA7;&#x522B;&#xFF0C;&#x6BCF;&#x4E2A;task&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x4FDD;&#x5B58;&#x5230;executor&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x6216;&#x8005;&#x6240;&#x5728;&#x8282;&#x70B9;&#x7684;&#x786C;&#x76D8;&#x3002;</p>
+<p>executor&#x5185;&#x5B58;&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x4E09;&#x90E8;&#x5206;&#xFF1A;1&#x3001;task&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4;&#x5360;executor&#x5185;&#x5B58;&#x7684;20%&#xFF1B;2&#x3001;task&#x901A;&#x8FC7;shuffle&#x62C9;&#x53D6;&#x4E0A;&#x4E00;&#x4E2A;stage&#x7684;task&#x7684;&#x8F93;&#x51FA;&#x540E;&#xFF0C;&#x8FDB;&#x884C;&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x9ED8;&#x8BA4;&#x5360;executor&#x5185;&#x5B58;&#x7684;20%&#xFF1B;3&#x3001;RDD&#x6301;&#x4E45;&#x5316;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x9ED8;&#x8BA4;&#x5360;executor&#x5185;&#x5B58;&#x7684;60%&#x3002;</p>
+<p>task&#x7684;&#x6267;&#x884C;&#x901F;&#x5EA6;&#x548C;&#x6BCF;&#x4E2A;executor&#x8FDB;&#x7A0B;&#x7684;CPU&#x6838;&#x5FC3;&#x6570;&#x6709;&#x76F4;&#x63A5;&#x5173;&#x7CFB;&#x3002;&#x4E00;&#x4E2A;CPU&#x6838;&#x5FC3;&#x540C;&#x4E00;&#x65F6;&#x95F4;&#x53EA;&#x80FD;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x800C;&#x6BCF;&#x4E2A;executor&#x8FDB;&#x7A0B;&#x5206;&#x914D;&#x5230;&#x7684;&#x591A;&#x4E2A;task&#x90FD;&#x662F;&#x4EE5;&#x6BCF;&#x4E2A;task&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x591A;&#x7EBF;&#x7A0B;&#x5E76;&#x884C;&#x8FD0;&#x884C;&#x7684;&#x3002;&#x5982;&#x679C;CPU&#x6838;&#x5FC3;&#x6570;&#x91CF;&#x8DB3;&#x591F;&#xFF0C;task&#x6570;&#x91CF;&#x5408;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x9AD8;&#x6548;&#x5730;&#x5B8C;&#x6210;&#x8FD9;&#x4E9B;task&#x3002;</p>
+<h4 id="&#x8D44;&#x6E90;&#x53C2;&#x6570;&#x8C03;&#x4F18;">&#x8D44;&#x6E90;&#x53C2;&#x6570;&#x8C03;&#x4F18;</h4>
+<h5 id="1&#x3001;num-executors">1&#x3001;num-executors</h5>
+<p>executor&#x8FDB;&#x7A0B;&#x6570;&#xFF0C;&#x96C6;&#x7FA4;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x542F;&#x52A8;&#x54CD;&#x5E94;&#x7684;executor&#x8FDB;&#x7A0B;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;&#xFF0C;&#x53EA;&#x4F1A;&#x7ED9;&#x4F5C;&#x4E1A;&#x5206;&#x914D;&#x5C11;&#x91CF;&#x7684;executor&#x8FDB;&#x7A0B;&#x3002;&#x8BBE;&#x7F6E;&#x592A;&#x5C11;&#x4E0D;&#x80FD;&#x5145;&#x5206;&#x5229;&#x7528;&#x96C6;&#x7FA4;&#x8D44;&#x6E90;&#xFF0C;&#x592A;&#x591A;&#x5219;&#x53EF;&#x80FD;&#x5927;&#x90E8;&#x5206;&#x961F;&#x5217;&#x65E0;&#x6CD5;&#x7ED9;&#x4E88;&#x8DB3;&#x591F;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<h5 id="2&#x3001;executor-memory">2&#x3001;executor-memory</h5>
+<p>&#x6BCF;&#x4E2A;executor&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x3002;&#x8981;&#x907F;&#x514D;&#x5360;&#x7528;&#x8FC7;&#x591A;&#x603B;&#x5185;&#x5B58;&#xFF0C;&#x5BFC;&#x81F4;&#x5176;&#x5B83;&#x4EFB;&#x52A1;&#x65E0;&#x6CD5;&#x8FD0;&#x884C;&#x3002;<code>num-executors</code>*<code>executor-memory</code>&#x6700;&#x597D;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;&#x961F;&#x5217;&#x603B;&#x5185;&#x5B58;&#x7684;1/3 ~ 1/2&#x3002;</p>
+<h5 id="3&#x3001;executor-cores">3&#x3001;executor-cores</h5>
+<p>&#x6BCF;&#x4E2A;executor&#x7684;CPU&#x6838;&#x5FC3;&#x6570;&#x91CF;&#xFF0C;&#x51B3;&#x5B9A;&#x4E86;&#x6BCF;&#x4E2A;executor&#x8FDB;&#x7A0B;&#x5E76;&#x884C;&#x6267;&#x884C;task&#x7684;&#x80FD;&#x529B;&#x3002;&#x4E00;&#x4E2A;CPU&#x6838;&#x5FC3;&#x540C;&#x65F6;&#x53EA;&#x80FD;&#x6267;&#x884C;&#x4E00;&#x4E2A;task&#xFF0C;executor&#x8FDB;&#x7A0B;&#x7684;CPU&#x6838;&#x5FC3;&#x6570;&#x8D8A;&#x591A;&#xFF0C;&#x8D8A;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x5730;&#x6267;&#x884C;&#x5B8C;&#x5206;&#x914D;&#x7ED9;&#x5B83;&#x7684;&#x6240;&#x6709;task&#x3002;</p>
+<p><code>num-executors</code>*<code>executor-cores</code>&#x6700;&#x597D;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;&#x961F;&#x5217;&#x603B;CPU&#x6838;&#x5FC3;&#x6570;&#x7684;1/3 ~ 1/2&#x3002;</p>
+<h5 id="4&#x3001;driver-memory">4&#x3001;driver-memory</h5>
+<p>Driver&#x7684;&#x5185;&#x5B58;&#x3002;&#x901A;&#x5E38;Driver&#x5185;&#x5B58;&#x4E0D;&#x7528;&#x8BBE;&#x7F6E;&#xFF0C;&#x6216;&#x8005;1G&#x5C31;&#x8DB3;&#x591F;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528;collect&#x7B97;&#x5B50;&#x5C06;RDD&#x7684;&#x6570;&#x636E;&#x5168;&#x90E8;&#x62C9;&#x53D6;&#x5230;Driver&#x4E0A;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x786E;&#x4FDD;Driver&#x7684;&#x5185;&#x5B58;&#x8DB3;&#x591F;&#x5927;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x6709;OOM&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h5 id="5&#x3001;sparkdefaultparallelism">5&#x3001;spark.default.parallelism</h5>
+<p>&#x6BCF;&#x4E2A;stage&#x9ED8;&#x8BA4;&#x7684;task&#x6570;&#x91CF;&#x3002;<strong>&#x6781;&#x4E3A;&#x91CD;&#x8981;</strong>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;Spark&#x4F1A;&#x6839;&#x636E;&#x5E95;&#x5C42;HDFS&#x7684;block&#x6570;&#x91CF;&#x6765;&#x8BBE;&#x7F6E;task&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E00;&#x4E2A;HDFS block&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;task&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Spark&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x7684;task&#x6570;&#x91CF;&#x662F;&#x504F;&#x5C11;&#x7684;&#xFF0C;task&#x6570;&#x91CF;&#x504F;&#x5C11;&#xFF0C;&#x90A3;&#x4E48;&#x524D;&#x9762;&#x7684;executor&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x53EF;&#x80FD;&#x4F1A;&#x8FBE;&#x4E0D;&#x5230;&#x9884;&#x671F;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<p>Spark&#x5B98;&#x65B9;&#x5EFA;&#x8BAE;&#x7684;&#x8BBE;&#x7F6E;&#x662F;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x4E3A;<code>num-executors</code>*<code>executor-cores</code>&#x7684;2 ~ 3&#x500D;&#x3002;&#x8FD9;&#x6837;&#x80FD;&#x591F;&#x5145;&#x5206;&#x5229;&#x7528;Spark&#x96C6;&#x7FA4;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<h5 id="6&#x3001;sparkstoragememoryfraction">6&#x3001;spark.storage.memoryFraction</h5>
+<p>RDD&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x5728;executor&#x5185;&#x5B58;&#x4E2D;&#x80FD;&#x5360;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;0.6&#xFF1B;&#x5373;&#x6301;&#x4E45;&#x5316;&#x5230;executor&#x5185;&#x5B58;&#x7684;&#x6570;&#x636E;&#x91CF;&#x81F3;&#x591A;&#x53EA;&#x80FD;&#x5360;&#x5230;executor&#x603B;&#x5185;&#x5B58;60%&#xFF0C;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x6839;&#x636E;&#x8BBE;&#x5B9A;&#x7684;&#x6301;&#x4E45;&#x5316;&#x7EA7;&#x522B;&#x6EA2;&#x51FA;&#x5230;&#x786C;&#x76D8;&#xFF0C;&#x6216;&#x8005;&#x4E0D;&#x4F1A;&#x6301;&#x4E45;&#x5316;&#x3002;</p>
+<p>&#x5982;&#x679C;Spark&#x4F5C;&#x4E1A;&#x4E2D;&#x6709;&#x8F83;&#x591A;&#x7684;RDD&#x6301;&#x4E45;&#x5316;&#x64CD;&#x4F5C;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x9002;&#x5F53;&#x589E;&#x52A0;&#xFF1B;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;Spark&#x4F5C;&#x4E1A;&#x4E2D;shuffle&#x64CD;&#x4F5C;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x6301;&#x4E45;&#x5316;&#x6BD4;&#x8F83;&#x5C11;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x9002;&#x5F53;&#x964D;&#x4F4E;&#xFF1B;&#x53E6;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x4F5C;&#x4E1A;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x9891;&#x7E41;GC&#xFF08;&#x901A;&#x8FC7;spark web ui&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x5230;&#x4F5C;&#x4E1A;GC&#x8017;&#x65F6;&#xFF09;&#xFF0C;&#x5219;&#x610F;&#x5473;&#x7740;task&#x6267;&#x884C;&#x4EE3;&#x7801;&#x5185;&#x5B58;&#x4E0D;&#x591F;&#xFF0C;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x9002;&#x5F53;&#x964D;&#x4F4E;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x503C;&#x3002;</p>
+<h5 id="7&#x3001;sparkshufflememoryfraction">7&#x3001;spark.shuffle.memoryFraction</h5>
+<p>shuffle&#x8FC7;&#x7A0B;&#x4E2D;&#x4E00;&#x4E2A;task&#x62C9;&#x53D6;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;stage&#x7684;task&#x7684;&#x8F93;&#x51FA;&#x540E;&#xFF0C;&#x8FDB;&#x884C;&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x65F6;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x7684;executor&#x5185;&#x5B58;&#x6BD4;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;0.2&#x3002;&#x5982;&#x679C;shuffle&#x8FDB;&#x884C;&#x805A;&#x5408;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x8D85;&#x8FC7;20%&#xFF0C;&#x90A3;&#x4E48;&#x591A;&#x51FA;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x6EA2;&#x51FA;&#x5230;&#x786C;&#x76D8;&#xFF0C;&#x6B64;&#x65F6;&#x4F1A;&#x6781;&#x5927;&#x964D;&#x4F4E;&#x6027;&#x80FD;&#x3002;</p>
+<p>&#x5982;&#x679C;RDD&#x6301;&#x4E45;&#x5316;&#x8F83;&#x5C11;&#xFF0C;shuffle&#x64CD;&#x4F5C;&#x8F83;&#x591A;&#xFF0C;&#x5EFA;&#x8BAE;&#x5C06;&#x8BE5;&#x53C2;&#x6570;&#x9002;&#x5F53;&#x589E;&#x52A0;&#xFF1B;&#x5982;&#x679C;&#x4F5C;&#x4E1A;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x9891;&#x7E41;GC&#xFF0C;&#x610F;&#x5473;&#x7740;task&#x6267;&#x884C;&#x4F5C;&#x4E1A;&#x4EE3;&#x7801;&#x5185;&#x5B58;&#x4E0D;&#x591F;&#xFF0C;&#x53EF;&#x4EE5;&#x9002;&#x5F53;&#x8C03;&#x4F4E;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x503C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../extff1a-xing-neng-you-hua.html" class="navigation navigation-prev " aria-label="Previous page: 性能优化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gao-ji-you-hua.html" class="navigation navigation-next " aria-label="Next page: 高级优化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基础优化","level":"1.10.1","depth":2,"next":{"title":"高级优化","level":"1.10.2","depth":2,"path":"extff1a-xing-neng-you-hua/gao-ji-you-hua.md","ref":"extff1a-xing-neng-you-hua/gao-ji-you-hua.md","articles":[]},"previous":{"title":"性能优化","level":"1.10","depth":1,"path":"extff1a-xing-neng-you-hua.md","ref":"extff1a-xing-neng-you-hua.md","articles":[{"title":"基础优化","level":"1.10.1","depth":2,"path":"extff1a-xing-neng-you-hua/ji-chu-you-hua.md","ref":"extff1a-xing-neng-you-hua/ji-chu-you-hua.md","articles":[]},{"title":"高级优化","level":"1.10.2","depth":2,"path":"extff1a-xing-neng-you-hua/gao-ji-you-hua.md","ref":"extff1a-xing-neng-you-hua/gao-ji-you-hua.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"extff1a-xing-neng-you-hua/ji-chu-you-hua.md","mtime":"2020-04-29T12:14:25.850Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
