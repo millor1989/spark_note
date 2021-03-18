@@ -123,7 +123,7 @@ println("Counter value: " + counter)
 
 要确保这些场景下的行为执行，需要使用累加器`Accumulator`。Spark中累加器专门用于在集群中，当操作的执行被分散到各个工作节点时，提供一种安全的更新一个变量的机制。
 
-通常，closures—像循环结构或者本地定义的方法，不应该去改动某些全局的状态（global state）。Spark既没有定义也不保证对closures以外引用的对象的改动。
+通常，closures——像循环结构或者本地定义的方法，不应该去改动某些全局的状态（global state）。Spark既没有定义也不保证对closures以外引用的对象的改动。
 
 ##### RDD元素的输出
 

@@ -64,4 +64,5 @@
   * [Spark函数](questions/sparkhan-shu.md)
   * [Hadoop 1和Hadoop2](questions/hadoop-1he-hadoop2.md)
   * [Broadcast Join](questions/broadcast-join.md)
+  * [隐式转换与隐式参数](questions/implicits.md)
 

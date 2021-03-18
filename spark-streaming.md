@@ -1,10 +1,10 @@
-Spark Streaming是Spark API的扩展，对实时数据流（live data streams）进行可扩展的（scalable），高吞吐（high-throughput），容错的（fault-tolerant）流式处理（stream processing）。可以对Kafka，Flume，Kinesis，或者TCP sockets的数据进行处理，并且可以通过像`map`，`reduce`，`window`这样的高级函数用复杂的算法进行处理。处理后的数据可以保存到文件系统、数据库、和动态看板（live dashboards）。事实上，可以将Spark的机器学习和图运算算法运用到数据流上。
+Spark Streaming是核心Spark API的扩展，能够对实时数据流（live data streams）进行可扩展的（scalable），高吞吐（high-throughput），容错的（fault-tolerant）流式处理（stream processing）。可以从Kafka，Flume，Kinesis，或者TCP sockets等许多的数据源摄取数据，并且可以使用像`map`，`reduce`，`window`这样的高级函数表达的复杂的算法进行处理。处理后的数据可以保存到文件系统、数据库、和动态看板（live dashboards）。事实上，可以将Spark的机器学习和图运算算法运用到数据流上。
 
-Spark Streaming工作原理如下，接收输入数据流，把数据分为批次，使用Spark引擎对输入批次进行处理，结果也是按批次产生。
+Spark Streaming工作原理如下，接收输入数据流，把数据分为批次，使用Spark引擎对输入批次进行处理，最终的结果流也是按批次产生的。
 
 ![Spark Streaming](/assets/streaming-flow.png)
 
-Spark Streaming提供了高级别的抽象叫作离散流（discretized stream）或者DStream，它代表一个连续的数据流。可以使用Kafka、Flume、或Kinesis数据源的数据流来创建DStreams，也可以用其它DStreams的高级操作生成DStreams。在内部，DStream代表一个RDDs的序列。
+Spark Streaming提供了高级别的抽象叫作离散流（discretized stream）或者DStream，它代表一个连续的数据流。可以使用Kafka、Flume、或Kinesis数据源的数据流来创建DStreams，也可以用其它DStreams的高级操作生成DStreams。在内部，DStream被表示为一个RDDs的序列。
 
 ##### 例子
 
