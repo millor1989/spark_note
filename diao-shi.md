@@ -40,14 +40,14 @@ val sc = new SparkContext(conf)
 
 ### 2.1、内存管理概览（Memory Management Overview）
 
-Spark中的内存使用大致分为两类：execution和storage。execution内存指的是用于混洗、joins、sorts和聚合的运算的内存；而storage内存指的是用于缓存和集群内部传播数据的内存。在Spark中，execution和storage使用统一的区域（M）。当没有execution使用内存的时候，storage可以获得所有可用的内存，反之亦然。如果需要，execution可能会赶出storage，但是只能把storage内存挤压到一个阈值（R）即停止赶出。换句话说，R描述了一个M的子区域，其中缓存的块永远不会被赶出。storage不会赶出execution内存可能是因为实现方面比较复杂。
+Spark中的内存使用大致分为两类：execution和storage。execution内存指的是用于混洗、joins、sorts和聚合运算的内存；而storage内存指的是用于缓存和在集群内部传播数据的内存。在Spark中，execution和storage使用统一的区域（M）。当没有execution使用内存的时候，storage可以获得所有可用的内存，反之亦然。如有必要，execution可能会赶出storage，但是最多只能把storage内存挤压到一个阈值（R）。即，R描述了一个M的子区域，其中缓存的数据块永远不会被赶出。因为实现方面比较复杂，storage不会赶出execution内存。
 
-这种设计确保了几个想要的属性。首先，不需要使用缓存的应用可以使用整个空间来进行execution，避免不必要的磁盘溢出。第二、不使用缓存的应用可以保留最小的存储空间（R）其中的数据块不会被赶出。最后，这种方式为各种工作负载提供了合理的开箱即用（out-of-the-box）的性能，而无需用户有关于内存内部划分的专业知识。
+这种设计确保了几个想要的属性。首先，不需要使用缓存的应用可以使用整个空间来进行execution，避免不必要的磁盘溢出。第二、使用缓存的应用可以保留最小的存储空间（R）其中的数据块不会被赶出。最后，这种方式为多种工作负载提供了合理的开箱即用（out-of-the-box）的性能，而无需用户熟悉内存内部划分。
 
 尽管有两个相关的配置，一般的用户不应该调试它们，因为默认的值适用于大多数的工作负载：
 
-* spark.memory.fraction以（JVM堆空间-300M的）分数（默认0.6）表示M的大小。剩下的空间（40%）是为用户的数据结构、Spark的内部metadata和保障不出现OOM（万一有稀疏的并且大得不寻常的记录）的错误而保留的。
-* spark.memory.storageFraction以M空间的分数（默认0.5）表示R空间的大小。R是M中的存储空间，其中缓存的数据块不会被执行赶出。
+* `spark.memory.fraction`以（JVM堆空间-300M）的因子（默认0.6）表示M的大小。剩下的空间（40%）是为用户的数据结构、Spark的内部metadata和保障不出现OOM（万一有稀疏的并且大得不寻常的记录）的错误而保留的。
+* `spark.memory.storageFraction`以M空间的因子（默认0.5）表示R空间的大小。R是M中的存储空间，其中缓存的数据块不会被执行赶出。
 
 spark.memeory.fraction的值应该以适应JVM的老或者“终身”代中堆空间的量为目的来设置。详情参考下面关于GC调试的讨论。
 

@@ -1,6 +1,6 @@
 ### API使用Datasets和DataFrames
 
-从Spark 2.0开始，DataFrames和Datasets可以表示静态的有边界的数据，也可以表示流、无边界的数据。与静态Datasets/DataFrames类似，可以使用常用的入口`SparkSession`来从流数据源创建流DataFrames/Datasets，并且可以对它们应用与静态DataFrames/Datasets相同的操作。
+从Spark 2.0开始，DataFrames和Datasets可以表示静态的有边界的数据，也可以表示流、无边界的数据。与静态Datasets/DataFrames类似，可以使用通用的入口`SparkSession`来从流数据源创建流DataFrames/Datasets，并且可以对它们应用与静态DataFrames/Datasets相同的操作。
 
 #### 1、创建流DataFrames和流Datasets
 
@@ -10,9 +10,15 @@
 
 Spark 2.0中，有一些内置的数据源：
 
-- File source：将一个目录中的文件读取为一个数据流。支持的文件格式有：text、csv、json、parquet。可以通过`DataStreamReader`接口的文档来查看最新支持的格式，和每个格式支持的options。注意，文件必须原子性地放在指定的目录中，在大多数的文件系统中，可以通过文件移动操作实现原子性。容错；支持通配符路径，但是不支持逗号分隔得多路径。
-- Kafka source：从Kafka获取数据。兼容0.10.0和更高版本的Kafka broker。容错。
-- Socket source（用于测试）：从socket连接读取UTF8文本数据。监听server socket在driver中。注意，这种数据源只能用于测试，因为它不提供端到端的容错保证。
+- **File source**：将写到一个目录中的文件读取为一个数据的流。支持的文件格式有：text、csv、json、parquet。可以通过`DataStreamReader`接口的文档来查看最新支持的格式，和每个格式支持的options。注意，文件必须原子性地放在指定的目录中，在大多数的文件系统中，可以通过文件移动操作实现原子性。
+
+  文件数据源是容错的；支持的选项有`path`（输入目录路径）、`maxFilesPerTrigger`（每次触发考虑的新文件的最大数量，默认没有最大数量限制）、`latestFirst`（是否首先处理最新的文件，默认false，在处理大量文件时是有用的）、`fileNameOnly`（是否只基于文件名而不是全路径来检查新的文件，默认false，如果设置为true，则只考虑文件名，比如，此时` "file:///dataset.txt"`和` "s3://a/dataset.txt"`是相同的）。
+
+  文件数据源支持通配符路径，但是不支持逗号分隔得多路径。
+
+- **Kafka source**：从Kafka获取数据，参考集成Kafka章节。兼容0.10.0和更高版本的Kafka broker。Kafka数据源是容错的。
+
+- **Socket source**（用于测试）：从socket连接读取UTF8文本数据。在driver中监听server socket。注意，这种数据源只能用于测试，它是不提供端到端的容错保证的。支持的选项有`host`（必须，主机名）和`port`（必须，端口）。
 
 ```scala
 val spark: SparkSession = ...
@@ -40,21 +46,21 @@ val csvDF = spark
   .csv("/path/to/directory")
 ```
 
-这些例子中生成的流DataFrames是无类型的（untyped），即这些DataFrames的schema在编译时不会被检查，只有当查询提交后的运行时才会检查。某些操作，比如`map`，`flatMap`等需要在编译时知道类型，可以使用与静态DataFrame相同的方法将无类型的流DataFrame转换为有类型的流Dataset。
+这些例子中生成的流DataFrames是无类型的（untyped），即在编译时不会检查这些DataFrames的schema，只有运行时当查询提交后才会检查。对于某些需要在编译时知道类型的操作，比如`map`，`flatMap`等，可以使用与静态DataFrame相同的方法将无类型的流DataFrame转换为有类型的流Dataset，详细参看Spark SQL相关章节。
 
-##### 1.2、Schema推导和流DataFrames/Datasets的分区
+##### 1.2、Schema推导和流式DataFrames/Datasets的分区
 
-默认情况下，使用基于文件的数据源的Structured Streaming需要指定schema，而不是依赖Spark去自动地推导。这个限制确保流查询使用的是一直的schema，即使是发生了故障。对某些特定的（ad-hoc）使用场景，可以通过设置`spark.sql.streaming.schemaInference`为`true`来开启schema推导。
+默认情况下，使用基于文件的数据源的Structured Streaming需要指定schema，而不是依赖Spark去自动地推导Schema。这个限制确保流查询使用的schema是一致的，即使是发生了故障。对某些特定的（ad-hoc）使用场景，可以通过设置`spark.sql.streaming.schemaInference`为`true`来开启schema推导。
 
 当命名为`/key=value/`的子目录出现时会发生分区发现（partition discovery），分区发现会在这些子目录中递归。如果这些字段出现在了用户提供的schema中，Spark会基于读取文件的路径对它们进行填充。构成分区schema的目录必须在查询启动时就存在，并且必须是静态的。比如，`/data/year=2015`存在时添加`/data/year=2016`是可以的，但是改变分区字段是非法的（即，创建目录`/data/date=2016-04-17`）。
 
-#### 2、基于流DataFrames/Datasets的操作
+#### 2、对流式DataFrames/Datasets的操作
 
-可以对流DataFrames/Datasets应用各种操作——包括无类型的、类SQL操作（比如`select`，`where`，`groupby`）、有类型的类RDD操作（比如`map`，`filter`，`flatMap`）。
+可以对流DataFrames/Datasets应用各种操作——包括无类型的（untyped）、类SQL操作（比如`select`，`where`，`groupby`）、有类型的（typed）类RDD操作（比如`map`，`filter`，`flatMap`）。
 
 ##### 2.1、基本操作-Selection，Projection，Aggregation
 
-大多数DataFrame/Dataset操作都适用于流DataFrame/Dataset。
+大多数DataFrame/Dataset操作都适用于流DataFrame/Dataset。本节稍后会讨论那些不支持的操作。
 
 ```scala
 case class DeviceData(device: String, deviceType: String, signal: Double, time: DateTime)
@@ -77,15 +83,15 @@ ds.groupByKey(_.deviceType).agg(typed.avg(_.signal))    // using typed API
 
 ##### 2.2、基于事件时间的窗口操作
 
-Structured Streaming的对滑动的事件时间窗口的聚合很简单，与分组聚合（grouped aggregations）很相似。在分组聚合中，聚合值（比如，counts）是针对用户指定的分组字段的每个唯一值的。而在基于窗口的聚合中，聚合值是针对每个事件时间窗口中的行的。通过一个例子来阐释它……
+用Structured Streaming对一个滑动的事件时间窗口的聚合很简单，与分组聚合（grouped aggregations）很相似。在分组聚合中，聚合值（比如，counts）是针对用户指定的分组字段的每个唯一值的。而在基于窗口的聚合中，聚合值是针对每个事件时间窗口进行的。通过一个例子来阐释它……
 
-数据流包含文本行和文本行产生的时间，计算窗口时长10分钟，每5分钟更新的窗口中的每个单词的数量。即，统计窗口12:00 - 12:10, 12:05 - 12:15, 12:10 - 12:20等等期间接收到的单词的单词数量。12:00 - 12:10意味着12:00之后12:10之前接收到的数据。比如，12:07接收到的单词即在12:00 - 12:10窗口也在12:05 - 12:15窗口中。
+数据流包含文本行和文本行产生的时间，计算窗口时长10分钟，每5分钟更新的窗口中的每个单词的数量。即，统计窗口12:00 - 12:10, 12:05 - 12:15, 12:10 - 12:20等等期间接收到的单词的单词数量。12:00 - 12:10意味着12:00之后12:10之前接收到的数据。比如，12:07接收到的单词既在12:00 - 12:10窗口中，也在12:05 - 12:15窗口中。
 
 结果表的用图像表示如下：
 
 ![Window Operations](/assets/structured-streaming-window.png)
 
-以内窗口操作和分组操作类似，代码上，可以用`groupBy()`和`window()`操作来表示窗口聚合（windowed aggregations）。
+因为窗口操作和分组操作类似，代码上，可以用`groupBy()`和`window()`操作来表示窗口聚合（windowed aggregations）。
 
 ```scala
 import spark.implicits._
@@ -101,11 +107,11 @@ val windowedCounts = words.groupBy(
 
 ##### 2.3、处理迟到数据和水印
 
-如果数据迟到，比如，一个12:04产生的单词被应用在12:11接收到。应用应该用时间12:04而不是12:11来更新窗口12:00-12:10的计数。对于基于窗口的分组操作这是很自然地——Structured Streaming可以维持部分聚合的中间状态很长一段时间，以便迟到的数据可以正确地更新旧的窗口，如下图所示。
+如果数据迟到，比如，应用在12:11接收到一个12:04产生的单词。应用应该用时间12:04而不是12:11来更新窗口12:00-12:10的计数。对于基于窗口的分组操作这是很自然地——Structured Streaming可以维持部分聚合的中间状态很长一段时间，以便迟到的数据可以正确地更新旧的窗口，如下图所示。
 
 ![Handling Late Data](/assets/structured-streaming-late-data.png)
 
-但是，要运行查询很多天的话，很有必要限制累加的中间的在内存中的状态的量。这意味着，系统需要知道什么时间（因为应用将不再为这个旧的聚合接收迟到的数据）可以从内存状态中删除旧的聚合。要开启它，在Spark 2.1中采用了水印（watermarking），让引擎自动的跟踪数据中的当前事件时间并根据情况清除旧的状态。可以通过指定事件时间字段和事件时间的迟到阈值来定义一个查询的水印。对于在时间`T`启动的特定窗口，引擎会维持状态并允许迟到的数据更新这个状态直到达到水印时间（水印时间`wm`=最大事件时间-减去-迟到阈值，最大事件时间就是上次的触发时间）。即，阈值范围内的迟到数据会被聚合，但是更晚的数据会被删除。
+但是，要运行查询很多天的话，很有必要限制在内存中的累加的中间状态的量。这意味着，系统需要知道什么时间（因为应用将不再为这个旧的聚合接收迟到的数据）可以从内存状态中删除旧的聚合。要实现它，Spark 2.1中采用了水印（watermarking），让引擎自动的跟踪数据中的当前事件时间并根据情况清除旧的状态。可以通过指定事件时间字段和事件时间的迟到阈值来定义一个查询的水印。对于在时间`T`启动的特定窗口，引擎会维持状态并允许迟到的数据更新这个状态直到达到水印时间（水印时间`wm`=最大事件时间-减去-迟到阈值，最大事件时间就是上次的触发时间）。即，阈值范围内的迟到数据会被聚合，但是更晚的数据会被删除。
 
 使用`withWatermark()`可以定义水印：
 
@@ -125,7 +131,9 @@ val windowedCounts = words
 
 此处，用字段“timestamp”定义了水印，并且指定“10 minutes”作为迟到阈值。如果查询的输出模式是“Update”，引擎会持续更新某个窗口在结果表中的计数，直到窗口时间超过了水印的阈值。每次触发后，更新后的计数会被作为本次触发的输出写到外部接收器。比如，12:15-12:20（12:20触发）收到了一个12:08的数据，窗口12:00-12:10对应的结果数据会被更新并写到外部接收器。
 
-某些外部接收器（比如，文件）不支持“Update”输出模式需要的细粒度更新。为了能使用它们，也支持“Append”模式，此时，只有最终的计数结果才会写到外部接收器，如下图所示。
+某些外部接收器（比如，文件）不支持“Update”输出模式需要的细粒度更新。为了能使用它们，也支持“**Append**”模式，此时，只有最终的计数结果（当超过水印时间范围的窗口的结果）才会写到外部接收器，如下图所示。
+
+注意，对一个非流式的Dataset使用`withWatermark`是没有任何效果的。因为，水印不以任何方式影响批查询，会被直接忽略。
 
 ![Watermarking in Append Mode](/assets/structured-streaming-watermark-append-mode.png)
 
@@ -133,10 +141,10 @@ val windowedCounts = words
 
 **水印清除聚合状态的条件**：
 
-- 输出模式必须是“Append”或“Update”：“Complete”模式不能使用水印删除中间状态。
+- **输出模式必须是“Append”或“Update”**：“Complete”模式是需要保留所有聚合数据的，因此不能使用水印删除中间状态。
 - 聚合必须要有事件时间字段或者基于事件时间字段的`window`
-- `withWatermark`使用的字段和聚合使用字段相同；`df.withWatermark("time", "1 min").groupBy("time2").count()` 是错误的。
-- `withWatermark`必须在使用水印的聚合之前调用；`df.groupBy("time").count().withWatermark("time", "1 min")`是错误的。
+- `withWatermark`使用的字段和聚合使用时间字段必须相同；`df.withWatermark("time", "1 min").groupBy("time2").count()` 是错误的。
+- `withWatermark`必须在聚合之前调用，以便水印详情可以被应用；`df.groupBy("time").count().withWatermark("time", "1 min")`是错误的。
 
 ##### 2.4、连接操作
 
@@ -155,7 +163,7 @@ streamingDf.join(staticDf, "type", "right_join")
 
 可以使用事件中的唯一identifier来去重数据流中的记录。这和静态DataFrame使用唯一的identifier字段去重是相同的。查询会从之前的记录保存必要数量的数据以便过滤重复的记录。与聚合类似，用不用水印都可以去重。
 
-- 用水印：如果有重复数据最后到达的上限，可以基于事件时间定义一个水印，并且用guid和事件时间字段来去重。查询会使用水印把过去的记录中不重复记录的的状态数据删除。这限定了查询需要维护的状态的数量。
+- 用水印：如果有重复数据最后到达的时间上限，可以基于事件时间定义一个水印，并且用guid和事件时间字段来去重。查询会使用水印把过去的记录中不重复记录的的状态数据删除。这限定了查询需要维护的状态的数量。
 - 不用水印：如果没有重复数据最后到达的边界，查询会存储所有过去的记录作为状态。
 
 ```scala
@@ -178,49 +186,49 @@ streamingDf
 
 - 流Datasets的多重流聚合（即，对一个流DF进行一串的聚合）暂不支持
 - 流Datasets的`limit`和take前N行不支持
-- 流Datasets的distinct操作不支持
-- 除了聚合后和在Compelte输出模式，流Datasets的排序操作是不支持的
+- 流Datasets的`distinct`操作不支持
+- 流Datasets在聚合后和在Compelte输出模式时，才支持排序操作
 - 流和静态Datasets的外连接是有条件支持的：
   - 和流Dataset的全外连接不支持
   - 流Dataset在右边的左外连接不支持
   - 流Dataset在左边的右外连接不支持
-- 不支持两个流Datasets的任意连接
+- **不支持两个流Datasets的任意连接**
 
-此外，某些Dataset方法在流Datasets上不起作用。这些操作是会直接运行查询并返回结果的行动操作，对流Dataset是没有用的。但是，通过明确地启动一个流查询这些功能是可以实现的。
+此外，某些Dataset方法在流Datasets上不起作用。它们是会直接运行查询并返回结果的行动操作，对流Dataset是没有用的。但是，通过明确地启动一个流查询这些功能是可以实现的。
 
-- `count()`：不能返回流Dataset的记录数量。使用`ds.groupBy().count()`来返回一个包含运行计数的流Dataset。
-- `foreach()`：使用`ds.writeStream.foreach(...)`作为替代
-- `show()`：使用控制台外部接收器作为替代。
+- `count()`：不能返回流Dataset的记录数量。使用`ds.groupBy().count()`来返回一个包含运行中的计数的流Dataset。
+- `foreach()`：使用`ds.writeStream.foreach(...)`作为替代（下节介绍）
+- `show()`：使用console外部接收器作为替代（下节介绍）。
 
 如果对流Dataset直接使用这些操作，将会发生像"operation XYZ is not supported with streaming DataFrames/Datasets"这种`AnalysisException`错误。但是，以后版本的Spark可能会支持它们中的某些操作，其它的操作（比如排序）在流数据上高效地实现是困难的。
 
 #### 3、启动流查询
 
-使用`Dataset.writeStream()`返回的`DataStreamWriter`来启动流运算。需要指定如下接口中的一个或者多个：
+使用`Dataset.writeStream()`返回的`DataStreamWriter`来启动流运算。需要在接口中指定如下的一个或者多个：
 
 - 输出外部接收器的详情：数据格式、位置等
 - 输出模式：输出到输出外部接收器的内容
 - 查询名称：可选，为查询指定一个方便识别的唯一名称
-- 触发时间间隔（trigger interval）：可选，指定触发时间间隔。如果不指定，系统会在之前的数据处理完成后立即检查新的数据是否可用。如果因为之前的处理未完成而错过了触发时间，系统会在下一次触发时间尝试触发，而不是处理完成后马上触发。
-- 检查点位置：对于需要端到端容错保证的输出外部接收器，指定检查点位置以保存检查点信息。应该是一个兼容HDFS的容错的文件系统目录。
+- 触发时间间隔（trigger interval）：可选，指定触发时间间隔。如果不指定，系统会在之前的数据处理完成后立即检查新的数据是否可用。如果因为之前的处理未完成而错过了触发时间，系统会尝试在下一次触发时间触发，而不是处理完成后马上触发。
+- 检查点位置：对于需要端到端容错保证的输出外部接收器，指定检查点位置以保存检查点信息。应该是一个兼容HDFS的容错的文件系统目录。检查点语义会在下节介绍。
 
 ##### 3.1、输出模式
 
 输出模式的类型：
 
-- Append mode（默认）：默认的模式，只有最近一次触发引起的追加到结果表的新行会被输出到外部接收器。只有已经追加到结果表的行不会改变的查询才支持这种模式。因此，这种模式能够保证每行只输出一次（假设是容错的外部接收器）。比如，只有`select`，`where`，`map`，`flatMap`，`filter`，`join`等的查询支持使用追加模式。
-- Compelte mode：每次触发后，整个结果表会输出到外部接收器。聚合查询支持使用这种模式。
-- Update mode：（从Spark 2.1.1可用）只有最近一次触发后结果表中被更新的行才会被输出到外部接收器。
+- **Append mode**（默认）：默认的模式，只有最近一次触发引起的追加到结果表的新行会被输出到外部接收器。只有已经追加到结果表的行不会改变的查询才支持这种模式。因此，这种模式能够保证每行只输出一次（假设是容错的外部接收器）。比如，只有`select`，`where`，`map`，`flatMap`，`filter`，`join`等的查询支持使用追加模式。
+- **Compelte mode**：每次触发后，整个结果表会输出到外部接收器。聚合查询支持使用这种模式。
+- **Update mode**：（从Spark 2.1.1可用）只有最近一次触发后结果表中被更新的行才会被输出到外部接收器。
 
 不同类型的流查询支持不同输出模式。
 
-基于事件时间并且有水印的聚合支持使用三种输出模式。追加模式时，使用水印可以删除旧的聚合状态，但是因为水印的使用，窗口聚合结果的输出会有延时。更新模式时，使用水印删除旧的聚合状态。完整模式不会删除旧的聚合状态，因为按照定义这种模式保留结果表中的所有数据。
+**基于事件时间并且有水印的聚合**支持使用三种输出模式。追加模式时，使用水印可以删除旧的聚合状态，但是因为水印的使用和追加模式的语义，窗口聚合结果的输出会延时，延时时间即在`withWatermark()`中指定的延迟阈值，结果只有在最终确定之后（finalized）才会被加到结果表。更新模式时，使用水印删除旧的聚合状态。完整模式不会删除旧的聚合状态，因为按照定义这种模式将所有数据保留在结果表中。
 
-不使用水印的聚合不支持追加模式，因为聚合结果的更新与这种模式的语义相冲突。因为没有使用水印，旧的聚合状态不会被删除。
+**不使用水印的聚合**不支持追加模式，因为聚合结果的更新与这种模式的语义相冲突。因为没有使用水印，旧的聚合状态不会被删除。
 
-使用`mapGroupsWithState`的查询支持更新模式。
+**使用`mapGroupsWithState`的查询**支持更新模式。
 
-使用`flatMapGroupsWithState`的查询，在使用追加模式时，`flatMapGroupsWithState`后面可以使用聚合；而在使用更新模式时，`flatMapGroupsWithState`后面不能使用聚合。
+**使用`flatMapGroupsWithState`的查询**，在使用追加模式时，`flatMapGroupsWithState`后面可以使用聚合；而在使用更新模式时，`flatMapGroupsWithState`后面不能使用聚合。
 
 其它查询，不能使用完整模式，因为在结果表中保存所有的非聚合数据是不可行的。
 
@@ -262,7 +270,7 @@ streamingDf
       .start()
   ```
 
-注意，需要调用`start()`方法来事实上启动查询的执行。返回一个`StreamingQuery`对象，它是持续运行的查询的一个操作句柄，可以用它来管理查询。
+注意，需要调用`start()`方法来事实上启动查询的执行。`start()`方法返回一个`StreamingQuery`对象，它是持续运行的查询的一个操作句柄，可以用它来管理查询。
 
 例子：
 
@@ -307,7 +315,7 @@ spark.sql("select * from aggregates").show()   // interactively query in-memory 
 
 ##### 3.3、使用Foreach
 
-`foreach`操作从Spark 2.1开始可用。使用它可以对输出数据执行任意的操作。要使用它，需要实现`ForeachWriter`接口，流触发后当有输出结果产生时，会调用`ForeachWriter`中的方法。需要注意的是：
+`foreach`操作从Spark 2.1开始可用。使用它可以对输出数据执行任意的操作。要使用它，需要实现`ForeachWriter`接口，流触发后产生了输出结果时，会调用`ForeachWriter`中的方法。需要注意的是：
 
 - 这个writer必须是可序列化的，因为它会被序列化并发送到executors去执行
 - executors会执行writer的所有方法（`open`，`process`，`close`）
@@ -318,7 +326,7 @@ spark.sql("select * from aggregates").show()   // interactively query in-memory 
 
 #### 4、管理流查询
 
-`StreamQuery`对象可以用了监控和管理查询。
+`StreamQuery`对象可以用来监控和管理查询。
 
 ```scala
 val query = df.writeStream.format("console").start()   // get the query object

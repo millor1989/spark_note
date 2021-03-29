@@ -6,6 +6,8 @@ Spark怎样的分布式运行的？连接Mysql等关系型数据库进行分布�
 
 dataset的分区数，初始分区数
 
+Spark Streaming的批次大小怎么确定？
+
 `spark.sparkContext.defaultParallelism`默认的并行度
 
 Kafka作用，削峰异步解耦
@@ -82,7 +84,11 @@ Spark Sql 自适应执行：
 
 [http://www.jasongj.com/spark/adaptive\_execution/](http://www.jasongj.com/spark/adaptive_execution/)
 
-Spark SQL架构：![](/assets/sparksql架构.png)从上图可见，无论是直接使用 SQL 语句还是使用 DataFrame，都会经过如下步骤转换成 DAG 对 RDD 的操作
+Spark SQL架构：
+
+![](/assets/sparksql架构.png)
+
+从上图可见，无论是直接使用 SQL 语句还是使用 DataFrame，都会经过如下步骤转换成 DAG 对 RDD 的操作
 
 * Parser 解析 SQL，生成 Unresolved Logical Plan
 * 由 Analyzer 结合 Catalog 信息生成 Resolved Logical Plan
@@ -189,15 +195,17 @@ Accept状态时是在执行初始化SparkSession之前的代码，以及分配�
 
 从日志推测：首先启动ApplicationMaster：Preparing Local resources；启动`ApplicationAttemptId`；启动user application；初始化spark context；spark context提交应用；启动sparkDriver；获取资源启动executor，之前是不是先启动容器呢？再之前YARN调度呢……
 
-## Event Timeline出现了巨长的空白，怎么回事呢？生成执行计划？生成sql吗?![](/assets/eventtimelinewhitespace.png)
+### Event Timeline出现了巨长的空白，怎么回事呢？生成执行计划？生成sql吗?
 
-## 视图
+![](/assets/eventtimelinewhitespace.png)
 
-* ### Local Temporary View
+### 视图
+
+* #### Local Temporary View
 
   Local temporary view is session-scoped. Its lifetime is the lifetime of the session that create it,i.e. it will be automatically dropped when the session terminates. It's not tied to any databases, i.e. we can't use \`db1.view1\` to reference a local temporary view.
 
-* ### Global temporary view
+* #### Global temporary view
 
   Global temporary view is cross-session. Its lifetime is the lifetime of the Spark application, i.e. it will be automatically dropped when the application terminates. It's tied to a system preserved database \`global\_temp\`, and we must use the qualified name to refer a global temp view, e.g. \`SELECT \* FROM global\_temp.view1\`.
 
@@ -208,7 +216,21 @@ def dropGlobalTempView(viewName: String): Boolean
 
 This method drops the view with the given view name in the catalog. If the view has been cached before, then it will also be uncached.
 
-##### Hive/Impala的实时性。ALTER TABLE的原因吗？感觉修改数据后，查询表的修正结果会有延时。
+Spark SQL运行过程中是否也会根据情况自动Cache一些RDD？？发现`dropTempView`和`unpersist`还是会清除不掉缓存（Spark Web UI的Storage中的RDD缓存一致都存在），但是改用`spark.catalog().clearCache()`（从内存中删除所有缓存的表）可以将它们清除。
+
+#### Spark Web UI的“Executors”中，Storage Memory一直在增加（increasing overtime）
+
+![1616741331350](/assets/1616741331350.png)
+
+程序运行2个小时左右，Executors的Storage Memeory一直在增加，最初怀疑是大量的DataFrame cache导致的，但是进行了`spark.catalog().clearCache()`操作后，清除RDD的缓存，而Storage Memeory依旧在增长。
+
+不知道是不是Spark Web UI的bug，还是说是内存泄露导致的？？
+
+之前没有注意过，似乎所有的Spark应用的Storage Memeory都存在递增的情况。但是Storage Memory过大，应该还是有需要优化的地方。
+
+#### Spark Executor GC Time
+
+#### Hive/Impala的实时性。ALTER TABLE的原因吗？感觉修改数据后，查询表的修正结果会有延时。
 
 ### resolved attribute\(s\) xxxxx\#xxx missing from...
 
@@ -344,7 +366,7 @@ Exception in thread "broadcast-exchange-1" java.lang.OutOfMemoryError: Not enoug
 
 奇怪，为什么和空的dataset进行join会报这个错。
 
-
+#### Spark SQL的执行是依赖Hive 表的Schema的，虽然Hive 表是读时模式，但是使用Spark SQL插入Hive表时，还是会验证表的Schema。
 
 #### Spark中JDBC更新效率很慢的问题
 
@@ -422,3 +444,4 @@ org.apache.spark.sql.AnalysisException: Can only write data to relations with a 
 
 **Spark application失败,但是Spark Web UI仍然有活跃的jobs**，Yarn application Web UI显示的状态是Failed，Spark Web UI的bug？？
 
+#### Spark使用`to_date(str)`函数，比使用`substring(str,1,10)`早了一天，例如，`str`为`2021-03-01 xx:xx:xx`，前者结果`2021-02-28`。奇怪了……用到了时区吗？？？还是……将`to_date(str)`作为连接条件导致了什么变化？？
