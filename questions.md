@@ -445,3 +445,5 @@ org.apache.spark.sql.AnalysisException: Can only write data to relations with a 
 **Spark application失败,但是Spark Web UI仍然有活跃的jobs**，Yarn application Web UI显示的状态是Failed，Spark Web UI的bug？？
 
 #### Spark使用`to_date(str)`函数，比使用`substring(str,1,10)`早了一天，例如，`str`为`2021-03-01 xx:xx:xx`，前者结果`2021-02-28`。奇怪了……用到了时区吗？？？还是……将`to_date(str)`作为连接条件导致了什么变化？？
+
+#### Spark Structured Streaming的输出延时socket 数据源，`option("includeTimestamp", true)`，使用窗口和水印的聚合。
