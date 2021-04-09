@@ -60,6 +60,7 @@
   * [协同过滤](mllib/xie-tong-guo-lv.md)
 * [问题记录](questions.md)
   * [Spark框架](questions/dag-or-something.md) 
+  * [Executors数量](questions/004.md)
   * [DataFrame-Dataset-RDD](questions/datasetdataframerdd.md)
   * [checkpoint](questions/spark-checkpoint.md)
   * [Spark Memory相关问题](questions/001.md)
@@ -68,5 +69,6 @@
   * [Spark函数](questions/sparkhan-shu.md)
   * [Hadoop 1和Hadoop2](questions/hadoop-1he-hadoop2.md)
   * [Broadcast Join](questions/broadcast-join.md)
+  * [Broadcast](003.md)
   * [隐式转换与隐式参数](questions/implicits.md)
 
