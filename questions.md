@@ -447,3 +447,5 @@ org.apache.spark.sql.AnalysisException: Can only write data to relations with a 
 #### Spark使用`to_date(str)`函数，比使用`substring(str,1,10)`早了一天，例如，`str`为`2021-03-01 xx:xx:xx`，前者结果`2021-02-28`。奇怪了……用到了时区吗？？？还是……将`to_date(str)`作为连接条件导致了什么变化？？
 
 #### Spark Structured Streaming的输出延时socket 数据源，`option("includeTimestamp", true)`，使用窗口和水印的聚合。
+
+Spark WebUI 有时候看到有job 为 `run at ThreadPoolExecutor.java:1149` ，一直疑惑是什么，看StackOverflow上一个回答，似乎是Spark join时，如果是 broadcastjoin，会起一个线程发送数据到executors。大概需要发送数据到其他executors时都会发生吧？！
