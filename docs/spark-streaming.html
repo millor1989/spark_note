@@ -372,6 +372,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.3" data-path="structured-streaming/003.html">
+            
+                <a href="structured-streaming/003.html">
+            
+                    
+                    Structured Streaming集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -894,7 +907,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16" data-path="questions.html">
+        <li class="chapter " data-level="1.16" data-path="oozie.html">
+            
+                <a href="oozie.html">
+            
+                    
+                    Oozie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="questions.html">
             
                 <a href="questions.html">
             
@@ -908,7 +934,33 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.16.1" data-path="questions/datasetdataframerdd.html">
+        <li class="chapter " data-level="1.17.1" data-path="questions/dag-or-something.html">
+            
+                <a href="questions/dag-or-something.html">
+            
+                    
+                    Spark框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="questions/004.html">
+            
+                <a href="questions/004.html">
+            
+                    
+                    Executors数量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="questions/datasetdataframerdd.html">
             
                 <a href="questions/datasetdataframerdd.html">
             
@@ -921,7 +973,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.2" data-path="questions/spark-checkpoint.html">
+        <li class="chapter " data-level="1.17.4" data-path="questions/spark-checkpoint.html">
             
                 <a href="questions/spark-checkpoint.html">
             
@@ -934,7 +986,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.3" data-path="questions/shu-ju-ben-di-xing.html">
+        <li class="chapter " data-level="1.17.5" data-path="questions/001.html">
+            
+                <a href="questions/001.html">
+            
+                    
+                    Spark Memory相关问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="questions/002.html">
+            
+                <a href="questions/002.html">
+            
+                    
+                    数据倾斜和GC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="questions/shu-ju-ben-di-xing.html">
             
                 <a href="questions/shu-ju-ben-di-xing.html">
             
@@ -947,7 +1025,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.4" data-path="questions/sparkhan-shu.html">
+        <li class="chapter " data-level="1.17.8" data-path="questions/sparkhan-shu.html">
             
                 <a href="questions/sparkhan-shu.html">
             
@@ -960,7 +1038,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.5" data-path="questions/hadoop-1he-hadoop2.html">
+        <li class="chapter " data-level="1.17.9" data-path="questions/hadoop-1he-hadoop2.html">
             
                 <a href="questions/hadoop-1he-hadoop2.html">
             
@@ -973,12 +1051,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.6" data-path="questions/broadcast-join.html">
+        <li class="chapter " data-level="1.17.10" data-path="questions/broadcast-join.html">
             
                 <a href="questions/broadcast-join.html">
             
                     
                     Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.11" data-path="003.md">
+            
+                <span>
+            
+                    
+                    Broadcast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.12" data-path="questions/implicits.html">
+            
+                <a href="questions/implicits.html">
+            
+                    
+                    隐式转换与隐式参数
             
                 </a>
             
@@ -1036,10 +1140,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>Spark Streaming&#x662F;Spark API&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x5BF9;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x6D41;&#xFF08;live data streams&#xFF09;&#x8FDB;&#x884C;&#x53EF;&#x6269;&#x5C55;&#x7684;&#xFF08;scalable&#xFF09;&#xFF0C;&#x9AD8;&#x541E;&#x5410;&#xFF08;high-throughput&#xFF09;&#xFF0C;&#x5BB9;&#x9519;&#x7684;&#xFF08;fault-tolerant&#xFF09;&#x6D41;&#x5F0F;&#x5904;&#x7406;&#xFF08;stream processing&#xFF09;&#x3002;&#x53EF;&#x4EE5;&#x5BF9;Kafka&#xFF0C;Flume&#xFF0C;Kinesis&#xFF0C;&#x6216;&#x8005;TCP sockets&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x50CF;<code>map</code>&#xFF0C;<code>reduce</code>&#xFF0C;<code>window</code>&#x8FD9;&#x6837;&#x7684;&#x9AD8;&#x7EA7;&#x51FD;&#x6570;&#x7528;&#x590D;&#x6742;&#x7684;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x5904;&#x7406;&#x540E;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;&#x548C;&#x52A8;&#x6001;&#x770B;&#x677F;&#xFF08;live dashboards&#xFF09;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;Spark&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x548C;&#x56FE;&#x8FD0;&#x7B97;&#x7B97;&#x6CD5;&#x8FD0;&#x7528;&#x5230;&#x6570;&#x636E;&#x6D41;&#x4E0A;&#x3002;</p>
-<p>Spark Streaming&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x5982;&#x4E0B;&#xFF0C;&#x63A5;&#x6536;&#x8F93;&#x5165;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x628A;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x6279;&#x6B21;&#xFF0C;&#x4F7F;&#x7528;Spark&#x5F15;&#x64CE;&#x5BF9;&#x8F93;&#x5165;&#x6279;&#x6B21;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x7ED3;&#x679C;&#x4E5F;&#x662F;&#x6309;&#x6279;&#x6B21;&#x4EA7;&#x751F;&#x3002;</p>
+                                <p>Spark Streaming&#x662F;&#x6838;&#x5FC3;Spark API&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x80FD;&#x591F;&#x5BF9;&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x6D41;&#xFF08;live data streams&#xFF09;&#x8FDB;&#x884C;&#x53EF;&#x6269;&#x5C55;&#x7684;&#xFF08;scalable&#xFF09;&#xFF0C;&#x9AD8;&#x541E;&#x5410;&#xFF08;high-throughput&#xFF09;&#xFF0C;&#x5BB9;&#x9519;&#x7684;&#xFF08;fault-tolerant&#xFF09;&#x6D41;&#x5F0F;&#x5904;&#x7406;&#xFF08;stream processing&#xFF09;&#x3002;&#x53EF;&#x4EE5;&#x4ECE;Kafka&#xFF0C;Flume&#xFF0C;Kinesis&#xFF0C;&#x6216;&#x8005;TCP sockets&#x7B49;&#x8BB8;&#x591A;&#x7684;&#x6570;&#x636E;&#x6E90;&#x6444;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x50CF;<code>map</code>&#xFF0C;<code>reduce</code>&#xFF0C;<code>window</code>&#x8FD9;&#x6837;&#x7684;&#x9AD8;&#x7EA7;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x7684;&#x590D;&#x6742;&#x7684;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x5904;&#x7406;&#x540E;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;&#x548C;&#x52A8;&#x6001;&#x770B;&#x677F;&#xFF08;live dashboards&#xFF09;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;Spark&#x7684;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x548C;&#x56FE;&#x8FD0;&#x7B97;&#x7B97;&#x6CD5;&#x8FD0;&#x7528;&#x5230;&#x6570;&#x636E;&#x6D41;&#x4E0A;&#x3002;</p>
+<p>Spark Streaming&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x5982;&#x4E0B;&#xFF0C;&#x63A5;&#x6536;&#x8F93;&#x5165;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x628A;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x6279;&#x6B21;&#xFF0C;&#x4F7F;&#x7528;Spark&#x5F15;&#x64CE;&#x5BF9;&#x8F93;&#x5165;&#x6279;&#x6B21;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x6D41;&#x4E5F;&#x662F;&#x6309;&#x6279;&#x6B21;&#x4EA7;&#x751F;&#x7684;&#x3002;</p>
 <p><img src="assets/streaming-flow.png" alt="Spark Streaming"></p>
-<p>Spark Streaming&#x63D0;&#x4F9B;&#x4E86;&#x9AD8;&#x7EA7;&#x522B;&#x7684;&#x62BD;&#x8C61;&#x53EB;&#x4F5C;&#x79BB;&#x6563;&#x6D41;&#xFF08;discretized stream&#xFF09;&#x6216;&#x8005;DStream&#xFF0C;&#x5B83;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x6570;&#x636E;&#x6D41;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Kafka&#x3001;Flume&#x3001;&#x6216;Kinesis&#x6570;&#x636E;&#x6E90;&#x7684;&#x6570;&#x636E;&#x6D41;&#x6765;&#x521B;&#x5EFA;DStreams&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5176;&#x5B83;DStreams&#x7684;&#x9AD8;&#x7EA7;&#x64CD;&#x4F5C;&#x751F;&#x6210;DStreams&#x3002;&#x5728;&#x5185;&#x90E8;&#xFF0C;DStream&#x4EE3;&#x8868;&#x4E00;&#x4E2A;RDDs&#x7684;&#x5E8F;&#x5217;&#x3002;</p>
+<p>Spark Streaming&#x63D0;&#x4F9B;&#x4E86;&#x9AD8;&#x7EA7;&#x522B;&#x7684;&#x62BD;&#x8C61;&#x53EB;&#x4F5C;&#x79BB;&#x6563;&#x6D41;&#xFF08;discretized stream&#xFF09;&#x6216;&#x8005;DStream&#xFF0C;&#x5B83;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x6570;&#x636E;&#x6D41;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Kafka&#x3001;Flume&#x3001;&#x6216;Kinesis&#x6570;&#x636E;&#x6E90;&#x7684;&#x6570;&#x636E;&#x6D41;&#x6765;&#x521B;&#x5EFA;DStreams&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5176;&#x5B83;DStreams&#x7684;&#x9AD8;&#x7EA7;&#x64CD;&#x4F5C;&#x751F;&#x6210;DStreams&#x3002;&#x5728;&#x5185;&#x90E8;&#xFF0C;DStream&#x88AB;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;RDDs&#x7684;&#x5E8F;&#x5217;&#x3002;</p>
 <h5 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h5>
 <p>&#x8BA1;&#x7B97;TCP socket&#x7684;text&#x6570;&#x636E;&#x6D41;&#x4E2D;&#x7684;&#x5355;&#x8BCD;&#x4E2A;&#x6570;&#xFF1A;</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.apache.spark._
@@ -1114,7 +1218,7 @@ ssc.awaitTermination()  <span class="hljs-comment">// Wait for the computation t
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Spark Streaming","level":"1.5","depth":1,"next":{"title":"基本概念","level":"1.5.1","depth":2,"path":"spark-streaming/ji-ben-gai-nian.md","ref":"spark-streaming/ji-ben-gai-nian.md","articles":[]},"previous":{"title":"内置函数","level":"1.4.7","depth":2,"path":"spark-sql/built-in-functions.md","ref":"spark-sql/built-in-functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"spark-streaming.md","mtime":"2020-07-06T06:55:40.770Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Spark Streaming","level":"1.5","depth":1,"next":{"title":"基本概念","level":"1.5.1","depth":2,"path":"spark-streaming/ji-ben-gai-nian.md","ref":"spark-streaming/ji-ben-gai-nian.md","articles":[]},"previous":{"title":"内置函数","level":"1.4.7","depth":2,"path":"spark-sql/built-in-functions.md","ref":"spark-sql/built-in-functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"spark-streaming.md","mtime":"2021-03-12T02:57:43.273Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-30T08:14:52.430Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

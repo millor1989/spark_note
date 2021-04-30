@@ -2,7 +2,7 @@
 
 Spark Streaming依赖：
 
-```
+```xml
 <dependency>
     <groupId>org.apache.spark</groupId>
     <artifactId>spark-streaming_2.11</artifactId>
@@ -45,8 +45,8 @@ val ssc = new StreamingContext(sc, Seconds(1))
 - 启动`StreamingContext`后，不能设置或添加新的流运算
 - 停止`StreamingContext`后，不能重启
 - 一个JVM同时只能有一个活跃的`StreamingContext`
-- `streamingContext.stop()`会同时停止`SparkContext`，但是可以使用重载的`stop()`方法只停止`StreamingContext`
-- 可以重用`SparkContext`来创建新的`StreamingContext`，但是要保证新的创建之前，老的`StreamingContext`已经停止。
+- `streamingContext.stop()`会同时停止`SparkContext`，但是可以使用重载的`stop(false)`方法只停止`StreamingContext`
+- 可以重用`SparkContext`来创建新的`StreamingContext`，但是要保证新的创建之前，老的`StreamingContext`已经停止（同时`SparkContext`没有停止）。
 
 #### 3、离散化的流（DStreams）
 

@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="questions/datasetdataframerdd.html" />
+    <link rel="next" href="questions/dag-or-something.html" />
     
     
-    <link rel="prev" href="mllib/xie-tong-guo-lv.html" />
+    <link rel="prev" href="oozie.html" />
     
 
     </head>
@@ -365,6 +365,19 @@
             
                     
                     Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="structured-streaming/003.html">
+            
+                <a href="structured-streaming/003.html">
+            
+                    
+                    Structured Streaming集成Kafka
             
                 </a>
             
@@ -894,7 +907,20 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.16" data-path="questions.html">
+        <li class="chapter " data-level="1.16" data-path="oozie.html">
+            
+                <a href="oozie.html">
+            
+                    
+                    Oozie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="questions.html">
             
                 <a href="questions.html">
             
@@ -908,7 +934,33 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.16.1" data-path="questions/datasetdataframerdd.html">
+        <li class="chapter " data-level="1.17.1" data-path="questions/dag-or-something.html">
+            
+                <a href="questions/dag-or-something.html">
+            
+                    
+                    Spark框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="questions/004.html">
+            
+                <a href="questions/004.html">
+            
+                    
+                    Executors数量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="questions/datasetdataframerdd.html">
             
                 <a href="questions/datasetdataframerdd.html">
             
@@ -921,7 +973,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.2" data-path="questions/spark-checkpoint.html">
+        <li class="chapter " data-level="1.17.4" data-path="questions/spark-checkpoint.html">
             
                 <a href="questions/spark-checkpoint.html">
             
@@ -934,7 +986,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.3" data-path="questions/shu-ju-ben-di-xing.html">
+        <li class="chapter " data-level="1.17.5" data-path="questions/001.html">
+            
+                <a href="questions/001.html">
+            
+                    
+                    Spark Memory相关问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="questions/002.html">
+            
+                <a href="questions/002.html">
+            
+                    
+                    数据倾斜和GC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="questions/shu-ju-ben-di-xing.html">
             
                 <a href="questions/shu-ju-ben-di-xing.html">
             
@@ -947,7 +1025,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.4" data-path="questions/sparkhan-shu.html">
+        <li class="chapter " data-level="1.17.8" data-path="questions/sparkhan-shu.html">
             
                 <a href="questions/sparkhan-shu.html">
             
@@ -960,7 +1038,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.5" data-path="questions/hadoop-1he-hadoop2.html">
+        <li class="chapter " data-level="1.17.9" data-path="questions/hadoop-1he-hadoop2.html">
             
                 <a href="questions/hadoop-1he-hadoop2.html">
             
@@ -973,12 +1051,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16.6" data-path="questions/broadcast-join.html">
+        <li class="chapter " data-level="1.17.10" data-path="questions/broadcast-join.html">
             
                 <a href="questions/broadcast-join.html">
             
                     
                     Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.11" data-path="003.md">
+            
+                <span>
+            
+                    
+                    Broadcast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.12" data-path="questions/implicits.html">
+            
+                <a href="questions/implicits.html">
+            
+                    
+                    隐式转换与隐式参数
             
                 </a>
             
@@ -1040,6 +1144,7 @@
 <p>Spark&#x7684;driver&#xFF0C;client&#xFF1F;</p>
 <p>Spark&#x600E;&#x6837;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x8FD0;&#x884C;&#x7684;&#xFF1F;&#x8FDE;&#x63A5;Mysql&#x7B49;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x5206;&#x5E03;&#x5F0F;&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#x4F1A;&#x4E0D;&#x4F1A;&#x9020;&#x6210;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8FDE;&#x63A5;&#x8FC7;&#x591A;&#x3002;</p>
 <p>dataset&#x7684;&#x5206;&#x533A;&#x6570;&#xFF0C;&#x521D;&#x59CB;&#x5206;&#x533A;&#x6570;</p>
+<p>Spark Streaming&#x7684;&#x6279;&#x6B21;&#x5927;&#x5C0F;&#x600E;&#x4E48;&#x786E;&#x5B9A;&#xFF1F;</p>
 <p><code>spark.sparkContext.defaultParallelism</code>&#x9ED8;&#x8BA4;&#x7684;&#x5E76;&#x884C;&#x5EA6;</p>
 <p>Kafka&#x4F5C;&#x7528;&#xFF0C;&#x524A;&#x5CF0;&#x5F02;&#x6B65;&#x89E3;&#x8026;</p>
 <h4 id="spark&#x7A0B;&#x5E8F;&#x914D;&#x7F6E;&#x4E2D;&#x7684;&#x6DF7;&#x6D17;&#x5206;&#x533A;&#x6570;">spark&#x7A0B;&#x5E8F;&#x914D;&#x7F6E;&#x4E2D;&#x7684;&#x6DF7;&#x6D17;&#x5206;&#x533A;&#x6570;</h4>
@@ -1094,7 +1199,9 @@
 </ul>
 <p><a href="https://help.aliyun.com/document_detail/93157.html" target="_blank">https://help.aliyun.com/document_detail/93157.html</a></p>
 <p><a href="http://www.jasongj.com/spark/adaptive_execution/" target="_blank">http://www.jasongj.com/spark/adaptive_execution/</a></p>
-<p>Spark SQL&#x67B6;&#x6784;&#xFF1A;<img src="assets/sparksql&#x67B6;&#x6784;.png" alt="">&#x4ECE;&#x4E0A;&#x56FE;&#x53EF;&#x89C1;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528; SQL &#x8BED;&#x53E5;&#x8FD8;&#x662F;&#x4F7F;&#x7528; DataFrame&#xFF0C;&#x90FD;&#x4F1A;&#x7ECF;&#x8FC7;&#x5982;&#x4E0B;&#x6B65;&#x9AA4;&#x8F6C;&#x6362;&#x6210; DAG &#x5BF9; RDD &#x7684;&#x64CD;&#x4F5C;</p>
+<p>Spark SQL&#x67B6;&#x6784;&#xFF1A;</p>
+<p><img src="assets/sparksql&#x67B6;&#x6784;.png" alt=""></p>
+<p>&#x4ECE;&#x4E0A;&#x56FE;&#x53EF;&#x89C1;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528; SQL &#x8BED;&#x53E5;&#x8FD8;&#x662F;&#x4F7F;&#x7528; DataFrame&#xFF0C;&#x90FD;&#x4F1A;&#x7ECF;&#x8FC7;&#x5982;&#x4E0B;&#x6B65;&#x9AA4;&#x8F6C;&#x6362;&#x6210; DAG &#x5BF9; RDD &#x7684;&#x64CD;&#x4F5C;</p>
 <ul>
 <li>Parser &#x89E3;&#x6790; SQL&#xFF0C;&#x751F;&#x6210; Unresolved Logical Plan</li>
 <li>&#x7531; Analyzer &#x7ED3;&#x5408; Catalog &#x4FE1;&#x606F;&#x751F;&#x6210; Resolved Logical Plan</li>
@@ -1189,13 +1296,14 @@ id: int
 <h2 id="spark&#x7684;accept&#x72B6;&#x6001;&#xFF0C;&#x90FD;&#x5728;&#x505A;&#x4EC0;&#x4E48;&#xFF1F;&#x53EA;&#x662F;&#x7B49;&#x5F85;&#x8D44;&#x6E90;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x7B49;&#x5F85;&#x5F88;&#x4E45;&#x2014;&#x2014;&#x51E0;&#x4E2A;&#x5C0F;&#x65F6;&#xFF1F;&#x5927;&#x6982;&#x662F;&#x7B49;&#x8D44;&#x6E90;&#x5427;&#x3002;">Spark&#x7684;Accept&#x72B6;&#x6001;&#xFF0C;&#x90FD;&#x5728;&#x505A;&#x4EC0;&#x4E48;&#xFF1F;&#x53EA;&#x662F;&#x7B49;&#x5F85;&#x8D44;&#x6E90;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x7B49;&#x5F85;&#x5F88;&#x4E45;&#x2014;&#x2014;&#x51E0;&#x4E2A;&#x5C0F;&#x65F6;&#xFF1F;&#x5927;&#x6982;&#x662F;&#x7B49;&#x8D44;&#x6E90;&#x5427;&#x3002;</h2>
 <p>Accept&#x72B6;&#x6001;&#x65F6;&#x662F;&#x5728;&#x6267;&#x884C;&#x521D;&#x59CB;&#x5316;SparkSession&#x4E4B;&#x524D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4EE5;&#x53CA;&#x5206;&#x914D;&#x8D44;&#x6E90;&#x8FDB;&#x884C;SparkSession&#x7684;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
 <p>&#x4ECE;&#x65E5;&#x5FD7;&#x63A8;&#x6D4B;&#xFF1A;&#x9996;&#x5148;&#x542F;&#x52A8;ApplicationMaster&#xFF1A;Preparing Local resources&#xFF1B;&#x542F;&#x52A8;<code>ApplicationAttemptId</code>&#xFF1B;&#x542F;&#x52A8;user application&#xFF1B;&#x521D;&#x59CB;&#x5316;spark context&#xFF1B;spark context&#x63D0;&#x4EA4;&#x5E94;&#x7528;&#xFF1B;&#x542F;&#x52A8;sparkDriver&#xFF1B;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x542F;&#x52A8;executor&#xFF0C;&#x4E4B;&#x524D;&#x662F;&#x4E0D;&#x662F;&#x5148;&#x542F;&#x52A8;&#x5BB9;&#x5668;&#x5462;&#xFF1F;&#x518D;&#x4E4B;&#x524D;YARN&#x8C03;&#x5EA6;&#x5462;&#x2026;&#x2026;</p>
-<h2 id="event-timeline&#x51FA;&#x73B0;&#x4E86;&#x5DE8;&#x957F;&#x7684;&#x7A7A;&#x767D;&#xFF0C;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#x5462;&#xFF1F;&#x751F;&#x6210;&#x6267;&#x884C;&#x8BA1;&#x5212;&#xFF1F;&#x751F;&#x6210;sql&#x5417;">Event Timeline&#x51FA;&#x73B0;&#x4E86;&#x5DE8;&#x957F;&#x7684;&#x7A7A;&#x767D;&#xFF0C;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#x5462;&#xFF1F;&#x751F;&#x6210;&#x6267;&#x884C;&#x8BA1;&#x5212;&#xFF1F;&#x751F;&#x6210;sql&#x5417;?<img src="assets/eventtimelinewhitespace.png" alt=""></h2>
-<h2 id="&#x89C6;&#x56FE;">&#x89C6;&#x56FE;</h2>
+<h3 id="event-timeline&#x51FA;&#x73B0;&#x4E86;&#x5DE8;&#x957F;&#x7684;&#x7A7A;&#x767D;&#xFF0C;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#x5462;&#xFF1F;&#x751F;&#x6210;&#x6267;&#x884C;&#x8BA1;&#x5212;&#xFF1F;&#x751F;&#x6210;sql&#x5417;">Event Timeline&#x51FA;&#x73B0;&#x4E86;&#x5DE8;&#x957F;&#x7684;&#x7A7A;&#x767D;&#xFF0C;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#x5462;&#xFF1F;&#x751F;&#x6210;&#x6267;&#x884C;&#x8BA1;&#x5212;&#xFF1F;&#x751F;&#x6210;sql&#x5417;?</h3>
+<p><img src="assets/eventtimelinewhitespace.png" alt=""></p>
+<h3 id="&#x89C6;&#x56FE;">&#x89C6;&#x56FE;</h3>
 <ul>
-<li><h3 id="local-temporary-view">Local Temporary View</h3>
+<li><h4 id="local-temporary-view">Local Temporary View</h4>
 <p>Local temporary view is session-scoped. Its lifetime is the lifetime of the session that create it,i.e. it will be automatically dropped when the session terminates. It&apos;s not tied to any databases, i.e. we can&apos;t use `db1.view1` to reference a local temporary view.</p>
 </li>
-<li><h3 id="global-temporary-view">Global temporary view</h3>
+<li><h4 id="global-temporary-view">Global temporary view</h4>
 <p>Global temporary view is cross-session. Its lifetime is the lifetime of the Spark application, i.e. it will be automatically dropped when the application terminates. It&apos;s tied to a system preserved database `global_temp`, and we must use the qualified name to refer a global temp view, e.g. `SELECT * FROM global_temp.view1`.</p>
 </li>
 </ul>
@@ -1203,7 +1311,14 @@ id: int
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dropGlobalTempView</span></span>(viewName: <span class="hljs-type">String</span>): <span class="hljs-type">Boolean</span>
 </code></pre>
 <p>This method drops the view with the given view name in the catalog. If the view has been cached before, then it will also be uncached.</p>
-<h5 id="hiveimpala&#x7684;&#x5B9E;&#x65F6;&#x6027;&#x3002;alter-table&#x7684;&#x539F;&#x56E0;&#x5417;&#xFF1F;&#x611F;&#x89C9;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x67E5;&#x8BE2;&#x8868;&#x7684;&#x4FEE;&#x6B63;&#x7ED3;&#x679C;&#x4F1A;&#x6709;&#x5EF6;&#x65F6;&#x3002;">Hive/Impala&#x7684;&#x5B9E;&#x65F6;&#x6027;&#x3002;ALTER TABLE&#x7684;&#x539F;&#x56E0;&#x5417;&#xFF1F;&#x611F;&#x89C9;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x67E5;&#x8BE2;&#x8868;&#x7684;&#x4FEE;&#x6B63;&#x7ED3;&#x679C;&#x4F1A;&#x6709;&#x5EF6;&#x65F6;&#x3002;</h5>
+<p>Spark SQL&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x662F;&#x5426;&#x4E5F;&#x4F1A;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x81EA;&#x52A8;Cache&#x4E00;&#x4E9B;RDD&#xFF1F;&#xFF1F;&#x53D1;&#x73B0;<code>dropTempView</code>&#x548C;<code>unpersist</code>&#x8FD8;&#x662F;&#x4F1A;&#x6E05;&#x9664;&#x4E0D;&#x6389;&#x7F13;&#x5B58;&#xFF08;Spark Web UI&#x7684;Storage&#x4E2D;&#x7684;RDD&#x7F13;&#x5B58;&#x4E00;&#x81F4;&#x90FD;&#x5B58;&#x5728;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x6539;&#x7528;<code>spark.catalog().clearCache()</code>&#xFF08;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x5220;&#x9664;&#x6240;&#x6709;&#x7F13;&#x5B58;&#x7684;&#x8868;&#xFF09;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x6E05;&#x9664;&#x3002;</p>
+<h4 id="spark-web-ui&#x7684;executors&#x4E2D;&#xFF0C;storage-memory&#x4E00;&#x76F4;&#x5728;&#x589E;&#x52A0;&#xFF08;increasing-overtime&#xFF09;">Spark Web UI&#x7684;&#x201C;Executors&#x201D;&#x4E2D;&#xFF0C;Storage Memory&#x4E00;&#x76F4;&#x5728;&#x589E;&#x52A0;&#xFF08;increasing overtime&#xFF09;</h4>
+<p><img src="assets/1616741331350.png" alt="1616741331350"></p>
+<p>&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;2&#x4E2A;&#x5C0F;&#x65F6;&#x5DE6;&#x53F3;&#xFF0C;Executors&#x7684;Storage Memeory&#x4E00;&#x76F4;&#x5728;&#x589E;&#x52A0;&#xFF0C;&#x6700;&#x521D;&#x6000;&#x7591;&#x662F;&#x5927;&#x91CF;&#x7684;DataFrame cache&#x5BFC;&#x81F4;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x8FDB;&#x884C;&#x4E86;<code>spark.catalog().clearCache()</code>&#x64CD;&#x4F5C;&#x540E;&#xFF0C;&#x6E05;&#x9664;RDD&#x7684;&#x7F13;&#x5B58;&#xFF0C;&#x800C;Storage Memeory&#x4F9D;&#x65E7;&#x5728;&#x589E;&#x957F;&#x3002;</p>
+<p>&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x4E0D;&#x662F;Spark Web UI&#x7684;bug&#xFF0C;&#x8FD8;&#x662F;&#x8BF4;&#x662F;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x5BFC;&#x81F4;&#x7684;&#xFF1F;&#xFF1F;</p>
+<p>&#x4E4B;&#x524D;&#x6CA1;&#x6709;&#x6CE8;&#x610F;&#x8FC7;&#xFF0C;&#x4F3C;&#x4E4E;&#x6240;&#x6709;&#x7684;Spark&#x5E94;&#x7528;&#x7684;Storage Memeory&#x90FD;&#x5B58;&#x5728;&#x9012;&#x589E;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x4F46;&#x662F;Storage Memory&#x8FC7;&#x5927;&#xFF0C;&#x5E94;&#x8BE5;&#x8FD8;&#x662F;&#x6709;&#x9700;&#x8981;&#x4F18;&#x5316;&#x7684;&#x5730;&#x65B9;&#x3002;</p>
+<h4 id="spark-executor-gc-time">Spark Executor GC Time</h4>
+<h4 id="hiveimpala&#x7684;&#x5B9E;&#x65F6;&#x6027;&#x3002;alter-table&#x7684;&#x539F;&#x56E0;&#x5417;&#xFF1F;&#x611F;&#x89C9;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x67E5;&#x8BE2;&#x8868;&#x7684;&#x4FEE;&#x6B63;&#x7ED3;&#x679C;&#x4F1A;&#x6709;&#x5EF6;&#x65F6;&#x3002;">Hive/Impala&#x7684;&#x5B9E;&#x65F6;&#x6027;&#x3002;ALTER TABLE&#x7684;&#x539F;&#x56E0;&#x5417;&#xFF1F;&#x611F;&#x89C9;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x540E;&#xFF0C;&#x67E5;&#x8BE2;&#x8868;&#x7684;&#x4FEE;&#x6B63;&#x7ED3;&#x679C;&#x4F1A;&#x6709;&#x5EF6;&#x65F6;&#x3002;</h4>
 <h3 id="resolved-attributes-xxxxxxxx-missing-from">resolved attribute(s) xxxxx#xxx missing from...</h3>
 <pre><code>20/02/27 12:11:04 ERROR yarn.ApplicationMaster: User class threw exception: org.apache.spark.sql.AnalysisException: resolved attribute(s) recharge_level#738 missing from app_id#300L,is_parent_channel#336,recharge_level#113,user_id#298L,parent_id#337L,channel_id#257L in operator !Project [user_id#298L, app_id#300L, channel_id#257L, is_parent_channel#336, parent_id#337L, recharge_level#738];;
 Project [app_id#84L, channel_id#80L, is_parent_channel#65, recharge_level#113, dau#412L, channel_user_count#414L, level_in#349L, level_out#360L]
@@ -1282,6 +1397,7 @@ Exchange SinglePartition
 </code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x9519;&#x8BEF;&#x662F;&#x6700;&#x7EC8;&#x4F5C;&#x4E1A;&#x7ED3;&#x675F;&#x65F6;&#x7684;&#x62A5;&#x9519;&#xFF0C;&#x8FC7;&#x7A0B;&#x4E2D;&#x62A5;&#x7684;&#x9519;&#x8BEF;&#x662F;&#xFF1A;</p>
 <pre><code>Exception in thread &quot;broadcast-exchange-1&quot; java.lang.OutOfMemoryError: Not enough memory to build and broadcast the table to all worker nodes.
 </code></pre><p>&#x5947;&#x602A;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x548C;&#x7A7A;&#x7684;dataset&#x8FDB;&#x884C;join&#x4F1A;&#x62A5;&#x8FD9;&#x4E2A;&#x9519;&#x3002;</p>
+<h4 id="spark-sql&#x7684;&#x6267;&#x884C;&#x662F;&#x4F9D;&#x8D56;hive-&#x8868;&#x7684;schema&#x7684;&#xFF0C;&#x867D;&#x7136;hive-&#x8868;&#x662F;&#x8BFB;&#x65F6;&#x6A21;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;spark-sql&#x63D2;&#x5165;hive&#x8868;&#x65F6;&#xFF0C;&#x8FD8;&#x662F;&#x4F1A;&#x9A8C;&#x8BC1;&#x8868;&#x7684;schema&#x3002;">Spark SQL&#x7684;&#x6267;&#x884C;&#x662F;&#x4F9D;&#x8D56;Hive &#x8868;&#x7684;Schema&#x7684;&#xFF0C;&#x867D;&#x7136;Hive &#x8868;&#x662F;&#x8BFB;&#x65F6;&#x6A21;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;Spark SQL&#x63D2;&#x5165;Hive&#x8868;&#x65F6;&#xFF0C;&#x8FD8;&#x662F;&#x4F1A;&#x9A8C;&#x8BC1;&#x8868;&#x7684;Schema&#x3002;</h4>
 <h4 id="spark&#x4E2D;jdbc&#x66F4;&#x65B0;&#x6548;&#x7387;&#x5F88;&#x6162;&#x7684;&#x95EE;&#x9898;">Spark&#x4E2D;JDBC&#x66F4;&#x65B0;&#x6548;&#x7387;&#x5F88;&#x6162;&#x7684;&#x95EE;&#x9898;</h4>
 <p>&#x5E94;&#x8BE5;&#x662F;&#x7D22;&#x5F15;&#x7684;&#x5173;&#x7CFB;&#xFF1B;&#x7ECF;&#x8FC7;&#x5B9E;&#x8DF5;&#xFF1A;&#x6539;&#x4E3A;&#x8054;&#x5408;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x540E;&#xFF0C;Spark&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;update&#xFF08;where&#x6761;&#x4EF6;&#x5C31;&#x662F;&#x8054;&#x5408;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#xFF09;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x5FEB;&#x3002;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x5426;&#x4E0E;&#x9501;&#x6709;&#x5173;&#x3002;Unique&#x9501;&#xFF0C;&#x4F1A;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x53EA;&#x9501;&#x4E00;&#x884C;&#xFF1F;&#x800C;&#x666E;&#x901A;&#x7D22;&#x5F15;&#x4F1A;&#x9501;&#x76F8;&#x540C;&#x7D22;&#x5F15;&#x7684;&#x884C;&#x5417;&#xFF1F;mysql&#x9ED8;&#x8BA4;&#x7684;autocommit&#x4E3A;true&#xFF0C;autocommit&#x4E3A;false&#x624D;&#x4F1A;&#x6709;&#x9501;&#x5417;&#xFF1F;</p>
 <ul>
@@ -1325,6 +1441,9 @@ Exchange SinglePartition
 <h4 id="hive-&#x9501;&#x8868;&#xFF1F;">Hive &#x9501;&#x8868;&#xFF1F;</h4>
 <p><a href="http://www.hplsql.org/home" target="_blank">http://www.hplsql.org/home</a></p>
 <p><strong>Spark application&#x5931;&#x8D25;,&#x4F46;&#x662F;Spark Web UI&#x4ECD;&#x7136;&#x6709;&#x6D3B;&#x8DC3;&#x7684;jobs</strong>&#xFF0C;Yarn application Web UI&#x663E;&#x793A;&#x7684;&#x72B6;&#x6001;&#x662F;Failed&#xFF0C;Spark Web UI&#x7684;bug&#xFF1F;&#xFF1F;</p>
+<h4 id="spark&#x4F7F;&#x7528;todatestr&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x4F7F;&#x7528;substringstr110&#x65E9;&#x4E86;&#x4E00;&#x5929;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;str&#x4E3A;2021-03-01-xxxxxx&#xFF0C;&#x524D;&#x8005;&#x7ED3;&#x679C;2021-02-28&#x3002;&#x5947;&#x602A;&#x4E86;&#x7528;&#x5230;&#x4E86;&#x65F6;&#x533A;&#x5417;&#xFF1F;&#xFF1F;&#xFF1F;&#x8FD8;&#x662F;&#x5C06;todatestr&#x4F5C;&#x4E3A;&#x8FDE;&#x63A5;&#x6761;&#x4EF6;&#x5BFC;&#x81F4;&#x4E86;&#x4EC0;&#x4E48;&#x53D8;&#x5316;&#xFF1F;&#xFF1F;">Spark&#x4F7F;&#x7528;<code>to_date(str)</code>&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x4F7F;&#x7528;<code>substring(str,1,10)</code>&#x65E9;&#x4E86;&#x4E00;&#x5929;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;<code>str</code>&#x4E3A;<code>2021-03-01 xx:xx:xx</code>&#xFF0C;&#x524D;&#x8005;&#x7ED3;&#x679C;<code>2021-02-28</code>&#x3002;&#x5947;&#x602A;&#x4E86;&#x2026;&#x2026;&#x7528;&#x5230;&#x4E86;&#x65F6;&#x533A;&#x5417;&#xFF1F;&#xFF1F;&#xFF1F;&#x8FD8;&#x662F;&#x2026;&#x2026;&#x5C06;<code>to_date(str)</code>&#x4F5C;&#x4E3A;&#x8FDE;&#x63A5;&#x6761;&#x4EF6;&#x5BFC;&#x81F4;&#x4E86;&#x4EC0;&#x4E48;&#x53D8;&#x5316;&#xFF1F;&#xFF1F;</h4>
+<h4 id="spark-structured-streaming&#x7684;&#x8F93;&#x51FA;&#x5EF6;&#x65F6;socket-&#x6570;&#x636E;&#x6E90;&#xFF0C;optionincludetimestamp-true&#xFF0C;&#x4F7F;&#x7528;&#x7A97;&#x53E3;&#x548C;&#x6C34;&#x5370;&#x7684;&#x805A;&#x5408;&#x3002;">Spark Structured Streaming&#x7684;&#x8F93;&#x51FA;&#x5EF6;&#x65F6;socket &#x6570;&#x636E;&#x6E90;&#xFF0C;<code>option(&quot;includeTimestamp&quot;, true)</code>&#xFF0C;&#x4F7F;&#x7528;&#x7A97;&#x53E3;&#x548C;&#x6C34;&#x5370;&#x7684;&#x805A;&#x5408;&#x3002;</h4>
+<p>Spark WebUI &#x6709;&#x65F6;&#x5019;&#x770B;&#x5230;&#x6709;job &#x4E3A; <code>run at ThreadPoolExecutor.java:1149</code> &#xFF0C;&#x4E00;&#x76F4;&#x7591;&#x60D1;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x770B;StackOverflow&#x4E0A;&#x4E00;&#x4E2A;&#x56DE;&#x7B54;&#xFF0C;&#x4F3C;&#x4E4E;&#x662F;Spark join&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x662F; broadcastjoin&#xFF0C;&#x4F1A;&#x8D77;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53D1;&#x9001;&#x6570;&#x636E;&#x5230;executors&#x3002;&#x5927;&#x6982;&#x9700;&#x8981;&#x53D1;&#x9001;&#x6570;&#x636E;&#x5230;&#x5176;&#x4ED6;executors&#x65F6;&#x90FD;&#x4F1A;&#x53D1;&#x751F;&#x5427;&#xFF1F;&#xFF01;</p>
 
                                 
                                 </section>
@@ -1352,12 +1471,12 @@ Exchange SinglePartition
 
             
                 
-                <a href="mllib/xie-tong-guo-lv.html" class="navigation navigation-prev " aria-label="Previous page: 协同过滤">
+                <a href="oozie.html" class="navigation navigation-prev " aria-label="Previous page: Oozie">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="questions/datasetdataframerdd.html" class="navigation navigation-next " aria-label="Next page: DataFrame-Dataset-RDD">
+                <a href="questions/dag-or-something.html" class="navigation navigation-next " aria-label="Next page: Spark框架">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1368,7 +1487,7 @@ Exchange SinglePartition
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"问题记录","level":"1.16","depth":1,"next":{"title":"DataFrame-Dataset-RDD","level":"1.16.1","depth":2,"path":"questions/datasetdataframerdd.md","ref":"questions/datasetdataframerdd.md","articles":[]},"previous":{"title":"协同过滤","level":"1.15.7","depth":2,"path":"mllib/xie-tong-guo-lv.md","ref":"mllib/xie-tong-guo-lv.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"questions.md","mtime":"2021-02-04T09:47:07.216Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-04T09:47:13.100Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"问题记录","level":"1.17","depth":1,"next":{"title":"Spark框架","level":"1.17.1","depth":2,"path":"questions/dag-or-something.md","ref":"questions/dag-or-something.md","articles":[]},"previous":{"title":"Oozie","level":"1.16","depth":1,"path":"oozie.md","ref":"oozie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"questions.md","mtime":"2021-04-30T08:08:50.762Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-30T08:14:52.430Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

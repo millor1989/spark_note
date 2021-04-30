@@ -1,0 +1,1431 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Structured Streaming集成Kafka · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../bu-shu.html" />
+    
+    
+    <link rel="prev" href="structured-streaminghe-spark-streaming.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Spark总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../kuai-su-ru-men.html">
+            
+                <a href="../kuai-su-ru-men.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../sparkbian-cheng-dao-yin.html">
+            
+                <a href="../sparkbian-cheng-dao-yin.html">
+            
+                    
+                    Spark编程导引
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/rdds.html">
+            
+                    
+                    RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                <a href="../sparkbian-cheng-dao-yin/cong-java-scalaqi-dong-spark-jobs.html">
+            
+                    
+                    从Java/Scala启动Spark jobs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../spark-sql.html">
+            
+                <a href="../spark-sql.html">
+            
+                    
+                    Spark SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../spark-sql/getting-started.html">
+            
+                <a href="../spark-sql/getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../spark-sql/shu-ju-yuan.html">
+            
+                <a href="../spark-sql/shu-ju-yuan.html">
+            
+                    
+                    数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../spark-sql/xing-neng-diao-shi.html">
+            
+                <a href="../spark-sql/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                <a href="../spark-sql/fen-bu-shi-sql-yin-qing.html">
+            
+                    
+                    分布式SQL引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                <a href="../spark-sql/yu-apache-hive-de-jian-rong-xing.html">
+            
+                    
+                    与Apache Hive的兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../spark-sql/shu-ju-lei-xing.html">
+            
+                <a href="../spark-sql/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../spark-sql/built-in-functions.html">
+            
+                <a href="../spark-sql/built-in-functions.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../spark-streaming.html">
+            
+                <a href="../spark-streaming.html">
+            
+                    
+                    Spark Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../spark-streaming/ji-ben-gai-nian.html">
+            
+                <a href="../spark-streaming/ji-ben-gai-nian.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../spark-streaming/xing-neng-diao-shi.html">
+            
+                <a href="../spark-streaming/xing-neng-diao-shi.html">
+            
+                    
+                    性能调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../spark-streaming/rong-cuo.html">
+            
+                <a href="../spark-streaming/rong-cuo.html">
+            
+                    
+                    容错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../structured-streaming.html">
+            
+                <a href="../structured-streaming.html">
+            
+                    
+                    Structured Streaming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="shi-yong-datasets-hedataframes-de-api.html">
+            
+                <a href="shi-yong-datasets-hedataframes-de-api.html">
+            
+                    
+                    使用Datasets和DataFrames的API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="structured-streaminghe-spark-streaming.html">
+            
+                <a href="structured-streaminghe-spark-streaming.html">
+            
+                    
+                    Structured Streaming和Spark Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.3" data-path="003.html">
+            
+                <a href="003.html">
+            
+                    
+                    Structured Streaming集成Kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../bu-shu.html">
+            
+                <a href="../bu-shu.html">
+            
+                    
+                    部署和运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../bu-shu/zu-jian-ff08-components.html">
+            
+                <a href="../bu-shu/zu-jian-ff08-components.html">
+            
+                    
+                    组件（Components）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                <a href="../bu-shu/ji-qun-guan-li-qi-lei-xing.html">
+            
+                    
+                    集群管理器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../bu-shu/ti-jiao-ying-yong.html">
+            
+                <a href="../bu-shu/ti-jiao-ying-yong.html">
+            
+                    
+                    提交应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../bu-shu/jian-kong.html">
+            
+                <a href="../bu-shu/jian-kong.html">
+            
+                    
+                    监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在YARN上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../pei-zhi.html">
+            
+                <a href="../pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../pei-zhi/sparkshu-xing.html">
+            
+                <a href="../pei-zhi/sparkshu-xing.html">
+            
+                    
+                    Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/dong-tai-jia-zai-spark-shu-xing.html">
+            
+                    
+                    动态加载Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                <a href="../pei-zhi/cha-kan-spark-shu-xing.html">
+            
+                    
+                    查看Spark属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../diao-shi.html">
+            
+                <a href="../diao-shi.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../extff1a-xing-neng-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/ji-chu-you-hua.html">
+            
+                    
+                    基础优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                <a href="../extff1a-xing-neng-you-hua/gao-ji-you-hua.html">
+            
+                    
+                    高级优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../zai-yarn-shang-yun-xing-spark.html">
+            
+                <a href="../zai-yarn-shang-yun-xing-spark.html">
+            
+                    
+                    在Yarn上运行Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../zuo-ye-diao-du.html">
+            
+                <a href="../zuo-ye-diao-du.html">
+            
+                    
+                    作业调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../an-quan.html">
+            
+                <a href="../an-quan.html">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ying-jian-pei-zhi.html">
+            
+                <a href="../ying-jian-pei-zhi.html">
+            
+                    
+                    硬件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../mllib.html">
+            
+                <a href="../mllib.html">
+            
+                    
+                    MLlib
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../mllib/shu-ju-lei-xing.html">
+            
+                <a href="../mllib/shu-ju-lei-xing.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../mllib/ji-chu-tong-ji.html">
+            
+                <a href="../mllib/ji-chu-tong-ji.html">
+            
+                    
+                    基础统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../mllib/pipelines.html">
+            
+                <a href="../mllib/pipelines.html">
+            
+                    
+                    Pipelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan.html">
+            
+                    
+                    特征的提取、转换和筛选
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-extractors.html">
+            
+                    
+                    Feature Extractors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-tranformers.html">
+            
+                    
+                    Feature Transformers-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-transformers-2.html">
+            
+                    
+                    Feature Transformers-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/feature-selectors.html">
+            
+                    
+                    Feature Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                <a href="../mllib/te-zheng-de-huo-qu-3001-zhuan-huan-he-shai-xuan/locality-sensitive-hashing.html">
+            
+                    
+                    Locality Sensitive Hashing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../mllib/fen-lei-he-hui-gui.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui.html">
+            
+                    
+                    分类和回归
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="../mllib/fen-lei-he-hui-gui/fen-lei.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/fen-lei.html">
+            
+                    
+                    分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="../mllib/fen-lei-he-hui-gui/hui-gui.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/hui-gui.html">
+            
+                    
+                    回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="../mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/xian-xing-fang-fa.html">
+            
+                    
+                    线性方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="../mllib/fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/jue-ce-shu.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="../mllib/fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                <a href="../mllib/fen-lei-he-hui-gui/shu-tuan-ti.html">
+            
+                    
+                    树团体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../mllib/ju-lei.html">
+            
+                <a href="../mllib/ju-lei.html">
+            
+                    
+                    聚类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../mllib/xie-tong-guo-lv.html">
+            
+                <a href="../mllib/xie-tong-guo-lv.html">
+            
+                    
+                    协同过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../oozie.html">
+            
+                <a href="../oozie.html">
+            
+                    
+                    Oozie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../questions.html">
+            
+                <a href="../questions.html">
+            
+                    
+                    问题记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../questions/dag-or-something.html">
+            
+                <a href="../questions/dag-or-something.html">
+            
+                    
+                    Spark框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../questions/004.html">
+            
+                <a href="../questions/004.html">
+            
+                    
+                    Executors数量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../questions/datasetdataframerdd.html">
+            
+                <a href="../questions/datasetdataframerdd.html">
+            
+                    
+                    DataFrame-Dataset-RDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../questions/spark-checkpoint.html">
+            
+                <a href="../questions/spark-checkpoint.html">
+            
+                    
+                    checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../questions/001.html">
+            
+                <a href="../questions/001.html">
+            
+                    
+                    Spark Memory相关问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../questions/002.html">
+            
+                <a href="../questions/002.html">
+            
+                    
+                    数据倾斜和GC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../questions/shu-ju-ben-di-xing.html">
+            
+                <a href="../questions/shu-ju-ben-di-xing.html">
+            
+                    
+                    某个task很慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="../questions/sparkhan-shu.html">
+            
+                <a href="../questions/sparkhan-shu.html">
+            
+                    
+                    Spark函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.9" data-path="../questions/hadoop-1he-hadoop2.html">
+            
+                <a href="../questions/hadoop-1he-hadoop2.html">
+            
+                    
+                    Hadoop 1和Hadoop2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.10" data-path="../questions/broadcast-join.html">
+            
+                <a href="../questions/broadcast-join.html">
+            
+                    
+                    Broadcast Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.11" data-path="../003.md">
+            
+                <span>
+            
+                    
+                    Broadcast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.12" data-path="../questions/implicits.html">
+            
+                <a href="../questions/implicits.html">
+            
+                    
+                    隐式转换与隐式参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Structured Streaming集成Kafka</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="structured-streaming&#x96C6;&#x6210;kafka">Structured Streaming&#x96C6;&#x6210;Kafka</h3>
+<p>&#x652F;&#x6301;Kafka broker&#x7684;&#x7248;&#x672C;&#x4E3A;0.10.0&#x6216;&#x4EE5;&#x4E0A;</p>
+<h4 id="&#x4F9D;&#x8D56;">&#x4F9D;&#x8D56;</h4>
+<p>&#x5BF9;&#x4E8E;&#x4F7F;&#x7528;SBT&#x7684;Scala/Java&#x5E94;&#x7528;&#xFF1A;</p>
+<pre><code>groupId = org.apache.spark
+artifactId = spark-sql-kafka-0-10_2.11
+version = 2.2.0
+</code></pre><h4 id="1&#x3001;&#x4ECE;kafka&#x8BFB;&#x53D6;&#x6570;&#x636E;">1&#x3001;&#x4ECE;Kafka&#x8BFB;&#x53D6;&#x6570;&#x636E;</h4>
+<h5 id="11&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6D41;&#x67E5;&#x8BE2;&#x7684;kafka&#x6570;&#x636E;&#x6E90;">1.1&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6D41;&#x67E5;&#x8BE2;&#x7684;Kafka&#x6570;&#x636E;&#x6E90;</h5>
+<pre><code class="lang-scala"><span class="hljs-comment">// Subscribe to 1 topic</span>
+<span class="hljs-keyword">val</span> df = spark
+  .readStream
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .option(<span class="hljs-string">&quot;subscribe&quot;</span>, <span class="hljs-string">&quot;topic1&quot;</span>)
+  .load()
+df.selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .as[(<span class="hljs-type">String</span>, <span class="hljs-type">String</span>)]
+
+<span class="hljs-comment">// Subscribe to multiple topics</span>
+<span class="hljs-keyword">val</span> df = spark
+  .readStream
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .option(<span class="hljs-string">&quot;subscribe&quot;</span>, <span class="hljs-string">&quot;topic1,topic2&quot;</span>)
+  .load()
+df.selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .as[(<span class="hljs-type">String</span>, <span class="hljs-type">String</span>)]
+
+<span class="hljs-comment">// Subscribe to a pattern</span>
+<span class="hljs-keyword">val</span> df = spark
+  .readStream
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .option(<span class="hljs-string">&quot;subscribePattern&quot;</span>, <span class="hljs-string">&quot;topic.*&quot;</span>)
+  .load()
+df.selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .as[(<span class="hljs-type">String</span>, <span class="hljs-type">String</span>)]
+</code></pre>
+<h5 id="12&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6279;&#x67E5;&#x8BE2;&#x7684;kafka&#x6570;&#x636E;&#x6E90;">1.2&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6279;&#x67E5;&#x8BE2;&#x7684;Kafka&#x6570;&#x636E;&#x6E90;</h5>
+<pre><code class="lang-scala"><span class="hljs-comment">// Subscribe to 1 topic defaults to the earliest and latest offsets</span>
+<span class="hljs-keyword">val</span> df = spark
+  .read
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .option(<span class="hljs-string">&quot;subscribe&quot;</span>, <span class="hljs-string">&quot;topic1&quot;</span>)
+  .load()
+df.selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .as[(<span class="hljs-type">String</span>, <span class="hljs-type">String</span>)]
+
+<span class="hljs-comment">// Subscribe to multiple topics, specifying explicit Kafka offsets</span>
+<span class="hljs-keyword">val</span> df = spark
+  .read
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .option(<span class="hljs-string">&quot;subscribe&quot;</span>, <span class="hljs-string">&quot;topic1,topic2&quot;</span>)
+  .option(<span class="hljs-string">&quot;startingOffsets&quot;</span>, <span class="hljs-string">&quot;&quot;</span><span class="hljs-string">&quot;{&quot;</span>topic1<span class="hljs-string">&quot;:{&quot;</span><span class="hljs-number">0</span><span class="hljs-string">&quot;:23,&quot;</span><span class="hljs-number">1</span><span class="hljs-string">&quot;:-2},&quot;</span>topic2<span class="hljs-string">&quot;:{&quot;</span><span class="hljs-number">0</span><span class="hljs-string">&quot;:-2}}&quot;</span><span class="hljs-string">&quot;&quot;</span>)
+  .option(<span class="hljs-string">&quot;endingOffsets&quot;</span>, <span class="hljs-string">&quot;&quot;</span><span class="hljs-string">&quot;{&quot;</span>topic1<span class="hljs-string">&quot;:{&quot;</span><span class="hljs-number">0</span><span class="hljs-string">&quot;:50,&quot;</span><span class="hljs-number">1</span><span class="hljs-string">&quot;:-1},&quot;</span>topic2<span class="hljs-string">&quot;:{&quot;</span><span class="hljs-number">0</span><span class="hljs-string">&quot;:-1}}&quot;</span><span class="hljs-string">&quot;&quot;</span>)
+  .load()
+df.selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .as[(<span class="hljs-type">String</span>, <span class="hljs-type">String</span>)]
+
+<span class="hljs-comment">// Subscribe to a pattern, at the earliest and latest offsets</span>
+<span class="hljs-keyword">val</span> df = spark
+  .read
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .option(<span class="hljs-string">&quot;subscribePattern&quot;</span>, <span class="hljs-string">&quot;topic.*&quot;</span>)
+  .option(<span class="hljs-string">&quot;startingOffsets&quot;</span>, <span class="hljs-string">&quot;earliest&quot;</span>)
+  .option(<span class="hljs-string">&quot;endingOffsets&quot;</span>, <span class="hljs-string">&quot;latest&quot;</span>)
+  .load()
+df.selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .as[(<span class="hljs-type">String</span>, <span class="hljs-type">String</span>)]
+</code></pre>
+<p>&#x6570;&#x636E;&#x6E90;&#x4E2D;&#x6CA1;&#x4E00;&#x884C;&#x7684;schema&#x4E3A;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>binary</td>
+</tr>
+<tr>
+<td>value</td>
+<td>binary</td>
+</tr>
+<tr>
+<td>topic</td>
+<td>string</td>
+</tr>
+<tr>
+<td>partition</td>
+<td>int</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>long</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>long</td>
+</tr>
+<tr>
+<td>timestampType</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5BF9;&#x4E8E;Kafka&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x6279;&#x67E5;&#x8BE2;&#x8FD8;&#x662F;&#x6D41;&#x67E5;&#x8BE2;&#x90FD;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x5982;&#x4E0B;&#x9009;&#x9879;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>value</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assign</td>
+<td>json&#x5B57;&#x7B26;&#x4E32;{&quot;topicA&quot;:[0,1],&quot;topicB&quot;:[2,4]}</td>
+<td>&#x6307;&#x5B9A;&#x6D88;&#x8D39;&#x7684;&#x4E3B;&#x9898;&#x5206;&#x533A;&#x3002;&#x5BF9;&#x4E8E;Kafka&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x201C;assign&#x201D;&#xFF0C;&#x201C;subscribe&#x201D;&#x6216;&#x201C;subscribePattern&#x201D;&#x4E09;&#x4E2A;&#x9009;&#x9879;&#x53EA;&#x80FD;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x3002;</td>
+</tr>
+<tr>
+<td>subscribe</td>
+<td>&#x9017;&#x53F7;&#x5206;&#x9694;&#x5F97;&#x4E3B;&#x9898;&#x96C6;&#x5408;</td>
+<td>&#x8981;&#x8BA2;&#x9605;&#x7684;&#x4E3B;&#x9898;&#x96C6;&#x5408;&#x3002;&#x5BF9;&#x4E8E;Kafka&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x201C;assign&#x201D;&#xFF0C;&#x201C;subscribe&#x201D;&#x6216;&#x201C;subscribePattern&#x201D;&#x4E09;&#x4E2A;&#x9009;&#x9879;&#x53EA;&#x80FD;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x3002;</td>
+</tr>
+<tr>
+<td>subscribePattern</td>
+<td>Java &#x6B63;&#x5219;&#x5B57;&#x7B26;&#x4E32;</td>
+<td>&#x7528;&#x4E8E;&#x8BA2;&#x9605;&#x4E3B;&#x9898;&#x7684;&#x6A21;&#x5F0F;&#x3002;&#x5BF9;&#x4E8E;Kafka&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x201C;assign&#x201D;&#xFF0C;&#x201C;subscribe&#x201D;&#x6216;&#x201C;subscribePattern&#x201D;&#x4E09;&#x4E2A;&#x9009;&#x9879;&#x53EA;&#x80FD;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x3002;</td>
+</tr>
+<tr>
+<td>kafka.bootstrap.servers</td>
+<td>&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;<code>host:port</code>&#x96C6;&#x5408;</td>
+<td>Kafka &#x201C;bootstrap.servers&#x201D;&#x914D;&#x7F6E;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5982;&#x4E0B;&#x9009;&#x9879;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>value</th>
+<th>default</th>
+<th>&#x67E5;&#x8BE2;&#x7C7B;&#x578B;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>startingOffsets</td>
+<td>&#x201C;earliest&#x201D;&#xFF0C;&#x201C;latest&#x201D;&#xFF08;&#x4EC5;&#x6D41;&#x9002;&#x7528;&#xFF09;&#xFF0C;&#x6216;&#x8005;json&#x5B57;&#x7B26;&#x4E32;{&quot;topicA&quot;:{&quot;0&quot;:23,&quot;1&quot;:-1},&quot;topicB&quot;:{&quot;0&quot;:-2}}</td>
+<td>&#x6D41;&#x67E5;&#x8BE2;&#x201C;latest&#x201D;&#xFF0C;&#x6279;&#x67E5;&#x8BE2;&#x201C;earliest&#x201D;</td>
+<td>&#x6D41;&#x548C;&#x6279;</td>
+<td>&#x542F;&#x52A8;&#x67E5;&#x8BE2;&#x65F6;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x201C;earliest&#x201D;&#x4ECE;&#x6700;&#x65E9;&#x7684;&#x504F;&#x79FB;&#x5F00;&#x59CB;&#xFF0C;&#x201C;latest&#x201D;&#x4ECE;&#x6700;&#x65B0;&#x7684;&#x504F;&#x79FB;&#x5F00;&#x59CB;&#xFF0C;&#x6216;&#x8005;&#x6307;&#x5B9A;&#x4E86;&#x6BCF;&#x4E2A;&#x4E3B;&#x9898;&#x5206;&#x533A;&#x8D77;&#x59CB;&#x504F;&#x79FB;&#x7684;json&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5728;json&#x4E2D;&#xFF0C;-2&#x7528;&#x4F5C;&#x504F;&#x79FB;&#x6307;&#x7684;&#x662F;&#x6700;&#x65E9;&#x7684;&#x504F;&#x79FB;&#xFF0C;-1&#x6307;&#x7684;&#x662F;&#x6700;&#x65B0;&#x7684;&#x504F;&#x79FB;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5BF9;&#x4E8E;&#x6279;&#x67E5;&#x8BE2;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x6700;&#x65B0;&#x7684;&#x504F;&#x79FB;&#x3002;&#x5BF9;&#x4E8E;&#x6D41;&#x67E5;&#x8BE2;&#xFF0C;&#x5F53;&#x65B0;&#x7684;&#x67E5;&#x8BE2;&#x542F;&#x52A8;&#x65F6;&#x8FD9;&#x4E2A;&#x8BBE;&#x7F6E;&#x624D;&#x4F1A;&#x5E94;&#x7528;&#xFF0C;&#x91CD;&#x65B0;&#x5F00;&#x59CB;&#xFF08;resuming&#xFF09;&#x603B;&#x662F;&#x4ECE;&#x67E5;&#x8BE2;&#x79BB;&#x5F00;&#xFF08;left off&#xFF09;&#x7684;&#x5730;&#x65B9;&#x7EE7;&#x7EED;&#x3002;&#x67E5;&#x8BE2;&#x8FC7;&#x7A0B;&#x4E2D;&#x65B0;&#x53D1;&#x73B0;&#x7684;&#x5206;&#x533A;&#x5C06;&#x4ECE;&#x6700;&#x65E9;&#x7684;&#x5F00;&#x59CB;&#x3002;</td>
+</tr>
+<tr>
+<td>endingOffset</td>
+<td>&#x201C;latest&#x201D;&#x6216;&#x8005;json&#x5B57;&#x7B26;&#x4E32;{&quot;topicA&quot;:{&quot;0&quot;:23,&quot;1&quot;:-1},&quot;topicB&quot;:{&quot;0&quot;:-1}}</td>
+<td>&#x201C;latest&#x201D;</td>
+<td>&#x6279;&#x67E5;&#x8BE2;</td>
+<td>&#x6279;&#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x675F;&#x70B9;&#x3002;&#x201C;latest&#x201D;&#x6307;&#x7684;&#x662F;&#x6700;&#x65B0;&#x7684;&#xFF0C;json&#x5B57;&#x7B26;&#x4E32;&#x6307;&#x5B9A;&#x6BCF;&#x4E2A;&#x4E3B;&#x9898;&#x5206;&#x533A;&#x7684;&#x7ED3;&#x675F;&#x504F;&#x79FB;&#x3002;&#x5728;json&#x4E2D;&#xFF0C;-1&#x662F;&#x6307;&#x6700;&#x65B0;&#x7684;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;-2&#xFF08;&#x6700;&#x65E9;&#x7684;&#xFF09;</td>
+</tr>
+<tr>
+<td>failOnDataLoss</td>
+<td>true&#x6216;false</td>
+<td>true</td>
+<td>&#x6D41;&#x67E5;&#x8BE2;</td>
+<td>&#x5F53;&#x6709;&#x53EF;&#x80FD;&#x6570;&#x636E;&#x4E22;&#x5931;&#x4E86;&#x65F6;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x4E3B;&#x9898;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x6216;&#x8005;&#x504F;&#x79FB;&#x8D85;&#x51FA;&#x8303;&#x56F4;&#xFF09;&#xFF0C;&#x5C06;&#x67E5;&#x8BE2;&#x5931;&#x8D25;&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;false&#x62A5;&#x8B66;&#x3002;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x7B26;&#x5408;&#x671F;&#x671B;&#x65F6;&#x5173;&#x95ED;&#x5B83;&#x3002;&#x5BF9;&#x4E8E;&#x6279;&#x67E5;&#x8BE2;&#xFF0C;&#x5982;&#x679C;&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x4E22;&#x5931;&#x5B83;&#x4E0D;&#x80FD;&#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x504F;&#x79FB;&#x8BFB;&#x53D6;&#x5230;&#x6570;&#x636E;&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x5931;&#x8D25;&#x3002;</td>
+</tr>
+<tr>
+<td>kafkaConsumer.pollTimeoutMs</td>
+<td>long</td>
+<td>512</td>
+<td>&#x6D41;&#x6216;&#x6279;</td>
+<td>executors&#x4ECE;Kafka poll&#x6570;&#x636E;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x6BEB;&#x79D2;</td>
+</tr>
+<tr>
+<td>fetchOffset.numRetries</td>
+<td>int</td>
+<td>3</td>
+<td>&#x6D41;&#x6216;&#x6279;</td>
+<td>&#x83B7;&#x53D6;Kafka &#x504F;&#x79FB;&#x7684;&#x91CD;&#x8BD5;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>fetchOffset.retryIntervalMs</td>
+<td>long</td>
+<td>10</td>
+<td>&#x6D41;&#x6216;&#x6279;</td>
+<td>&#x91CD;&#x8BD5;&#x83B7;&#x53D6;Kafka&#x504F;&#x79FB;&#x524D;&#x7B49;&#x5F85;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x6BEB;&#x79D2;</td>
+</tr>
+<tr>
+<td>maxOffsetsPerTrigger</td>
+<td>long</td>
+<td>none</td>
+<td>&#x6D41;&#x6216;&#x6279;</td>
+<td>&#x6BCF;&#x4E2A;&#x89E6;&#x53D1;&#x95F4;&#x9694;&#x5904;&#x7406;&#x7684;&#x6700;&#x5927;&#x504F;&#x79FB;&#x6570;&#x91CF;&#x7684;&#x901F;&#x7387;&#x3002;&#x6307;&#x5B9A;&#x7684;&#x504F;&#x79FB;&#x603B;&#x6570;&#x5C06;&#x5728;&#x4E0D;&#x540C;&#x5BB9;&#x91CF;&#x7684;&#x4E3B;&#x9898;&#x5206;&#x533A;&#x4E4B;&#x95F4;&#x6309;&#x6BD4;&#x4F8B;&#x5206;&#x914D;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2&#x3001;&#x5F80;kafka&#x5199;&#x6570;&#x636E;">2&#x3001;&#x5F80;Kafka&#x5199;&#x6570;&#x636E;</h4>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="structured-streaminghe-spark-streaming.html" class="navigation navigation-prev " aria-label="Previous page: Structured Streaming和Spark Streaming">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../bu-shu.html" class="navigation navigation-next " aria-label="Next page: 部署和运行">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Structured Streaming集成Kafka","level":"1.6.3","depth":2,"next":{"title":"部署和运行","level":"1.7","depth":1,"path":"bu-shu.md","ref":"bu-shu.md","articles":[{"title":"组件（Components）","level":"1.7.1","depth":2,"path":"bu-shu/zu-jian-ff08-components.md","ref":"bu-shu/zu-jian-ff08-components.md","articles":[]},{"title":"集群管理器类型","level":"1.7.2","depth":2,"path":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","ref":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","articles":[]},{"title":"提交应用","level":"1.7.3","depth":2,"path":"bu-shu/ti-jiao-ying-yong.md","ref":"bu-shu/ti-jiao-ying-yong.md","articles":[]},{"title":"监控","level":"1.7.4","depth":2,"path":"bu-shu/jian-kong.md","ref":"bu-shu/jian-kong.md","articles":[]},{"title":"作业调度","level":"1.7.5","depth":2,"path":"zuo-ye-diao-du.md","ref":"zuo-ye-diao-du.md","articles":[]},{"title":"在YARN上运行Spark","level":"1.7.6","depth":2,"path":"zai-yarn-shang-yun-xing-spark.md","ref":"zai-yarn-shang-yun-xing-spark.md","articles":[]}]},"previous":{"title":"Structured Streaming和Spark Streaming","level":"1.6.2","depth":2,"path":"structured-streaming/structured-streaminghe-spark-streaming.md","ref":"structured-streaming/structured-streaminghe-spark-streaming.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"structured-streaming/003.md","mtime":"2021-03-29T09:41:51.927Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-30T08:14:52.430Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
