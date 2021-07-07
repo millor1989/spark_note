@@ -12,7 +12,9 @@ Spark 2.0之前，Spark主要的编程接口是RDD（Resillient Distributed Data
 ./bin/spark-shell
 ```
 
-Spark Shell有一些可用的选项，比如，“--jars &lt;comma seperated jar-pathes&gt;”添加jar文件，通过“--help”可以查看可用选项列表。
+Spark Shell有一些可用的选项，比如，“--jars &lt;comma seperated jar-pathes&gt;”添加jar文件，通过“--help”可以查看可用选项列表。其中，启动 Spark Shell 时，`--deploy-mode` 只能是`client`，即使设置为`cluster` 也是没用的。
+
+进入Spark shell 交互模式后，输入`:help` 命令可以查看帮助选项。
 
 Spark的主要抽象概念是一个叫做Dataset的分布式的数据集合。Datasets可以通过Hadoop InputFormats（例如HDFS文件）或者通过转换其它Datasets创建。
 
@@ -92,6 +94,10 @@ res8: Long = 15
 scala> linesWithSpark.count()
 res9: Long = 15
 ```
+
+#### 1.4、其它
+
+在 YARN 集群中的某台机器启动 Spark Shell 后，YARN 资源管理器 Web UI 界面中可以看到名为 `Spark shell` 的应用。可以跳转到对应的 Spark Web UI 查看 Spark Shell 中命令的执行过程。（使用时发现，启动Spark shell时，好像指定指定executor核心和executor个数参数没起作用，都是一个driver，两个 executor）。
 
 ### 2、Self-Contained Applications
 

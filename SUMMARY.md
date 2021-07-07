@@ -58,7 +58,7 @@
     * [树团体](mllib/fen-lei-he-hui-gui/shu-tuan-ti.md)
   * [聚类](mllib/ju-lei.md)
   * [协同过滤](mllib/xie-tong-guo-lv.md)
-* [Oozie](oozie.md)
+* [数据分析](data-analyse.md)
 * [问题记录](questions.md)
   * [Spark框架](questions/dag-or-something.md) 
   * [Executors数量](questions/004.md)
