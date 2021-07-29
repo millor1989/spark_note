@@ -442,6 +442,11 @@ org.apache.spark.sql.AnalysisException: Can only write data to relations with a 
 
 [http://www.hplsql.org/home](http://www.hplsql.org/home)
 
+```sql
+show locks
+unlock table <table_name>
+```
+
 **Spark application失败,但是Spark Web UI仍然有活跃的jobs**，Yarn application Web UI显示的状态是Failed，Spark Web UI的bug？？
 
 #### Spark使用`to_date(str)`函数，比使用`substring(str,1,10)`早了一天，例如，`str`为`2021-03-01 xx:xx:xx`，前者结果`2021-02-28`。奇怪了……用到了时区吗？？？还是……将`to_date(str)`作为连接条件导致了什么变化？？
@@ -449,3 +454,21 @@ org.apache.spark.sql.AnalysisException: Can only write data to relations with a 
 #### Spark Structured Streaming的输出延时socket 数据源，`option("includeTimestamp", true)`，使用窗口和水印的聚合。
 
 Spark WebUI 有时候看到有job 为 `run at ThreadPoolExecutor.java:1149` ，一直疑惑是什么，看StackOverflow上一个回答，似乎是Spark join时，如果是 broadcastjoin，会起一个线程发送数据到executors。大概需要发送数据到其他executors时都会发生吧？！
+
+#### collect_set、collect_list
+
+如果分组元素都是 `null`，它们返回的结果是空的集合，而不是 `null`。
+
+#### Dataset 的 `repartition()`
+
+**df `repration()` 之后保存为parquet格式的hive表**，大小比不执行 `repartition()`会变大很多（之前 60M 之后209M），不知道是不是因为 `repartion()` 操作按照 roundrobin 的方式重新为混洗之后的数据进行分区，导致数据不够紧凑，从而导致 Parquet 编码后的文件占用空间变大。
+
+缺省参数的`repartion()` 是 `RoundRobinPartitioning`，当指定的分区列（列类型应该为 `nonSortOrder` 类型）时执行的是 `HashPartitioning`。
+
+`repartitionByRange(numPartitions:Int, partitionExprs: Column*)` 分区列为 `SortOrder` 类型，执行的是 `RangePartitioning`。
+
+`repartition` 缺省的分区数量为 `spark.sql.shuffle.partitions`。
+
+#### `spark.sql.adaptive.enabled`
+
+启用该[配置](https://help.aliyun.com/document_detail/93157.html)，[自适应混洗分区个数](https://support-it.huawei.com/docs/en-us/fusioninsight-all/fusioninsight_hd_6.5.1_documentation/en-us_topic_0176046027.html)后，spark.sql("insert overwrite table ....") 会产生多个 job，而不启用该配置则只有一个job。不知道为什么……

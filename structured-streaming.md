@@ -39,7 +39,7 @@ val query = wordCounts.writeStream
 query.awaitTermination()
 ```
 
-其中DataFrame `lines`代表一个包含流式文本数据的无边界表（unbounded table）。使用`.as[String]`将DataFrame转换为String的Dataset。通过`groupBy.count()`计算了Dataset中唯一值得数量，使用`outputMode("complete")`，在每次有更新时，把完整的结果输出到控制台。使用`start()`启动流应用。代码执行后，流运算会在后台启动。`query`对象是活跃的流查询的句柄，用它调用`awaitTermination()`来防止在查询活跃时进程退出。
+其中DataFrame `lines`代表一个包含流式文本数据的无边界表（unbounded table）。使用`.as[String]`将DataFrame （`readStream` 从 socket 数据源读取的输入为只有一列名为 `value` 类型为 `binary` 的 DataFrame）转换为String的Dataset。通过`groupBy.count()`计算了Dataset中唯一值得数量，使用`outputMode("complete")`，在每次有更新时，把完整的结果输出到控制台。使用`start()`启动流应用。代码执行后，流运算会在后台启动。`query`对象是活跃的流查询的句柄，用它调用`awaitTermination()`来防止在查询活跃时进程退出。
 
 运行程序，分别往端口`9999`发送如下字符：
 
@@ -74,6 +74,18 @@ Batch: 1
 ```
 
 可见，程序执行的结果是，所有批次输入的汇总。
+
+本地环境（`SparkSession.builder.master("local[xx]")`）运行该例子时，可以将 SparkSession 的参数 `spark.default.parallelism` 和 `spark.sql.shuffle.partitions` 设置为 `1` 以加快运行速度，使用 默认值 `200` 运行时会很慢。
+
+默认情况下，只要有新的数据到达就会触发计算并输出，可以通过触发器 `trigger` 来控制触发计算的时间间隔：
+
+```scala
+wordCounts.writeStream
+  .outputMode("complete")
+  .format("console")
+  .trigger(Trigger.ProcessingTime(5000))// 5s 触发一次
+  .start()
+```
 
 #### 3、编程模型
 
