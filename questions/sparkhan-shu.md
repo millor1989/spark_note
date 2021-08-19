@@ -28,7 +28,7 @@
 
 如果要达到`col1`为`NULL`时返回`col2`的目的，可以使用`coalesce(e: Column*)`函数，或者使用hive SQL的`NVL(col1,col2)`替换`nanvl`。
 
-#### `split`函数——换行
+#### `split` 函数——换行
 
 文本里面包含换行，也会在换行处进行切分，不管切分的pattern是否是换行符。奇怪……hive、和spark sql都是这样……
 
@@ -42,3 +42,41 @@ User class threw exception: org.apache.spark.sql.AnalysisException: cannot resol
 
 Spark将其识别为数组`array<struct<c0:string>>`。是Spark对类型进行了隐式转换吗？
 
+#### collect_set、collect_list
+
+如果分组元素都是 `null`，它们返回的结果是空的集合，而不是 `null`。
+
+#### 如果函数的返回结果不是一个单纯的列，那么不能对函数结果直接进行解析等操作
+
+否则会报错 ：
+
+```
+Generators are not supported when it's nested in expressions
+```
+
+如下代码会报错，因为 `json_tuple` 返回的不是单纯的一列，可能是多列：
+
+```scala
+df.select(
+    from_json(
+        json_tuple('value.cast("string"), "data").as("data"),
+        msgDataSchema
+    ).as("data")
+)
+```
+
+具体报错为：
+
+```
+org.apache.spark.sql.AnalysisException: Generators are not supported when it's nested in expressions, but got: jsontostructs(json_tuple(CAST(value AS STRING), data
+) AS `data`);
+```
+
+多一层`select`处理后就可以正常执行了：
+
+```
+df.select(json_tuple('value.cast("string"), "data").as("data"))
+      .select(from_json('data, msgDataSchema).as("data"))
+```
+
+类似 `json_tuple`，`explode` 也可能引发这个错。

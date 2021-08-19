@@ -189,7 +189,7 @@ CollectLimit 10
 +- LocalTableScan [id#3]
 ```
 
-## Spark的Accept状态，都在做什么？只是等待资源？为什么会等待很久——几个小时？大概是等资源吧。
+### Spark的Accept状态，都在做什么？只是等待资源？为什么会等待很久——几个小时？大概是等资源吧。
 
 Accept状态时是在执行初始化SparkSession之前的代码，以及分配资源进行SparkSession的初始化。
 
@@ -455,10 +455,6 @@ unlock table <table_name>
 
 Spark WebUI 有时候看到有job 为 `run at ThreadPoolExecutor.java:1149` ，一直疑惑是什么，看StackOverflow上一个回答，似乎是Spark join时，如果是 broadcastjoin，会起一个线程发送数据到executors。大概需要发送数据到其他executors时都会发生吧？！
 
-#### collect_set、collect_list
-
-如果分组元素都是 `null`，它们返回的结果是空的集合，而不是 `null`。
-
 #### Dataset 的 `repartition()`
 
 **df `repration()` 之后保存为parquet格式的hive表**，大小比不执行 `repartition()`会变大很多（之前 60M 之后209M），不知道是不是因为 `repartion()` 操作按照 roundrobin 的方式重新为混洗之后的数据进行分区，导致数据不够紧凑，从而导致 Parquet 编码后的文件占用空间变大。
@@ -472,3 +468,13 @@ Spark WebUI 有时候看到有job 为 `run at ThreadPoolExecutor.java:1149` ，�
 #### `spark.sql.adaptive.enabled`
 
 启用该[配置](https://help.aliyun.com/document_detail/93157.html)，[自适应混洗分区个数](https://support-it.huawei.com/docs/en-us/fusioninsight-all/fusioninsight_hd_6.5.1_documentation/en-us_topic_0176046027.html)后，spark.sql("insert overwrite table ....") 会产生多个 job，而不启用该配置则只有一个job。不知道为什么……
+
+#### `spark-submit` 的 `--jars` 指定 jar 包的优先级
+
+似乎是 `--jars` 中先指定的 jar 包优先级高；遇到的情况是——先制定了高版本的 mysql-connector jar，后指定的 shaded jar 中包含了低版本的 mysql-connector jar，生效的是高版本的 mysql-connector jar；如果调换二者顺序生效的就是低版本的 mysql-connector jar。
+
+#### Spark 修改 Hive 表内容，Impala 能查到最新的结果，但是 Hive 查到的是修改前的结果！！
+
+原因不明……具体操作是增加了 Hive 表字段。
+
+#### `sparksession.sql("insert overwrite table ...")` 返回结果是空的 DataFrame。

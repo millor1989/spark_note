@@ -1,4 +1,4 @@
-### API使用Datasets和DataFrames
+### 使用Datasets和DataFrames的API
 
 从Spark 2.0开始，DataFrames和Datasets可以表示静态的有边界的数据，也可以表示流、无边界的数据。与静态Datasets/DataFrames类似，可以使用通用的入口`SparkSession`来从流数据源创建流DataFrames/Datasets，并且可以对它们应用与静态DataFrames/Datasets相同的操作。
 
@@ -12,9 +12,9 @@ Spark 2.0中，有一些内置的数据源：
 
 - **File source**：将写到一个目录中的文件读取为一个数据的流。支持的文件格式有：text、csv、json、parquet。可以通过`DataStreamReader`接口的文档来查看最新支持的格式，和每个格式支持的options。注意，文件必须原子性地放在指定的目录中，在大多数的文件系统中，可以通过文件移动操作实现原子性。
 
-  文件数据源是容错的；支持的选项有`path`（输入目录路径）、`maxFilesPerTrigger`（每次触发考虑的新文件的最大数量，默认没有最大数量限制）、`latestFirst`（是否首先处理最新的文件，默认false，在处理大量文件时是有用的）、`fileNameOnly`（是否只基于文件名而不是全路径来检查新的文件，默认false，如果设置为true，则只考虑文件名，比如，此时` "file:///dataset.txt"`和` "s3://a/dataset.txt"`是相同的）。
+  文件数据源是容错的；支持的选项有`path`（输入**目录**路径）、`maxFilesPerTrigger`（每次触发考虑的新文件的最大数量，默认没有最大数量限制）、`latestFirst`（是否首先处理最新的文件，默认false，在处理大量文件时是有用的）、`fileNameOnly`（是否只基于文件名而不是全路径来检查新的文件，默认false，如果设置为true，则只考虑文件名，比如，此时` "file:///dataset.txt"`和` "s3://a/dataset.txt"`是相同的）。
 
-  文件数据源支持通配符路径，但是不支持逗号分隔得多路径。
+  文件数据源支持通配符路径，但是不支持逗号分隔的多路径。
 
 - **Kafka source**：从Kafka获取数据，参考集成Kafka章节。兼容0.10.0和更高版本的Kafka broker。Kafka数据源是容错的。
 
@@ -459,7 +459,7 @@ spark.streams.addListener(new StreamingQueryListener() {
 
 ### 使用Checkpointing从故障中恢复
 
-使用checkpointing和write ahead logs，在故障或故意的关闭时，可以恢复之前查询的进度和状态，并且继续执行。可以为查询配置一个checkpoint位置，查询会把所有的进度信息（即，每次触发处理的偏移量范围）和运行中的聚合（比如，之前例子中的单词计数）保存到checkpoint位置。checkpoint位置必须是一个兼容HDFS的文件系统，当查询启动时要在`DataStreamWriter`中的选项中设置checkpoint位置。
+使用checkpointing和write ahead logs，在故障或故意的关闭时，可以恢复之前查询的进度和状态，并且继续执行。可以为查询配置一个checkpoint位置，查询会把所有的进度信息（即，每次触发处理的偏移量范围）和运行中的聚合（比如，之前例子中的单词计数）保存到checkpoint位置。checkpoint 位置必须是一个兼容HDFS的文件系统，当查询启动时要在`DataStreamWriter`中的选项中设置 checkpoint 位置。
 
 ```scala
 aggDF
@@ -470,3 +470,4 @@ aggDF
   .start()
 ```
 
+`checkpointLocation` 是一个目录，如果 `option("checkpointLocation", "hdfs://nameservice/user/hdfs/checkpoints/rcevf")`指定目录不存在，Spark 会自动创建目录。

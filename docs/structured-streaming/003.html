@@ -1064,9 +1064,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.11" data-path="../003.md">
+        <li class="chapter " data-level="1.17.11" data-path="../questions/003.html">
             
-                <span>
+                <a href="../questions/003.html">
             
                     
                     Broadcast
@@ -1083,6 +1083,19 @@
             
                     
                     隐式转换与隐式参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.13" data-path="../questions/sss.html">
+            
+                <a href="../questions/sss.html">
+            
+                    
+                    Structured Streaming
             
                 </a>
             
@@ -1349,6 +1362,84 @@ df.selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, 
 </tbody>
 </table>
 <h4 id="2&#x3001;&#x5F80;kafka&#x5199;&#x6570;&#x636E;">2&#x3001;&#x5F80;Kafka&#x5199;&#x6570;&#x636E;</h4>
+<p>&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x5C06; Streaming Queries &#x548C; Batch Queries &#x5199;&#x5230; Apache Kafka&#x3002;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;Apache Kafka &#x53EA;&#x652F;&#x6301;&#x81F3;&#x5C11;&#x4E00;&#x6B21;&#xFF08;at least once&#xFF09;&#x7684;&#x5199;&#x8BED;&#x4E49;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5F53;&#x5199;&#x5165; Kafka &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x65E0;&#x8BBA;&#x662F; Streaming &#x8FD8;&#x662F; Batch&#xFF0C;&#x6709;&#x4E9B;&#x8BB0;&#x5F55;&#x53EF;&#x80FD;&#x4F1A;&#x91CD;&#x590D;&#xFF1B;&#x6BD4;&#x5982;&#xFF0C;&#x5F53; Kafka &#x91CD;&#x8BD5;&#x6CA1;&#x6709;&#x88AB; Kafka Broker &#x786E;&#x8BA4;&#xFF08;acknowledged&#xFF09;&#x7684;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x5373;&#x4F7F;&#x90A3;&#x4E2A; Kafka Broker &#x5DF2;&#x7ECF;&#x63A5;&#x6536;&#x5230;&#x5E76;&#x5199;&#x8FC7;&#x8FD9;&#x6761;&#x6D88;&#x606F;&#xFF0C;&#x8FD8;&#x662F;&#x4F1A;&#x53D1;&#x751F;&#x91CD;&#x590D;&#x3002;Structured Streaming &#x4E0D;&#x80FD;&#x9632;&#x6B62;&#x8FD9;&#x4E9B;&#x91CD;&#x590D;&#x7684;&#x53D1;&#x751F;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x662F; Kafka &#x7684;&#x5199;&#x5165;&#x8BED;&#x4E49;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x5982;&#x679C;&#x67E5;&#x8BE2;&#x5199;&#x5165;&#x6210;&#x529F;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x67E5;&#x8BE2;&#x8F93;&#x51FA;&#x88AB;&#x81F3;&#x5C11;&#x4E00;&#x6B21;&#x5730;&#x5199;&#x8FC7;&#x4E86;&#x3002;&#x4E00;&#x4E2A;&#x79FB;&#x9664;&#x91CD;&#x590D;&#x8BB0;&#x5F55;&#x7684;&#x53EF;&#x80FD;&#x65B9;&#x6848;&#x662F;&#xFF0C;&#x5F53;&#x8BFB;&#x53D6;&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x8FDB;&#x884C;&#x8BFB;&#x65F6;&#x7684;&#x53BB;&#x91CD;&#x3002;</p>
+<p>&#x5199;&#x5230; Kafka &#x7684; DataFrame schema &#x5E94;&#x8BE5;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x5217;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key&#xFF08;&#x53EF;&#x9009;&#x7684;&#xFF09;</td>
+<td>string or binary</td>
+</tr>
+<tr>
+<td>value&#xFF08;&#x5FC5;&#x987B;&#x7684;&#xFF09;</td>
+<td>string or binary</td>
+</tr>
+<tr>
+<td>topic&#xFF08;&#x203B; &#x53EF;&#x9009;&#x7684;&#xFF09;</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p>&#x203B; &#x5982;&#x679C;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x4E2D;&#x6CA1;&#x6709;&#x6307;&#x5B9A; &#x201C;topic&#x201D;&#xFF0C;&#x90A3;&#x4E48; <code>topic</code> &#x5217;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x3002;</p>
+<p><code>value</code> &#x5217;&#x662F;&#x552F;&#x4E00;&#x5FC5;&#x9700;&#x7684;&#x3002;&#x5982;&#x679C; <code>key</code> &#x5217;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x503C;&#x4E3A; <code>null</code> &#x7684;&#x5217;&#xFF08;&#x53EF;&#x4EE5;&#x67E5;&#x770B; Kafka &#x8BED;&#x4E49;&#x6765;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x5904;&#x7406;&#x503C;&#x4E3A; <code>null</code> &#x7684; <code>key</code>&#xFF09;&#x3002;&#x5982;&#x679C;&#x5B58;&#x5728; <code>topic</code> &#x5217;&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684; <code>topic</code> &#x6765;&#x5199;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F; &#x201C;topic&#x201D; &#x914D;&#x7F6E;&#x4F1A;&#x8986;&#x76D6;DataFrame&#x7684; <code>topic</code> &#x5217;&#x3002;</p>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x6279;&#x67E5;&#x8BE2;&#x8FD8;&#x662F;&#x6D41;&#x67E5;&#x8BE2;&#x90FD;&#x5FC5;&#x987B;&#x6307;&#x5B9A; <code>kafka.bootstrap.servers</code> &#x9009;&#x9879;&#x3002;</p>
+<h5 id="21&#x3001;&#x4E3A;&#x6D41;&#x67E5;&#x8BE2;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;-kafka-sink">2.1&#x3001;&#x4E3A;&#x6D41;&#x67E5;&#x8BE2;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Kafka Sink</h5>
+<pre><code class="lang-scala"><span class="hljs-comment">// Write key-value data from a DataFrame to a specific Kafka topic specified in an option</span>
+<span class="hljs-keyword">val</span> ds = df
+  .selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .writeStream
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .option(<span class="hljs-string">&quot;topic&quot;</span>, <span class="hljs-string">&quot;topic1&quot;</span>)
+  .start()
+
+<span class="hljs-comment">// Write key-value data from a DataFrame to Kafka using a topic specified in the data</span>
+<span class="hljs-keyword">val</span> ds = df
+  .selectExpr(<span class="hljs-string">&quot;topic&quot;</span>, <span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .writeStream
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .start()
+</code></pre>
+<h5 id="22&#x3001;&#x5C06;&#x6279;&#x67E5;&#x8BE2;&#x8F93;&#x51FA;&#x5199;&#x5230;-kafka">2.2&#x3001;&#x5C06;&#x6279;&#x67E5;&#x8BE2;&#x8F93;&#x51FA;&#x5199;&#x5230; Kafka</h5>
+<pre><code class="lang-scala"><span class="hljs-comment">// Write key-value data from a DataFrame to a specific Kafka topic specified in an option</span>
+df.selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .write
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .option(<span class="hljs-string">&quot;topic&quot;</span>, <span class="hljs-string">&quot;topic1&quot;</span>)
+  .save()
+
+<span class="hljs-comment">// Write key-value data from a DataFrame to Kafka using a topic specified in the data</span>
+df.selectExpr(<span class="hljs-string">&quot;topic&quot;</span>, <span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, <span class="hljs-string">&quot;CAST(value AS STRING)&quot;</span>)
+  .write
+  .format(<span class="hljs-string">&quot;kafka&quot;</span>)
+  .option(<span class="hljs-string">&quot;kafka.bootstrap.servers&quot;</span>, <span class="hljs-string">&quot;host1:port1,host2:port2&quot;</span>)
+  .save()
+</code></pre>
+<h4 id="3&#x3001;kakfa-&#x4E13;&#x7528;&#x914D;&#x7F6E;">3&#x3001;Kakfa &#x4E13;&#x7528;&#x914D;&#x7F6E;</h4>
+<p>&#x901A;&#x8FC7; <code>DataStreamReader.option</code> &#x52A0;&#x4E0A; <code>kafka.</code> &#x524D;&#x7F00;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Kafka &#x81EA;&#x6709;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x6BD4;&#x5982; <code>sream.option(&quot;kafak.bootstrap.servers&quot;, &quot;host:port&quot;)</code>&#x3002;&#x53EF;&#x4EE5;&#x7528;&#x7684; Kafka &#x53C2;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x67E5;&#x770B; Kafka &#x6D88;&#x8D39;&#x8005;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x6587;&#x6863;&#xFF0C;&#x5BF9;&#x4E8E;&#x5199;&#x6570;&#x636E;&#x67E5;&#x770B; Kafka &#x751F;&#x4EA7;&#x8005;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;<strong>&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B; Kafka &#x53C2;&#x6570;</strong>&#xFF0C;&#x5426;&#x5219; Kafka Source &#x6216;&#x8005; Sink &#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF1A;</p>
+<ul>
+<li><code>group.id</code>&#xFF1A;Kafka source &#x4F1A;&#x81EA;&#x52A8;&#x5730;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684; group id</li>
+<li><code>auto.offset.reset</code>&#xFF1A;&#x4F7F;&#x7528; <code>startingOffsets</code> &#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x6E90;&#x9009;&#x9879;&#x6765;&#x51B3;&#x5B9A;&#x4ECE;&#x54EA;&#x91CC;&#x5F00;&#x59CB;&#x6D88;&#x8D39;&#x3002;Structrued Streaming &#x5185;&#x90E8;&#x4F1A;&#x7BA1;&#x7406;&#x6D88;&#x8D39;&#x8FC7;&#x54EA;&#x4E9B;&#x504F;&#x79FB;&#xFF0C;&#x4E0D;&#x4F9D;&#x8D56; Kafka &#x6D88;&#x8D39;&#x8005;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;&#x8FD9;&#x6837;&#x80FD;&#x591F;&#x786E;&#x4FDD;&#x5728;&#x52A8;&#x6001;&#x5730;&#x8BA2;&#x9605;&#x65B0;&#x7684; topics/partitions &#x65F6;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x6570;&#x636E;&#x3002;&#x6CE8;&#x610F;&#xFF0C;<code>startingOffsets</code> &#x53EA;&#x7528;&#x4E8E;&#x65B0;&#x7684;&#x6D41;&#x67E5;&#x8BE2;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x518D;&#x6B21;&#x63D0;&#x4EA4;&#x65F6;&#x5C06;&#x603B;&#x662F;&#x4ECE;&#x67E5;&#x8BE2;&#x4E0A;&#x6B21;&#x79BB;&#x5F00;&#x7684;&#x5730;&#x65B9;&#x5F00;&#x59CB;&#x6D88;&#x8D39;&#x3002;</li>
+<li><code>key.deserializer</code>&#xFF1A;&#x603B;&#x662F;&#x4F7F;&#x7528; <code>ByteArrayDeserializer</code> &#x5C06; Keys &#x53CD;&#x5E8F;&#x5217;&#x5316;&#x4E3A;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x3002;&#x4F7F;&#x7528; DataFrame &#x64CD;&#x4F5C;&#x6765;&#x660E;&#x786E;&#x5730;&#x53CD;&#x5E8F;&#x5217;&#x5316; keys&#x3002;</li>
+<li><code>value.deserializer</code>&#xFF1A;&#x603B;&#x662F;&#x4F7F;&#x7528; <code>ByteArrayDeserializer</code> &#x5C06; values &#x53CD;&#x5E8F;&#x5217;&#x5316;&#x4E3A;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x3002;&#x4F7F;&#x7528; DataFrame &#x64CD;&#x4F5C;&#x6765;&#x660E;&#x786E;&#x5730;&#x53CD;&#x5E8F;&#x5217;&#x5316; values&#x3002;</li>
+<li><code>key.serializer</code>&#xFF1A;&#x603B;&#x662F;&#x4F7F;&#x7528; <code>ByteArraySerializer</code> &#x6216; <code>StringSerializer</code> &#x6765;&#x5E8F;&#x5217;&#x5316; Keys&#x3002;&#x4F7F;&#x7528; DataFrame &#x64CD;&#x4F5C;&#x6765;&#x660E;&#x786E;&#x5730;&#x5C06; keys &#x5E8F;&#x5217;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x3002;</li>
+<li><code>value.serializer</code>&#xFF1A;&#x603B;&#x662F;&#x4F7F;&#x7528; <code>ByteArraySerializer</code> &#x6216; <code>StringSerializer</code> &#x6765;&#x5E8F;&#x5217;&#x5316; Values&#x3002;&#x4F7F;&#x7528; DataFrame &#x64CD;&#x4F5C;&#x6765;&#x660E;&#x786E;&#x5730;&#x5C06; values &#x5E8F;&#x5217;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x3002;</li>
+<li><code>enable.auto.commit</code>&#xFF1A;Kafka &#x6570;&#x636E;&#x6E90;&#x4E0D;&#x4F1A;&#x63D0;&#x4EA4;&#x4EFB;&#x4F55;&#x504F;&#x79FB;&#x91CF;&#x3002;&#x6B63;&#x56E0;&#x5982;&#x6B64;&#xFF0C;&#x4F7F;&#x7528; Kafka &#x547D;&#x4EE4; <code>kafka-consumer-groups --describe --bootstrap-server 172.16.1.111:9092 --group &lt;group-id&gt;</code> &#x6765;&#x67E5;&#x770B; Structured Streaming &#x7684; Kafka &#x6D88;&#x8D39;&#x8FDB;&#x5EA6;&#x65F6;&#xFF0C;&#x662F;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x3002;</li>
+<li><code>interceptor.classes</code>&#xFF1A;Kafka &#x6570;&#x636E;&#x6E90;&#x603B;&#x662F;&#x5C06; keys &#x548C; values &#x8BFB;&#x53D6;&#x4E3A;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#x3002;&#x4F7F;&#x7528; <code>ConsumerInterceptor</code> &#x662F;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x80FD;&#x4F1A;&#x6253;&#x65AD;&#x67E5;&#x8BE2;&#x3002;</li>
+</ul>
+<h4 id="4&#x3001;&#x90E8;&#x7F72;">4&#x3001;&#x90E8;&#x7F72;</h4>
+<p>&#x5C31;&#x50CF; Spark &#x5E94;&#x7528;&#x4E00;&#x6837;&#xFF0C;&#x4F7F;&#x7528; <code>spark-submit</code> &#x6765;&#x63D0;&#x4EA4;&#x5E94;&#x7528;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>--packages</code> &#x5C06; <code>spark-sql-kafka-0-10_2.11</code> &#x548C;&#x5B83;&#x7684;&#x4F9D;&#x8D56;&#x6DFB;&#x52A0;&#x5230; <code>spark-submit</code>&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-shell">./bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.2.0 ...
+</code></pre>
 
                                 
                                 </section>
@@ -1392,7 +1483,7 @@ df.selectExpr(<span class="hljs-string">&quot;CAST(key AS STRING)&quot;</span>, 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Structured Streaming集成Kafka","level":"1.6.3","depth":2,"next":{"title":"部署和运行","level":"1.7","depth":1,"path":"bu-shu.md","ref":"bu-shu.md","articles":[{"title":"组件（Components）","level":"1.7.1","depth":2,"path":"bu-shu/zu-jian-ff08-components.md","ref":"bu-shu/zu-jian-ff08-components.md","articles":[]},{"title":"集群管理器类型","level":"1.7.2","depth":2,"path":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","ref":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","articles":[]},{"title":"提交应用","level":"1.7.3","depth":2,"path":"bu-shu/ti-jiao-ying-yong.md","ref":"bu-shu/ti-jiao-ying-yong.md","articles":[]},{"title":"监控","level":"1.7.4","depth":2,"path":"bu-shu/jian-kong.md","ref":"bu-shu/jian-kong.md","articles":[]},{"title":"作业调度","level":"1.7.5","depth":2,"path":"zuo-ye-diao-du.md","ref":"zuo-ye-diao-du.md","articles":[]},{"title":"在YARN上运行Spark","level":"1.7.6","depth":2,"path":"zai-yarn-shang-yun-xing-spark.md","ref":"zai-yarn-shang-yun-xing-spark.md","articles":[]}]},"previous":{"title":"Structured Streaming和Spark Streaming","level":"1.6.2","depth":2,"path":"structured-streaming/structured-streaminghe-spark-streaming.md","ref":"structured-streaming/structured-streaminghe-spark-streaming.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"structured-streaming/003.md","mtime":"2021-07-15T02:58:58.221Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-29T03:02:39.343Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Structured Streaming集成Kafka","level":"1.6.3","depth":2,"next":{"title":"部署和运行","level":"1.7","depth":1,"path":"bu-shu.md","ref":"bu-shu.md","articles":[{"title":"组件（Components）","level":"1.7.1","depth":2,"path":"bu-shu/zu-jian-ff08-components.md","ref":"bu-shu/zu-jian-ff08-components.md","articles":[]},{"title":"集群管理器类型","level":"1.7.2","depth":2,"path":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","ref":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","articles":[]},{"title":"提交应用","level":"1.7.3","depth":2,"path":"bu-shu/ti-jiao-ying-yong.md","ref":"bu-shu/ti-jiao-ying-yong.md","articles":[]},{"title":"监控","level":"1.7.4","depth":2,"path":"bu-shu/jian-kong.md","ref":"bu-shu/jian-kong.md","articles":[]},{"title":"作业调度","level":"1.7.5","depth":2,"path":"zuo-ye-diao-du.md","ref":"zuo-ye-diao-du.md","articles":[]},{"title":"在YARN上运行Spark","level":"1.7.6","depth":2,"path":"zai-yarn-shang-yun-xing-spark.md","ref":"zai-yarn-shang-yun-xing-spark.md","articles":[]}]},"previous":{"title":"Structured Streaming和Spark Streaming","level":"1.6.2","depth":2,"path":"structured-streaming/structured-streaminghe-spark-streaming.md","ref":"structured-streaming/structured-streaminghe-spark-streaming.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"structured-streaming/003.md","mtime":"2021-08-18T02:15:58.377Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-19T08:52:23.583Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
