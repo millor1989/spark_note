@@ -80,3 +80,24 @@ df.select(json_tuple('value.cast("string"), "data").as("data"))
 ```
 
 类似 `json_tuple`，`explode` 也可能引发这个错。
+
+#### 可以使用 `from_json` 解析 json 字符串 `{k1:v1,k2:v2,k11:v11,k3:v3,...}` 为 map
+
+`from_json` 无法直接解析 `MapType` 类型数据。需要将其转化为 `StructType`。
+
+```
+df.select('device_id,
+        explode(
+          from_json(
+            concat(lit("{\"k\":"), 'kws, lit("}")),
+            StructType(Seq(StructField("k", MapType(StringType, DoubleType))))
+          ).getField("k")
+        )
+      )
+```
+
+解析后通过  `getField("k")` 即可将字符串读取为 `MapType` 的列。通过 `explode` 函数，便可以将 map 解析为名为 `key` 和 `value` 的两列数据。
+
+#### `explode` 函数在遇到 `NULL` 值得时候，会将其过滤掉。
+
+如果想要保留 `NULL` 值对应的记录，可以使用函数 `explode_outer`。

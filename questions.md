@@ -477,4 +477,26 @@ Spark WebUI 有时候看到有job 为 `run at ThreadPoolExecutor.java:1149` ，�
 
 原因不明……具体操作是增加了 Hive 表字段。
 
-#### `sparksession.sql("insert overwrite table ...")` 返回结果是空的 DataFrame。
+#### `sparksession.sql("insert overwrite table ...")` 返回的结果是空 DataFrame。
+
+#### SparkSession 只存在于 Driver 中，只能在 Driver 中调用 SparkSession
+
+```scala
+    val modeMapAcc = spark.sparkContext.collectionAccumulator[util.Map[String, String]]("mode-map")
+	df.foreach(
+        r => {
+          modeMapAcc.add(new util.HashMap[String, String]() {
+            put(r, sparkSession.sql(...).head().getAs[Any](0).toString)
+          })
+        }
+      )
+```
+
+如果 `df` 分区不是全都在 Driver 上保存，那么执行 `foreach` 操作时，会有在 Executor 中调用 `SparkSession`的情况，那么将会抛出异常：
+
+```text
+...
+Caused by: java.lang.NullPointerException at org.apache.spark.sql.SparkSession.sessionState$lzycompute(SparkSession.scala:142) at org.apache.spark.sql.SparkSession.sessionState(SparkSession.scala:140) at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:641) at
+...
+```
+

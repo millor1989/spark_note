@@ -21,5 +21,5 @@ Spark Streaming的直接运算引擎是Spark Core，而Structured Streaming的�
 - 保证端到端仅仅一次的应用
 - 使用Spark SQL引擎
 
-Structured Streaming的continuous processing模式可以达到~1ms级的延时，但是只提供了端到端至少一次的容错保证。
+Structured Streaming的continuous processing模式可以达到~1ms级的延时，但是只提供了端到端精确一次的容错保证。
 

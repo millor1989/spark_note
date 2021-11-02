@@ -1,24 +1,24 @@
-### 使用Datasets和DataFrames的API
+### 使用 Datasets 和 DataFrames 的 API
 
-从Spark 2.0开始，DataFrames和Datasets可以表示静态的有边界的数据，也可以表示流、无边界的数据。与静态Datasets/DataFrames类似，可以使用通用的入口`SparkSession`来从流数据源创建流DataFrames/Datasets，并且可以对它们应用与静态DataFrames/Datasets相同的操作。
+从 Spark 2.0 开始，DataFrames 和 Datasets 可以表示静态的有边界的数据，也可以表示流、无边界的数据。与静态 Datasets/DataFrames 类似，可以使用通用的入口 `SparkSession` 来从流数据源创建流DataFrames/Datasets，并且可以对它们应用与静态 DataFrames/Datasets 相同的操作。
 
 #### 1、创建流DataFrames和流Datasets
 
-可以用`SparkSession.readStream()`返回的`DataStreamReader`接口来创建流DataFrames。在R语言中，使用`read.stream()`方法。与创建静态DataFrame的read接口类似，可以指定一些数据源的详情——数据格式，schema，options，等等。
+可以用 `SparkSession.readStream()` 返回的 `DataStreamReader` 接口来创建流 DataFrames。在 R 语言中，使用 `read.stream()` 方法。与创建静态 DataFrame 的 read 接口类似，可以指定一些数据源的详情——数据格式，schema，options，等等。
 
 ##### 1.1、输入数据源
 
 Spark 2.0中，有一些内置的数据源：
 
-- **File source**：将写到一个目录中的文件读取为一个数据的流。支持的文件格式有：text、csv、json、parquet。可以通过`DataStreamReader`接口的文档来查看最新支持的格式，和每个格式支持的options。注意，文件必须原子性地放在指定的目录中，在大多数的文件系统中，可以通过文件移动操作实现原子性。
+- **File source**：将写到一个目录中的文件读取为一个数据的流。支持的文件格式有：text、csv、json、parquet。可以通过 `DataStreamReader` 接口的文档来查看最新支持的格式，和每个格式支持的options。注意，文件必须原子性地放在指定的目录中，在大多数的文件系统中，可以通过文件移动操作实现原子性。
 
-  文件数据源是容错的；支持的选项有`path`（输入**目录**路径）、`maxFilesPerTrigger`（每次触发考虑的新文件的最大数量，默认没有最大数量限制）、`latestFirst`（是否首先处理最新的文件，默认false，在处理大量文件时是有用的）、`fileNameOnly`（是否只基于文件名而不是全路径来检查新的文件，默认false，如果设置为true，则只考虑文件名，比如，此时` "file:///dataset.txt"`和` "s3://a/dataset.txt"`是相同的）。
+  文件数据源是容错的；支持的选项有 `path` （输入**目录**路径）、`maxFilesPerTrigger`（每次触发考虑的新文件的最大数量，默认没有最大数量限制）、`latestFirst`（是否首先处理最新的文件，默认 false，在处理大量文件时是有用的）、`fileNameOnly`（是否只基于文件名而不是全路径来检查新的文件，默认 false，如果设置为 true，则只考虑文件名，比如，此时 ` "file:///dataset.txt"` 和 ` "s3://a/dataset.txt"` 是相同的）。
 
   文件数据源支持通配符路径，但是不支持逗号分隔的多路径。
 
-- **Kafka source**：从Kafka获取数据，参考集成Kafka章节。兼容0.10.0和更高版本的Kafka broker。Kafka数据源是容错的。
+- **Kafka source**：从 Kafka 获取数据，参考集成 Kafka 章节。兼容 0.10.0 和更高版本的 Kafka broker。Kafka数据源是容错的。
 
-- **Socket source**（用于测试）：从socket连接读取UTF8文本数据。在driver中监听server socket。注意，这种数据源只能用于测试，它是不提供端到端的容错保证的。支持的选项有`host`（必须，主机名）和`port`（必须，端口）。
+- **Socket source**（用于测试）：从 socket 连接读取 UTF8 文本数据。在 driver 中监听 server socket。注意，这种数据源只能用于测试，它是不提供端到端的容错保证的。支持的选项有 `host`（必须，主机名）和 `port`（必须，端口）。
 
 ```scala
 val spark: SparkSession = ...

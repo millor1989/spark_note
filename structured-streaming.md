@@ -1,10 +1,12 @@
 #### 1、[概览](http://spark.apache.org/docs/2.2.0/structured-streaming-programming-guide.html#overview)
 
-Structured Streaming是一个基于Spark SQL引擎构建的，可扩展的并且容错的流处理引擎。可以用与基于静态数据的批次运算相同的方式表示流运算。随着流数据的到达，Spark SQL引擎负责渐进地、持续地更新最终结果。可以使用Dataset/DataFrame API来表示流的聚合、事件时间窗口（event-time windows）、流到批次连接（stream-to batch joins），等。运算是基于相同的优化的Spark SQL引擎的。系统通过使用checkpointing和*Write Ahead Logs*来确保端到端的精确一次（exactly once）的容错保证。
+Structured Streaming 是一个基于 Spark SQL 引擎构建的，可扩展的并且容错的流处理引擎。可以用与基于静态数据的批次运算相同的方式表示流运算。随着流数据的到达，Spark SQL 引擎负责渐进地、持续地更新最终结果。可以使用 Dataset/DataFrame API 来表示流的聚合、事件时间窗口（event-time windows）、流到批次连接（stream-to batch joins），等。运算是基于相同的优化的 Spark SQL 引擎的。系统通过使用 checkpointing 和 *Write Ahead Logs* 来确保端到端的精确一次（exactly once）的容错保证。
 
-简而言之，Structured Streaming提供了快速的、可扩展的、容错的、端到端的精确一次的流处理，而用户不用去理会流（reason about streaming）。
+简而言之，Structured Streaming 提供了快速的、可扩展的、容错的、端到端的精确一次的流处理，而用户不用去理会流（reason about streaming）。
 
 #### 2、例子
+
+从 TCP socket 接收文本数据进行单词计数的例子。
 
 ```scala
 import org.apache.spark.sql.functions._
@@ -39,9 +41,9 @@ val query = wordCounts.writeStream
 query.awaitTermination()
 ```
 
-其中DataFrame `lines`代表一个包含流式文本数据的无边界表（unbounded table）。使用`.as[String]`将DataFrame （`readStream` 从 socket 数据源读取的输入为只有一列名为 `value` 类型为 `binary` 的 DataFrame）转换为String的Dataset。通过`groupBy.count()`计算了Dataset中唯一值得数量，使用`outputMode("complete")`，在每次有更新时，把完整的结果输出到控制台。使用`start()`启动流应用。代码执行后，流运算会在后台启动。`query`对象是活跃的流查询的句柄，用它调用`awaitTermination()`来防止在查询活跃时进程退出。
+其中 DataFrame `lines` 代表一个包含流式文本数据的无边界表（unbounded table）。使用 `.as[String]` 将DataFrame （ `readStream`  从 socket 数据源读取的输入为只有一列名为 `value` 类型为 `binary` 的 DataFrame）转换为 String 的 Dataset。通过 `groupBy.count()` 计算了 Dataset 中唯一值得数量，使用`outputMode("complete")`，在每次有更新时，把完整的结果输出到控制台。使用 `start()` 启动流应用。代码执行后，流运算会在后台启动。 `query` 对象是活跃的流查询的句柄，用它调用 `awaitTermination()` 来防止在查询活跃时进程退出。
 
-运行程序，分别往端口`9999`发送如下字符：
+运行程序，分别往端口 `9999` 发送如下字符：
 
 ```
 apache spark
@@ -89,7 +91,7 @@ wordCounts.writeStream
 
 #### 3、编程模型
 
-Structured Streaming的主要理念是把实时数据流当作一个持续地追加数据的表。这是一个与批次处理模型非常相似的流处理模型。可以将流运算表达为，像基于一个静态表的标准的类批次查询（standard batch-like query），Spark会将其运行为一个对基于无边界输入表的增量的（incremental）查询。
+Structured Streaming 的主要理念是把实时数据流当作一个持续地追加数据的表。这是一个与批次处理模型非常相似的流处理模型。可以将流运算表达为，像基于一个静态表的标准的类批次查询（standard batch-like query），Spark会将其运行为一个对基于无边界输入表的增量的（incremental）查询。
 
 ##### 3.1、基本概念
 
@@ -104,24 +106,24 @@ Structured Streaming的主要理念是把实时数据流当作一个持续地追
 输出“Output”即写到外部存储系统的数据。输出模式：
 
 - **Complete Mode**：将整个更新后的结果表写到外部系统。根据存储连接器（storage connector）来决定如何处理整个表的写出。
-- **Append Mode**：只有最近一次触发的追加到结果表的新行才会写到外部系统。仅适用于结果表中已经存在的行不改变（not expected to change）的查询。
-- **Update Mode**：只有最近一次触发的结果表中被更新的行才会写到外部系统（从Spark 2.1.1开始可用）。这种模式只输出最近一次触发后改变的行。如果查询中不包含聚合，那么就和Append Mode等价。
+- **Append Mode**：只有最近一次触发的追加到结果表的新行才会写到外部系统。仅适用于结果表中已经存在的行不改变（not expected to change）的查询。Structured Streaming 输出的**默认模式**。
+- **Update Mode**：只有在最近一次触发的处理中，结果表中被更新的行才会写到外部系统（从Spark 2.1.1开始可用）。这种模式只输出最近一次触发后改变的行。如果查询中不包含聚合，那么就和 Append Mode 等价。
 
 每个模式只适用于某些特定类型的查询。
 
-用之前的例子阐释Structured Streaming模型，`lines`DataFrame是输入表，`wordCounts`DataFrame是结果表。基于流DataFrame `lines`产生`wordCounts`的查询与基于静态DataFrame的查询是完全相同的。但是，查询启动后，Spark会持续地从socket连接检查新的数据。如果有新的数据，Spark会运行一个“增量”的（incremental）查询，将之前运行的计数结果和新的数据结合来计算更新后的计数结果。
+用之前的例子阐释 Structured Streaming 模型，`lines` DataFrame 是输入表，`wordCounts` DataFrame 是结果表。基于流 DataFrame `lines` 产生 `wordCounts` 的查询与基于静态 DataFrame 的查询是完全相同的。但是，查询启动后，Spark 会持续地从 socket 连接检查新的数据。如果有新的数据，Spark 会运行一个“增量”的（incremental）查询，将之前运行的计数结果和新的数据结合来计算更新后的计数结果。
 
 ![Model](/assets/structured-streaming-example-model.png)
 
 这个模型与许多其它流处理引擎有显著地不同。许多流系统需要用户自己维持运行的流数据聚合（maintain running aggregations），因而需要推导容错、数据一致性（至少一次、最多一次、精确一次）。而这个模型中，Spark负责有新的数据时更新结果表，用户不用再进行复杂的推导。
 
-#### 4、处理Event-time和Late Data（迟到数据）
+#### 4、处理 Event-time 和 Late Data（迟到数据）
 
-事件时间（event-time）是指本身包含在数据中的时间。有许多的应用，可能都要基于事件时间进行操作。比如，如果要统计每分钟IoT设备产生的事件数量，那么就需要使用数据产生的时间（即，数据中的事件时间），而不是Spark收到数据的时间。事件时间在这个模型中表现得非常自然——设备的每个事件都是表中的一行，事件时间则是行的一个字段值。这就使基于窗口的聚合（比如，每分钟的事件数）变成仅仅是对事件时间字段的grouping和aggregation的一种特例——每个时间窗口是一个组并且每行可以属于多个窗口/组。因此，这种基于事件时间窗口的聚合查询对于静态dataset和数据流的定义是一致的，对用户来说更简单。
+事件时间（event-time）是指本身包含在数据中的时间。有许多的应用，可能都要基于事件时间进行操作。比如，如果要统计每分钟 IoT 设备产生的事件数量，那么就需要使用数据产生的时间（即，数据中的事件时间），而不是 Spark 收到数据的时间。事件时间在这个模型中表现得非常自然——设备的每个事件都是表中的一行，事件时间则是行的一个字段值。这就使基于窗口的聚合（比如，每分钟的事件数）变成仅仅是对事件时间字段的 grouping 和 aggregation 的一种特例——每个时间窗口是一个组并且每行可以属于多个窗口/组。因此，这种基于事件时间窗口的聚合查询对于静态 dataset 和数据流的定义是一致的，对用户来说更简单。
 
-另外，这个模型还可以很自然地处理在事件时间上迟到的数据。因为Spark是在更新结果表，当有迟到的数据时，它对更新旧的聚合具有完全的控制，也能清除旧的聚合来限制中间状态数据的大小。从Spark  2.1开始支持水印（watermarking），用户可以设置迟到数据的阈值，让引擎据此清除旧的状态。
+另外，这个模型还可以很自然地处理在事件时间上迟到的数据。因为 Spark 是在更新结果表，当有迟到的数据时，它对更新旧的聚合具有完全的控制，也能清除旧的聚合来限制中间状态数据的大小。从 Spark  2.1 开始支持水印（watermarking），用户可以设置迟到数据的阈值，让引擎据此清除旧的状态。
 
 #### 5、容错语义
 
-提供端到端精确一次的语义是Structured Streaming设计的一个关键目标。为了达到这个目的，设计了Structured Streaming的数据源、外部接收器（sink）和执行引擎，以可靠的追踪处理过程的精确进度，以便可以通过重启或/和重新处理来应对任何故障。每个流数据源都被假设为是有偏移量（类似于Kafka偏移量，或者Kinesis sequence numbers）的，从而可以用来追踪读取流的位置。引擎使用checkpointing和write ahead logs来记录每次触发中被处理的数据的偏移量范围。流的外部接收器被设计为幂等性的，以应对重新处理的情况（handling reprocessing）。这些一起，使用可以重播的（repalyable）数据源和幂等的外部接收器，Structured Streaming可以确保在任何故障中都能够是端到端精确一次的语义。
+提供端到端精确一次的语义是 Structured Streaming 设计的一个关键目标。为了达到这个目的，设计了 Structured Streaming 的数据源、外部接收器（sink）和执行引擎，以可靠的追踪处理过程的精确进度，以便可以通过重启或/和重新处理来应对任何故障。每个流数据源都被假设为是有偏移量（类似于Kafka偏移量，或者Kinesis sequence numbers）的，从而可以用来追踪读取流的位置。引擎使用 checkpointing 和 write ahead logs 来记录每次触发中被处理的数据的偏移量范围。流的外部接收器被设计为幂等性的，以应对重新处理的情况（handling reprocessing）。这些一起，使用可以重播的（repalyable）数据源和幂等的外部接收器， Structured Streaming 可以确保在任何故障中都能够是端到端精确一次的语义。
 
