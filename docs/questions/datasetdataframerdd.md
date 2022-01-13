@@ -43,3 +43,14 @@ Spark 2.0之前，Spark主要的编程接口是RDD（Resillient Distributed Data
 
 
 
+- ##### Dataset 、DataFrame 转换为 RDD 时如果使用了 `.rdd` 感觉会慢一些，大概是 `.rdd` 操作包含了反序列化的原因吧。
+
+- ##### Listing leaf files and directories for 224 paths
+
+  根据 Spark UI 中 `Jobs` 页面下，这个 `Job` 显示的对应的代码行，看到对应 SQL 操作包含两个分区字段，其中指定了一个分区字段的范围（该分区字段属于未指定分区字段的子目录）。当限定了两个分区字段的范围后，就不再出现这个 `Job` 了。
+
+  难道分区未指定范围时会出现这个 `Job`？？
+
+  另外，出现这个 `Job` 时还有几个 `run at ThreadPoolExecutor.java:1149` 的 Job。当 `List leaf` Job 消失后，`run at` Job 也没有了。
+
+  这个 `Job` 大概有分区修剪的作用，因为虽然限定了两个分区的范围，但是读的数据量和执行时间没有明显改善。

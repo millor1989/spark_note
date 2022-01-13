@@ -500,3 +500,15 @@ Caused by: java.lang.NullPointerException at org.apache.spark.sql.SparkSession.s
 ...
 ```
 
+#### java.lang.UnsupportedOperationException: parquet.column.values.dictionary.PlainValuesDictionary$PlainLongDictionary
+
+```
+Caused by: java.lang.UnsupportedOperationException: parquet.column.values.dictionary.PlainValuesDictionary$PlainLongDictionary
+	at parquet.column.Dictionary.decodeToBinary(Dictionary.java:44)
+	at org.apache.spark.sql.execution.datasources.parquet.ParquetDictionary.decodeToBinary(ParquetDictionary.java:51)
+	at org.apache.spark.sql.execution.vectorized.WritableColumnVector.getUTF8String(WritableColumnVector.java:380)
+	at ... ...
+```
+
+修改了保存格式为 Parquet 的分区的 Hive 表某个字段的类型（比如 bigint 改为 string），之后读取多个分区（包含了修改前和修改后），就报这个错。将修改前的分区数据重新跑一边就行了。原因是 Parquet 检测到了**不同分区（文件）字段的类型不一致**！！
+
