@@ -455,6 +455,8 @@ unlock table <table_name>
 
 Spark WebUI 有时候看到有job 为 `run at ThreadPoolExecutor.java:1149` ，一直疑惑是什么，看StackOverflow上一个回答，似乎是Spark join时，如果是 broadcastjoin，会起一个线程发送数据到executors。大概需要发送数据到其他executors时都会发生吧？！
 
+当禁用了 broadcastjoin（设置 `spark.sql.autoBroadcastJoinThreshold` 为 -1）后，的确就不会出现了。
+
 #### Dataset 的 `repartition()`
 
 **df `repration()` 之后保存为parquet格式的hive表**，大小比不执行 `repartition()`会变大很多（之前 60M 之后209M），不知道是不是因为 `repartion()` 操作按照 roundrobin 的方式重新为混洗之后的数据进行分区，导致数据不够紧凑，从而导致 Parquet 编码后的文件占用空间变大。
@@ -512,3 +514,20 @@ Caused by: java.lang.UnsupportedOperationException: parquet.column.values.dictio
 
 修改了保存格式为 Parquet 的分区的 Hive 表某个字段的类型（比如 bigint 改为 string），之后读取多个分区（包含了修改前和修改后），就报这个错。将修改前的分区数据重新跑一边就行了。原因是 Parquet 检测到了**不同分区（文件）字段的类型不一致**！！
 
+##### 如果对 `df` 进行 `cache()`，`df.first()` 算子，只会让部分（某一个）分区刷入缓存吗？
+
+##### Spark 读取 Hive 时，报错 Caused by: java.io.IOException: Not a file: hdfs://nameservice/data/dw/xxx.db/xxxxxxxx/xxxx=xx/xxx=xxx/xxx=4465/xxx_4465_tmp07303
+
+大概 Spark 读取 Hive 时，使用的是 Hive 的 Metastore，如果 MetaStore 中的分区、表对应的文件不存在，就会报错。
+
+这种情况下，可能是表（分区）文件因为被删除了；解决方法——要么恢复被删除的文件，要么将对应的分区（表）从 MetaStore 中删除（比如 `ALTER TABLE XX DROP PARTION(XX=XX,XX=XX)`）。
+
+##### Spark SQL 中除法（`/`）的运算结果是 `Double` 类型的。如果用 `round` 保留多位小数，可能会导致用科学记数法表示（比如，`6E-4`），在往 mysql 进行 jdbc 插入时，会出现 `Not a Numberic... ` 之类的错误。
+
+解决方式是，进行强制转换，将其转换为 `decimal` 类型：
+
+```sql
+df.select('percent_bulala.cast("deciaml(6, 4)").as("percent_bulala"))
+```
+
+其中 `decimal` 必须指定精度和小数位数，不然默认的小数位好像是 0。
