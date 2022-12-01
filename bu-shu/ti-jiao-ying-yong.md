@@ -161,3 +161,35 @@ Spark支持不同形式的jar文件URL：
 
 JAR文件和文件被复制到每个执行器executor节点上的_**SparkContext**_的工作目录。这会用掉很可观的量的空间，所以需要被清理。对于YARN，会自动执行清理，对于Spark standalone可以通过属性_spark.worker.cleanup.appDataTtl_配置自动清理。
 
+### `SparkLauncher()` 提交 Spark 应用
+
+除了使用 `spark-submit` 通过命令行提交 Spark Application 外，还可以使用 Spark 提供的 `SparkLauncher()` 在代码中提交 Spark 应用。
+
+```scala
+new SparkLauncher()
+      // SPARK_HOME 目录
+      .setSparkHome("/opt/cloudera/parcels/SPARK2-2.4.0.cloudera1-1.cdh5.13.3.p0.1007356/lib/spark2")
+      // .setAppName(appName)
+      .setAppResource(appJarPath)
+      .addJar(dependenceJars)
+      .setMainClass(mainClass)
+      //.addAppArgs("", "")
+      .setMaster("yarn")
+      .setDeployMode("cluster")
+      .addSparkArg("--driver-memory", "4G")
+      .addSparkArg("--num-executors", "5")
+      .addSparkArg("--executor-cores", "2")
+      .addSparkArg("--executor-memory", "4G")
+      // .launch()
+      .startApplication(
+      new SparkAppHandle.Listener {
+        override def stateChanged(handle: SparkAppHandle): Unit = {
+          println(s"state changed---${handle.getAppId}-----------------${handle.getState}")
+        }
+
+        override def infoChanged(handle: SparkAppHandle): Unit = {
+          println(s"info changed---${handle.getAppId}-----------------${handle.getState}")
+        }
+      }
+    )
+```

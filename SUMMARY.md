@@ -68,9 +68,12 @@
   * [数据倾斜和GC](questions/002.md)
   * [某个task很慢](questions/shu-ju-ben-di-xing.md)
   * [Spark函数](questions/sparkhan-shu.md)
+  * [数据类型](questions/datatype.md)
   * [Hadoop 1和Hadoop2](questions/hadoop-1he-hadoop2.md)
   * [Broadcast Join](questions/broadcast-join.md)
   * [Broadcast](questions/003.md)
   * [隐式转换与隐式参数](questions/implicits.md)
   * [Structured Streaming](questions/sss.md)
+  * [jar 依赖冲突](questions/jar-conflict.md)
+  * [其它](questions/other.md)
 

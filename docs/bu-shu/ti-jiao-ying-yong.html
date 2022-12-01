@@ -1038,7 +1038,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.9" data-path="../questions/hadoop-1he-hadoop2.html">
+        <li class="chapter " data-level="1.17.9" data-path="../questions/datatype.html">
+            
+                <a href="../questions/datatype.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.10" data-path="../questions/hadoop-1he-hadoop2.html">
             
                 <a href="../questions/hadoop-1he-hadoop2.html">
             
@@ -1051,7 +1064,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.10" data-path="../questions/broadcast-join.html">
+        <li class="chapter " data-level="1.17.11" data-path="../questions/broadcast-join.html">
             
                 <a href="../questions/broadcast-join.html">
             
@@ -1064,7 +1077,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.11" data-path="../questions/003.html">
+        <li class="chapter " data-level="1.17.12" data-path="../questions/003.html">
             
                 <a href="../questions/003.html">
             
@@ -1077,7 +1090,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.12" data-path="../questions/implicits.html">
+        <li class="chapter " data-level="1.17.13" data-path="../questions/implicits.html">
             
                 <a href="../questions/implicits.html">
             
@@ -1090,12 +1103,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.13" data-path="../questions/sss.html">
+        <li class="chapter " data-level="1.17.14" data-path="../questions/sss.html">
             
                 <a href="../questions/sss.html">
             
                     
                     Structured Streaming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.15" data-path="../questions/jar-conflict.html">
+            
+                <a href="../questions/jar-conflict.html">
+            
+                    
+                    jar 依赖冲突
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.16" data-path="../questions/other.html">
+            
+                <a href="../questions/other.html">
+            
+                    
+                    其它
             
                 </a>
             
@@ -1332,6 +1371,35 @@ export HADOOP_CONF_DIR=XXX
 <li><strong>local-</strong>&#x4E00;&#x4E2A;&#x4EE5;&#x672C;&#x5730;&#x201C;/&#x201D;&#x5F00;&#x59CB;&#x7684;URI&#xFF0C;&#x671F;&#x5F85;&#x7684;&#x662F;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x8282;&#x70B9;&#x90FD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6CA1;&#x6709;&#x7F51;&#x7EDC;IO&#x7684;&#x5F00;&#x9500;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x4E8E;&#x63A8;&#x9001;&#x5230;&#x5404;&#x4E2A;&#x5DE5;&#x4F5C;&#x8005;&#x7684;&#x5927;&#x6587;&#x4EF6;/&#x5927;JAR&#x5DE5;&#x4F5C;&#x826F;&#x597D;&#x3002;</li>
 </ul>
 <p>JAR&#x6587;&#x4EF6;&#x548C;&#x6587;&#x4EF6;&#x88AB;&#x590D;&#x5236;&#x5230;&#x6BCF;&#x4E2A;&#x6267;&#x884C;&#x5668;executor&#x8282;&#x70B9;&#x4E0A;&#x7684;<em><strong>SparkContext</strong></em>&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x3002;&#x8FD9;&#x4F1A;&#x7528;&#x6389;&#x5F88;&#x53EF;&#x89C2;&#x7684;&#x91CF;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x88AB;&#x6E05;&#x7406;&#x3002;&#x5BF9;&#x4E8E;YARN&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x6E05;&#x7406;&#xFF0C;&#x5BF9;&#x4E8E;Spark standalone&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C5E;&#x6027;<em>spark.worker.cleanup.appDataTtl</em>&#x914D;&#x7F6E;&#x81EA;&#x52A8;&#x6E05;&#x7406;&#x3002;</p>
+<h3 id="sparklauncher-&#x63D0;&#x4EA4;-spark-&#x5E94;&#x7528;"><code>SparkLauncher()</code> &#x63D0;&#x4EA4; Spark &#x5E94;&#x7528;</h3>
+<p>&#x9664;&#x4E86;&#x4F7F;&#x7528; <code>spark-submit</code> &#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x4EA4; Spark Application &#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Spark &#x63D0;&#x4F9B;&#x7684; <code>SparkLauncher()</code> &#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x63D0;&#x4EA4; Spark &#x5E94;&#x7528;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">new</span> <span class="hljs-type">SparkLauncher</span>()
+      <span class="hljs-comment">// SPARK_HOME &#x76EE;&#x5F55;</span>
+      .setSparkHome(<span class="hljs-string">&quot;/opt/cloudera/parcels/SPARK2-2.4.0.cloudera1-1.cdh5.13.3.p0.1007356/lib/spark2&quot;</span>)
+      <span class="hljs-comment">// .setAppName(appName)</span>
+      .setAppResource(appJarPath)
+      .addJar(dependenceJars)
+      .setMainClass(mainClass)
+      <span class="hljs-comment">//.addAppArgs(&quot;&quot;, &quot;&quot;)</span>
+      .setMaster(<span class="hljs-string">&quot;yarn&quot;</span>)
+      .setDeployMode(<span class="hljs-string">&quot;cluster&quot;</span>)
+      .addSparkArg(<span class="hljs-string">&quot;--driver-memory&quot;</span>, <span class="hljs-string">&quot;4G&quot;</span>)
+      .addSparkArg(<span class="hljs-string">&quot;--num-executors&quot;</span>, <span class="hljs-string">&quot;5&quot;</span>)
+      .addSparkArg(<span class="hljs-string">&quot;--executor-cores&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>)
+      .addSparkArg(<span class="hljs-string">&quot;--executor-memory&quot;</span>, <span class="hljs-string">&quot;4G&quot;</span>)
+      <span class="hljs-comment">// .launch()</span>
+      .startApplication(
+      <span class="hljs-keyword">new</span> <span class="hljs-type">SparkAppHandle</span>.<span class="hljs-type">Listener</span> {
+        <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stateChanged</span></span>(handle: <span class="hljs-type">SparkAppHandle</span>): <span class="hljs-type">Unit</span> = {
+          println(<span class="hljs-string">s&quot;state changed---<span class="hljs-subst">${handle.getAppId}</span>-----------------<span class="hljs-subst">${handle.getState}</span>&quot;</span>)
+        }
+
+        <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">infoChanged</span></span>(handle: <span class="hljs-type">SparkAppHandle</span>): <span class="hljs-type">Unit</span> = {
+          println(<span class="hljs-string">s&quot;info changed---<span class="hljs-subst">${handle.getAppId}</span>-----------------<span class="hljs-subst">${handle.getState}</span>&quot;</span>)
+        }
+      }
+    )
+</code></pre>
 
                                 
                                 </section>
@@ -1375,7 +1443,7 @@ export HADOOP_CONF_DIR=XXX
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"提交应用","level":"1.7.3","depth":2,"next":{"title":"监控","level":"1.7.4","depth":2,"path":"bu-shu/jian-kong.md","ref":"bu-shu/jian-kong.md","articles":[]},"previous":{"title":"集群管理器类型","level":"1.7.2","depth":2,"path":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","ref":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"bu-shu/ti-jiao-ying-yong.md","mtime":"2019-08-17T06:34:10.458Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T05:38:04.067Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"提交应用","level":"1.7.3","depth":2,"next":{"title":"监控","level":"1.7.4","depth":2,"path":"bu-shu/jian-kong.md","ref":"bu-shu/jian-kong.md","articles":[]},"previous":{"title":"集群管理器类型","level":"1.7.2","depth":2,"path":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","ref":"bu-shu/ji-qun-guan-li-qi-lei-xing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"bu-shu/ti-jiao-ying-yong.md","mtime":"2022-12-01T07:49:21.855Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-01T07:52:59.100Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
