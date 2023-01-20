@@ -90,19 +90,33 @@ Spark SQL架构：
 
 从上图可见，无论是直接使用 SQL 语句还是使用 DataFrame，都会经过如下步骤转换成 DAG 对 RDD 的操作
 
-* Parser 解析 SQL，生成 Unresolved Logical Plan
-* 由 Analyzer 结合 Catalog 信息生成 Resolved Logical Plan
-* Optimizer根据预先定义好的规则对 Resolved Logical Plan 进行优化并生成 Optimized Logical Plan
-* Query Planner 将 Optimized Logical Plan 转换成多个 Physical Plan
-* CBO 根据 Cost Model 算出每个 Physical Plan 的代价并选取代价最小的 Physical Plan 作为最终的 Physical Plan
-* Spark 以 DAG 的方法执行上述 Physical Plan
-* 在执行 DAG 的过程中，Adaptive Execution 根据运行时信息动态调整执行计划从而提高执行效率
+* **Parser** 解析 SQL，生成 Unresolved Logical Plan
 
-在Spark SQL中，由`AstBuilder`来构建一个逻辑算子和表达式组成的抽象语法树。
+  基于语义对 SQL、DataFrame 进行检查和验证；不会对表、字段进行分析。
 
-> AstBuilder是一个基于ANTLR的SQL解析器，使用的是`SqlBase.g4`文件中描述的SQL语法，把一个ANTLR4 ParseTree转换为一个catalyst `Expression`，`LogicalPlan`或者`TableIdentifier`。
+* 由 **Analyzer** 结合 Spark 的内部结构—— Catalog 信息生成 Resolved Logical Plan
 
-通过`SparkSession.sql(...)`方法的描述，通过`spark.sql.dialect`可以设置用于sql解析的方言：
+  Catalog 类似于 metastore。这一步会根据 Catalog 验证数据结构、schema、类型等。
+
+* **Optimizer** 根据预先定义好的规则对 Resolved Logical Plan 进行**优化**并生成 Optimized Logical Plan
+
+  比如，谓词下推（predicates push down）
+
+* **Query Planner** 将 Optimized Logical Plan 转换成多个 Physical Plan
+
+  物理计划的生成—— Physical Planning；Catalyst Optimizer 会根据不同的策略生成多个物理计划。
+
+* **CBO** 根据 Cost Model 算出每个 Physical Plan 的代价（执行时间、资源消耗等）并选取代价最小的**一个** Physical Plan 作为最终的 Physical Plan（Selected Physical Plan）
+
+* Spark 以 DAG 的方式执行上述 Physical Plan
+
+* 在执行 DAG 的过程中，Adaptive （Query） Execution（AE、AQE） 根据运行时信息动态调整执行计划从而提高执行效率。
+
+在Spark SQL中，由 `AstBuilder` 来构建一个逻辑算子和表达式组成的抽象语法树。
+
+> AstBuilder 是一个基于 ANTLR 的 SQL 解析器，使用的是 `SqlBase.g4` 文件中描述的 SQL 语法，把一个ANTLR4 ParseTree 转换为一个 catalyst `Expression`，`LogicalPlan` 或者 `TableIdentifier`。
+
+通过 `SparkSession.sql(...)` 方法的描述，通过 `spark.sql.dialect` 可以设置用于 sql 解析的方言：
 
 ```scala
   /**
@@ -114,7 +128,7 @@ Spark SQL架构：
   }
 ```
 
-尝试一下使用`sqlParser`来获取Logical Plan：
+尝试一下使用 `sqlParser` 来获取Logical Plan：
 
 ```scala
 scala> import spark.sessionState.sqlParser
@@ -126,11 +140,11 @@ res2: org.apache.spark.sql.catalyst.plans.logical.LogicalPlan =
 +- 'UnresolvedRelation `ids_ttable`
 ```
 
-Spark SQL的使用`QueryExecution`来处理Logcial Plan，`QueryExecution`是一个结构化的查询执行工作流（a structured query execution pipeline）：
+Spark SQL 使用 `QueryExecution` 来处理 Logcial Plan，`QueryExecution` 是一个结构化的查询执行工作流（a structured query execution pipeline）：
 
-> QueryExecution：使用Spark执行关系查询（relational queries）的主要工作流。开发者可以轻松的访问query execution的中间阶段。可以用来debug。
+> QueryExecution：使用 Spark 执行关系查询（relational queries）的主要工作流。开发者可以轻松的访问query execution 的中间阶段。可以用来 debug。
 
-查看一个`Dataset`的`QueryExecution`：
+查看一个 `Dataset` 的 `QueryExecution`：
 
 ```scala
 scala> val ds = spark.sql("select * from ids_ttable limit 10")
@@ -531,3 +545,9 @@ df.select('percent_bulala.cast("deciaml(6, 4)").as("percent_bulala"))
 ```
 
 其中 `decimal` 必须指定精度和小数位数，不然默认的小数位好像是 0。
+
+##### spark `java.io.EOFException: Cannot seek after EOF`
+
+报错，增大 executor 内存后竟然解决了……奇怪了！
+
+难道是内存不足，导致部分文件丢失了？？？

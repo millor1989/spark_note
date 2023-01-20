@@ -1147,6 +1147,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.18" data-path="../extend.html">
+            
+                <a href="../extend.html">
+            
+                    
+                    待扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../practice-log.md">
+            
+                <span>
+            
+                    
+                    动手实践
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -1305,6 +1331,98 @@ df.repartition(1, &apos;c1).sort(&apos;c3.desc).groupBy(&apos;c1).agg(concat_ws(
 </code></pre>
 <p>&#x6839;&#x636E;&#x51FD;&#x6570;&#x7684;&#x63CF;&#x8FF0;&#xFF1A;1&#x3001;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x51CF;&#x5C11;&#x5206;&#x533A;&#xFF1B;2&#x3001;&#x7A84;&#x4F9D;&#x8D56;&#xFF0C;&#x4E0D;&#x4F1A;&#x6709;&#x6DF7;&#x6D17;&#xFF0C;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x8FDB;&#x884C;&#x5206;&#x533A;&#x5408;&#x5E76;&#x3002;</p>
 <p>&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6765;&#x8FDB;&#x884C;&#x5267;&#x70C8;&#x7684;&#x5408;&#x5E76;&#xFF08;&#x6BD4;&#x5982;&#xFF0C;&#x5408;&#x5E76;&#x4E3A; 1 &#x4E2A;&#x5206;&#x533A;&#xFF09;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD0;&#x7B97;&#x53EA;&#x5728;&#x5F88;&#x5C11;&#x7684;&#x8282;&#x70B9;&#x4E0A;&#xFF08;&#x6BD4;&#x5982;&#xFF0C; 1 &#x4E2A;&#xFF09;&#x8FD0;&#x884C;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>repartition()</code> &#x51FD;&#x6570;&#x6765;&#x66FF;&#x6362;&#x2014;&#x2014;&#x5B83;&#x4F1A;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x6DF7;&#x6D17;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x610F;&#x5473;&#x7740;&#x6B64;&#x524D;&#x7684;&#x4E0A;&#x6E38;&#x5206;&#x533A;&#x4F1A;&#x5E76;&#x884C;&#x7684;&#x6267;&#x884C;&#x3002; </p>
+<h5 id="&#x900F;&#x89C6;&#x884C;&#x8F6C;&#x5217;&#x2014;&#x2014;pivot-&#x51FD;&#x6570;&#x3001;&#x9006;&#x900F;&#x89C6;&#x5217;&#x8F6C;&#x884C;&#xFF08;unpivot&#xFF09;&#x2014;&#x2014;stack-&#x51FD;&#x6570;">&#x900F;&#x89C6;/&#x884C;&#x8F6C;&#x5217;&#x2014;&#x2014;<code>pivot()</code> &#x51FD;&#x6570;&#x3001;&#x9006;&#x900F;&#x89C6;/&#x5217;&#x8F6C;&#x884C;&#xFF08;unpivot&#xFF09;&#x2014;&#x2014;<code>stack()</code> &#x51FD;&#x6570;</h5>
+<p><strong>&#x900F;&#x89C6;&#x4F8B;&#x5B50;</strong>&#xFF1A;</p>
+<pre><code class="lang-properties"># &#x6E90;&#x8868;
+ +---------+-------+---------------+
+ |  Project|   Name|Cost_To_Project|
+ +---------+-------+---------------+
+ |Ingestion|  Jerry|           1000|
+ |Ingestion|   Arya|           2000|
+ |Ingestion|  Emily|           3000|
+ |       ML|  Riley|           9000|
+ |       ML|Patrick|           1000|
+ |       ML| Mickey|           8000|
+ |Analytics| Donald|           1000|
+ |Ingestion|   John|           1000|
+ |Analytics|  Emily|           8000|
+ |Analytics|   Arya|          10000|
+ |       BI| Mickey|          12000|
+ |       BI| Martin|           5000|
+ +---------+-------+---------------+ 
+# &#x8F6C;&#x6362;&#x4E3A;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;&#xFF08;&#x6309; Name &#x5206;&#x7EC4;&#xFF0C;&#x6C42; Cost_To_Project &#x7684;&#x548C;&#xFF0C;&#x5E76;&#x6309; Project &#x8FDB;&#x884C;&#x201C;&#x884C;&#x8F6C;&#x5217;&#x201D;&#xFF09;&#xFF1A;
+ +-------+---------+-----+---------+----+
+ |   Name|Analytics|   BI|Ingestion|  ML|
+ +-------+---------+-----+---------+----+
+ | Mickey|     null|12000|     null|8000|
+ | Martin|     null| 5000|     null|null|
+ |  Jerry|     null| null|     1000|null|
+ |  Riley|     null| null|     null|9000|
+ | Donald|     1000| null|     null|null|
+ |   John|     null| null|     1000|null|
+ |Patrick|     null| null|     null|1000|
+ |  Emily|     8000| null|     3000|null|
+ |   Arya|    10000| null|     2000|null|
+ +-------+---------+-----+---------+----+
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>RelationalGroupedDataset.piovt()</code> &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> spark.implicits._
+<span class="hljs-keyword">import</span> org.apache.spark.sql.functions.sum
+
+<span class="hljs-comment">// &#x4E0D;&#x6307;&#x5B9A;&#x9700;&#x8981;&#x900F;&#x89C6;&#x7684;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x6BD4;&#x8F83;&#x4F4E;&#x6548;&#xFF08;Spark &#x9700;&#x8981;&#x5185;&#x90E8;&#x5730;&#x5148;&#x8BA1;&#x7B97;&#x51FA;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF09; </span>
+df.groupBy(<span class="hljs-symbol">&apos;Name</span>).pivot(<span class="hljs-string">&quot;Project&quot;</span>).agg(sum(<span class="hljs-symbol">&apos;Cost_To_Project</span>)).show(<span class="hljs-literal">false</span>)
+
+<span class="hljs-comment">// &#x6307;&#x5B9A;&#x9700;&#x8981;&#x900F;&#x89C6;&#x7684;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x6BD4;&#x8F83;&#x9AD8;&#x6548;</span>
+df.groupBy(<span class="hljs-symbol">&apos;Name</span>).pivot(<span class="hljs-string">&quot;Project&quot;</span>, <span class="hljs-type">Seq</span>(<span class="hljs-string">&quot;Analytics&quot;</span>, <span class="hljs-string">&quot;BI&quot;</span>, <span class="hljs-string">&quot;Ingestion&quot;</span>, <span class="hljs-string">&quot;ML&quot;</span>)).agg(sum(<span class="hljs-symbol">&apos;Cost_To_Project</span>)).show(<span class="hljs-literal">false</span>)
+</code></pre>
+<p><strong>&#x9006;&#x900F;&#x89C6;&#x4F8B;&#x5B50;</strong>&#xFF1A;</p>
+<pre><code class="lang-properties"># &#x6E90;&#x8868;
+ +-------+---------+-----+---------+----+
+ |   Name|Analytics|   BI|Ingestion|  ML|
+ +-------+---------+-----+---------+----+
+ | Mickey|     null|12000|     null|8000|
+ | Martin|     null| 5000|     null|null|
+ |  Jerry|     null| null|     1000|null|
+ |  Riley|     null| null|     null|9000|
+ | Donald|     1000| null|     null|null|
+ |   John|     null| null|     1000|null|
+ |Patrick|     null| null|     null|1000|
+ |  Emily|     8000| null|     3000|null|
+ |   Arya|    10000| null|     2000|null|
+ +-------+---------+-----+---------+----+ 
+
+# &#x5C06;&#x6E90;&#x8868;&#x8F6C;&#x6362;&#xFF08;&#x5217;&#x8F6C;&#x884C;\&#x9006;&#x900F;&#x89C6;&#xFF09;&#x4E3A;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;
+ +-------+---------+---------------+
+ |   Name|  Project|Cost_To_Project|
+ +-------+---------+---------------+
+ | Mickey|       BI|          12000|
+ | Mickey|       ML|           8000|
+ | Martin|       BI|           5000|
+ |  Jerry|Ingestion|           1000|
+ |  Riley|       ML|           9000|
+ | Donald|Analytics|           1000|
+ |   John|Ingestion|           1000|
+ |Patrick|       ML|           1000|
+ |  Emily|Analytics|           8000|
+ |  Emily|Ingestion|           3000|
+ |   Arya|Analytics|          10000|
+ |   Arya|Ingestion|           2000|
+ +-------+---------+---------------+
+</code></pre>
+<p>Spark &#x6CA1;&#x6709;&#x63D0;&#x4F9B; unpivot &#x51FD;&#x6570;&#xFF08;<code>org.apache.spark.sql.catalyst.analysis.FunctionRegistry</code> &#x4E2D;&#x6709;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#xFF09;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6709; <code>stack</code> &#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-properties">+-----------------------------------------------------------------------------------+
+|function_desc                                                                      |
++-----------------------------------------------------------------------------------+
+|Function: stack                                                                    |
+|Class: org.apache.spark.sql.catalyst.expressions.Stack                             |
+|Usage: stack(n, expr1, ..., exprk) - Separates `expr1`, ..., `exprk` into `n` rows.|
++-----------------------------------------------------------------------------------+
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>stack</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x76F8;&#x540C;&#x7684;&#x529F;&#x80FD;&#xFF1A;</p>
+<pre><code class="lang-scala">df1.selectExpr(<span class="hljs-string">&quot;Name&quot;</span>,
+               <span class="hljs-string">&quot;stack(4, &apos;Analytics&apos;, Analytics, &apos;BI&apos;, BI, &apos;Ingestion&apos;, Ingestion, &apos;ML&apos;, ML) as (Project, Cost_To_Project)&quot;</span>)
+.filter(<span class="hljs-symbol">&apos;Cost_To_Project</span>.isNotNull).show(<span class="hljs-literal">false</span>)
+</code></pre>
 
                                 
                                 </section>
@@ -1348,7 +1466,7 @@ df.repartition(1, &apos;c1).sort(&apos;c3.desc).groupBy(&apos;c1).agg(concat_ws(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Spark函数","level":"1.17.8","depth":2,"next":{"title":"数据类型","level":"1.17.9","depth":2,"path":"questions/datatype.md","ref":"questions/datatype.md","articles":[]},"previous":{"title":"某个task很慢","level":"1.17.7","depth":2,"path":"questions/shu-ju-ben-di-xing.md","ref":"questions/shu-ju-ben-di-xing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"questions/sparkhan-shu.md","mtime":"2022-11-10T06:44:35.158Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-01T07:52:59.100Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Spark函数","level":"1.17.8","depth":2,"next":{"title":"数据类型","level":"1.17.9","depth":2,"path":"questions/datatype.md","ref":"questions/datatype.md","articles":[]},"previous":{"title":"某个task很慢","level":"1.17.7","depth":2,"path":"questions/shu-ju-ben-di-xing.md","ref":"questions/shu-ju-ben-di-xing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"questions/sparkhan-shu.md","mtime":"2023-01-16T09:53:08.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-20T05:44:48.153Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

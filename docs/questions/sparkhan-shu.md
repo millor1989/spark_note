@@ -183,3 +183,111 @@ def coalesce(numPartitions: Int): Dataset[T] = withTypedPlan {
 根据函数的描述：1、只能用于减少分区；2、窄依赖，不会有混洗，只是简单的进行分区合并。
 
 但是，如果用来进行剧烈的合并（比如，合并为 1 个分区），可能会导致运算只在很少的节点上（比如， 1 个）运行。为了避免这种情况，可以使用 `repartition()` 函数来替换——它会增加一个混洗的步骤，但是也意味着此前的上游分区会并行的执行。 
+
+##### 透视/行转列——`pivot()` 函数、逆透视/列转行（unpivot）——`stack()` 函数
+
+**透视例子**：
+
+```properties
+# 源表
+ +---------+-------+---------------+
+ |  Project|   Name|Cost_To_Project|
+ +---------+-------+---------------+
+ |Ingestion|  Jerry|           1000|
+ |Ingestion|   Arya|           2000|
+ |Ingestion|  Emily|           3000|
+ |       ML|  Riley|           9000|
+ |       ML|Patrick|           1000|
+ |       ML| Mickey|           8000|
+ |Analytics| Donald|           1000|
+ |Ingestion|   John|           1000|
+ |Analytics|  Emily|           8000|
+ |Analytics|   Arya|          10000|
+ |       BI| Mickey|          12000|
+ |       BI| Martin|           5000|
+ +---------+-------+---------------+ 
+# 转换为如下形式（按 Name 分组，求 Cost_To_Project 的和，并按 Project 进行“行转列”）：
+ +-------+---------+-----+---------+----+
+ |   Name|Analytics|   BI|Ingestion|  ML|
+ +-------+---------+-----+---------+----+
+ | Mickey|     null|12000|     null|8000|
+ | Martin|     null| 5000|     null|null|
+ |  Jerry|     null| null|     1000|null|
+ |  Riley|     null| null|     null|9000|
+ | Donald|     1000| null|     null|null|
+ |   John|     null| null|     1000|null|
+ |Patrick|     null| null|     null|1000|
+ |  Emily|     8000| null|     3000|null|
+ |   Arya|    10000| null|     2000|null|
+ +-------+---------+-----+---------+----+ 
+```
+
+使用 `RelationalGroupedDataset.piovt()` 函数实现：
+
+```scala
+import spark.implicits._
+import org.apache.spark.sql.functions.sum
+
+// 不指定需要透视的不同的值，比较低效（Spark 需要内部地先计算出不同的值） 
+df.groupBy('Name).pivot("Project").agg(sum('Cost_To_Project)).show(false)
+
+// 指定需要透视的不同的值，比较高效
+df.groupBy('Name).pivot("Project", Seq("Analytics", "BI", "Ingestion", "ML")).agg(sum('Cost_To_Project)).show(false)
+```
+
+**逆透视例子**：
+
+```properties
+# 源表
+ +-------+---------+-----+---------+----+
+ |   Name|Analytics|   BI|Ingestion|  ML|
+ +-------+---------+-----+---------+----+
+ | Mickey|     null|12000|     null|8000|
+ | Martin|     null| 5000|     null|null|
+ |  Jerry|     null| null|     1000|null|
+ |  Riley|     null| null|     null|9000|
+ | Donald|     1000| null|     null|null|
+ |   John|     null| null|     1000|null|
+ |Patrick|     null| null|     null|1000|
+ |  Emily|     8000| null|     3000|null|
+ |   Arya|    10000| null|     2000|null|
+ +-------+---------+-----+---------+----+ 
+
+# 将源表转换（列转行\逆透视）为如下形式
+ +-------+---------+---------------+
+ |   Name|  Project|Cost_To_Project|
+ +-------+---------+---------------+
+ | Mickey|       BI|          12000|
+ | Mickey|       ML|           8000|
+ | Martin|       BI|           5000|
+ |  Jerry|Ingestion|           1000|
+ |  Riley|       ML|           9000|
+ | Donald|Analytics|           1000|
+ |   John|Ingestion|           1000|
+ |Patrick|       ML|           1000|
+ |  Emily|Analytics|           8000|
+ |  Emily|Ingestion|           3000|
+ |   Arya|Analytics|          10000|
+ |   Arya|Ingestion|           2000|
+ +-------+---------+---------------+ 
+```
+
+Spark 没有提供 unpivot 函数（`org.apache.spark.sql.catalyst.analysis.FunctionRegistry` 中有所有可用的函数表达式）。但是，有 `stack` 函数：
+
+```properties
++-----------------------------------------------------------------------------------+
+|function_desc                                                                      |
++-----------------------------------------------------------------------------------+
+|Function: stack                                                                    |
+|Class: org.apache.spark.sql.catalyst.expressions.Stack                             |
+|Usage: stack(n, expr1, ..., exprk) - Separates `expr1`, ..., `exprk` into `n` rows.|
++-----------------------------------------------------------------------------------+
+```
+
+使用 `stack` 函数可以实现相同的功能：
+
+```scala
+df1.selectExpr("Name",
+               "stack(4, 'Analytics', Analytics, 'BI', BI, 'Ingestion', Ingestion, 'ML', ML) as (Project, Cost_To_Project)")
+.filter('Cost_To_Project.isNotNull).show(false)
+```
