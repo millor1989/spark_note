@@ -54,3 +54,28 @@ Spark 2.0之前，Spark主要的编程接口是RDD（Resillient Distributed Data
   另外，出现这个 `Job` 时还有几个 `run at ThreadPoolExecutor.java:1149` 的 Job。当 `List leaf` Job 消失后，`run at` Job 也没有了。
 
   这个 `Job` 大概有分区修剪的作用，因为虽然限定了两个分区的范围，但是读的数据量和执行时间没有明显改善。
+
+##### 创建空的 DataFrame（但是有字段）
+
+使用 `spark.emptyDataFrame` 创建的 DataFrame 没有字段，如果需要对空 DataFrame 进行 `union` 操作，则会报错：
+
+```scala
+res1.union(spark.emptyDataFrame)
+# org.apache.spark.sql.AnalysisException: Union can only be performed on tables with the same number of columns, but the first table has 2 columns and the second table has 0 columns;;
+```
+
+创建空的 DataFrame，指定 shema 可以用如下的方法：
+
+```scala
+spark.createDataset(Seq[String]()).toDF("deviceid")
+# org.apache.spark.sql.DataFrame = [deviceid: string]
+
+spark.createDataset(Seq[(String,Int)]()).toDF("deviceid","count")
+# org.apache.spark.sql.DataFrame = [deviceid: string, count: int]
+
+import org.apache.spark.sql.DataFrame, Encoders
+spark.emptyDataset(Encoders.tuple(Encoders.STRING, Encoders.STRING)).toDF("id1", "id2")
+# org.apache.spark.sql.DataFrame = [id1: string, id2: string]
+```
+
+这样用创建的空 DataFrame 进行 `union` 就可以了。

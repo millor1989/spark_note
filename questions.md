@@ -98,15 +98,26 @@ Spark SQL架构：
 
   Catalog 类似于 metastore。这一步会根据 Catalog 验证数据结构、schema、类型等。
 
-* **Optimizer** 根据预先定义好的规则对 Resolved Logical Plan 进行**优化**并生成 Optimized Logical Plan
-
-  比如，谓词下推（predicates push down）
+* **Optimizer** 根据预先定义好的规则（谓词下推-`PushDownPredicate`、列裁剪-`ColumnPruning`、常量替换-`ConstantPropagation`、常量累加-`ConstantFolding`）对 Resolved Logical Plan 进行**优化**并生成 Optimized Logical Plan
 
 * **Query Planner** 将 Optimized Logical Plan 转换成多个 Physical Plan
 
   物理计划的生成—— Physical Planning；Catalyst Optimizer 会根据不同的策略生成多个物理计划。
 
 * **CBO** 根据 Cost Model 算出每个 Physical Plan 的代价（执行时间、资源消耗等）并选取代价最小的**一个** Physical Plan 作为最终的 Physical Plan（Selected Physical Plan）
+
+  正式开始执行之前，Spark 还会对生成的物理计划进行一些[处理](https://www.iteblog.com/archives/2563.html)——即 `prepareForExecution` 过程，规则如下：
+
+  ```scala
+  protected def preparations: Seq[Rule[SparkPlan]] = Seq(
+     PlanSubqueries(sparkSession),                          //特殊子查询物理计划处理
+     EnsureRequirements(sparkSession.sessionState.conf),    //确保执行计划分区与排序正确性
+     CollapseCodegenStages(sparkSession.sessionState.conf), //代码生成
+     ReuseExchange(sparkSession.sessionState.conf),         //节点重用
+     ReuseSubquery(sparkSession.sessionState.conf))         //子查询重用
+  ```
+
+  其中 `CollapseCodegenStages` 是 Catalyst 全阶段代码生成的入口。全阶段代码生成大大减少了（火山模型）虚函数的调用，大大提升了性能。
 
 * Spark 以 DAG 的方式执行上述 Physical Plan
 
@@ -140,7 +151,7 @@ res2: org.apache.spark.sql.catalyst.plans.logical.LogicalPlan =
 +- 'UnresolvedRelation `ids_ttable`
 ```
 
-Spark SQL 使用 `QueryExecution` 来处理 Logcial Plan，`QueryExecution` 是一个结构化的查询执行工作流（a structured query execution pipeline）：
+Spark SQL 使用 `QueryExecution` 来处理 Logcial Plan，`QueryExecution` 是一个结构化查询执行管道（a structured query execution pipeline）：
 
 > QueryExecution：使用 Spark 执行关系查询（relational queries）的主要工作流。开发者可以轻松的访问query execution 的中间阶段。可以用来 debug。
 

@@ -42,6 +42,10 @@ User class threw exception: org.apache.spark.sql.AnalysisException: cannot resol
 
 Spark将其识别为数组 `array<struct<c0:string>>`。是Spark对类型进行了隐式转换吗？
 
+##### concat_ws
+
+如果分隔符为 `NULL` 返回 `NULL`，值（array\map）中的 `NULL` 元素会被忽略
+
 #### collect_set、collect_list
 
 如果分组元素都是 `null`，它们返回的结果是**空的集合**，而不是 `null`。

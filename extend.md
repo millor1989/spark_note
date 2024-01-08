@@ -8,6 +8,43 @@ DataSource 方式读取文件
 spark.read.text("hdfs://nameservice/data/dw/dw_db/db_logs/p_appkey=app/p_day=20221202")
 ```
 
+文件读取参数（sql 前缀适用于 `spark.sql` 读取 Parequet、JSON、ORC，其它适用于 `spark.read`）：
+
+`spark.sql.files.maxPartitionBytes`
+
+`spark.sql.files.openCostInBytes`
+
+`spark.sql.files.minPartitionNum`
+
+如下两个没找到用的场合：
+
+`spark.files.maxPartitionBytes`
+
+`spark.files.openCostInBytes`
+
+
+
+##### 读取 text 文件时，
+
+对于 spark.read RDD 实现是 `FileScanRDD`，
+
+而 `spark.sql` 对应的 RDD 实现是 `HadoopRDD`，每个目录对应一个 `HadoopRDD`。
+
+spark task 【stage tab】 inputsize 
+
+
+
+
+
+
+
+spark datasource 读取支持使用通配符，底层使用的是 Hadoop 的 `Path` API：
+
+```scala
+/* 读取20230321 至 20230326 的数据 */
+spark.read.text("hdfs://nameservice/data/db_logs/p_appkey=app/p_day=2023032[1-6]")
+```
+
 DataSource 表，使用 Spark 的 DataSource 创建的表称为 DataSource 表。建表语句使用 `Using` 加 datasource 的语法。[参考链接1](https://blog.csdn.net/weixin_40893503/article/details/124664973?spm=1001.2101.3001.6650.7&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-7-124664973-blog-103087029.pc_relevant_recovery_v2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-7-124664973-blog-103087029.pc_relevant_recovery_v2&utm_relevant_index=8)、[参考链接2](https://www.jianshu.com/p/c2ce36583af5)
 
 ```sql
@@ -412,6 +449,101 @@ SortMergeJoin [id#2482L], [id#2483L], LeftAnti
 
 
 
+### Spark 3.0 Join
+
+Spark 会根据一些内部逻辑选择 join 算法，但是 Spark 的默认选择可能不是最好的。
+
+Spark 3.0 提供了一个使用策略暗示（strategy hints）选择指定算法的方式：
+
+```scala
+dfA.join(dfB.hint(algorithm), join_condition)
+```
+
+其中 `algorithm` 可以是：`broadcast`、`shuffle_hash`、`shuffle_merge`；而 Spark 3.0 之前，只能是 `broadcast`——作用与 `broadcast` 函数相同：
+
+```scala
+dfA.join(broadcast(dfB), join_condition)
+```
+
+#### 1、`JoinSelection` 策略
+
+在物理计划生成阶段，逻辑计划的每个节点必须使用策略（strategies）转换为一个或者多个算子。Spark 使用 `JoinSelection` 策略决定使用那种算法进行 join。其中，影响进行 join 算法选择的因素有：
+
+- 暗示
+- 连接条件（是否是等值连接）
+- 连接的类型（inner、left、full outer、...）
+- 连接时的数据量
+
+#### 2、广播连接（BroadcastHashJoin）
+
+join 一侧的表足够小（小于配置 `spark.sql.autoBroadcastJoinThreshold`，按字节，默认 `10 * 1024 * 1024`），小表被广播到每个 executor，大表不用混洗。DAG 如下：
+
+![img](/assets/Pzvy3UDoNIP6g1pOZwu1qw.png)
+
+Spark 对表大小的评估依赖于读取数据的方式、metastore 中是否计算了统计数据（statistics）以及 CBO（cost-based optimization）特性是否开启。`autoBroadcastJoinThreshold` 的默认值是比较保守的，设置合适的值依赖于集群资源——要比埋你 OOM 或者广播超时（`spark.sql.broadcastTimeout`，默认值 300，单位秒）。
+
+除了数据量大导致广播超时，获得小表数据的运算过于复杂也会导致广播超时。比如：
+
+```scala
+dfA = spark.table(...)
+
+dfB = (
+  data
+  .withColumn("x", udf_call())
+  .groupBy("id").sum("x")
+)
+
+dfA.join(dfB.hint("broadcast"), "id")
+```
+
+其中 `dfB` 是一个比较大的表 `data` 聚合后的结果。但是，如果 UDF 耗时过长就会导致广播超时。除了增加广播超时时间，还可以使用 `cache()`，预先计算出 `dfB`，这样仍然可以进行广播 join：
+
+```sacla
+dfA = spark.table(...)
+
+dfB = (
+  data
+  .withColumn("x", udf_call())
+  .groupBy("id").sum("x")
+).cache()
+
+dfB.count()
+
+dfA.join(dfB.hint("broadcast"), "id")
+```
+
+此时，这个查询会以三个 jobs 执行。第一个 job 由 `count` 触发，计算聚合结果并缓存；第二个 job 负责将缓存结果广播到每个 executor；最后一个 job 执行 join。
+
+#### 2、SortMergeJoin
+
+如果 join 两侧的表都不能被广播， join key 可以排序并且 join 是等值 join，Spark 将会采用 `SortMergeJoin`。
+
+`SortMergeJoin` 需要两侧的表有合适的分区和排序，通常通过 join 两侧分支的混洗和排序来满足这个条件。典型的物理计划 DAG 如下：
+
+![img](/assets/HW3YcSgA2KdS2MYGbPsxpw.png)
+
+其中 `Exchange` 和 `Sort` 算子确保数据被以合适的方式分区、排序，从而能够进行最终的合并。
+
+另外，通过合理运用 `repartition` 算子或对数据源表进行合适的分桶可以减少混洗的次数。
+
+#### 3、ShuffledHashJoin
+
+虽然，Spark 提供了 `ShuffledHashJoin` 但是它不常见，因为 Spark 的内部配置 `spark.sql.join.preferSortMergeJoin` 默认为 `true`，即，当 Spark 在 `SortMergeJoin` 和 `ShuffledHashJoin` 之间做选择时会选择 `SortMergeJoin`，因为就 OOM 而言 SortMergeJoin 更稳定。使用 `ShuffedHashJoin` 时，如果一个分区不能放进内存，job 就会失败，但是，对于 `SortMergeJoin` 会把数据溢出到磁盘，虽然执行速度慢但是保证了 job 正常执行。
+
+如果 `spark.sql.join.preferSortMergeJoin` 为 `false`，不能进行 `BroadcastHashJoin`，join 一侧表的**分区的平均大小**大小的 **3 倍**小于另一侧的表且分区平均大小小于广播阈值（**canBuildLocalHashMap** `plan.stats.sizeInBytes < conf.autoBroadcastJoinThreshold * conf.numShufflePartitions`）会使用 `ShuffledHashJoin`。因为检查的是平均分区大小，如果数据严重倾斜，某个分区特别大，内存无法容纳，就会失败。
+
+与 `SortMergeJoin` 类似，`ShuffledHashJoin` 需要数据正确地进行分区，所以通常它会在 join 的两个分支引入混洗。但是与 `SortMergeJoin` 不同的是，`ShuffledHashJoin` 不需要排序，排序也是一个开销很大的操作，因此 `ShuffledHashJoin` 很可能比 `SortMergeJoin` 更快。
+
+当 join 一侧表比另一侧表小得多（3 倍小于）时，`ShuffledHashJoin` 会比 `SortMergeJoin` 更快，因为此时对一个表构建 hash map 相比对两个表进行排序优势明显。`ShuffledHashJoin` 的物理计划：
+
+![img](/assets/IDRGpNF7C-IwlMYoOEvAA.png)
+
+#### 4、BroadcastNestedLoopJoin
+
+上面的三个 join 算法要求是等值连接。如果是非等值连接，Spark 就只能采用 `BroadcastNestedLoopJoin` 或者笛卡尔积。如果一侧表可以被广播，就会采用 `BroadcastNestedLoopJoin`。`BroadcastNestedLoopJoin` 和笛卡尔积都是非常慢的，所以应该尽可能使用等值连接。
+
+
+
 ### ShuffleManager
 
 Spark shuffle 过程中的主要组件是 ShuffleManager。
@@ -489,7 +621,7 @@ if (!conf.getBoolean("spark.shuffle.spill", true)) {
 
 1. ##### 普通机制（BaseShuffleHandle）
 
-   数据先写入内存数据结构（Map 或 Array）中，如果是聚合类的 shuffle 算子（reduceByKey 等）使用 Map 结构，一边通过 Map 进行聚合，以便写入内存；如果是不需要聚合的普通 shuffle 算子（join 等）使用 Array 结构，直接写入内存。写入内存的数据达到阈值之后，尝试将内存数据结构中的数据溢出到磁盘——溢写之前会根据 key 进行排序。溢写到磁盘文件是通过 `BufferedOutputStream` 实现的——会先将数据写入内存中的数据缓冲区，缓冲区写满后后才溢写到磁盘——这样可以减少磁盘 IO，提升性能。每次溢写都产生一个临时的磁盘文件，最后 shuffle write task 会将所有临时的磁盘文件合并，这就是 merge 过程。最终一个 task 只有一个磁盘文件。
+   数据先写入内存数据结构（Map 或 Array）中，如果是聚合类的 shuffle 算子（reduceByKey 等）使用 Map 结构，一边通过 Map 进行聚合，一边写入内存；如果是不需要聚合的普通 shuffle 算子（join 等）使用 Array 结构，直接写入内存。写入内存的数据达到阈值之后，尝试将内存数据结构中的数据溢出到磁盘——溢写之前会根据 key 进行排序。溢写到磁盘文件是通过 `BufferedOutputStream` 实现的——会先将数据写入内存中的数据缓冲区，缓冲区写满后后才溢写到磁盘——这样可以减少磁盘 IO，提升性能。每次溢写都产生一个临时的磁盘文件，最后 shuffle write task 会将所有临时的磁盘文件合并，这就是 merge 过程。最终一个 task 只有一个磁盘文件。
 
    `BaseShuffleHandle` 对应的是普通的 `SortShuffleWriter`：
 
@@ -664,9 +796,188 @@ if (!conf.getBoolean("spark.shuffle.spill", true)) {
 
 
 
+### Spark 3.0+ 查询计划（Query Plans）
+
+基于查询计划中的信息，有可能找到引起 job 低效的原因，从而可以重写低效查询以提升性能。
+
+直接调用 `df.explain()` 方法，展示的是查询的物理计划（Physical Plan）。Spark 3.0 中重载的 `explain` 方法可以接收一个 `mode` 参数——可选的值为 `formatted`、`cost`、`codegen`。使用 `formatted` 值可以看到一个格式美化后物理计划和对应算子的详细描述（物计划后面的标号，与下面算子前面的标号对应）。
+
+![img](/assets/TRaSWP5otKhYcbdTZ809sA.png)
+
+`cost` 模式的 `explain` 方法除了展示物理计划还展示优化的逻辑计划（Optimized Logical Plan）及每个算子相关的统计数据——可以看到每个执行步骤预估的数据大小。`codegen` 模式的 `explain` 会展示将要被执行的生成的 java 代码。
+
+Spark WebUI 的 SQL 页签也可以看到查询计划和查询的 DAG 图。Spark 3.0 的 DAG 图中的 codegen 同时标注了对应的 codgen id。通过 codgen id 可以将 DAG 图和物理计划进行对应。
+
+Spark 2.0 相对于 Spark 3.0 DAG 图就比较简陋了——没有 codegen id 展示。Spark 2.0 可以通过 `df.queryExecution.debug.codegen()` 查看分 Subtree 展示的各个 codegen 对应的物理计划：
+
+![1676259743145](/assets/1676259743145.png)
+
+物理执行计划中，支持 codegen 的算子前面回有 `*(<codegen id>)`，不支持的算子（比如 `Exchange`）前面则没有。
+
+#### 1、`CollapseCodegenStages`
+
+在 Spark 的 Web UI 中，可以看到 job DAG 中算子会被分组为 `WholeStageCodegen`。这实际上是在生成物理计划的过程中发生的一个优化特性——`CollapseCodegenStages`。
+
+`CollapseCodegenStages` 将支持 code generation 的算子合并到一起执行，消除了虚拟函数调用从而提高执行效率。
+
+#### 2、查询计划中的算子
+
+##### 2.1、`Scan parquet`
+
+`scan parquet` 算子表示从 parquet 格式文件中读取数据。从计划详情中可以看到从数据源筛选的字段。即使查询中不指定筛选字段，也会有一个叫作 `ColumnPruning` 的优化规则根据查询的实际需要从数据源筛选字段。还有两种过滤类型：
+
+- `PartitionFilters`：基于数据源分区字段的过滤。**非常重要！**可以跳过扫描不需要的数据。Spark 2.4 中有一个属性 `partitionCount` ——实际扫描的分区数量，在 Spark 3.0 中已经没有了。
+- `PushedFilters`：可以直接应用到 parquet 文件的对字段的过滤，如果 parquet 文件是按照这些过滤字段排序的，那么还可以利用内部的 parquet 结构跳过不需要的数据。parquet 文件是由行组（row groups）和包含了这些行组的元数据的文件的页脚（footer）组成的。这里的元数据包含了统计信息（比如每个行组的 min、max value），基于这些信息 Spark 可以决定是否要读取某个行组。
+
+##### 2.2、`Filter`
+
+过滤条件。通常它不对应于查询中使用的过滤条件。应为所有的过滤都是首先会被 Catalyst optimizer 处理，这可能会导致过滤被修改或重定位。逻辑过滤（logical filters）被转换为物理算子是的几个规则：
+
+- `PushDownPredicates`（谓词下推）——通过几个其他的算子将过滤（并不是所有的）向数据源推近。比如，不是确定性的表达式（比如使用了函数 `first`、`last`、`collect_set`、`collect_list`、`rand` 等）不会被下推。
+- `CombineFilters`——将两个相邻的算子组合为一个算子
+- `InferFiltersFromConstraints`——这个规则实际上会创建新的 `Filter` 算子，比如对于 inner join 的连接条件会创建一个连接 key 不为 null 的过滤条件。
+- `PruneFilters`——移除冗余的过滤（比如，条件值总是为 true 的过滤）
+
+##### 2.3、`Project`
+
+表示哪些字段会被选择。对 DataFrame 执行 `select`、`withColumn`、`drop` 操作时，Spark 会对逻辑计划增加一个 `Project` 算子。转化为物理计划中的对应算子时，也有一些优化规则：
+
+- `ColumnPruning`——字段修剪，修剪掉不需要的字段，减少扫描的数据量。
+- `CollapseProject`——将相邻的两个 `Project` 算子合并为一个。
+- `PushProjectionThroughUnion`—— push the `Project` through both sides of the `Union` operator.
+
+##### 2.4、`Exchange`
+
+`Exchange` 表示混洗，是集群中物理的数据移动。开销很大的操作。在执行计划中，这个算子的信息包含了数据如何重新分区。比如 `hashpartitioning(user_id, 200)` 表示对数据按 `user_id` 进行哈希分区。分区类型：
+
+- `HashPartitioning`——计算分区 key 的哈希值，然后对哈希值按分区数取模，结果相同则分配到相同的分区。
+- `RoundRobinPartitioning`——数据被随机地分发到 `n`（分区数量） 个大小相同的分区。`repartition(n)`。
+- `RangePartitioning`——用于排序数据是，在调用 `orderBy` 或 `sort` 之后使用。
+- `SinglePartition`——所有数据被移动到一个分区。当调用了窗口函数而窗口是整个 DataFrame（不为窗口的 `partitionB()` 函数提供参数）时会发生。
+
+##### 2.5、`HashAggregate`
+
+表示数据聚合。通常是成对的出现（第一个是分区内聚合，第二个是分区间的聚合）——有可能被 `Exchange` 隔开。
+
+##### 2.6、`BroadcastHashJoin` & `BroadcastExchange`
+
+`BroadcastHashJoin` 与 `BroadcastExchange` 成对出现，表示广播连接——数据被收集到 driver 然后发送到每个 executor，之后再进行 join。
+
+此外，Spark 还有 `SortMergeJoin` 和 `ShuffleHashJoin` 算子。
+
+
+
+Subtree 的数量会小于 codegen 的数量
+
+Spark WebUI 的 DAG 图中“绿色”背景色表示是缓存在内存的数据。
+
+`spark.sql.codegen.maxFields` 默认值 100，激活 whole stage codegen 之前支持的最大的字段数量。如果字段数量超过哦这个值，将不能产生 whole stage codegen——物理计划中对应的计划的算子前面就没有 codegen id。
+
+wholestage codegen 是 spark tungsten 优化的一部分，与之相对应的是旧版本 Spark 采用的火山模型。
+
+`spark.sql.codegen.wholeStage` 开启 wholestagecodegen，默认为 true。
+
+https://www.jianshu.com/p/9232b632090b
+
+
+
+
+
+
+
+### Spark 源码
+
+SparkSubmit
+
+###### Spark 应用入口
+SparkApplication
+
+Dependency
+	NarrowDependency
+	ShuffleDependency
+	OneToOneDependency
+	RangeDependency
+
+Task
+	ShuffleMapTask
+	ResultTask
+
+Stage
+	ShuffleMapStage
+	ResultStage
+
+###### 高级调度层（面向 stage 调度的实现），为每个 job 计算出 stage 组成的 DAG
+DAGScheduler
+	######A running job in the DAGScheduler
+	ActiveJob	// A running job in the DAGScheduler
+
+TaskScheduler
+
+###### TaskScheduler 的唯一实现
+TaskSchedulerImpl
+
+###### 位于 TaskSchedulerImpl 中，TaskScheduler 的通信终端
+SchedulerBackend
+
+
+
+SparkContext
+	###### 获取集群管理器
+	###### 创建一个task scheduler 和 SchedulerBackend
+createTaskScheduler()
+
+
+
+
+
+### Hive UDTF
+
+```
+# 上传 jar、依赖的 jar
+add jar /root/fastjson-1.2.5.jar;
+
+add jar /root/moto_report_etl.jar;
+
+# 查看 Hive 会话中添加的 jar 列表。
+list jars;
+
+# 创建临时函数（临时函数只存在于当前的 Hive 会话）
+create temporary function ext_ctr as 'com.jdd.utils.CtrUDTF';
+
+# 创建永久函数（会话无关的函数）
+create function ext_ctr as 'com.jdd.utils.CtrUDTF' USING JAR  'hdfs://<jar_file_path>';
+
+#函数是与库相关的，创建函数时如果不指定库名，则默认使用当前的库。使用函数时也需要库名，默认当前库。
+
+# 删除函数
+drop function ext_ctr;
+```
+
+
+
+
+
+![1681380474980](/assets/bad_broadcast.png)
+
+
+
+broadcastJOin 不适用于所有的场合，如果多表 union（union 不是混洗操作） 和 小表（被广播） join，然后落表，此时可能会产生很多的小文件；反而导致 job 会比 sortmergejoin 更慢。
+
+每个 Task 输入数据的大小\数量
+
+![1681434602410](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1681434602410.png)
+
+每个 HadoopRDD 对应一个文件目录
+
+![1681434517450](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1681434517450.png)
+
+
+
 ### join 实现方式的选择
 
 ### Spark 优化
+
+CBO `spark.sql.cbo.enabled`
 
 https://blog.csdn.net/longlovefilm/article/details/121418148
 

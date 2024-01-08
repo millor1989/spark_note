@@ -377,31 +377,31 @@ Spark SQL的Hive支持中有些很重要部分是与Hive metastore的交互，�
 | --- | --- | --- |
 | `spark.sql.hive.metastore.version` | `1.2.1` | Hive metastore版本.可选的是 `0.12.0` t到 `1.2.1`的版本。 |
 | `spark.sql.hive.metastore.jars` | `builtin` | 用来实例化HiveMetastoreClient的jars的位置。有3个选项: 1） `builtin`         使用Hive 1.2.1, 当`-Phive`被开启时，它和Spark assembly 是绑定的. 使用这个选项时，`spark.sql.hive.metastore.version` 必须是 `1.2.1` 或者未定义的。2） `maven`      使用从Maven仓库下载的指定版本的Hive jars。通常不建议在生产环境使用这个配置。3）JVM标准格式的classpath    这个classpath必须包含整个Hive和Hive的依赖，包括正确版本的Hadoop。这些jars只需要存在于driver上，但是，如果要在yarn集群模式运行，必须确保它们打包在应用中。 |
-|  | `com.mysql.jdbc`， `org.postgresql`， `com.microsoft.sqlserver`，  `oracle.jdbc` | 逗号分隔的，需要使用classloader加载的，Spark SQL和某个指定版本的Hive之间共享的，类的前缀的集合。需要共享的类的一个例子是与metastore进行交流的JDBC drivers。其它需要共享是那些和已经共享的类进行交互的类。比如，log4j使用的自定义的appenders。 |
+| `spark.sql.hive.metastore.sharedPrefixes` | `com.mysql.jdbc`， `org.postgresql`， `com.microsoft.sqlserver`，  `oracle.jdbc` | 逗号分隔的，需要使用classloader加载的，Spark SQL和某个指定版本的Hive之间共享的，类的前缀的集合。需要共享的类的一个例子是与metastore进行交流的JDBC drivers。其它需要共享是那些和已经共享的类进行交互的类。比如，log4j使用的自定义的appenders。 |
 | `spark.sql.hive.metastore.barrierPrefixes` | `(empty)` | 逗号分隔的，需要明确地为和Spark SQL通信的每个Hive版本重新加载的，类的前缀的集合。比如，以同一个前缀声明的需要共享的Hive UDFs（比如，`org.apache.spark.*`）。 |
 
-#### 5、其它数据库的JDBC
+#### 5、其它数据库的 JDBC
 
-Spark SQL也包括有一个使用JDBC从其它数据库读取数据的数据源。这个功能比使用`JdbcRDD`更好。它返回的结果是DataFrame，进而并且可以轻松地被Spark SQL处理或者和其它数据源进行连接。JDBC数据源不需要用户提供ClassTag，使用Java或者Python操作起来更简单。（注意JDBC数据源和允许其他应用使用Spark SQL运行查询的Spark SQL JDBC server是不同的。）
+Spark SQL 也包括有一个使用 JDBC 从其它数据库读取数据的数据源。这个功能比使用 `JdbcRDD` 更好。它返回的结果是 DataFrame，进而并且可以轻松地被 Spark SQL 处理或者和其它数据源进行连接。JDBC 数据源不需要用户提供 ClassTag，使用 Java 或者 Python 操作起来更简单。（注意 JDBC 数据源和允许其他应用使用 Spark SQL 运行查询的 Spark SQL JDBC server 是不同的。）
 
-使用jdbc数据源需要spark classpath中有与数据对应的JDBC driver。比如，要通过spark-shell连接到postgres，需要运行如下命令：
+使用 jdbc 数据源需要 spark classpath 中有与数据对应的 JDBC driver。比如，要通过spark-shell连接到 postgres，需要运行如下命令：
 
 ```bash
 bin/spark-shell --driver-class-path postgresql-9.4.1207.jar --jars postgresql-9.4.1207.jar
 ```
 
-使用JDBC数据源API可以把远程的数据库加载为一个DataFrame或者Spark SQL临时视图。在数据源的选项中可以指定JDBC连接属性。`user`和`password`一般作为连接属性来提供，以登录到数据源。除了连接属性，Spark还支持如下的不区分大小写的选项：
+使用JDBC数据源API可以把远程的数据库加载为一个DataFrame或者Spark SQL临时视图。在数据源的选项中可以指定JDBC连接属性。`user` 和 `password` 一般作为连接属性来提供，以登录到数据源。除了连接属性，Spark还支持如下的不区分大小写的选项：
 
 | Property Name | Meaning |
 | --- | --- |
 | `url` | JDBC URL。不同数据源可能不同。比如, `jdbc:postgresql://localhost/test?user=fred&password=secret` |
 | `dbtable` | 表名。可以是SQL查询的`FROM`子句中合法的所有语句。比如，除了表名，还可以使用括号中的子查询。 |
-| \`driver | JDBC driver类名 |
+| `driver` | JDBC driver类名 |
 | `partitionColumn, lowerBound, upperBound` | 这几个属性必须同时指定或者都不指定。指定时，`numPartitions`也必须同时指定。这些选项描述从多个工作者并行读取数据时如何对表进行分区。`partitionColumn`必须是表的数值类型列。注意，`lowerBound`和`upperBound` 只是用来决定分区的步长，不是过滤表中的记录。所有的记录都会被分区然后返回。这个选项只用于读取数据。 |
 | `numPartitions` | 表并行读写使用的最大的分区数量。也决定了并行的JDBC连接的最大数量。如果要写入的数据集的分区数超过这个限制，Spark会在写数据前调用 `coalesce(numPartitions)`。 |
 | `fetchsize` | JDBC抓取大小，决定一次性获取的记录条数。这个选项有助于提升抓取大小比较小的（比如，Oracel是10）JDBC driver的性能。仅适用于读。 |
 | `batchsize` | JDBC批次大小，决定一次插入的记录条数。这个选项有助于提升JDBC drivers的性能。仅适用于写。默认，1000。 |
-| `isolationLevel` | 事物独立级别，仅适用于当前连接。可以是 `NONE`, `READ_COMMITTED`, `READ_UNCOMMITTED`, `REPEATABLE_READ`, 或者 `SERIALIZABLE`, 对应于 JDBC的Connection对象的标准事物独立性级别，默认的是`READ_UNCOMMITTED`。仅适用于写。具体查阅`java.sql.Connection`文档。 |
+| `isolationLevel` | 事务独立级别，仅适用于当前连接。可以是 `NONE`, `READ_COMMITTED`, `READ_UNCOMMITTED`, `REPEATABLE_READ`, 或者 `SERIALIZABLE`, 对应于 JDBC的Connection对象的标准事独立性级别，默认的是`READ_UNCOMMITTED`。仅适用于写。具体查阅`java.sql.Connection`文档。 |
 | `truncate` | 这是一个JDBC写相关选项。当开启 `SaveMode.Overwrite` 时，这个选项让Spark truncate已经存在的表，而不是先drop表然后再create表。这更加高效，并且防止表元数据（比如，索引）被删除。但是，某些情况下不起作用，比如，当新的数据schema不同时。默认`false`，只适用于写。 |
 | `createTableOptions` | 这是一个JDBC写相关的选项。如果指定，当创建表时这个选项允许设置数据库专用的表或分区选项 \(比如, `CREATE TABLE t (name string) ENGINE=InnoDB.`\)。仅适用于写。 |
 | `createTableColumnTypes` | 创建表时，用于替换默认列类型的数据库列数据类型。数据类型信息的指定应该与CREATE TABLE语法格式相同（比如： `"name CHAR(64), comments VARCHAR(1024)"`）。指定的类型应该是合法的Spark SQL数据类型。仅适用于写。 |
@@ -440,6 +440,16 @@ jdbcDF.write
   .option("createTableColumnTypes", "name CHAR(64), comments VARCHAR(1024)")
   .jdbc("jdbc:postgresql:dbserver", "schema.tablename", connectionProperties)
 ```
+
+**使用 Spark JDBC 时需要[注意](https://c2fo.github.io/spark/jdbc/data-partitioning/db/io/2022/12/01/apache-spark-a-note-when-using-jdbc-partitioning/)**：spark 通过 jdbc 并行读取数据（多分区）就是通过多个独立的 jdbc 连接去读取数据库。指定了 `numPartitions` 时也需要指定 `partitionColumn, lowerBound, upperBound` 三个属性才能生效，否则读取结果都是只有一个分区。`partitionColumn, lowerBound, upperBound` 三个属性结合 `numPartitions` 属性决定了每个独立（并行）查询的步长：
+
+```scala
+val stride: Long = upperBound / numPartitions - lowerBound / numPartitions
+```
+
+另，JDBC 写数据时，如果多分区（并行）写数据，可能会遇到多个并发连接同时操作数据库的情况，可能出现 `lock write timeout` 异常，此时如果能保证不出错，可以设置 `isolationLevel` 选项为 `NONE` 关闭事务，从而提高写数据的效率。
+
+如果写的**数据量很大，频率很高，可能会对数据库造成较大压力**，还会有存储压力（MySQL Binary Log 会激增）。
 
 #### 6、故障排除
 
